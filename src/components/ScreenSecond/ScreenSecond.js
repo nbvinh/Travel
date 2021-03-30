@@ -1,0 +1,151 @@
+import React, { useEffect, useState } from "react";
+import {
+    View,
+    Text,
+    StyleSheet,
+    StatusBar,
+    SafeAreaView,
+    Image,
+    Animated,
+    Dimensions,
+    Easing,
+    ImageBackground,
+    TextInput
+}
+    from "react-native";
+import LinearGradient from 'react-native-linear-gradient';
+const { width, height } = Dimensions.get('screen')
+const ScreenSecond = () => {
+    return (
+        <SafeAreaView style={styles.container}>
+            <StatusBar backgroundColor='white' barStyle={"dark-content"} />
+            <ImageBackground style={styles.container} source={require('../../img/backgroundcolor.png')}>
+                <View style={styles.header}>
+                    <Image
+                        source={require('../../img/okgoCIP-05.png')}
+                        style={styles.img}
+                    />
+                    <Image
+                        source={require('../../img/okgoCIP-06.png')}
+                        style={styles.img1}
+                    />
+                </View>
+                <View style={styles.footer}>
+                    <View style={styles.footercontent}>
+                        <View style={styles.viewtextinput}>
+                            <View style={styles.textinput1}>
+                                <Text />
+                                <Image
+                                    source={require('../../img/flag.png')}
+                                    style={styles.img2}
+                                />
+                                <Image
+                                    source={require('../../img/Shape.png')}
+                                    style={styles.img3}
+                                />
+                                <Text style={styles.text}>+84</Text>
+                                <Text style={styles.text}>|</Text>
+                            </View>
+                            <TextInput
+                                style={styles.textInput}
+                            />
+                        </View>
+                    </View>
+                </View>
+            </ImageBackground>
+
+        </SafeAreaView>
+    )
+}
+export default ScreenSecond;
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+    },
+    header: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    footer: {
+        flex: 1,
+    },
+    img: {
+        width: width / 3.7,
+        height: width / 2.9
+    },
+    img1: {
+        width: 137,
+        height: 33.69,
+        marginTop: 10
+    },
+    footercontent: {
+        marginHorizontal: 10
+    },
+    textInput: {
+        borderTopRightRadius: 30,
+        borderBottomRightRadius: 30,
+        height: 50,
+        width: '60%',
+        backgroundColor: 'rgba(0, 0, 0, 0.7)'
+    },
+    viewtextinput: {
+        flexDirection: 'row'
+    },
+    textinput1: {
+        height: 50,
+        width: '40%',
+        backgroundColor: 'rgba(0, 0, 0, 0.7)',
+        borderTopLeftRadius: 30,
+        borderBottomLeftRadius: 30,
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        flexDirection: 'row'
+    },
+    img2: {
+        width: 24,
+        height: 15.89
+    },
+    img3: {
+        width: 10,
+        height: 6
+    },
+    text: {
+        fontSize: 15,
+        fontWeight: '500',
+        color: 'white'
+    }
+})
+
+
+// import React, { Component } from 'react';
+// import { View } from 'react-native';
+// import { LoginButton, AccessToken } from 'react-native-fbsdk-next';
+
+// export default class Login extends Component {
+//     render() {
+//         return (
+//             <View>
+//                 <LoginButton
+//                     // onLoginFinished={
+//                     //     (error, result) => {
+//                     //         if (error) {
+//                     //             console.log("login has error: " + result.error);
+//                     //         } else if (result.isCancelled) {
+//                     //             console.log("login is cancelled.");
+//                     //         } else {
+//                     //             AccessToken.getCurrentAccessToken().then(
+//                     //                 (data) => {
+//                     //                     console.log(data.accessToken.toString())
+//                     //                 }
+//                     //             )
+//                     //         }
+//                     //     }
+//                     // }
+//                     // onLogoutFinished={() => console.log("logout.")} 
+//                     />
+//             </View>
+//         );
+//     }
+// };
