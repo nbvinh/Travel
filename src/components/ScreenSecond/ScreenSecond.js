@@ -11,18 +11,29 @@ import {
     Easing,
     ImageBackground,
     TextInput,
-    TouchableOpacity
+    TouchableOpacity,
+    Alert
 }
     from "react-native";
 import LinearGradient from 'react-native-linear-gradient';
 import { onChange } from "react-native-reanimated";
 import { LoginButton, AccessToken } from "react-native-fbsdk-next";
+import { useDispatch } from "react-redux";
 const { width, height } = Dimensions.get('screen')
-const ScreenSecond = () => {
+const ScreenSecond = ({ navigation }) => {
     const [text, setText] = useState('')
+    const [OK, setOK] = useState(false)
     const onChange = (value) => {
         setText(value)
+        if (value.length === 9) {
+            setOK(true)
+        }
     }
+    const onOK = () => {
+        navigation.navigate('ScreenOTP')
+        dispatch({type:'PHONE',phone : text})
+    }
+    const dispatch = useDispatch()
     return (
         <SafeAreaView style={styles.container}>
             <StatusBar backgroundColor='white' barStyle={"dark-content"} />
@@ -60,20 +71,37 @@ const ScreenSecond = () => {
                             <TextInput
                                 style={styles.textInput}
                                 onChangeText={(value) => onChange(value)}
-                                value={text}
                                 maxLength={9}
                                 keyboardType='numeric'
                                 placeholder="Nhập Số Điện Thoại"
                                 placeholderTextColor='white'
+                                value={text}
                             />
                         </View>
-                        <TouchableOpacity style={styles.OK}>
-                            <Text style={styles.text1}>OK</Text>
-                        </TouchableOpacity>
-                        <View style={{ marginTop: 20, height: 40, width: '100%', backgroundColor: '#436EEE', borderRadius: 8, justifyContent: 'center', alignItems: 'center' }}>
+                        {
+                            OK ?
+                                <TouchableOpacity style={styles.OK} onPress={() => onOK()}>
+                                    <Text style={styles.text1}>OK</Text>
+                                </TouchableOpacity>
+                                :
+                                <TouchableOpacity style={styles.OK} onPress={() => {Alert.alert('Bạn Cần Nhập Đủ Số Điện Thoại')}}>
+                                    <Text style={styles.text1}>OK</Text>
+                                </TouchableOpacity>
+                        }
+                        <View style={styles.loginFB}>
                             <LoginButton
                             />
                         </View>
+                        <TouchableOpacity style={styles.loginGG}>
+                            <Image
+                                source={{ uri: 'https://brasol.vn/public/ckeditor/uploads/tin-tuc/13-logo-google.png' }}
+                                style={styles.img4}
+                            />
+                            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                                <Text style={styles.text2}>Đăng Nhập Với Google</Text>
+
+                            </View>
+                        </TouchableOpacity>
                     </View>
                 </View>
             </ImageBackground>
@@ -91,16 +119,16 @@ const styles = StyleSheet.create({
         // flex: 1,
         // justifyContent: 'center',
         // alignItems: 'center',
-        position:'absolute',
-        left:'35%',
-        top:'10%',
+        position: 'absolute',
+        left: '35%',
+        top: '5%',
         zIndex: 1
     },
     footer: {
         // flex: 1,
-        position:'absolute',
-        zIndex:1,
-        top:'50%'
+        position: 'absolute',
+        zIndex: 1,
+        top: '45%'
     },
     img: {
         width: width / 3.7,
@@ -166,6 +194,35 @@ const styles = StyleSheet.create({
         color: 'white',
         fontWeight: '700',
         fontSize: 20
+    },
+    loginFB: {
+        marginTop: 50,
+        height: 40,
+        width: '100%',
+        backgroundColor: '#436EEE',
+        borderRadius: 8,
+        justifyContent: 'center',
+        alignItems: 'center'
+    },
+    img4: {
+        width: 40,
+        height: '100%',
+        backgroundColor: 'white',
+        borderTopLeftRadius: 8,
+        borderBottomLeftRadius: 8,
+    },
+    loginGG: {
+        backgroundColor: '#1864FD',
+        marginTop: 20,
+        width: '100%',
+        height: 40,
+        borderRadius: 8,
+        flexDirection: 'row',
+    },
+    text2: {
+        color: 'white',
+        fontSize: 15,
+        fontWeight: '500',
     }
 })
 

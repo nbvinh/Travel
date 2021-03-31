@@ -4,14 +4,18 @@ import { createStackNavigator } from '@react-navigation/stack'
 import { NavigationContainer } from "@react-navigation/native";
 import ScreenFirst from "../../components/ScreenFirst/ScreenFirst";
 import ScreenSecond from "../../components/ScreenSecond/ScreenSecond";
+import ScreenOTP from "../../components/SreenOTP/ScreenOTP";
+import ScreenUpdateProfile from "../../components/ScreenUpdateProfile/ScreenUpdateProfile";
 
 const Root = createStackNavigator();
-const RootStack = () =>{
-    return(
+const RootStack = () => {
+    return (
         <NavigationContainer >
             <Root.Navigator headerMode="none">
                 <Root.Screen name="ScreenFirst" component={ScreenFirst} />
                 <Root.Screen name="ScreenSecond" component={ScreenSecond} />
+                <Root.Screen name="ScreenOTP" component={ScreenOTP} />
+                <Root.Screen name="ScreenUpdateProfile" component={ScreenUpdateProfile} />
             </Root.Navigator>
         </NavigationContainer>
     )
