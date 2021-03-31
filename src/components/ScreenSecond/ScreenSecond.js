@@ -10,12 +10,19 @@ import {
     Dimensions,
     Easing,
     ImageBackground,
-    TextInput
+    TextInput,
+    TouchableOpacity
 }
     from "react-native";
 import LinearGradient from 'react-native-linear-gradient';
+import { onChange } from "react-native-reanimated";
+import { LoginButton, AccessToken } from "react-native-fbsdk-next";
 const { width, height } = Dimensions.get('screen')
 const ScreenSecond = () => {
+    const [text, setText] = useState('')
+    const onChange = (value) => {
+        setText(value)
+    }
     return (
         <SafeAreaView style={styles.container}>
             <StatusBar backgroundColor='white' barStyle={"dark-content"} />
@@ -48,6 +55,19 @@ const ScreenSecond = () => {
                             </View>
                             <TextInput
                                 style={styles.textInput}
+                                onChangeText={(value) => onChange(value)}
+                                value={text}
+                                maxLength={10}
+                                keyboardType='numeric'
+                                placeholder="Nhập Số Điện Thoại"
+                                placeholderTextColor='white'
+                            />
+                        </View>
+                        <TouchableOpacity style={styles.OK}>
+                            <Text style={styles.text1}>OK</Text>
+                        </TouchableOpacity>
+                        <View style={{ marginTop:20,height:40, width:'100%',backgroundColor:'#436EEE',borderRadius:8,justifyContent:'center',alignItems:'center' }}>
+                            <LoginButton 
                             />
                         </View>
                     </View>
@@ -88,7 +108,8 @@ const styles = StyleSheet.create({
         borderBottomRightRadius: 30,
         height: 50,
         width: '60%',
-        backgroundColor: 'rgba(0, 0, 0, 0.7)'
+        backgroundColor: 'rgba(0, 0, 0, 0.7)',
+        color: 'white'
     },
     viewtextinput: {
         flexDirection: 'row'
@@ -115,6 +136,25 @@ const styles = StyleSheet.create({
         fontSize: 15,
         fontWeight: '500',
         color: 'white'
+    },
+    OK: {
+        width: '100%',
+        height: 50,
+        backgroundColor: '#FF5F24',
+        marginTop: 20,
+        justifyContent: 'center',
+        alignItems: 'center',
+        shadowColor: 'rgba(0, 0, 0, 0.2)',
+        shadowOpacity: 0.26,
+        shadowOffset: { width: 0, height: 2 },
+        shadowRadius: 10,
+        elevation: 3,
+        borderRadius: 25
+    },
+    text1: {
+        color: 'white',
+        fontWeight: '700',
+        fontSize: 20
     }
 })
 
