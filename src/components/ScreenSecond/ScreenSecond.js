@@ -27,6 +27,10 @@ const ScreenSecond = () => {
         <SafeAreaView style={styles.container}>
             <StatusBar backgroundColor='white' barStyle={"dark-content"} />
             <ImageBackground style={styles.container} source={require('../../img/backgroundcolor.png')}>
+                <Image
+                    source={require('../../img/background.png')}
+                    style={{ width: '100%', height: 813 }}
+                />
                 <View style={styles.header}>
                     <Image
                         source={require('../../img/okgoCIP-05.png')}
@@ -66,8 +70,8 @@ const ScreenSecond = () => {
                         <TouchableOpacity style={styles.OK}>
                             <Text style={styles.text1}>OK</Text>
                         </TouchableOpacity>
-                        <View style={{ marginTop:20,height:40, width:'100%',backgroundColor:'#436EEE',borderRadius:8,justifyContent:'center',alignItems:'center' }}>
-                            <LoginButton 
+                        <View style={{ marginTop: 20, height: 40, width: '100%', backgroundColor: '#436EEE', borderRadius: 8, justifyContent: 'center', alignItems: 'center' }}>
+                            <LoginButton
                             />
                         </View>
                     </View>
@@ -84,12 +88,19 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     header: {
-        flex: 1,
-        justifyContent: 'center',
-        alignItems: 'center'
+        // flex: 1,
+        // justifyContent: 'center',
+        // alignItems: 'center',
+        position:'absolute',
+        left:'35%',
+        top:'10%',
+        zIndex: 1
     },
     footer: {
-        flex: 1,
+        // flex: 1,
+        position:'absolute',
+        zIndex:1,
+        top:'50%'
     },
     img: {
         width: width / 3.7,
