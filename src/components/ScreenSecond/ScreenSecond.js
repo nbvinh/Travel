@@ -61,7 +61,7 @@ const ScreenSecond = () => {
                                 style={styles.textInput}
                                 onChangeText={(value) => onChange(value)}
                                 value={text}
-                                maxLength={10}
+                                maxLength={9}
                                 keyboardType='numeric'
                                 placeholder="Nhập Số Điện Thoại"
                                 placeholderTextColor='white'

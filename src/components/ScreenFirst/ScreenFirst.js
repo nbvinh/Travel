@@ -77,8 +77,8 @@ const ScreenFirst = ({navigation}) => {
     const rotate = interpolate.interpolate({
         // inputRange :[-1,0,1],
         // outputRange :['-360deg','0deg','360deg']
-        inputRange: [-1, -0.8, -0.6, -0.4, -0.2, 0, 0.2, 0.4, 0.6, 0.8, 1],
-        outputRange: ['-360deg', '-294deg', '-229deg', '-164deg', '-99deg', '-34deg', '31deg', '96deg', '161deg', '226deg', '360deg']
+        inputRange: [-1, -0.8, -0.6, -0.4, -0.2, 0, 0.2, 0.4, 0.6, 0.8, 1,2],
+        outputRange: ['-360deg', '-294deg', '-229deg', '-164deg', '-99deg', '-34deg', '31deg', '96deg', '161deg', '226deg', '360deg','-360deg']
     })
     return (
         <SafeAreaView style={styles.container}>
