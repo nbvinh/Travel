@@ -1,5 +1,5 @@
-import React, { useRef } from "react";
-import { View, Text, SafeAreaView, StyleSheet, TextInput, Platform,Image } from "react-native";
+import React, { useRef, useEffect, useState } from "react";
+import { View, Text, SafeAreaView, StyleSheet, TextInput, Platform, Image } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 
 let OTP = '9999'
@@ -20,8 +20,19 @@ const ScreenOTP = ({ navigation }) => {
         if (OTP === OTP1 + OTP2 + OTP3 + OTP4) {
             navigation.navigate('ScreenUpdateProfile')
         }
-
     }
+    const [TimeDown, setTimeDown] = useState(59);
+    useEffect(() => {
+        const Time = setInterval(() => {
+            setTimeDown(TimeDown - 1);
+            if (TimeDown == 0) {
+                setTimeDown(60);
+            }
+        }, 1000);
+        return () => {
+            clearInterval(Time);
+        }
+    })
     return (
         <SafeAreaView style={styles.container}>
             <View style={styles.content}>
@@ -162,7 +173,7 @@ const ScreenOTP = ({ navigation }) => {
                     />
                     <Text />
                 </View>
-                <Text style={styles.text2}>Gửi lại (60s)</Text>
+                <Text style={styles.text2}>Gửi lại ({TimeDown}s)</Text>
                 <TouchableOpacity style={styles.OK} onPress={() => onConFirm()}>
                     <Text style={styles.text3}>Xác Nhận</Text>
                 </TouchableOpacity>

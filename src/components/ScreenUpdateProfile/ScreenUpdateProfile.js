@@ -73,7 +73,7 @@ const ScreenUpdateProfile = ({ navigation }) => {
                 />
                 {
                     finish || finish1 ?
-                        <TouchableOpacity style={styles.finish}>
+                        <TouchableOpacity style={styles.finish} onPress={()=>navigation.navigate('BottomTab')}>
                             <Text style={styles.textfinish}>Hoàn Thành</Text>
                         </TouchableOpacity>
                         :
