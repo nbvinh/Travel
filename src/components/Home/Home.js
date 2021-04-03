@@ -6,34 +6,39 @@ import ImgHeader from "./ImgHeader";
 import Promotion from "./Promotion";
 import TextHome from "../TextHome";
 import Schedule from "./Schedule";
+import PopularPlace from "./PopularPlace";
+import Experience from "./Experience";
+import Hotel from "./Hotel";
 const { height, width } = Dimensions.get('screen')
-const Home = () => {
+const Home = ({navigation}) => {
     const [search, setSearch] = useState('')
     return (
         <SafeAreaView style={styles.container}>
-            <ImageBackground source={require('../../img/khampha.png')} style={{ flex: 5 }}>
-                <View style={styles.textHeader}>
-                    <Text style={styles.text1}>Khám phá</Text>
-                    <Text style={styles.text2}>Lên lịch trình, đặt vé máy bay, khách sạn, tìm kiếm các tour lịch và các hoạt động vui chơi giải trí</Text>
-                </View>
-                <View style={{ marginLeft: 20, }}>
-                    <ImgHeader />
-                </View>
-                <View style={styles.search}>
-                    <Image
-                        source={require('../../img/Vector.png')}
-                        style={styles.img}
-                    />
-                    <TextInput
-                        placeholder={'Bạn muốn đi đâu?'}
-                        maxLength={20}
-                        onChangeText={(value) => setSearch(value)}
-                    />
-                </View>
-            </ImageBackground>
+            <ScrollView style={styles.scrollview}>
+                <ImageBackground source={require('../../img/khampha.png')} style={{ height: height / 3.8 }}>
+                    <View style={styles.textHeader}>
+                        <Text style={styles.text1}>Khám phá</Text>
+                        <Text style={styles.text2}>Lên lịch trình, đặt vé máy bay, khách sạn, tìm kiếm các tour lịch và các hoạt động vui chơi giải trí</Text>
+                    </View>
+                    <View style={{ marginLeft: 20, }}>
+                        <ImgHeader />
+                    </View>
+                    <View style={styles.search}>
+                        <Image
+                            source={require('../../img/Vector.png')}
+                            style={styles.img}
+                        />
+                        <TextInput
+                            placeholder={'Bạn muốn đi đâu?'}
+                            maxLength={20}
+                            onChangeText={(value) => setSearch(value)}
+                            style={styles.textinput}
+                        />
+                    </View>
+                </ImageBackground>
 
-            <View style={{ flex: 10 }}>
-                <ScrollView style={styles.scrollview}>
+                <View style={{ flex: 10 }}>
+
                     <View style={styles.onpress}>
                         <TouchableOpacity style={styles.touchable}>
                             <Text style={styles.text3}>Xem gợi ý</Text>
@@ -42,16 +47,32 @@ const Home = () => {
                             <Text style={styles.text3}>Tạo lịch trình</Text>
                         </TouchableOpacity>
                     </View>
-                    <TextHome text1={'Khuyến Mại'} text2={'Xem Thêm >'} />
+                    <TextHome text1={'Khuyến Mại'} text2={'Xem Thêm >'} onSeeMore = {()=>navigation.navigate('SeeMorePromotions')} />
                     <View style={{ marginLeft: 20 }}>
                         <Promotion />
                     </View>
-                    <TextHome text1={'Lịch trình gần đây'} text2={'Xem Thêm >'} />
+                    <TextHome text1={'Lịch trình gần đây'} text2={'Xem Thêm >'}/>
                     <View style={{ marginLeft: 20 }}>
                         <Schedule />
                     </View>
-                </ScrollView>
-            </View>
+                    <TextHome text1={'Địa điểm phổ biến'} text2={'Xem Thêm >'} />
+                    <View style={{ marginLeft: 20 }}>
+                        <PopularPlace />
+                    </View>
+                    <TextHome text1={'Trải Nghiệm nổi bật'} text2={'Xem Thêm >'} />
+                    <View style={{ marginLeft: 20 }}>
+                        <Experience />
+                    </View>
+                    <TextHome text1={'Điểm đến tháng 12'} text2={'Xem Thêm >'} />
+                    <View style={{ marginLeft: 20 }}>
+                        <PopularPlace />
+                    </View>
+                    <TextHome text1={'Khách sạn & Resort'} text2={'Xem Thêm >'} />
+                    <View style={{ marginLeft: 20 }}>
+                        <Hotel />
+                    </View>
+                </View>
+            </ScrollView>
         </SafeAreaView>
     )
 }
@@ -134,4 +155,8 @@ const styles = StyleSheet.create({
         color: '#9E9E9E',
         fontWeight: '600'
     },
+    textinput: {
+        width: '100%',
+        height: '100%'
+    }
 })

@@ -1,15 +1,14 @@
 const initialState = {
     user: [],
     count: 0,
-    modalProfile: false
+    modalProfile: false,
+    check : false
   };
   
   export default function peopleReducer(state = initialState, action) {
     switch (action.type) {
-      case 'MODALPROFILE':
-        return{...state,modalProfile: !state.modalProfile}
-      case 'PHONE' :
-        return{...state, phone: action.phone}
+      case 'CHECK':
+        return{...state,check: true}
       default:
         return state;
     }

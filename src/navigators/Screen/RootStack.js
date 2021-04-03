@@ -7,7 +7,7 @@ import ScreenSecond from "../../components/ScreenSecond/ScreenSecond";
 import ScreenOTP from "../../components/SreenOTP/ScreenOTP";
 import ScreenUpdateProfile from "../../components/ScreenUpdateProfile/ScreenUpdateProfile";
 import BottomTab from "../../navigators/Screen/BottomTab";
-
+import SeeMorePromotions from "../../components/SeeMore/SeeMorePromotions";
 const Root = createStackNavigator();
 const RootStack = () => {
     return (
@@ -18,6 +18,7 @@ const RootStack = () => {
                 <Root.Screen name="ScreenSecond" component={ScreenSecond} />
                 <Root.Screen name="ScreenOTP" component={ScreenOTP} />
                 <Root.Screen name="ScreenUpdateProfile" component={ScreenUpdateProfile} />
+                <Root.Screen name="SeeMorePromotions" component={SeeMorePromotions} />
             </Root.Navigator>
         </NavigationContainer>
     )

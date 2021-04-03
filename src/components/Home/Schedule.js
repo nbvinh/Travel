@@ -32,13 +32,13 @@ const Schedule = () => {
                                     </View>
                                 </View>
                             </View>
-                            <View style={{ marginTop: 15, marginHorizontal: 20, flexDirection: 'row', justifyContent: 'space-between' }}>
-                                <View>
-                                    <View style={{ flexDirection: 'row',marginBottom:10 }}>
+                            <View style={{ marginTop: 15, flexDirection: 'row', justifyContent: 'space-between',width:(width / 3.1 + width / 2.15 +10) }}>
+                                <View style={{flex:1}}>
+                                    <View style={{ flexDirection: 'row',marginBottom:10,marginLeft:5 }}>
                                         <Text style={{ fontWeight: 'bold' }}>{item.text1} </Text>
                                         <Text style={{ color: '#494949' }}>({item.text2})</Text>
                                     </View>
-                                    <View style={{flexDirection:'row',marginBottom:10}}>
+                                    <View style={{flexDirection:'row',marginBottom:10,marginLeft:5}}>
                                         <Image 
                                             source={{uri:item.avatar}}
                                             style={{width:25,height:25,borderRadius:15,marginRight:10,marginTop:5}}
@@ -49,7 +49,7 @@ const Schedule = () => {
                                         </View>
                                     </View>
                                 </View>
-                                <View>
+                                <View style={{marginRight:5}}>
                                     <View style={{flexDirection:'row',justifyContent:'flex-end'}}>
                                         <Image 
                                             source={require('../../img/location.png')}

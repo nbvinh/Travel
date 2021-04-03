@@ -1,18 +1,17 @@
-import React from "react";
-import { View, StyleSheet, TouchableHighlight, Animated, Text } from "react-native";
+import React, { useState } from "react";
+import { View, StyleSheet, TouchableHighlight, Animated, Text, Image } from "react-native";
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Feather from 'react-native-vector-icons/Feather';
+import { TouchableOpacity } from "react-native-gesture-handler";
+import { useDispatch, useSelector } from "react-redux";
 const AddButton = () => {
     let mode = new Animated.Value(0);
-    let buttonSize = new Animated.Value(1);
-
+    let buttonSize = new Animated.Value(0);
+    const check = useSelector(store => store.people.check)
+    const dispatch = useDispatch()
     const handlePress = () => {
-        Animated.sequence([
-            Animated.timing(buttonSize, {
-                toValue: 0.95,
-                duration: 100,
-                useNativeDriver: false
-            }),
+
+        Animated.parallel([
             Animated.timing(buttonSize, {
                 toValue: 1,
                 useNativeDriver: false
@@ -25,32 +24,41 @@ const AddButton = () => {
     };
     const thermometerX = mode.interpolate({
         inputRange: [0, 1],
-        outputRange: [-24, -100]
+        outputRange: [-0, -90]
     });
 
     const thermometerY = mode.interpolate({
         inputRange: [0, 1],
-        outputRange: [-50, -100]
+        outputRange: [-0, -50]
+    });
+    const PenX = mode.interpolate({
+        inputRange: [0, 1],
+        outputRange: [-0, 40]
+    });
+
+    const PenY = mode.interpolate({
+        inputRange: [0, 1],
+        outputRange: [-0, -100]
     });
 
     const timeX = mode.interpolate({
         inputRange: [0, 1],
-        outputRange: [-24, -24]
+        outputRange: [-0, -40]
     });
 
     const timeY = mode.interpolate({
         inputRange: [0, 1],
-        outputRange: [-50, -150]
+        outputRange: [-0, -100]
     });
 
     const pulseX = mode.interpolate({
         inputRange: [0, 1],
-        outputRange: [-24, 50]
+        outputRange: [-0, 90]
     });
 
     const pulseY = mode.interpolate({
         inputRange: [0, 1],
-        outputRange: [-50, -100]
+        outputRange: [-0, -50]
     });
 
     const rotation = mode.interpolate({
@@ -58,34 +66,56 @@ const AddButton = () => {
         outputRange: ["0deg", "45deg"]
     });
 
-    const sizeStyle = {
-        transform: [{ scale: buttonSize }]
-    };
+    const fontSize = mode.interpolate({
+        inputRange: [0, 1],
+        outputRange: [0, 10]
+    });
 
     return (
-        <View style={{ position: "absolute", alignItems: "center" }}>
+        <View style={{ flex: 1 }}>
             <Animated.View style={{ position: "absolute", left: thermometerX, top: thermometerY }}>
                 <View style={styles.secondaryButton}>
-                    <Feather name="thermometer" size={24} color="#FFF" />
+                    <Image
+                        source={require('../img/plus.png')}
+                        style={{ width: 20, height: 20 }}
+                    />
                 </View>
+                <Animated.Text style={[styles.text1, { fontSize }]}>Tạo Lịch Trình</Animated.Text>
             </Animated.View>
             <Animated.View style={{ position: "absolute", left: timeX, top: timeY }}>
                 <View style={styles.secondaryButton}>
-                    <Feather name="clock" size={24} color="#FFF" />
+                    <Image
+                        source={require('../img/lights.png')}
+                        style={{ width: 20, height: 20 }}
+                    />
                 </View>
+                <Animated.Text style={[styles.text2, { fontSize }]}>Xem Gợi Ý</Animated.Text>
+            </Animated.View>
+            <Animated.View style={{ position: "absolute", left: PenX, top: PenY }}>
+                <View style={styles.secondaryButton}>
+                    <Image
+                        source={require('../img/Pen.png')}
+                        style={{ width: 20, height: 20 }}
+                    />
+                </View>
+                <Animated.Text style={[styles.text2, { fontSize }]}>Đánh giá</Animated.Text>
             </Animated.View>
             <Animated.View style={{ position: "absolute", left: pulseX, top: pulseY }}>
                 <View style={styles.secondaryButton}>
-                    <Feather name="activity" size={24} color="#FFF" />
+                    <Image
+                        source={require('../img/Search.png')}
+                        style={{ width: 20, height: 20 }}
+                    />
                 </View>
+                <Animated.Text style={[styles.text1,{fontSize}]}>Tìm quanh đây</Animated.Text>
             </Animated.View>
-            <Animated.View style={[styles.button, sizeStyle]}>
-                <TouchableHighlight onPress={() => handlePress()} underlayColor="#7F58FF">
-                    <Animated.View style={{ transform: [{ rotate: rotation }] }}>
-                        <FontAwesome5 name="plus" size={24} color="#FFF" />
-                    </Animated.View>
-                </TouchableHighlight>
-            </Animated.View>
+            <TouchableOpacity style={styles.Plus}
+                onPress={() => handlePress()}
+            >
+                <Animated.View style={{ transform: [{ rotate: rotation }] }}>
+                    <FontAwesome5 name="plus" size={24} color="#FFF" />
+                </Animated.View>
+            </TouchableOpacity>
         </View>
     );
 }
@@ -114,6 +144,27 @@ const styles = StyleSheet.create({
         width: 48,
         height: 48,
         borderRadius: 24,
-        backgroundColor: "#7F58FF"
+        backgroundColor: "#FF5F24"
+    },
+    text1: {
+        color: 'white',
+        fontWeight: 'bold',
+        position: 'absolute',
+        top: 50,
+        left: -10
+    },
+    text2: {
+        color: 'white',
+        fontWeight: 'bold',
+        position: 'absolute',
+        top: 50
+    },
+    Plus: {
+        width: '100%',
+        height: '100%',
+        backgroundColor: '#FF5F24',
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: 30
     }
 });
