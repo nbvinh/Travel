@@ -160,8 +160,8 @@ const styles = StyleSheet.create({
         top: 50
     },
     Plus: {
-        width: '100%',
-        height: '100%',
+        width: 50,
+        height: 50,
         backgroundColor: '#FF5F24',
         justifyContent: 'center',
         alignItems: 'center',

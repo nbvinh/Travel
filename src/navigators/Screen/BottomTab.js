@@ -1,4 +1,4 @@
-
+import Touch from "../../components/Touch";
 import AddButton from "../../components/AddButton";
 import Search from "../../components/Search/Search";
 import Cart from "../../components/Cart/Cart";
@@ -6,21 +6,24 @@ import Notification from "../../components/Notification/Notification";
 import User from "../../components/User/User";
 import Home from "../../components/Home/Home";
 import * as React from 'react';
-import { View, Text, TouchableOpacity, Image } from 'react-native';
+import { View, Text, TouchableOpacity, Image, Dimensions } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-// import FontAwesome from 'react-native-vector-icons/FontAwesome';
-// import Feather from "react-native-vector-icons/Feather";
+const { width, height } = Dimensions.get('screen')
 function MyTabBar({ state, descriptors, navigation }) {
     return (
         <View style={{ flexDirection: 'row', height: 45, backgroundColor: 'white' }}>
-            <View style={{ width: 50, height: 50, position: 'absolute', left: '43.5%', zIndex: 1, bottom: 20 }}>
+            <View style={{ position: 'absolute', left: (width / 5) * 2, right: (width / 5) * 2, zIndex: 1, bottom: 20, alignItems: 'center' }}>
                 <AddButton />
             </View>
-            <View style={{ width: 50, height: 50, position: 'absolute', right:10, zIndex: 1, bottom: 60 }}>
-                <Image 
-                    source={require('../../img/touchable.png')}
-                    style={{width:49,height:49}}
-                />
+            <View style={{ width: 49, height: 49, position: 'absolute', right: 10, zIndex: 1, bottom: 60 }}>
+                {/* <TouchableOpacity>
+                    <Image
+                        source={require('../../img/touchable.png')}
+                        style={{ width: '100%', height: '100%' }}
+                    />
+
+                </TouchableOpacity> */}
+                <Touch/>
             </View>
             {state.routes.map((route, index) => {
                 const { options } = descriptors[route.key];
