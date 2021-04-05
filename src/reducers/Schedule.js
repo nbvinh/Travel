@@ -19,7 +19,7 @@ const initialState = {
             img2:'https://www.vietnambooking.com/wp-content/uploads/2020/07/hon-kho-quy-nhon-1.jpg',
             img3: 'https://timchuyenbay.com/assets/uploads/2020/06/quy-nhon.jpg',
             img4:'https://tourdulichviet.com/storage/upload/images/800x600/tour-ha-noi-quy-nhon-ky-co-eo-gio-4-ngay-3-dem.png',
-            text1: 'Quy Nhơn, Kỳ Co',
+            text1: 'Quy Nhơn, Bình Định',
             text2:'5 Ngày',
             price: '5,200,000 đ/ người',
             avatar :'http://linkvaobong88ag.com/wp-content/uploads/2020/11/khong-minh-thanh-15.jpg',

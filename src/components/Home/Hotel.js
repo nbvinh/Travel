@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, ImageBackground, SafeAreaView, StyleSheet, Dimensions, Image, TextInput, ScrollView, FlatList } from "react-native";
 import { useSelector, useDispatch } from "react-redux";
+import AppStyle from "../../theme/index";
 const { height, width } = Dimensions.get('screen')
 const Hotel = () => {
     const dataheader = useSelector(store => store.Hotel.data)
@@ -9,45 +10,45 @@ const Hotel = () => {
             {
                 dataheader && dataheader.map((item) => {
                     return (
-                        <View key={item.id.toString()} style={{ marginRight: 20, width: width / 2.34,marginBottom:30 }}>
+                        <View key={item.id.toString()} style={AppStyle.StyleHotel.container}>
                             <Image
                                 source={{ uri: item.img }}
-                                style={{ width: '100%', height: height / 5.4, borderRadius: 5 }}
+                                style={AppStyle.StyleHotel.img1}
                             />
-                            <View style={{flexDirection:'row',justifyContent:'space-between',width:'100%'}}>
-                                <Text style={{marginVertical:5,color:'#A1A1A1',fontSize:height/64}}>{item.text2}</Text>
-                                <View style={{flexDirection:'row',justifyContent:'space-around',marginTop:10}}>
+                            <View style={AppStyle.StyleHotel.content}>
+                                <Text style={AppStyle.StyleHotel.text1}>{item.text2}</Text>
+                                <View style={AppStyle.StyleHotel.content2}>
                                     <Image 
                                         source={require('../../img/star.png')}
-                                        style={{width:10,height:9.56,marginRight:3}}
+                                        style={AppStyle.StyleHotel.star}
                                     />
                                     <Image 
                                         source={require('../../img/star.png')}
-                                        style={{width:10,height:9.56,marginRight:3}}
+                                        style={AppStyle.StyleHotel.star}
                                     />
                                     <Image 
                                         source={require('../../img/star.png')}
-                                        style={{width:10,height:9.56,marginRight:3}}
+                                        style={AppStyle.StyleHotel.star}
                                     />
                                     <Image 
                                         source={require('../../img/star.png')}
-                                        style={{width:10,height:9.56,marginRight:3}}
+                                        style={AppStyle.StyleHotel.star}
                                     />
                                     <Image 
                                         source={require('../../img/star.png')}
-                                        style={{width:10,height:9.56}}
+                                        style={AppStyle.StyleHotel.star}
                                     />
                                 </View>
                             </View>
-                            <Text style={{ color: 'black', fontSize: height / 45, fontWeight: '700',marginBottom:5 }}>{item.text}</Text>
+                            <Text style={AppStyle.StyleHotel.text2}>{item.text}</Text>
                             <View style={{flexDirection:'row'}}>
                                 <Image
                                     source={require('../../img/location.png')}
-                                    style={{ width: 10, height: 13, marginRight: 5,marginTop:3 }}
+                                    style={AppStyle.StyleHotel.img2}
                                 />
-                                <Text style={{color:'#3076FE',marginBottom:5}}>{item.text1}</Text>
+                                <Text style={AppStyle.StyleHotel.text3}>{item.text1}</Text>
                             </View>
-                            <Text style={{color:'red',fontSize:height/50,fontWeight:'600'}}>{item.price} đ/ đêm</Text>
+                            <Text style={AppStyle.StyleHotel.text4}>{item.price} đ/ đêm</Text>
                         </View>
                     )
                 })

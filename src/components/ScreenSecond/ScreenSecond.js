@@ -137,15 +137,15 @@ const styles = StyleSheet.create({
     img1: {
         width: 137,
         height: 33.69,
-        marginTop: 10
+        marginTop: width/37.5
     },
     footercontent: {
-        marginHorizontal: 10
+        marginHorizontal: width/37.5
     },
     textInput: {
-        borderTopRightRadius: 30,
-        borderBottomRightRadius: 30,
-        height: 50,
+        borderTopRightRadius: width/12.5,
+        borderBottomRightRadius: width/12.5,
+        height: height/16.24,
         width: '60%',
         backgroundColor: 'rgba(0, 0, 0, 0.7)',
         color: 'white'
@@ -154,33 +154,33 @@ const styles = StyleSheet.create({
         flexDirection: 'row'
     },
     textinput1: {
-        height: 50,
+        height: height/16.24,
         width: '40%',
         backgroundColor: 'rgba(0, 0, 0, 0.7)',
-        borderTopLeftRadius: 30,
-        borderBottomLeftRadius: 30,
+        borderTopLeftRadius: width/12.5,
+        borderBottomLeftRadius: width/12.5,
         justifyContent: 'space-around',
         alignItems: 'center',
         flexDirection: 'row'
     },
     img2: {
-        width: 24,
-        height: 15.89
+        width: width/15.625,
+        height: height/51.1
     },
     img3: {
-        width: 10,
-        height: 6
+        width: width/37.5,
+        height: height/135.333
     },
     text: {
-        fontSize: 15,
+        fontSize: width/25,
         fontWeight: '500',
         color: 'white'
     },
     OK: {
         width: '100%',
-        height: 50,
+        height: height/16.24,
         backgroundColor: '#FF5F24',
-        marginTop: 20,
+        marginTop: width/18.75,
         justifyContent: 'center',
         alignItems: 'center',
         shadowColor: 'rgba(0, 0, 0, 0.2)',
@@ -188,15 +188,15 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
         shadowRadius: 10,
         elevation: 3,
-        borderRadius: 25
+        borderRadius: width/15
     },
     text1: {
         color: 'white',
         fontWeight: '700',
-        fontSize: 20
+        fontSize: width/18.75
     },
     loginFB: {
-        marginTop: 50,
+        marginTop: width/7.5,
         height: 40,
         width: '100%',
         backgroundColor: '#436EEE',
@@ -205,23 +205,23 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     img4: {
-        width: 40,
+        width: width/9.375,
         height: '100%',
         backgroundColor: 'white',
-        borderTopLeftRadius: 8,
-        borderBottomLeftRadius: 8,
+        borderTopLeftRadius: width/46.875,
+        borderBottomLeftRadius: width/46.875,
     },
     loginGG: {
         backgroundColor: '#1864FD',
-        marginTop: 20,
+        marginTop: width/18.75,
         width: '100%',
         height: 40,
-        borderRadius: 8,
+        borderRadius: width/46.875,
         flexDirection: 'row',
     },
     text2: {
         color: 'white',
-        fontSize: 15,
+        fontSize: width/25,
         fontWeight: '500',
     }
 })

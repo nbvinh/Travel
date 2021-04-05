@@ -9,66 +9,68 @@ import Schedule from "./Schedule";
 import PopularPlace from "./PopularPlace";
 import Experience from "./Experience";
 import Hotel from "./Hotel";
+import DecemberDestination from "./DecemberDestination";
+import AppStyle from "../../theme/index";
 const { height, width } = Dimensions.get('screen')
-const Home = ({navigation}) => {
+const Home = ({ navigation }) => {
     const [search, setSearch] = useState('')
     return (
-        <SafeAreaView style={styles.container}>
-            <ScrollView style={styles.scrollview}>
+        <SafeAreaView style={AppStyle.StyleHome.container}>
+            <ScrollView style={AppStyle.StyleHome.scrollview}>
                 <ImageBackground source={require('../../img/khampha.png')} style={{ height: height / 3.8 }}>
-                    <View style={styles.textHeader}>
-                        <Text style={styles.text1}>Khám phá</Text>
-                        <Text style={styles.text2}>Lên lịch trình, đặt vé máy bay, khách sạn, tìm kiếm các tour lịch và các hoạt động vui chơi giải trí</Text>
+                    <View style={AppStyle.StyleHome.textHeader}>
+                        <Text style={AppStyle.StyleHome.text1}>Khám phá</Text>
+                        <Text style={AppStyle.StyleHome.text2}>Lên lịch trình, đặt vé máy bay, khách sạn, tìm kiếm các tour lịch và các hoạt động vui chơi giải trí</Text>
                     </View>
-                    <View style={{ marginLeft: 20, }}>
+                    <View style={AppStyle.StyleHome.marginLeft}>
                         <ImgHeader />
                     </View>
-                    <View style={styles.search}>
+                    <View style={AppStyle.StyleHome.search}>
                         <Image
                             source={require('../../img/Vector.png')}
-                            style={styles.img}
+                            style={AppStyle.StyleHome.img}
                         />
                         <TextInput
                             placeholder={'Bạn muốn đi đâu?'}
                             maxLength={20}
                             onChangeText={(value) => setSearch(value)}
-                            style={styles.textinput}
+                            style={AppStyle.StyleHome.textinput}
                         />
                     </View>
                 </ImageBackground>
 
                 <View style={{ flex: 10 }}>
 
-                    <View style={styles.onpress}>
-                        <TouchableOpacity style={styles.touchable}>
-                            <Text style={styles.text3}>Xem gợi ý</Text>
+                    <View style={AppStyle.StyleHome.onpress}>
+                        <TouchableOpacity style={AppStyle.StyleHome.touchable}>
+                            <Text style={AppStyle.StyleHome.text3}>Xem gợi ý</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={styles.touchable}>
-                            <Text style={styles.text3}>Tạo lịch trình</Text>
+                        <TouchableOpacity style={AppStyle.StyleHome.touchable}>
+                            <Text style={AppStyle.StyleHome.text3}>Tạo lịch trình</Text>
                         </TouchableOpacity>
                     </View>
-                    <TextHome text1={'Khuyến Mại'} text2={'Xem Thêm >'} onSeeMore = {()=>navigation.navigate('SeeMorePromotions')} />
-                    <View style={{ marginLeft: 20 }}>
+                    <TextHome text1={'Khuyến Mại'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMorePromotions')} />
+                    <View style={AppStyle.StyleHome.marginLeft}>
                         <Promotion />
                     </View>
-                    <TextHome text1={'Lịch trình gần đây'} text2={'Xem Thêm >'}/>
-                    <View style={{ marginLeft: 20 }}>
+                    <TextHome text1={'Lịch trình gần đây'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMoreSchedule')} />
+                    <View style={AppStyle.StyleHome.marginLeft}>
                         <Schedule />
                     </View>
-                    <TextHome text1={'Địa điểm phổ biến'} text2={'Xem Thêm >'} />
-                    <View style={{ marginLeft: 20 }}>
+                    <TextHome text1={'Địa điểm phổ biến'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMorePopularPlace')} />
+                    <View style={AppStyle.StyleHome.marginLeft}>
                         <PopularPlace />
                     </View>
-                    <TextHome text1={'Trải Nghiệm nổi bật'} text2={'Xem Thêm >'} />
-                    <View style={{ marginLeft: 20 }}>
+                    <TextHome text1={'Trải Nghiệm nổi bật'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMoreExperience')} />
+                    <View style={AppStyle.StyleHome.marginLeft}>
                         <Experience />
                     </View>
-                    <TextHome text1={'Điểm đến tháng 12'} text2={'Xem Thêm >'} />
-                    <View style={{ marginLeft: 20 }}>
-                        <PopularPlace />
+                    <TextHome text1={'Điểm đến tháng 12'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMoreDecemberDestination')} />
+                    <View style={AppStyle.StyleHome.marginLeft}>
+                        <DecemberDestination />
                     </View>
-                    <TextHome text1={'Khách sạn & Resort'} text2={'Xem Thêm >'} />
-                    <View style={{ marginLeft: 20 }}>
+                    <TextHome text1={'Khách sạn & Resort'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMoreHotel')}/>
+                    <View style={AppStyle.StyleHome.marginLeft}>
                         <Hotel />
                     </View>
                 </View>
@@ -77,86 +79,3 @@ const Home = ({navigation}) => {
     )
 }
 export default Home;
-const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-        backgroundColor: '#E5E5E5'
-    },
-    search: {
-        backgroundColor: 'white',
-        borderRadius: 5,
-        shadowColor: 'black',
-        shadowOpacity: 0.26,
-        shadowOffset: { width: 0, height: 2 },
-        shadowRadius: 10,
-        elevation: 3,
-        height: 40,
-        position: 'absolute',
-        bottom: -20,
-        left: 20,
-        right: 20,
-        flexDirection: 'row',
-        alignItems: 'center'
-    },
-    img: {
-        width: 16,
-        height: 14,
-        marginLeft: 20,
-        marginRight: 10
-    },
-    textHeader: {
-        marginHorizontal: 20,
-        marginTop: 10
-    },
-    text1: {
-        fontSize: height / 45,
-        fontWeight: 'bold',
-        color: 'white'
-    },
-    text2: {
-        color: 'white',
-        fontSize: height / 51,
-        marginTop: 5
-    },
-    onpress: {
-        marginTop: 40,
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        marginHorizontal: 20
-    },
-    touchable: {
-        width: width / 2.4,
-        height: 25,
-        backgroundColor: '#FF5F24',
-        justifyContent: 'center',
-        alignItems: 'center',
-        borderRadius: 5
-    },
-    text3: {
-        color: 'white',
-    },
-    scrollview: {
-        flex: 1,
-
-    },
-    textPromotion: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        marginTop: 10,
-        marginBottom: 20,
-        marginHorizontal: 20
-    },
-    text4: {
-        fontWeight: 'bold',
-        fontSize: height / 45
-    },
-    text5: {
-        fontSize: height / 45,
-        color: '#9E9E9E',
-        fontWeight: '600'
-    },
-    textinput: {
-        width: '100%',
-        height: '100%'
-    }
-})

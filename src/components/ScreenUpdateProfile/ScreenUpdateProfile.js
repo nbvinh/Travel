@@ -73,7 +73,7 @@ const ScreenUpdateProfile = ({ navigation }) => {
                 />
                 {
                     finish || finish1 ?
-                        <TouchableOpacity style={styles.finish} onPress={()=>navigation.navigate('BottomTab')}>
+                        <TouchableOpacity style={styles.finish} onPress={() => navigation.navigate('BottomTab')}>
                             <Text style={styles.textfinish}>Hoàn Thành</Text>
                         </TouchableOpacity>
                         :
@@ -84,8 +84,8 @@ const ScreenUpdateProfile = ({ navigation }) => {
                 }
                 <View style={styles.rules}>
                     <Text style={styles.text3}>Bằng cách tham gia OKGO, bạn đã đồng ý với
-                        <Text onPress={() => { dispatch({ type: 'MODALPROFILE' }) }} style={{ textDecorationLine: 'underline' }}> Chính sách bảo mật và Điều khoản sử dụng</Text>
-                        <Text> của chúng tôi</Text>
+                        <Text onPress={() => { dispatch({ type: 'MODALPROFILE' }) }} style={{ textDecorationLine: 'underline' }}> Chính sách bảo mật và Điều khoản sử dụng </Text>
+                        của chúng tôi
                     </Text>
                 </View>
             </View>
@@ -101,57 +101,58 @@ const styles = StyleSheet.create({
     },
     content: {
         flex: 10,
-        marginHorizontal: 20
+        marginHorizontal: width / 18.75
     },
     text1: {
-        fontSize: 25,
+        fontSize: width / 15,
         fontWeight: 'bold',
-        marginBottom: 20
+        marginBottom: width / 18.75
     },
     text2: {
         width: '100%',
-        height: 40,
+        height: width / 9.375,
         borderBottomWidth: 2,
         color: 'black',
-        fontSize: 18,
+        fontSize: height / 45.1111,
         fontWeight: '400',
         justifyContent: 'center'
     },
     finish: {
         // position: 'absolute',
         // bottom:'40%',
-        marginTop:70,
-        height: 45,
+        marginTop: height / 11.6,
+        height: height / 18.1,
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#FF5F24',
-        borderRadius: 30
+        borderRadius: width / 12.5
     },
     textfinish: {
         fontWeight: '700',
         color: 'white',
-        fontSize: 18
+        fontSize: width / 20.8333
     },
     rules: {
         // position: 'absolute',
         // // top: '64%'
         // bottom:'20%',
-        marginTop:20
+        marginTop: width/18.75
     },
     text3: {
         textAlign: 'center',
-        color: '#565656'
+        color: '#565656',
+        fontSize:width/25
     },
     finishfall: {
         // position: 'absolute',
         // bottom:'40%',
-        marginTop:70,
-        height: 45,
+        marginTop: height / 11.6,
+        height: height / 18.1,
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#FBD7CA',
-        borderRadius: 30
+        borderRadius: width / 12.5
     }
 })
