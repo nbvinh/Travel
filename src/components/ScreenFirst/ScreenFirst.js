@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, StyleSheet, StatusBar, SafeAreaView, Image, Animated, Dimensions, Easing } from "react-native";
 const { width, height } = Dimensions.get('screen')
+import { scale, verticalScale, moderateScale } from 'react-native-size-matters';
 const ScreenFirst = ({navigation}) => {
     let Okgo1 = new Animated.Value(-height / 3)
     let Okgo2 = new Animated.Value(0)
@@ -148,11 +149,11 @@ const styles = StyleSheet.create({
         flex: 1.2,
     },
     img1: {
-        width: 59.41,
-        height: 11.39,
+        width: scale(59.41),
+        height: verticalScale(11.39),
         position: 'absolute',
-        bottom: 10,
-        left: 20
+        bottom: verticalScale(10),
+        left: verticalScale(20)
     },
     imgfather: {
         position: 'absolute',
@@ -160,19 +161,19 @@ const styles = StyleSheet.create({
         left: '40%',
     },
     img2: {
-        width: 76.02,
-        height: 98.11,
-        marginBottom: 5
+        width: scale(76.02),
+        height: scale(98.11),
+        marginBottom: moderateScale(5)
     },
     img3: {
-        width: 73,
-        height: 18,
+        width: scale(73),
+        height: verticalScale(18),
     },
     img4: {
         position: 'absolute',
         right: 0,
-        width: 66,
-        height: 11,
+        width: scale(66),
+        height: verticalScale(11),
         top: '15%'
     },
     img5: {
@@ -180,8 +181,8 @@ const styles = StyleSheet.create({
         height: '100%'
     },
     img6: {
-        height: 217,
-        width: 217,
+        height: verticalScale(217),
+        width: verticalScale(217),
         position: 'absolute'
     },
     img7: {
@@ -189,7 +190,7 @@ const styles = StyleSheet.create({
         height: '95%'
     },
     text: {
-        fontSize: 12,
+        fontSize: scale(12),
         position: 'absolute',
         bottom: 0,
         left: '45%',

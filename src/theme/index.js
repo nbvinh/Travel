@@ -8,6 +8,7 @@ import StyleSchedule from "./StyleSchedule";
 import StyleHotel from "./StyleHotel";
 import StylePromotionDetails from "./StylePromotionDetails";
 import StyleSeeMoreHotel from "./StyleSeeMoreHotel";
+import StyleScheduleDetails from "./StyleScheduleDetails";
 const AppStyle = {
     StyleHome,
     StyleExpenrience,
@@ -19,5 +20,6 @@ const AppStyle = {
     StyleHotel,
     StylePromotionDetails,
     StyleSeeMoreHotel,
+    StyleScheduleDetails
 }
 export default AppStyle;

@@ -15,7 +15,13 @@ const SeeMoreSchedule = ({ navigation }) => {
                     {
                         dataheader && dataheader.map((item) => {
                             return (
-                                <TouchableOpacity key={item.id.toString()} style={AppStyle.StyleSeeMoreSchedule.container}>
+                                <TouchableOpacity
+                                    key={item.id.toString()}
+                                    style={AppStyle.StyleSeeMoreSchedule.container}
+                                    onPress={()=>navigation.navigate('ScheduleDetails',
+                                        {id: item.id}
+                                    )}
+                                >
                                     <View style={{ flexDirection: 'row' }}>
                                         <Image
                                             source={{ uri: item.img1 }}

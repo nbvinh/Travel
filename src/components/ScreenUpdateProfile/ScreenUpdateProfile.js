@@ -3,6 +3,7 @@ import { View, TextInput, Text, SafeAreaView, StyleSheet, Dimensions, TouchableO
 import Header from "../Header";
 import { useDispatch, useSelector } from "react-redux";
 import Form from "./Form";
+import { verticalScale,moderateScale,scale } from "react-native-size-matters";
 
 const { width, height } = Dimensions.get('screen')
 const ScreenUpdateProfile = ({ navigation }) => {
@@ -56,7 +57,7 @@ const ScreenUpdateProfile = ({ navigation }) => {
                 <TextInput
                     onChangeText={(value) => onChangefisrtname(value)}
                     value={text1}
-                    style={[styles.text2, { marginVertical: 20, borderColor: fisrtname ? '#F17A4F' : '#E0E0E0' }]}
+                    style={[styles.text2, { marginVertical: scale(20), borderColor: fisrtname ? '#F17A4F' : '#E0E0E0' }]}
                     placeholder={'Tên'}
                     placeholderTextColor={'#BDBDBD'}
                     onFocus={() => {
@@ -101,58 +102,58 @@ const styles = StyleSheet.create({
     },
     content: {
         flex: 10,
-        marginHorizontal: width / 18.75
+        marginHorizontal: scale(20)
     },
     text1: {
-        fontSize: width / 15,
+        fontSize: scale(25),
         fontWeight: 'bold',
-        marginBottom: width / 18.75
+        marginBottom: scale(20)
     },
     text2: {
         width: '100%',
-        height: width / 9.375,
+        height: scale(40),
         borderBottomWidth: 2,
         color: 'black',
-        fontSize: height / 45.1111,
+        fontSize: scale(16),
         fontWeight: '400',
         justifyContent: 'center'
     },
     finish: {
         // position: 'absolute',
         // bottom:'40%',
-        marginTop: height / 11.6,
-        height: height / 18.1,
+        marginTop: verticalScale(70),
+        height: verticalScale(45),
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#FF5F24',
-        borderRadius: width / 12.5
+        borderRadius: scale(30)
     },
     textfinish: {
         fontWeight: '700',
         color: 'white',
-        fontSize: width / 20.8333
+        fontSize: scale(18)
     },
     rules: {
         // position: 'absolute',
         // // top: '64%'
         // bottom:'20%',
-        marginTop: width/18.75
+        marginTop:scale(20)
     },
     text3: {
         textAlign: 'center',
         color: '#565656',
-        fontSize:width/25
+        fontSize:scale(15)
     },
     finishfall: {
         // position: 'absolute',
         // bottom:'40%',
-        marginTop: height / 11.6,
-        height: height / 18.1,
+        marginTop: moderateScale(70),
+        height: verticalScale(45),
         width: '100%',
         justifyContent: 'center',
         alignItems: 'center',
         backgroundColor: '#FBD7CA',
-        borderRadius: width / 12.5
+        borderRadius: scale(30)
     }
 })

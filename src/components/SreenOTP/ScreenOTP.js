@@ -1,6 +1,7 @@
 import React, { useRef, useEffect, useState } from "react";
 import { View, Text, SafeAreaView, StyleSheet, TextInput, Platform, Image } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
+import { moderateScale, scale, verticalScale } from "react-native-size-matters";
 
 let OTP = '9999'
 const ScreenOTP = ({ navigation }) => {
@@ -190,40 +191,40 @@ const styles = StyleSheet.create({
     content: {
         position: 'absolute',
         top: '15%',
-        marginHorizontal: 30
+        marginHorizontal: scale(30)
     },
     text: {
         textAlign: 'center',
-        fontSize: 16,
+        fontSize: scale(16),
         fontWeight: '600'
     },
     textInput: {
         flexDirection: 'row',
         justifyContent: 'space-around',
-        marginTop: 40
+        marginTop: scale(40)
     },
     text1: {
-        width: 38,
-        height: 60,
-        borderBottomWidth: 5,
+        width: scale(38),
+        height: scale(60),
+        borderBottomWidth: verticalScale(5),
         // borderColor: '#D8D8D8',
         color: 'black',
         textAlign: 'center',
-        fontSize: 36,
+        fontSize: scale(36),
         fontWeight: '600'
     },
     text2: {
         color: '#F26230',
-        fontSize: 12,
+        fontSize: scale(12),
         fontWeight: '400',
         textAlign: 'center',
-        marginTop: 10
+        marginTop: moderateScale(10)
     },
     OK: {
         width: '100%',
-        height: 50,
+        height: verticalScale(50),
         backgroundColor: '#FF5F24',
-        marginTop: 20,
+        marginTop: moderateScale(20),
         justifyContent: 'center',
         alignItems: 'center',
         shadowColor: 'rgba(0, 0, 0, 0.2)',
@@ -231,11 +232,11 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
         shadowRadius: 10,
         elevation: 3,
-        borderRadius: 25,
+        borderRadius: scale(25),
     },
     text3: {
         color: 'white',
-        fontSize: 20,
+        fontSize: scale(20),
         fontWeight: '600'
     }
 })

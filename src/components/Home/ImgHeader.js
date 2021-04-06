@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, ImageBackground, SafeAreaView, StyleSheet, Dimensions, Image, TextInput,ScrollView, FlatList } from "react-native";
+import { scale } from "react-native-size-matters";
 import { useSelector,useDispatch } from "react-redux";
 const { height } = Dimensions.get('screen')
 const ImgHeader =()=>{
@@ -12,7 +13,7 @@ const ImgHeader =()=>{
                         <View key={item.id.toString()} style={{marginTop:height/40,marginRight:30}}>
                             <Image 
                                 source={item.img}
-                                style={{width:35,height:35}}
+                                style={{width:scale(35),height:scale(35)}}
                             />
                             <Text style={{color:'white',fontSize:height/68,textAlign:'center'}}>{item.text}</Text>
                         </View>

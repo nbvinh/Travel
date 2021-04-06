@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { View, TextInput, Text, Image, TouchableOpacity, StyleSheet,Dimensions } from "react-native";
+import { moderateVerticalScale } from "react-native-size-matters";
 const { height, width } = Dimensions.get('screen')
 const TextHome = (props) => {
     const text1 = props.text1
@@ -17,9 +18,9 @@ const styles = StyleSheet.create({
     textPromotion: {
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginTop: 10,
-        marginBottom: 20,
-        marginHorizontal: 20
+        marginTop: moderateVerticalScale(10),
+        marginBottom: moderateVerticalScale(20),
+        marginHorizontal: moderateVerticalScale(20)
     },
     text4: {
         fontWeight: 'bold',

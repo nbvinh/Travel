@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, Modal, StatusBar, StyleSheet, Image, TouchableOpacity, ScrollView } from "react-native";
+import { moderateScale, scale, verticalScale } from "react-native-size-matters";
 import { useDispatch, useSelector } from "react-redux";
 const Form = () => {
     const modalProfile = useSelector(store => store.people.modalProfile)
@@ -49,15 +50,15 @@ const styles = StyleSheet.create({
     content: {
         backgroundColor: 'white',
         position: 'absolute',
-        bottom: 20,
-        left: 20,
-        right: 20,
-        top: 50,
-        borderRadius: 5,
+        bottom: verticalScale(20),
+        left: scale(20),
+        right: scale(20),
+        top: verticalScale(50),
+        borderRadius: scale(5),
     },
     content1: {
-        marginHorizontal: 15,
-        marginVertical: 15
+        marginHorizontal: moderateScale(15),
+        marginVertical: moderateScale(15)
     },
     content2: {
         flexDirection: 'row',
@@ -65,15 +66,15 @@ const styles = StyleSheet.create({
     },
     text1: {
         fontWeight: 'bold',
-        fontSize: 16,
+        fontSize: scale(16),
         color: 'black'
     },
     text2: {
-        marginVertical: 10,
-        fontSize: 14
+        marginVertical: moderateScale(10),
+        fontSize: scale(14)
     },
     text3:{
-        fontSize:14,
+        fontSize:scale(14),
         fontWeight:'bold'
     }
 })

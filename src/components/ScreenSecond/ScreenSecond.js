@@ -20,6 +20,7 @@ import { onChange } from "react-native-reanimated";
 import { LoginButton, AccessToken } from "react-native-fbsdk-next";
 import { useDispatch } from "react-redux";
 const { width, height } = Dimensions.get('screen')
+import { scale, verticalScale, moderateScale } from 'react-native-size-matters';
 const ScreenSecond = ({ navigation }) => {
     const [text, setText] = useState('')
     const [OK, setOK] = useState(false)
@@ -131,56 +132,57 @@ const styles = StyleSheet.create({
         top: '45%'
     },
     img: {
-        width: width / 3.7,
-        height: width / 2.9
+        width: scale(101),
+        height: scale(129)
     },
     img1: {
-        width: 137,
-        height: 33.69,
-        marginTop: width/37.5
+        width: scale(137),
+        height: scale(33.69),
+        marginTop: moderateScale(10)
     },
     footercontent: {
-        marginHorizontal: width/37.5
+        marginHorizontal: moderateScale(10)
     },
     textInput: {
-        borderTopRightRadius: width/12.5,
-        borderBottomRightRadius: width/12.5,
-        height: height/16.24,
+        borderTopRightRadius: moderateScale(30),
+        borderBottomRightRadius: moderateScale(30),
+        height: verticalScale(50),
         width: '60%',
         backgroundColor: 'rgba(0, 0, 0, 0.7)',
-        color: 'white'
+        color: 'white',
+        fontSize:moderateScale(15)
     },
     viewtextinput: {
         flexDirection: 'row'
     },
     textinput1: {
-        height: height/16.24,
+        height: verticalScale(50),
         width: '40%',
         backgroundColor: 'rgba(0, 0, 0, 0.7)',
-        borderTopLeftRadius: width/12.5,
-        borderBottomLeftRadius: width/12.5,
+        borderTopLeftRadius: scale(30),
+        borderBottomLeftRadius: scale(30),
         justifyContent: 'space-around',
         alignItems: 'center',
         flexDirection: 'row'
     },
     img2: {
-        width: width/15.625,
-        height: height/51.1
+        width: scale(24),
+        height: verticalScale(16)
     },
     img3: {
-        width: width/37.5,
-        height: height/135.333
+        width: scale(10),
+        height: verticalScale(6)
     },
     text: {
-        fontSize: width/25,
+        fontSize: scale(15),
         fontWeight: '500',
         color: 'white'
     },
     OK: {
         width: '100%',
-        height: height/16.24,
+        height: verticalScale(50),
         backgroundColor: '#FF5F24',
-        marginTop: width/18.75,
+        marginTop: moderateScale(20),
         justifyContent: 'center',
         alignItems: 'center',
         shadowColor: 'rgba(0, 0, 0, 0.2)',
@@ -188,15 +190,15 @@ const styles = StyleSheet.create({
         shadowOffset: { width: 0, height: 2 },
         shadowRadius: 10,
         elevation: 3,
-        borderRadius: width/15
+        borderRadius: scale(25)
     },
     text1: {
         color: 'white',
         fontWeight: '700',
-        fontSize: width/18.75
+        fontSize: scale(20)
     },
     loginFB: {
-        marginTop: width/7.5,
+        marginTop: scale(50),
         height: 40,
         width: '100%',
         backgroundColor: '#436EEE',
@@ -205,23 +207,23 @@ const styles = StyleSheet.create({
         alignItems: 'center'
     },
     img4: {
-        width: width/9.375,
+        width: scale(40),
         height: '100%',
         backgroundColor: 'white',
-        borderTopLeftRadius: width/46.875,
-        borderBottomLeftRadius: width/46.875,
+        borderTopLeftRadius: scale(8),
+        borderBottomLeftRadius: scale(8),
     },
     loginGG: {
         backgroundColor: '#1864FD',
-        marginTop: width/18.75,
+        marginTop: scale(20),
         width: '100%',
         height: 40,
-        borderRadius: width/46.875,
+        borderRadius: scale(8),
         flexDirection: 'row',
     },
     text2: {
         color: 'white',
-        fontSize: width/25,
+        fontSize: scale(15),
         fontWeight: '500',
     }
 })
