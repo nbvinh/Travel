@@ -15,6 +15,7 @@ import SeeMoreExperience from "../../components/SeeMore/SeeMoreExperience";
 import SeeMoreDecemberDestination from "../../components/SeeMore/SeeMoreDecemberDestination";
 import SeeMoreHotel from "../../components/SeeMore/SeeMoreHotel";
 import ScheduleDetails from "../../components/Details/ScheduleDetails/ScheduleDetails";
+import PopularPlaceDetails from "../../components/Details/PopularPlace/PopularPlaceDetails";
 const Root = createStackNavigator();
 const RootStack = () => {
     return (
@@ -33,6 +34,7 @@ const RootStack = () => {
                 <Root.Screen name="SeeMoreDecemberDestination" component={SeeMoreDecemberDestination} />
                 <Root.Screen name="SeeMoreHotel" component={SeeMoreHotel} />
                 <Root.Screen name="ScheduleDetails" component={ScheduleDetails} />
+                <Root.Screen name="PopularPlaceDetails" component={PopularPlaceDetails} />
             </Root.Navigator>
         </NavigationContainer>
     )

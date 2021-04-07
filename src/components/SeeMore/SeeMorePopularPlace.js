@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View,TouchableOpacity, Text, ImageBackground, SafeAreaView, StatusBar, StyleSheet, Dimensions, Image, TextInput, ScrollView, FlatList } from "react-native";
+import { View, TouchableOpacity, Text, ImageBackground, SafeAreaView, StatusBar, StyleSheet, Dimensions, Image, TextInput, ScrollView, FlatList } from "react-native";
 import { useSelector, useDispatch } from "react-redux";
 import Header from "../Header";
 import AppStyle from "../../theme/index";
@@ -15,13 +15,19 @@ const SeeMorePopularPlace = ({ navigation }) => {
                     {
                         dataheader && dataheader.map((item) => {
                             return (
-                                <TouchableOpacity key={item.id.toString()} style={{ marginBottom: width / 18.75 }}>
+                                <TouchableOpacity
+                                    onPress={() => navigation.navigate('PopularPlaceDetails',
+                                        { id: item.id }
+                                    )}
+                                    key={item.id.toString()}
+                                    style={{ marginBottom: width / 18.75 }}
+                                >
                                     <Image
                                         source={{ uri: item.img }}
                                         style={AppStyle.StyleSeeMorePopularPlace.img1}
                                     />
                                     <View style={AppStyle.StyleSeeMorePopularPlace.content2}>
-                                        <Image 
+                                        <Image
                                             source={require('../../img/img24.png')}
                                             style={AppStyle.StyleSeeMorePopularPlace.img2}
                                         />

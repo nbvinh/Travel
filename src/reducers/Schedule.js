@@ -276,10 +276,27 @@ const initialState = {
             ]
         },
     ],
+    modalSchedule: false,
+    ScheduleItem: [],
+    additem: [],
 };
 
 export default function Schedule(state = initialState, action) {
     switch (action.type) {
+        case 'ID':
+            return { ...state, id: action.id }
+        case 'IDDAY':
+            return { ...state, imgId: action.imgId }
+        case 'ADDSCHEDULEITEM':
+            return { ...state, ScheduleItem: action.ScheduleItem }
+        case 'MODALSCHEDULE':
+            return { ...state, modalSchedule: !state.modalSchedule }
+        case 'REMOVE':
+            return {
+                ...state, ScheduleItem: state.ScheduleItem.filter((p) => p !== action.ScheduleItem)
+            }
+        case 'ADDITEM':
+            return { ...state, additem: action.additem }
         default:
             return state;
     }

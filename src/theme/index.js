@@ -9,6 +9,7 @@ import StyleHotel from "./StyleHotel";
 import StylePromotionDetails from "./StylePromotionDetails";
 import StyleSeeMoreHotel from "./StyleSeeMoreHotel";
 import StyleScheduleDetails from "./StyleScheduleDetails";
+import StylePopularPlaceDetails from "./StylePopularPlaceDetails";
 const AppStyle = {
     StyleHome,
     StyleExpenrience,
@@ -20,6 +21,7 @@ const AppStyle = {
     StyleHotel,
     StylePromotionDetails,
     StyleSeeMoreHotel,
-    StyleScheduleDetails
+    StyleScheduleDetails,
+    StylePopularPlaceDetails
 }
 export default AppStyle;

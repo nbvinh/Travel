@@ -15,7 +15,7 @@ const ScheduleDetails = ({ navigation, route }) => {
     const id = route.params.id;
     const dispatch = useDispatch()
     useEffect(()=>{
-        dispatch({type:'ID',id: id})
+        dispatch({type:'ID',id: id}) 
     },[])
     const Tab = createMaterialTopTabNavigator()
     return (
@@ -60,7 +60,10 @@ const ScheduleDetails = ({ navigation, route }) => {
                                         </Tab.Navigator>
                                     </View>
                                     <View style={AppStyle.StyleScheduleDetails.footer}>
-                                        <Text>{item.price}</Text>
+                                        <Text style={AppStyle.StyleScheduleDetails.textPrice}>{item.price}</Text>
+                                        <TouchableOpacity style={AppStyle.StyleScheduleDetails.BookNow}>
+                                            <Text style={AppStyle.StyleScheduleDetails.textBookNow}>Đặt Ngay</Text>
+                                        </TouchableOpacity>
                                     </View>
                                 </View>
                             )

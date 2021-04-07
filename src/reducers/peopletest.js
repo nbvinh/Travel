@@ -7,8 +7,6 @@ const initialState = {
 
 export default function peopleReducer(state = initialState, action) {
   switch (action.type) {
-    case 'ID' :
-      return{...state,id : action.id}
     case "PHONE":
       return { ...state, phone: action.phone }
     case 'CHECK':

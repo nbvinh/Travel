@@ -6,6 +6,13 @@ import AppStyle from "../../theme/index";
 const { height, width } = Dimensions.get('screen')
 const SeeMoreSchedule = ({ navigation }) => {
     const dataheader = useSelector(store => store.Schedule.data)
+    const dispatch = useDispatch()
+    const onChoose = (item) => {
+        navigation.navigate('ScheduleDetails',
+            { id: item.id }
+        )
+        dispatch({type:'ADDSCHEDULEITEM',ScheduleItem:item.imgday})
+    }
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: '#E5E5E5' }}>
             <StatusBar backgroundColor='#E5E5E5' barStyle={"dark-content"} />
@@ -18,9 +25,7 @@ const SeeMoreSchedule = ({ navigation }) => {
                                 <TouchableOpacity
                                     key={item.id.toString()}
                                     style={AppStyle.StyleSeeMoreSchedule.container}
-                                    onPress={()=>navigation.navigate('ScheduleDetails',
-                                        {id: item.id}
-                                    )}
+                                    onPress={() =>onChoose(item)}
                                 >
                                     <View style={{ flexDirection: 'row' }}>
                                         <Image

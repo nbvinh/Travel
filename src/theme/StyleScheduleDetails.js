@@ -46,8 +46,14 @@ const StyleScheduleDetails = StyleSheet.create({
     },
     footer: {
         position: 'absolute',
-        bottom: 0
-
+        bottom: 0,
+        top:'94.5%',
+        left:0,
+        right:0,
+        backgroundColor:'white',
+        justifyContent:'space-between',
+        alignItems:'center',
+        flexDirection:'row'
     },
     daycontainer: {
         flex: 1,
@@ -154,7 +160,8 @@ const StyleScheduleDetails = StyleSheet.create({
         alignItems: 'center',
         flexDirection: 'row',
         borderRadius:5,
-        borderColor:'#FF5F24'
+        borderColor:'#FF5F24',
+        marginBottom:scale(70)
     },
     img7:{
         width:scale(11),
@@ -164,6 +171,27 @@ const StyleScheduleDetails = StyleSheet.create({
         color:'#FF5F24',
         fontSize:scale(10),
         marginLeft:scale(5)
+    },
+    BookNow :{
+        backgroundColor:'#FF5F24',
+        borderRadius :scale(5),
+        width:scale(71),
+        height:scale(25),
+        marginRight:scale(10),
+        justifyContent:'center',
+        alignItems:'center'
+    },
+    textPrice:{
+        fontSize:scale(16),
+        fontWeight:'700',
+        color:'#FF5F24',
+        marginLeft:scale(10)
+    },
+    textBookNow:{
+        fontSize:scale(10),
+        fontWeight:'600',
+        color:'#FFFFFF',
+        
     }
 
 })
