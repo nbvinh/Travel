@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Text, TouchableOpacity, View, Image, SafeAreaView, StatusBar, Dimensions, ScrollView, StyleSheet } from "react-native";
 import Header from "../../Header";
 const { height, width } = Dimensions.get('screen')
-import { useSelector,useDispatch } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import AppStyle from "../../../theme/index";
 import Day1 from "./Day1";
 import Day2 from "./Day2";
@@ -14,9 +14,9 @@ const ScheduleDetails = ({ navigation, route }) => {
     const dataheader = useSelector(store => store.Schedule.data)
     const id = route.params.id;
     const dispatch = useDispatch()
-    useEffect(()=>{
-        dispatch({type:'ID',id: id}) 
-    },[])
+    useEffect(() => {
+        dispatch({ type: 'ID', id: id })
+    }, [])
     const Tab = createMaterialTopTabNavigator()
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: '#E5E5E5' }}>
@@ -59,17 +59,27 @@ const ScheduleDetails = ({ navigation, route }) => {
                                             <Tab.Screen name="Day4" component={Day4} options={{ tabBarLabel: 'Ngày 4 ' + item.day4 }} />
                                         </Tab.Navigator>
                                     </View>
-                                    <View style={AppStyle.StyleScheduleDetails.footer}>
-                                        <Text style={AppStyle.StyleScheduleDetails.textPrice}>{item.price}</Text>
-                                        <TouchableOpacity style={AppStyle.StyleScheduleDetails.BookNow}>
-                                            <Text style={AppStyle.StyleScheduleDetails.textBookNow}>Đặt Ngay</Text>
-                                        </TouchableOpacity>
-                                    </View>
+
                                 </View>
                             )
                     })
                 }
             </ScrollView>
+            {
+                dataheader && dataheader.map((item) => {
+                    if (id === item.id)
+                        return (
+                            <View key={item.id.toString()} style={AppStyle.StyleScheduleDetails.footer}>
+                                <Text style={AppStyle.StyleScheduleDetails.textPrice}>{item.price}</Text>
+                                <TouchableOpacity
+                                    onPress={()=>navigation.navigate('ScheduleOverview')}
+                                    style={AppStyle.StyleScheduleDetails.BookNow}
+                                >
+                                    <Text style={AppStyle.StyleScheduleDetails.textBookNow}>Đặt Ngay</Text>
+                                </TouchableOpacity>
+                            </View>
+                        )
+                })}
         </SafeAreaView >
     )
 }

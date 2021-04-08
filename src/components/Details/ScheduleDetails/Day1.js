@@ -11,7 +11,7 @@ const Day1 = () => {
     const dispatch = useDispatch()
     const onX = (item) => {
         dispatch({ type: 'MODALSCHEDULE' })
-        dispatch({ type: 'ADDITEM', additem:item })
+        dispatch({ type: 'ADDITEM', additem: item })
     }
     const ScheduleItem = useSelector(store => store.Schedule.ScheduleItem)
     return (
@@ -23,6 +23,14 @@ const Day1 = () => {
                         <View key={item.imgId}>
                             <Text style={AppStyle.StyleScheduleDetails.daytext1}>{item.time1}</Text>
                             <View style={AppStyle.StyleScheduleDetails.imgcontainer}>
+                                {
+                                    item.imgId < 3 ?
+                                        <View style={AppStyle.StyleScheduleDetails.straightLine} />
+                                        : null
+                                }
+                                <View style={AppStyle.StyleScheduleDetails.viewSTT}>
+                                    <Text style={AppStyle.StyleScheduleDetails.STT}>{item.imgId + 1}</Text>
+                                </View>
                                 <Image
                                     source={item.img}
                                     style={AppStyle.StyleScheduleDetails.img}

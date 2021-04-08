@@ -47,9 +47,8 @@ const StyleScheduleDetails = StyleSheet.create({
     footer: {
         position: 'absolute',
         bottom: 0,
-        top:'94.5%',
-        left:0,
-        right:0,
+        height:verticalScale(55),
+        width:'100%',
         backgroundColor:'white',
         justifyContent:'space-between',
         alignItems:'center',
@@ -192,6 +191,32 @@ const StyleScheduleDetails = StyleSheet.create({
         fontWeight:'600',
         color:'#FFFFFF',
         
+    },
+    STT:{
+        fontSize:scale(10),
+        color:'white'
+    },
+    viewSTT:{
+        position:'absolute',
+        left:scale(-28),
+        top:'35%',
+        backgroundColor:'black',
+        justifyContent:'center',
+        alignItems:'center',
+        width:scale(15),
+        height:scale(15),
+        borderRadius:scale(10)
+    },
+    straightLine:{
+        position:'absolute',
+        left:scale(-21 ),
+        top:'37%',
+        height:'197%',
+        width:1,
+        borderStyle: 'dashed',
+        borderWidth: 0.5,
+        borderRadius:1,
+        borderColor:'black'
     }
 
 })
