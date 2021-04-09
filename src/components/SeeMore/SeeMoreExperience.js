@@ -8,7 +8,7 @@ const SeeMoreExperience = ({ navigation }) => {
     const dataheader = useSelector(store => store.Experience.data)
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: '#E5E5E5' }}>
-            <StatusBar backgroundColor='#E5E5E5' barStyle={"dark-content"} />
+            <StatusBar backgroundColor='white' barStyle={"dark-content"} />
             <Header text={'Trải nghiệm nổi bật'} onBack={() => navigation.goBack()} />
             <View style={AppStyle.StyleSeeMoreExperience.container}>
                 <ScrollView style={{ flex: 1 }}>

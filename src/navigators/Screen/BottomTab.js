@@ -3,7 +3,7 @@ import AddButton from "../../components/AddButton";
 import Search from "../../components/Search/Search";
 import Cart from "../../components/Cart/Cart";
 import Notification from "../../components/Notification/Notification";
-import User from "../../components/User/User";
+import Profile from "../../components/Profile/Profile";
 import Home from "../../components/Home/Home";
 import * as React from 'react';
 import { View, Text, TouchableOpacity, Image, Dimensions } from 'react-native';
@@ -16,13 +16,6 @@ function MyTabBar({ state, descriptors, navigation }) {
                 <AddButton />
             </View>
             <View style={{ width: 49, height: 49, position: 'absolute', right: 10, zIndex: 1, bottom: 60 }}>
-                {/* <TouchableOpacity>
-                    <Image
-                        source={require('../../img/touchable.png')}
-                        style={{ width: '100%', height: '100%' }}
-                    />
-
-                </TouchableOpacity> */}
                 <Touch/>
             </View>
             {state.routes.map((route, index) => {
@@ -89,7 +82,7 @@ export default function BottomTab() {
             < Tab.Screen name="https://scontent.xx.fbcdn.net/v/t1.15752-9/cp0/167017015_557250808555013_9137485308532030877_n.png?_nc_cat=105&ccb=1-3&_nc_sid=58c789&_nc_ohc=seCKFm4tRN8AX9UmpUo&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&tp=30&oh=fd6e4face03a3b08f47107ad10b56a1c&oe=608F0D91" component={Notification}
                 options={{ title: 'https://scontent.xx.fbcdn.net/v/t1.15752-9/cp0/167588358_1649352638598433_1992561845971364195_n.png?_nc_cat=102&ccb=1-3&_nc_sid=58c789&_nc_ohc=fVbZ_XTxwJIAX-_y5aX&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&tp=30&oh=9861b0390c48d178bc6c76ba80ca9bca&oe=608C15DC' }}
             />
-            < Tab.Screen name="https://scontent.xx.fbcdn.net/v/t1.15752-9/cp0/166069118_137558148309589_9176252055582788907_n.png?_nc_cat=106&ccb=1-3&_nc_sid=58c789&_nc_ohc=yRvHRzVkuTAAX8eq6I_&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&tp=30&oh=a41c61c69f17bbc373d79eb901190e44&oe=608D0288" component={User}
+            < Tab.Screen name="https://scontent.xx.fbcdn.net/v/t1.15752-9/cp0/166069118_137558148309589_9176252055582788907_n.png?_nc_cat=106&ccb=1-3&_nc_sid=58c789&_nc_ohc=yRvHRzVkuTAAX8eq6I_&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&tp=30&oh=a41c61c69f17bbc373d79eb901190e44&oe=608D0288" component={Profile}
                 options={{ title: 'https://scontent.xx.fbcdn.net/v/t1.15752-9/cp0/167628664_1183335815442745_3737342627869015062_n.png?_nc_cat=106&ccb=1-3&_nc_sid=58c789&_nc_ohc=WAfgEnRe_IsAX9uneOi&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&tp=30&oh=13ed2ef752cffa0cc2e7df64167fd33e&oe=608CF951' }}
             />
         </Tab.Navigator>

@@ -3,7 +3,7 @@ import { View, TextInput, Text, SafeAreaView, StyleSheet, Dimensions, TouchableO
 import Header from "../Header";
 import { useDispatch, useSelector } from "react-redux";
 import Form from "./Form";
-import { verticalScale,moderateScale,scale } from "react-native-size-matters";
+import { verticalScale, moderateScale, scale } from "react-native-size-matters";
 
 const { width, height } = Dimensions.get('screen')
 const ScreenUpdateProfile = ({ navigation }) => {
@@ -37,6 +37,12 @@ const ScreenUpdateProfile = ({ navigation }) => {
             setFinish1(false)
         }
     }
+    const data = [
+        { lastname: text, fisrtname: text1, id: Math.random(),phone : phone },
+    ]
+    useEffect(() => {
+        dispatch({type:'PROFILE',data : data})
+    }, [data])
     return (
         <SafeAreaView style={styles.container}>
             <Header onBack={onBack} />
@@ -138,12 +144,12 @@ const styles = StyleSheet.create({
         // position: 'absolute',
         // // top: '64%'
         // bottom:'20%',
-        marginTop:scale(20)
+        marginTop: scale(20)
     },
     text3: {
         textAlign: 'center',
         color: '#565656',
-        fontSize:scale(15)
+        fontSize: scale(15)
     },
     finishfall: {
         // position: 'absolute',

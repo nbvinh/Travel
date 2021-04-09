@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, Text, ImageBackground, SafeAreaView, StyleSheet, Dimensions, Image, TextInput, ScrollView } from "react-native";
+import { View,StatusBar, Text, ImageBackground, SafeAreaView, StyleSheet, Dimensions, Image, TextInput, ScrollView } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { useSelector } from "react-redux";
 import ImgHeader from "./ImgHeader";
@@ -16,6 +16,7 @@ const Home = ({ navigation }) => {
     const [search, setSearch] = useState('')
     return (
         <SafeAreaView style={AppStyle.StyleHome.container}>
+            <StatusBar backgroundColor='white' barStyle={"dark-content"} />
             <ScrollView style={AppStyle.StyleHome.scrollview}>
                 <ImageBackground source={require('../../img/khampha.png')} style={{ height: height / 3.8 }}>
                     <View style={AppStyle.StyleHome.textHeader}>

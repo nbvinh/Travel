@@ -105,7 +105,7 @@ const StyleScheduleOverview = StyleSheet.create({
     },
     search:{
         borderRadius:5,
-        width:'90%',
+        width:'100%',
         height:scale(25),
         marginBottom:scale(60),
         backgroundColor:'white',

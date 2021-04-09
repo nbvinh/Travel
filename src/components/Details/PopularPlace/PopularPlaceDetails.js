@@ -19,7 +19,7 @@ const PopularPlaceDetails = ({ navigation, route }) => {
     }, [])
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: '#E5E5E5' }}>
-            <StatusBar backgroundColor='#E5E5E5' barStyle={"dark-content"} />
+            <StatusBar backgroundColor='white' barStyle={"dark-content"} />
             <ScrollView style={{ flex: 1 }}>
                 {
                     dataheader && dataheader.map((item) => {

@@ -17,6 +17,10 @@ import SeeMoreHotel from "../../components/SeeMore/SeeMoreHotel";
 import ScheduleDetails from "../../components/Details/ScheduleDetails/ScheduleDetails";
 import PopularPlaceDetails from "../../components/Details/PopularPlace/PopularPlaceDetails";
 import ScheduleOverview from "../../components/Details/ScheduleDetails/ScheduleOverview/ScheduleOverview";
+import Setting from "../../components/Profile/Setting/Setting";
+import PrivacyPolicy from "../../components/Profile/Setting/PrivacyPolicy";
+import TermsOfUse from "../../components/Profile/Setting/TermsOfUse";
+import PersonalPage from "../../components/Profile/PersonalPage/PersonalPage";
 const Root = createStackNavigator();
 const RootStack = () => {
     return (
@@ -37,6 +41,10 @@ const RootStack = () => {
                 <Root.Screen name="ScheduleDetails" component={ScheduleDetails} />
                 <Root.Screen name="PopularPlaceDetails" component={PopularPlaceDetails} />
                 <Root.Screen name="ScheduleOverview" component={ScheduleOverview} />
+                <Root.Screen name="Setting" component={Setting} />
+                <Root.Screen name="PrivacyPolicy" component={PrivacyPolicy} />
+                <Root.Screen name="TermsOfUse" component={TermsOfUse} />
+                <Root.Screen name="PersonalPage" component={PersonalPage} />
             </Root.Navigator>
         </NavigationContainer>
     )

@@ -8,7 +8,7 @@ const SeeMoreHotel = ({ navigation }) => {
     const dataheader = useSelector(store => store.Hotel.data)
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: '#E5E5E5' }}>
-            <StatusBar backgroundColor='#E5E5E5' barStyle={"dark-content"} />
+            <StatusBar backgroundColor='white' barStyle={"dark-content"} />
             <Header text={'Khách sạn & Resort'} onBack={() => navigation.goBack()} />
             <View style={{ flex: 10, marginHorizontal: 10 }}>
                 <ScrollView style={{ flex: 1 }}>

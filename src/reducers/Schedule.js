@@ -28,7 +28,8 @@ const initialState = {
                     timeCar: '25 phút',
                     day1 : '5/12/2021',
                     Destination:4,
-                    amountKM: 30
+                    amountKM: 30,
+                    price : '120.000đ/ 2 vé/ 2 người'
                 },
                 {
                     imgId: 1,
@@ -40,7 +41,8 @@ const initialState = {
                     timeCar: '25 phút',
                     day1 : '6/12/2021',
                     Destination:5,
-                    amountKM: 45.6
+                    amountKM: 45.6,
+                    price : '50.000đ/ 2 vé/ 2 người'
                 },
                 {
                     imgId: 2,
@@ -52,7 +54,8 @@ const initialState = {
                     timeCar: '15 phút',
                     day1 : '7/12/2021',
                     Destination:3,
-                    amountKM: 15
+                    amountKM: 15,
+                    price : '150.000đ/ 2 vé/ 2 người'
                 },
                 {
                     imgId: 3,
@@ -64,7 +67,8 @@ const initialState = {
                     timeCar: '15 phút',
                     day1 : '8/12/2021',
                     Destination:4,
-                    amountKM: 27
+                    amountKM: 27,
+                    price : '100.000đ/ 2 vé/ 2 người'
                 },
             ]
         },
@@ -96,7 +100,8 @@ const initialState = {
                     timeCar: '25 phút',
                     day1 : '5/12/2021',
                     Destination:4,
-                    amountKM: 30
+                    amountKM: 30,
+                    price : '50.000đ/ 2 vé/ 2 người'
                 },
                 {
                     imgId: 1,
@@ -108,7 +113,8 @@ const initialState = {
                     timeCar: '25 phút',
                     day1 : '6/12/2021',
                     Destination:4,
-                    amountKM: 27
+                    amountKM: 27,
+                    price : '120.000đ/ 2 vé/ 2 người'
                 },
                 {
                     imgId: 2,
@@ -120,7 +126,8 @@ const initialState = {
                     timeCar: '15 phút',
                     day1 : '7/12/2021',
                     Destination:5,
-                    amountKM: 45.6
+                    amountKM: 45.6,
+                    price : '60.000đ/ 2 vé/ 2 người'
                 },
                 {
                     imgId: 3,
@@ -132,7 +139,8 @@ const initialState = {
                     timeCar: '15 phút',
                     day1 : '8/12/2021',
                     Destination:4,
-                    amountKM: 30
+                    amountKM: 30,
+                    price : '100.000đ/ 2 vé/ 2 người'
                 },
             ]
         },
@@ -164,7 +172,8 @@ const initialState = {
                     timeCar: '25 phút',
                     day1 : '5/12/2021',
                     Destination:4,
-                    amountKM: 30
+                    amountKM: 30,
+                    price : '300.000đ/ 2 vé/ 2 người'
                 },
                 {
                     imgId: 1,
@@ -176,7 +185,8 @@ const initialState = {
                     timeCar: '25 phút',
                     day1 : '6/12/2021',
                     Destination:3,
-                    amountKM: 15
+                    amountKM: 15,
+                    price : '200.000đ/ 2 vé/ 2 người'
                 },
                 {
                     imgId: 2,
@@ -188,7 +198,8 @@ const initialState = {
                     timeCar: '15 phút',
                     day1 : '7/12/2021',
                     Destination:5,
-                    amountKM: 20
+                    amountKM: 20,
+                    price : '100.000đ/ 2 vé/ 2 người'
                 },
                 {
                     imgId: 3,
@@ -200,7 +211,8 @@ const initialState = {
                     timeCar: '15 phút',
                     day1 : '8/12/2021',
                     Destination:4,
-                    amountKM: 31
+                    amountKM: 31,
+                    price : '60.000đ/ 2 vé/ 2 người'
                 },
             ]
         },
@@ -232,7 +244,8 @@ const initialState = {
                     timeCar: '25 phút',
                     day1 : '5/12/2021',
                     Destination:5,
-                    amountKM: 27
+                    amountKM: 27,
+                    price : '150.000đ/ 2 vé/ 2 người'
                 },
                 {
                     imgId: 1,
@@ -244,7 +257,8 @@ const initialState = {
                     timeCar: '25 phút',
                     day1 : '6/12/2021',
                     Destination:3,
-                    amountKM: 15
+                    amountKM: 15,
+                    price : '120.000đ/ 2 vé/ 2 người'
                 },
                 {
                     imgId: 2,
@@ -256,7 +270,8 @@ const initialState = {
                     timeCar: '15 phút',
                     day1 : '7/12/2021',
                     Destination:6,
-                    amountKM: 40
+                    amountKM: 40,
+                    price : '50.000đ/ 2 vé/ 2 người'
                 },
                 {
                     imgId: 3,
@@ -268,7 +283,8 @@ const initialState = {
                     timeCar: '15 phút',
                     day1 : '8/12/2021',
                     Destination:4,
-                    amountKM: 27
+                    amountKM: 27,
+                    price : '100.000đ/ 2 vé/ 2 người'
                 },
             ]
         },

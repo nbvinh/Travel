@@ -90,13 +90,6 @@ const Planes = ({ navigation, route }) => {
                         </View>
                     )
             })}
-            {/* {
-                data && data.map((item) => {
-                    if (id === item.id)
-                        return (
-                            
-                        )
-                })} */}
         </View>
     )
 }

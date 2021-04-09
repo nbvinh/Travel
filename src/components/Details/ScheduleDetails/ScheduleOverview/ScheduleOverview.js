@@ -7,6 +7,8 @@ import { createMaterialTopTabNavigator } from "@react-navigation/material-top-ta
 import { scale, verticalScale } from "react-native-size-matters";
 import Schedule from "./Schedule";
 import Planes from "./Planes";
+import Hotel from "./Hotel";
+import Visit from "./Visit";
 const ScheduleOverview = ({ navigation, route }) => {
     const dataheader = useSelector(store => store.Schedule.data)
     const id = useSelector(store => store.Schedule.id)
@@ -34,7 +36,7 @@ const ScheduleOverview = ({ navigation, route }) => {
     }
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: '#E5E5E5' }}>
-            <StatusBar backgroundColor='#E5E5E5' barStyle={"dark-content"} />
+            <StatusBar backgroundColor='white' barStyle={"dark-content"} />
             <ScrollView style={{ flex: 1 }}>
                 {
                     dataheader && dataheader.map((item) => {
@@ -93,9 +95,9 @@ const ScheduleOverview = ({ navigation, route }) => {
                                         </TouchableOpacity>
                                     </ScrollView>
                                     {
-                                        filterMenu === 'PLANES' ? <Planes /> : filterMenu === 'SCHEDULE' ? <Schedule /> :null
+                                        filterMenu === 'PLANES' ? <Planes /> : filterMenu === 'SCHEDULE' ? <Schedule /> : filterMenu === 'HOTEL' ? <Hotel /> : <Visit />
                                     }
-                                    
+
                                 </View>
                             )
                     })

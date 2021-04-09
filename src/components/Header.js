@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import { View, TextInput, Text, Image, TouchableOpacity,Dimensions } from "react-native";
+import { scale, verticalScale } from "react-native-size-matters";
 const { width, height } = Dimensions.get('screen')
 const Header = (props) => {
     const onBack=props.onBack
     const text=props.text
     return (
-        <View style={{ flex: 1, alignItems: 'center',flexDirection:'row' }}>
+        <View style={{ flex: 1,height:verticalScale(50), alignItems: 'center',flexDirection:'row',backgroundColor:'white' }}>
             <TouchableOpacity onPress={()=>onBack()}>
                 <Image
                     source={require('../img/arrow-left.png')}

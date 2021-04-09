@@ -8,7 +8,7 @@ const SeeMorePopularPlace = ({ navigation }) => {
     const dataheader = useSelector(store => store.PopularPlace.data)
     return (
         <SafeAreaView style={AppStyle.StyleSeeMorePopularPlace.container}>
-            <StatusBar backgroundColor='#E5E5E5' barStyle={"dark-content"} />
+            <StatusBar backgroundColor='white' barStyle={"dark-content"} />
             <Header text={'Địa điểm phổ biến'} onBack={() => navigation.goBack()} />
             <View style={AppStyle.StyleSeeMorePopularPlace.content}>
                 <ScrollView style={{ flex: 1 }}>

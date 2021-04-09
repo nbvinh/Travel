@@ -70,6 +70,82 @@ const StyleScheduleOverView2 = StyleSheet.create({
         width:scale(40),
         height:scale(40),
         borderRadius:scale(25)
-    }
+    },
+    body:{
+        marginHorizontal:scale(15)
+    },
+    search:{
+        // position: 'absolute',
+        // bottom: 0,
+        height:scale(25),
+        width:'100%',
+        backgroundColor:'white',
+        justifyContent:'center',
+        alignItems:'center',
+        flexDirection:'row',
+        marginTop:'45%'
+    },
+    text5:{
+        fontSize:scale(12),
+        fontWeight:'400',
+        color:'#000000',marginBottom:scale(5)
+    },
+    content:{
+        flexDirection:'row',
+        justifyContent:'space-between'
+    },
+    text6:{
+        fontSize:scale(15),
+        color:'#FF5F24'
+    },
+    text7:{
+        color:'#969696',
+        fontSize:scale(10),
+        fontWeight:'400'
+    },
+    Visit:{
+        marginBottom:scale(15),
+        backgroundColor:'white',
+        borderRadius:scale(5)
+    },
+    name:{
+        fontWeight:'500',
+        fontSize:scale(13),
+        marginLeft:scale(10),
+        marginTop:scale(10)
+    },
+    day1:{
+        fontSize:scale(12),
+        fontWeight:'400',
+        color:'#828282',
+        marginLeft:scale(10),
+        marginVertical:scale(3)
+    },
+    price:{
+        marginHorizontal:scale(10),
+        marginBottom:scale(10),
+        flexDirection:'row',
+        justifyContent:'space-between'
+    },
+    textprice:{
+        fontWeight:'700',
+        fontSize:scale(12),
+        color:'#000000'
+    },
+    textDetail:{
+        color:'#FF5F24',
+        fontSize:scale(10)
+    },
+    search1:{
+        // position: 'absolute',
+        // bottom: 0,
+        height:scale(25),
+        width:'100%',
+        backgroundColor:'white',
+        justifyContent:'center',
+        alignItems:'center',
+        flexDirection:'row',
+        marginBottom:scale(15)
+    },
 })
 export default StyleScheduleOverView2;

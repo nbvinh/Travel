@@ -3,6 +3,7 @@ import { View, TouchableOpacity, Text, ImageBackground, SafeAreaView, StatusBar,
 import { useSelector, useDispatch } from "react-redux";
 import Header from "../Header";
 import AppStyle from "../../theme/index";
+import { verticalScale } from "react-native-size-matters";
 const { height, width } = Dimensions.get('screen')
 const SeeMoreSchedule = ({ navigation }) => {
     const dataheader = useSelector(store => store.Schedule.data)
@@ -15,7 +16,7 @@ const SeeMoreSchedule = ({ navigation }) => {
     }
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: '#E5E5E5' }}>
-            <StatusBar backgroundColor='#E5E5E5' barStyle={"dark-content"} />
+            <StatusBar backgroundColor='white' barStyle={"dark-content"} />
             <Header text={'Lịch trình gần đây'} onBack={() => navigation.goBack()} />
             <View style={{ flex: 10, marginHorizontal: 10 }}>
                 <ScrollView style={{ flex: 1 }}>

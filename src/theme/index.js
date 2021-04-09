@@ -12,6 +12,8 @@ import StyleScheduleDetails from "./StyleScheduleDetails";
 import StylePopularPlaceDetails from "./StylePopularPlaceDetails";
 import StyleScheduleOverview from "./StyleScheduleOverview";
 import StyleScheduleOverView2 from "./StyleScheduleOverView2";
+import StyleProfile from "./StyleProfile";
+import StylePersonalPage from "./StylePersonalPage";
 const AppStyle = {
     StyleHome,
     StyleExpenrience,
@@ -27,5 +29,7 @@ const AppStyle = {
     StylePopularPlaceDetails,
     StyleScheduleOverview,
     StyleScheduleOverView2,
+    StyleProfile,
+    StylePersonalPage,
 }
 export default AppStyle;
