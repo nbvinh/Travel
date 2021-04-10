@@ -12,7 +12,10 @@ const SeeMoreSchedule = ({ navigation }) => {
         navigation.navigate('ScheduleDetails',
             { id: item.id }
         )
-        dispatch({type:'ADDSCHEDULEITEM',ScheduleItem:item.imgday})
+        dispatch({ type: 'ADDSCHEDULEITEM', ScheduleItem: item.imgday })
+    }
+    const onAddHeart = (item) => {
+        dispatch({ type: 'ADDHEART', heartARR: item })
     }
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: '#E5E5E5' }}>
@@ -26,7 +29,7 @@ const SeeMoreSchedule = ({ navigation }) => {
                                 <TouchableOpacity
                                     key={item.id.toString()}
                                     style={AppStyle.StyleSeeMoreSchedule.container}
-                                    onPress={() =>onChoose(item)}
+                                    onPress={() => onChoose(item)}
                                 >
                                     <View style={{ flexDirection: 'row' }}>
                                         <Image
@@ -82,14 +85,19 @@ const SeeMoreSchedule = ({ navigation }) => {
 
                                     </View>
                                     <View style={AppStyle.StyleSeeMoreSchedule.footer}>
-                                        <Image
-                                            source={require('../../img/img23.png')}
-                                            style={AppStyle.StyleSeeMoreSchedule.img6}
-                                        />
-                                        <Image
-                                            source={require('../../img/heart.png')}
-                                            style={AppStyle.StyleSeeMoreSchedule.img7}
-                                        />
+                                        <TouchableOpacity>
+                                            <Image
+                                                source={require('../../img/img23.png')}
+                                                style={AppStyle.StyleSeeMoreSchedule.img6}
+                                            />
+
+                                        </TouchableOpacity>
+                                        <TouchableOpacity onPress={() => onAddHeart(item)}>
+                                            <Image
+                                                source={require('../../img/heart.png')}
+                                                style={AppStyle.StyleSeeMoreSchedule.img7}
+                                            />
+                                        </TouchableOpacity>
                                     </View>
                                 </TouchableOpacity>
                             )

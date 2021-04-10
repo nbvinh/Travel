@@ -21,6 +21,7 @@ import Setting from "../../components/Profile/Setting/Setting";
 import PrivacyPolicy from "../../components/Profile/Setting/PrivacyPolicy";
 import TermsOfUse from "../../components/Profile/Setting/TermsOfUse";
 import PersonalPage from "../../components/Profile/PersonalPage/PersonalPage";
+import Heart from "../../components/Profile/Heart/Heart";
 const Root = createStackNavigator();
 const RootStack = () => {
     return (
@@ -45,6 +46,7 @@ const RootStack = () => {
                 <Root.Screen name="PrivacyPolicy" component={PrivacyPolicy} />
                 <Root.Screen name="TermsOfUse" component={TermsOfUse} />
                 <Root.Screen name="PersonalPage" component={PersonalPage} />
+                <Root.Screen name="Heart" component={Heart} />
             </Root.Navigator>
         </NavigationContainer>
     )

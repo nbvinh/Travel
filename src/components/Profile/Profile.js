@@ -1,15 +1,27 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, ImageBackground, SafeAreaView, StyleSheet, Dimensions, Image, TextInput, ScrollView, StatusBar } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import AppStyle from "../../theme/index";
 import HeaderBottomTab from "../HeaderBottomTab";
+import FormReview from "./FormReview";
+import Heart from "./Heart/Heart";
 import Item from "./Item";
 const { height, width } = Dimensions.get('screen')
 const Profile = ({ navigation }) => {
     const user = useSelector(store => store.people.user)
+    const dispatch = useDispatch()
     const onScreen = (item) => {
-        item.id === 4 ? navigation.navigate('Setting') : null
+        item.id === 4 ?
+            navigation.navigate('Setting')
+            :
+            item.id === 3 ?
+                dispatch({ type: 'MODALREVIEW' })
+                :
+                item.id === 2 ?
+                navigation.navigate('Heart')
+                    :
+                    null
     }
     const dataItem = useSelector(store => store.people.dataItem)
     return (
@@ -19,7 +31,7 @@ const Profile = ({ navigation }) => {
                 <HeaderBottomTab text={'Thông tin cá nhân'} />
                 <View style={AppStyle.StyleProfile.body}>
                     <ScrollView style={AppStyle.StyleHome.scrollview}>
-                        <TouchableOpacity style={AppStyle.StyleProfile.avatar} onPress={()=>navigation.navigate('PersonalPage')}>
+                        <TouchableOpacity style={AppStyle.StyleProfile.avatar} onPress={() => navigation.navigate('PersonalPage')}>
                             <Image
                                 source={require('../../img/vinh2.png')}
                                 style={AppStyle.StyleProfile.imgAvatar}
@@ -36,6 +48,7 @@ const Profile = ({ navigation }) => {
                     </ScrollView>
                 </View>
             </ScrollView>
+            <FormReview />
         </SafeAreaView>
     )
 }

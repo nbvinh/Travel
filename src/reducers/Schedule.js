@@ -9,7 +9,7 @@ const initialState = {
             text1: 'Đà Lạt, Lâm Đồng',
             text2: '5 Ngày',
             price: '5,200,000 đ/ người',
-            pricePlanes:'2,600,000 đ/ người',
+            pricePlanes: '2,600,000 đ/ người',
             avatar: 'http://linkvaobong88ag.com/wp-content/uploads/2020/11/khong-minh-thanh-15.jpg',
             time: '10 giờ trước',
             name: 'Ha AAnh',
@@ -26,10 +26,10 @@ const initialState = {
                     time: '45 phút',
                     distance: '17km',
                     timeCar: '25 phút',
-                    day1 : '5/12/2021',
-                    Destination:4,
+                    day1: '5/12/2021',
+                    Destination: 4,
                     amountKM: 30,
-                    price : '120.000đ/ 2 vé/ 2 người'
+                    price: '120.000đ/ 2 vé/ 2 người'
                 },
                 {
                     imgId: 1,
@@ -39,10 +39,10 @@ const initialState = {
                     time: '1 giờ',
                     distance: '15km',
                     timeCar: '25 phút',
-                    day1 : '6/12/2021',
-                    Destination:5,
+                    day1: '6/12/2021',
+                    Destination: 5,
                     amountKM: 45.6,
-                    price : '50.000đ/ 2 vé/ 2 người'
+                    price: '50.000đ/ 2 vé/ 2 người'
                 },
                 {
                     imgId: 2,
@@ -52,10 +52,10 @@ const initialState = {
                     time: '1 giờ 30 phút',
                     distance: '7km',
                     timeCar: '15 phút',
-                    day1 : '7/12/2021',
-                    Destination:3,
+                    day1: '7/12/2021',
+                    Destination: 3,
                     amountKM: 15,
-                    price : '150.000đ/ 2 vé/ 2 người'
+                    price: '150.000đ/ 2 vé/ 2 người'
                 },
                 {
                     imgId: 3,
@@ -65,10 +65,10 @@ const initialState = {
                     time: '3 giờ',
                     distance: '7km',
                     timeCar: '15 phút',
-                    day1 : '8/12/2021',
-                    Destination:4,
+                    day1: '8/12/2021',
+                    Destination: 4,
                     amountKM: 27,
-                    price : '100.000đ/ 2 vé/ 2 người'
+                    price: '100.000đ/ 2 vé/ 2 người'
                 },
             ]
         },
@@ -81,7 +81,7 @@ const initialState = {
             text1: 'Quy Nhơn, Bình Định',
             text2: '5 Ngày',
             price: '5,200,000 đ/ người',
-            pricePlanes:'2,600,000 đ/ người',
+            pricePlanes: '2,600,000 đ/ người',
             avatar: 'http://linkvaobong88ag.com/wp-content/uploads/2020/11/khong-minh-thanh-15.jpg',
             time: '10 giờ trước',
             name: 'Ha AAnh',
@@ -98,10 +98,10 @@ const initialState = {
                     time: '45 phút',
                     distance: '17km',
                     timeCar: '25 phút',
-                    day1 : '5/12/2021',
-                    Destination:4,
+                    day1: '5/12/2021',
+                    Destination: 4,
                     amountKM: 30,
-                    price : '50.000đ/ 2 vé/ 2 người'
+                    price: '50.000đ/ 2 vé/ 2 người'
                 },
                 {
                     imgId: 1,
@@ -111,10 +111,10 @@ const initialState = {
                     time: '1 giờ',
                     distance: '15km',
                     timeCar: '25 phút',
-                    day1 : '6/12/2021',
-                    Destination:4,
+                    day1: '6/12/2021',
+                    Destination: 4,
                     amountKM: 27,
-                    price : '120.000đ/ 2 vé/ 2 người'
+                    price: '120.000đ/ 2 vé/ 2 người'
                 },
                 {
                     imgId: 2,
@@ -124,10 +124,10 @@ const initialState = {
                     time: '1 giờ 30 phút',
                     distance: '7km',
                     timeCar: '15 phút',
-                    day1 : '7/12/2021',
-                    Destination:5,
+                    day1: '7/12/2021',
+                    Destination: 5,
                     amountKM: 45.6,
-                    price : '60.000đ/ 2 vé/ 2 người'
+                    price: '60.000đ/ 2 vé/ 2 người'
                 },
                 {
                     imgId: 3,
@@ -137,10 +137,10 @@ const initialState = {
                     time: '3 giờ',
                     distance: '7km',
                     timeCar: '15 phút',
-                    day1 : '8/12/2021',
-                    Destination:4,
+                    day1: '8/12/2021',
+                    Destination: 4,
                     amountKM: 30,
-                    price : '100.000đ/ 2 vé/ 2 người'
+                    price: '100.000đ/ 2 vé/ 2 người'
                 },
             ]
         },
@@ -153,7 +153,7 @@ const initialState = {
             text1: 'Đà Lạt, Lâm Đồng',
             text2: '3 Ngày',
             price: '5,200,000 đ/ người',
-            pricePlanes:'2,600,000 đ/ người',
+            pricePlanes: '2,600,000 đ/ người',
             avatar: 'http://linkvaobong88ag.com/wp-content/uploads/2020/11/khong-minh-thanh-15.jpg',
             time: '10 giờ trước',
             name: 'Ha Vinh',
@@ -170,10 +170,10 @@ const initialState = {
                     time: '45 phút',
                     distance: '17km',
                     timeCar: '25 phút',
-                    day1 : '5/12/2021',
-                    Destination:4,
+                    day1: '5/12/2021',
+                    Destination: 4,
                     amountKM: 30,
-                    price : '300.000đ/ 2 vé/ 2 người'
+                    price: '300.000đ/ 2 vé/ 2 người'
                 },
                 {
                     imgId: 1,
@@ -183,10 +183,10 @@ const initialState = {
                     time: '1 giờ',
                     distance: '15km',
                     timeCar: '25 phút',
-                    day1 : '6/12/2021',
-                    Destination:3,
+                    day1: '6/12/2021',
+                    Destination: 3,
                     amountKM: 15,
-                    price : '200.000đ/ 2 vé/ 2 người'
+                    price: '200.000đ/ 2 vé/ 2 người'
                 },
                 {
                     imgId: 2,
@@ -196,10 +196,10 @@ const initialState = {
                     time: '1 giờ 30 phút',
                     distance: '7km',
                     timeCar: '15 phút',
-                    day1 : '7/12/2021',
-                    Destination:5,
+                    day1: '7/12/2021',
+                    Destination: 5,
                     amountKM: 20,
-                    price : '100.000đ/ 2 vé/ 2 người'
+                    price: '100.000đ/ 2 vé/ 2 người'
                 },
                 {
                     imgId: 3,
@@ -209,10 +209,10 @@ const initialState = {
                     time: '3 giờ',
                     distance: '7km',
                     timeCar: '15 phút',
-                    day1 : '8/12/2021',
-                    Destination:4,
+                    day1: '8/12/2021',
+                    Destination: 4,
                     amountKM: 31,
-                    price : '60.000đ/ 2 vé/ 2 người'
+                    price: '60.000đ/ 2 vé/ 2 người'
                 },
             ]
         },
@@ -225,7 +225,7 @@ const initialState = {
             text1: 'Đà Lạt, Lâm Đồng',
             text2: '3 Ngày',
             price: '5,200,000 đ/ người',
-            pricePlanes:'2,600,000 đ/ người',
+            pricePlanes: '2,600,000 đ/ người',
             avatar: 'http://linkvaobong88ag.com/wp-content/uploads/2020/11/khong-minh-thanh-15.jpg',
             time: '10 giờ trước',
             name: 'Ha Nam',
@@ -242,10 +242,10 @@ const initialState = {
                     time: '45 phút',
                     distance: '17km',
                     timeCar: '25 phút',
-                    day1 : '5/12/2021',
-                    Destination:5,
+                    day1: '5/12/2021',
+                    Destination: 5,
                     amountKM: 27,
-                    price : '150.000đ/ 2 vé/ 2 người'
+                    price: '150.000đ/ 2 vé/ 2 người'
                 },
                 {
                     imgId: 1,
@@ -255,10 +255,10 @@ const initialState = {
                     time: '1 giờ',
                     distance: '15km',
                     timeCar: '25 phút',
-                    day1 : '6/12/2021',
-                    Destination:3,
+                    day1: '6/12/2021',
+                    Destination: 3,
                     amountKM: 15,
-                    price : '120.000đ/ 2 vé/ 2 người'
+                    price: '120.000đ/ 2 vé/ 2 người'
                 },
                 {
                     imgId: 2,
@@ -268,10 +268,10 @@ const initialState = {
                     time: '1 giờ 30 phút',
                     distance: '7km',
                     timeCar: '15 phút',
-                    day1 : '7/12/2021',
-                    Destination:6,
+                    day1: '7/12/2021',
+                    Destination: 6,
                     amountKM: 40,
-                    price : '50.000đ/ 2 vé/ 2 người'
+                    price: '50.000đ/ 2 vé/ 2 người'
                 },
                 {
                     imgId: 3,
@@ -281,10 +281,10 @@ const initialState = {
                     time: '3 giờ',
                     distance: '7km',
                     timeCar: '15 phút',
-                    day1 : '8/12/2021',
-                    Destination:4,
+                    day1: '8/12/2021',
+                    Destination: 4,
                     amountKM: 27,
-                    price : '100.000đ/ 2 vé/ 2 người'
+                    price: '100.000đ/ 2 vé/ 2 người'
                 },
             ]
         },
@@ -294,10 +294,15 @@ const initialState = {
     additem: [],
     FilterName: 'OK',
     filterMenu: 'SCHEDULE',
+    heartARR: []
 };
 
 export default function Schedule(state = initialState, action) {
     switch (action.type) {
+        case 'ADDHEART':
+            let newarr = [...state.heartARR]
+            newarr.push([...action.heartARR])
+            return { ...state, heartARR: newarr }
         case 'FILTERVISIT':
             return { ...state, filterMenu: 'VISIT' }
         case 'FILTERHOTEL':
@@ -324,6 +329,7 @@ export default function Schedule(state = initialState, action) {
             }
         case 'ADDITEM':
             return { ...state, additem: action.additem }
+
         default:
             return state;
     }

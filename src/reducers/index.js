@@ -7,6 +7,7 @@ import Schedule from "./Schedule";
 import Experience from "./Experience";
 import Hotel from "./Hotel";
 import DecemberDestination from "./DecemberDestination";
+import Review from "./Review";
 const rootReducer = combineReducers({
   people,
   PopularPlace,
@@ -16,6 +17,7 @@ const rootReducer = combineReducers({
   Experience,
   Hotel, 
   DecemberDestination,
+  Review,
 });
 
 export default rootReducer;
