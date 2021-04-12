@@ -294,15 +294,35 @@ const initialState = {
     additem: [],
     FilterName: 'OK',
     filterMenu: 'SCHEDULE',
-    heartARR: []
+    heartARR: [],
 };
 
 export default function Schedule(state = initialState, action) {
     switch (action.type) {
         case 'ADDHEART':
-            let newarr = [...state.heartARR]
-            newarr.push([...action.heartARR])
-            return { ...state, heartARR: newarr }
+            const isExist = state.heartARR.find(e => e.id === action.heartARR?.id)
+            const updateProduct = !isExist ?
+                [...state.heartARR, { ...action.heartARR, heart: true }]
+                : state.heartARR.map(e => {
+                    if (e?.id === action.heartARR?.id) {
+                        return ({ ...e, heart: true })
+                    }
+                    return e
+                })
+            return {
+                ...state, heartARR: updateProduct
+            }
+        case "REMOVE_HEART":
+            const reduceHeart = state.heartARR.map(e => {
+                if (e?.id === action.heartARR?.id) {
+                    return ({ ...e, heart: false })
+                }
+                return e
+            })
+            return {
+                ...state,
+                heartARR: reduceHeart.filter(e => e.heart === true)
+            }
         case 'FILTERVISIT':
             return { ...state, filterMenu: 'VISIT' }
         case 'FILTERHOTEL':

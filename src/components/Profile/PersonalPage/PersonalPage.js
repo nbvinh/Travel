@@ -9,6 +9,7 @@ import Review from "./Review";
 import SeeIMG from "./SeeIMG";
 import Schedule from "../../Home/Schedule";
 import { verticalScale } from "react-native-size-matters";
+import Follow from "../../Follow";
 const { height, width } = Dimensions.get('screen')
 const PersonalPage = ({ navigation }) => {
     const user = useSelector(store => store.people.user)
@@ -21,38 +22,35 @@ const PersonalPage = ({ navigation }) => {
                 <View style={AppStyle.StyleProfile.body}>
                     <ScrollView style={AppStyle.StyleHome.scrollview}>
                         <View style={AppStyle.StylePersonalPage.container}>
-                            <View style={AppStyle.StylePersonalPage.avatar}>
-                                <Image
-                                    source={require('../../../img/vinh2.png')}
-                                    style={AppStyle.StylePersonalPage.img1}
-                                />
-                                {user && user.map((item) =>
-                                    <Text key={item.id.toString()} style={AppStyle.StylePersonalPage.name}>{item.lastname} {item.fisrtname}</Text>
-                                )}
-                            </View>
+                            {user && user.map((item) =>
+                                <View key={item.id.toString()} style={AppStyle.StylePersonalPage.avatar}>
+                                    <Image
+                                        source={{ uri: item.avatar }}
+                                        style={AppStyle.StylePersonalPage.img1}
+                                    />
+                                    <Text style={AppStyle.StylePersonalPage.name}>{item.lastname} {item.fisrtname}</Text>
+                                </View>
+                            )}
                             <View style={AppStyle.StylePersonalPage.body}>
                                 <View style={AppStyle.StylePersonalPage.follow}>
                                     <Text />
-                                    <View>
-                                        <Text style={AppStyle.StylePersonalPage.text1}>100</Text>
-                                        <Text style={AppStyle.StylePersonalPage.text2}>Người theo dõi</Text>
-                                    </View>
-                                    <View >
-                                        <Text style={AppStyle.StylePersonalPage.text1}>200</Text>
-                                        <Text style={AppStyle.StylePersonalPage.text2}>Đang theo dõi</Text>
-                                    </View>
+                                    <Follow quantity={100} text={'Người theo dõi'} type={'follow'} navigation={navigation} />
+                                    <Follow quantity={200} text={'Đang theo dõi'} type={'following'} navigation={navigation} />
                                     <Text />
                                 </View>
-                                <View style={AppStyle.StylePersonalPage.Edit}>
+                                <TouchableOpacity
+                                    onPress={() => navigation.navigate('EditProfile')}
+                                    style={AppStyle.StylePersonalPage.Edit}
+                                >
                                     <Text style={AppStyle.StylePersonalPage.text3}>Sửa thông tin cá nhân</Text>
-                                </View>
+                                </TouchableOpacity>
                             </View>
                         </View>
                         <Review />
                         <TextHome text1={'Xem ảnh'} text2={'Xem thêm >'} />
                         <SeeIMG />
                         <TextHome text1={'Lịch trình của bạn'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMoreSchedule')} />
-                        <View style={[AppStyle.StyleHome.marginLeft,{marginBottom:verticalScale(30)}]}>
+                        <View style={[AppStyle.StyleHome.marginLeft, { marginBottom: verticalScale(30) }]}>
                             <Schedule />
                         </View>
                     </ScrollView>

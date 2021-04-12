@@ -12,7 +12,8 @@ const StylePersonalPage = StyleSheet.create({
     },
     img1: {
         width: verticalScale(65),
-        height: verticalScale(65)
+        height: verticalScale(65),
+        borderRadius:verticalScale(30)
     },
     name: {
         fontSize: verticalScale(15),
@@ -46,7 +47,8 @@ const StylePersonalPage = StyleSheet.create({
         marginLeft: verticalScale(30),
         marginTop: verticalScale(10),
         justifyContent: 'center',
-        alignItems: 'center'
+        alignItems: 'center',
+        borderRadius:verticalScale(5)
     },
     body: {
         width: width - verticalScale(100),

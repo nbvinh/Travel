@@ -23,11 +23,17 @@ const initialState = {
     { id: 3, text1: '4' },
     { id: 4, text1: '5' },
   ],
-  modalReview: false
+  modalReview: false,
+  text: '',
+  text1: ''
 };
 
 export default function peopleReducer(state = initialState, action) {
   switch (action.type) {
+    case 'TEXT':
+      return { ...state, text: action.text }
+    case 'TEXT1':
+      return { ...state, text1: action.text1 }
     case 'CHOOSE':
       let arr = [...state.Star]
       arr.map((item) => {

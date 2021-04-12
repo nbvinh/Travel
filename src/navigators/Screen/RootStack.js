@@ -22,13 +22,16 @@ import PrivacyPolicy from "../../components/Profile/Setting/PrivacyPolicy";
 import TermsOfUse from "../../components/Profile/Setting/TermsOfUse";
 import PersonalPage from "../../components/Profile/PersonalPage/PersonalPage";
 import Heart from "../../components/Profile/Heart/Heart";
+import FollowScreen from "../../components/Profile/PersonalPage/FollowScreen";
+import FollowingScreen from "../../components/Profile/PersonalPage/FollowingScreen";
+import EditProfile from "../../components/Profile/PersonalPage/EditProfile";
 const Root = createStackNavigator();
 const RootStack = () => {
     return (
         <NavigationContainer >
             <Root.Navigator headerMode="none">
-                <Root.Screen name="BottomTab" component={BottomTab} />
                 <Root.Screen name="ScreenFirst" component={ScreenFirst} />
+                <Root.Screen name="BottomTab" component={BottomTab} />
                 <Root.Screen name="ScreenSecond" component={ScreenSecond} />
                 <Root.Screen name="ScreenOTP" component={ScreenOTP} />
                 <Root.Screen name="ScreenUpdateProfile" component={ScreenUpdateProfile} />
@@ -47,6 +50,9 @@ const RootStack = () => {
                 <Root.Screen name="TermsOfUse" component={TermsOfUse} />
                 <Root.Screen name="PersonalPage" component={PersonalPage} />
                 <Root.Screen name="Heart" component={Heart} />
+                <Root.Screen name="FollowScreen" component={FollowScreen} />
+                <Root.Screen name="FollowingScreen" component={FollowingScreen} />
+                <Root.Screen name="EditProfile" component={EditProfile} />
             </Root.Navigator>
         </NavigationContainer>
     )

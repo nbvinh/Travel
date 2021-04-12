@@ -19,9 +19,12 @@ const Profile = ({ navigation }) => {
                 dispatch({ type: 'MODALREVIEW' })
                 :
                 item.id === 2 ?
-                navigation.navigate('Heart')
+                    navigation.navigate('Heart')
                     :
-                    null
+                    item.id === 1 ?
+                        navigation.navigate('SeeMorePromotions')
+                        :
+                        null
     }
     const dataItem = useSelector(store => store.people.dataItem)
     return (
@@ -31,17 +34,17 @@ const Profile = ({ navigation }) => {
                 <HeaderBottomTab text={'Thông tin cá nhân'} />
                 <View style={AppStyle.StyleProfile.body}>
                     <ScrollView style={AppStyle.StyleHome.scrollview}>
-                        <TouchableOpacity style={AppStyle.StyleProfile.avatar} onPress={() => navigation.navigate('PersonalPage')}>
-                            <Image
-                                source={require('../../img/vinh2.png')}
-                                style={AppStyle.StyleProfile.imgAvatar}
-                            />
-                            {user && user.map((item) => {
-                                return (
-                                    <Text key={item.id.toString()} style={AppStyle.StyleProfile.name}>{item.lastname} {item.fisrtname}</Text>
-                                )
-                            })}
-                        </TouchableOpacity>
+                        {user && user.map((item) => {
+                            return (
+                                <TouchableOpacity key={item.id.toString()} style={AppStyle.StyleProfile.avatar} onPress={() => navigation.navigate('PersonalPage')}>
+                                    <Image
+                                        source={{ uri: item.avatar }}
+                                        style={AppStyle.StyleProfile.imgAvatar}
+                                    />
+                                    <Text style={AppStyle.StyleProfile.name}>{item.lastname} {item.fisrtname}</Text>
+                                </TouchableOpacity>
+                            )
+                        })}
                         <View style={AppStyle.StyleProfile.content}>
                             {dataItem && dataItem.map((item) => <Item key={item.id.toString()} item={item} onScreen={() => onScreen(item)} />)}
                         </View>

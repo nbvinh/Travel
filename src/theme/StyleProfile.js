@@ -28,7 +28,8 @@ const StyleProfile = StyleSheet.create({
         width:scale(60),
         height:scale(60),
         marginHorizontal:scale(10),
-        marginVertical:scale(5)
+        marginVertical:scale(5),
+        borderRadius:scale(30)
     },
     name:{
         fontWeight:'500',

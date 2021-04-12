@@ -10,8 +10,10 @@ const ScreenUpdateProfile = ({ navigation }) => {
     const onBack = () => {
         navigation.goBack()
     }
-    const [text, setText] = useState('')
-    const [text1, setText1] = useState('')
+    // const [text, setText] = useState('')
+    // const [text1, setText1] = useState('')
+    const text = useSelector(store => store.people.text)
+    const text1 = useSelector(store => store.people.text1)
     const [lastname, setLastname] = useState(false)
     const [fisrtname, setFisrtname] = useState(false)
     const [finish, setFinish] = useState(false)
@@ -19,7 +21,7 @@ const ScreenUpdateProfile = ({ navigation }) => {
     const phone = useSelector(store => store.people.phone)
     const dispatch = useDispatch()
     const onChangelastname = (value) => {
-        setText(value)
+        dispatch({ type: 'TEXT', text: value })
         if (value !== '') {
             setFinish(true)
             console.log(finish)
@@ -29,7 +31,7 @@ const ScreenUpdateProfile = ({ navigation }) => {
         }
     }
     const onChangefisrtname = (value) => {
-        setText1(value)
+        dispatch({ type: 'TEXT1', text1: value })
         if (value !== '') {
             setFinish1(true)
         }
@@ -38,10 +40,10 @@ const ScreenUpdateProfile = ({ navigation }) => {
         }
     }
     const data = [
-        { lastname: text, fisrtname: text1, id: Math.random(),phone : phone },
+        { lastname: text, fisrtname: text1, id: Math.random(), phone: phone, avatar: 'https://thuthuatnhanh.com/wp-content/uploads/2019/07/anh-girl-xinh-facebook-tuyet-dep-387x580.jpg' },
     ]
     useEffect(() => {
-        dispatch({type:'PROFILE',data : data})
+        dispatch({ type: 'PROFILE', data: data })
     }, [data])
     return (
         <SafeAreaView style={styles.container}>

@@ -8,6 +8,7 @@ import Experience from "./Experience";
 import Hotel from "./Hotel";
 import DecemberDestination from "./DecemberDestination";
 import Review from "./Review";
+import Follow from "./Follow";
 const rootReducer = combineReducers({
   people,
   PopularPlace,
@@ -18,6 +19,8 @@ const rootReducer = combineReducers({
   Hotel, 
   DecemberDestination,
   Review,
+  Follow,
+  
 });
 
 export default rootReducer;
