@@ -30,8 +30,8 @@ const RootStack = () => {
     return (
         <NavigationContainer >
             <Root.Navigator headerMode="none">
-                <Root.Screen name="ScreenFirst" component={ScreenFirst} />
                 <Root.Screen name="BottomTab" component={BottomTab} />
+                <Root.Screen name="ScreenFirst" component={ScreenFirst} />
                 <Root.Screen name="ScreenSecond" component={ScreenSecond} />
                 <Root.Screen name="ScreenOTP" component={ScreenOTP} />
                 <Root.Screen name="ScreenUpdateProfile" component={ScreenUpdateProfile} />

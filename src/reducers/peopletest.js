@@ -25,13 +25,22 @@ const initialState = {
   ],
   modalReview: false,
   text: '',
-  text1: ''
+  text1: '',
+  fisrtname: '',
+  lastname: '',
+  picture: '',
 };
 
 export default function peopleReducer(state = initialState, action) {
   switch (action.type) {
+    case 'PICTURE':
+      return { ...state, picture: action.picture }
     case 'TEXT':
       return { ...state, text: action.text }
+    case 'LASTNAME':
+      return { ...state, lastname: action.lastname }
+    case 'FISRTNAME':
+      return { ...state, fisrtname: action.fisrtname }
     case 'TEXT1':
       return { ...state, text1: action.text1 }
     case 'CHOOSE':

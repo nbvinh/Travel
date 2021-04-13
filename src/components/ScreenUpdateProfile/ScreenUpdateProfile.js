@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View, TextInput, Text, SafeAreaView, StyleSheet, Dimensions, TouchableOpacity } from "react-native";
+import { View, TextInput, Text, SafeAreaView, StyleSheet, Dimensions, TouchableOpacity, ScrollView } from "react-native";
 import Header from "../Header";
 import { useDispatch, useSelector } from "react-redux";
 import Form from "./Form";
@@ -10,8 +10,6 @@ const ScreenUpdateProfile = ({ navigation }) => {
     const onBack = () => {
         navigation.goBack()
     }
-    // const [text, setText] = useState('')
-    // const [text1, setText1] = useState('')
     const text = useSelector(store => store.people.text)
     const text1 = useSelector(store => store.people.text1)
     const [lastname, setLastname] = useState(false)
@@ -47,58 +45,61 @@ const ScreenUpdateProfile = ({ navigation }) => {
     }, [data])
     return (
         <SafeAreaView style={styles.container}>
-            <Header onBack={onBack} />
-            <View style={styles.content}>
-                <Text style={styles.text1}>Cập Nhật Thông Tin</Text>
-                <TextInput
-                    onChangeText={(value) => onChangelastname(value)}
-                    value={text}
-                    style={[styles.text2, { borderColor: lastname ? '#F17A4F' : '#E0E0E0', }]}
-                    autoFocus={true}
-                    placeholder={'Họ'}
-                    placeholderTextColor={'#BDBDBD'}
-                    onFocus={() => {
-                        setLastname(true)
-                        setFisrtname(false)
-                    }}
-                />
-                <TextInput
-                    onChangeText={(value) => onChangefisrtname(value)}
-                    value={text1}
-                    style={[styles.text2, { marginVertical: scale(20), borderColor: fisrtname ? '#F17A4F' : '#E0E0E0' }]}
-                    placeholder={'Tên'}
-                    placeholderTextColor={'#BDBDBD'}
-                    onFocus={() => {
-                        setLastname(false)
-                        setFisrtname(true)
-                    }}
-                />
-                <TextInput
-                    style={[styles.text2, { borderColor: '#E0E0E0' }]}
-                    placeholder={'0' + phone}
-                    placeholderTextColor={'#BDBDBD'}
-                    editable={false}
-                    selectTextOnFocus={false}
-                />
-                {
-                    finish || finish1 ?
-                        <TouchableOpacity style={styles.finish} onPress={() => navigation.navigate('BottomTab')}>
-                            <Text style={styles.textfinish}>Hoàn Thành</Text>
-                        </TouchableOpacity>
-                        :
-                        <TouchableOpacity style={styles.finishfall}>
-                            <Text style={styles.textfinish}>Hoàn Thành</Text>
+            <ScrollView>
 
-                        </TouchableOpacity>
-                }
-                <View style={styles.rules}>
-                    <Text style={styles.text3}>Bằng cách tham gia OKGO, bạn đã đồng ý với
+                <Header onBack={onBack} />
+                <View style={styles.content}>
+                    <Text style={styles.text1}>Cập Nhật Thông Tin</Text>
+                    <TextInput
+                        onChangeText={(value) => onChangelastname(value)}
+                        value={text}
+                        style={[styles.text2, { borderColor: lastname ? '#F17A4F' : '#E0E0E0', }]}
+                        autoFocus={true}
+                        placeholder={'Họ'}
+                        placeholderTextColor={'#BDBDBD'}
+                        onFocus={() => {
+                            setLastname(true)
+                            setFisrtname(false)
+                        }}
+                    />
+                    <TextInput
+                        onChangeText={(value) => onChangefisrtname(value)}
+                        value={text1}
+                        style={[styles.text2, { marginVertical: scale(20), borderColor: fisrtname ? '#F17A4F' : '#E0E0E0' }]}
+                        placeholder={'Tên'}
+                        placeholderTextColor={'#BDBDBD'}
+                        onFocus={() => {
+                            setLastname(false)
+                            setFisrtname(true)
+                        }}
+                    />
+                    <TextInput
+                        style={[styles.text2, { borderColor: '#E0E0E0' }]}
+                        placeholder={'0' + phone}
+                        placeholderTextColor={'#BDBDBD'}
+                        editable={false}
+                        selectTextOnFocus={false}
+                    />
+                    {
+                        finish || finish1 ?
+                            <TouchableOpacity style={styles.finish} onPress={() => navigation.navigate('BottomTab')}>
+                                <Text style={styles.textfinish}>Hoàn Thành</Text>
+                            </TouchableOpacity>
+                            :
+                            <TouchableOpacity style={styles.finishfall}>
+                                <Text style={styles.textfinish}>Hoàn Thành</Text>
+
+                            </TouchableOpacity>
+                    }
+                    <View style={styles.rules}>
+                        <Text style={styles.text3}>Bằng cách tham gia OKGO, bạn đã đồng ý với
                         <Text onPress={() => { dispatch({ type: 'MODALPROFILE' }) }} style={{ textDecorationLine: 'underline' }}> Chính sách bảo mật và Điều khoản sử dụng </Text>
                         của chúng tôi
                     </Text>
+                    </View>
                 </View>
-            </View>
-            <Form />
+                <Form />
+            </ScrollView>
         </SafeAreaView>
     )
 }

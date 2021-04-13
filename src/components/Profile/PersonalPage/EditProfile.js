@@ -7,13 +7,35 @@ import AppStyle from "../../../theme/index";
 import { scale, verticalScale } from "react-native-size-matters";
 import Follower from "../../Follower";
 import Input from "../../Input";
+import ImagePicker from 'react-native-image-crop-picker';
 const EditProfile = ({ navigation }) => {
     const user = useSelector(store => store.people.user)
+    const fisrtname = useSelector(store => store.people.fisrtname)
+    const lastname = useSelector(store => store.people.lastname)
+    const picture = useSelector(store => store.people.picture)
+    const phone = useSelector(store => store.people.phone)
+    const dispatch = useDispatch()
+    const data = [
+        { lastname: lastname, fisrtname: fisrtname, id: Math.random(), phone: phone, avatar: picture },
+    ]
+    const onSave = () => {
+        dispatch({ type: 'PROFILE', data: data })
+        navigation.goBack()
+    }
+    const onPicture = () => {
+        ImagePicker.openPicker({
+            width: 300,
+            height: 400,
+            cropping: true
+        }).then(image => {
+            dispatch({ type: 'PICTURE', picture: image.path })
+        });
+    }
     return (
         <SafeAreaView style={AppStyle.StyleHome.container}>
             <StatusBar backgroundColor='white' barStyle={"dark-content"} />
             <ScrollView style={AppStyle.StyleHome.scrollview}>
-                <HeaderEdit text={'Sửa thông tin cá nhân'} onBack={() => navigation.goBack()} />
+                <HeaderEdit text={'Sửa thông tin cá nhân'} onBack={() => navigation.goBack()} onSave={() => onSave()} />
                 {user && user.map((item) => {
                     return (
                         <View key={item.id.toString()} style={styles.container} >
@@ -22,7 +44,7 @@ const EditProfile = ({ navigation }) => {
                                     source={{ uri: item.avatar }}
                                     style={styles.avatar}
                                 />
-                                <Text style={styles.edit}>Thay ảnh đại diện</Text>
+                                <Text onPress={() => onPicture()} style={styles.edit}>Thay ảnh đại diện</Text>
                             </View>
                             <Input value={item.fisrtname} text={'Họ'} editable={true} selectTextOnFocus={true} />
                             <Input value={item.lastname} text={'Tên'} editable={true} selectTextOnFocus={true} />

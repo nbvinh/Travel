@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import { View, Text, StyleSheet, StatusBar, SafeAreaView, Image, Animated, Dimensions, Easing } from "react-native";
 const { width, height } = Dimensions.get('screen')
 import { scale, verticalScale, moderateScale } from 'react-native-size-matters';
-const ScreenFirst = ({navigation}) => {
+const ScreenFirst = ({ navigation }) => {
     let Okgo1 = new Animated.Value(-height / 3)
     let Okgo2 = new Animated.Value(0)
     let Clouds1 = new Animated.Value(-width / 3)
@@ -12,9 +12,9 @@ const ScreenFirst = ({navigation}) => {
         animated1()
         animated2()
         animated3()
-        setTimeout(()=>{
+        setTimeout(() => {
             navigation.navigate('ScreenSecond')
-        },3000)
+        }, 3000)
     }, [])
     const animated3 = () => {
         const anim0 = Animated.timing(interpolate,
@@ -76,10 +76,8 @@ const ScreenFirst = ({navigation}) => {
     const marginLeft = Clouds1
     const marginRight = Clouds2
     const rotate = interpolate.interpolate({
-        // inputRange :[-1,0,1],
-        // outputRange :['-360deg','0deg','360deg']
-        inputRange: [-1, -0.8, -0.6, -0.4, -0.2, 0, 0.2, 0.4, 0.6, 0.8, 1,2],
-        outputRange: ['-360deg', '-294deg', '-229deg', '-164deg', '-99deg', '-34deg', '31deg', '96deg', '161deg', '226deg', '360deg','-360deg']
+        inputRange: [-1, 0, 1],
+        outputRange: ['-360deg', '0deg', '360deg']
     })
     return (
         <SafeAreaView style={styles.container}>
@@ -158,7 +156,9 @@ const styles = StyleSheet.create({
     imgfather: {
         position: 'absolute',
         top: '20%',
-        left: '40%',
+        left: 0,
+        right: 0,
+        alignItems: 'center'
     },
     img2: {
         width: scale(76.02),

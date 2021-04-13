@@ -1,7 +1,7 @@
 import Touch from "../../components/Touch";
 import AddButton from "../../components/AddButton";
 import Search from "../../components/Search/Search";
-import Cart from "../../components/Cart/Cart";
+import MySchedule from "../../components/MySchedule/MySchedule";
 import Notification from "../../components/Notification/Notification";
 import Profile from "../../components/Profile/Profile";
 import Home from "../../components/Home/Home";
@@ -16,7 +16,7 @@ function MyTabBar({ state, descriptors, navigation }) {
                 <AddButton />
             </View>
             <View style={{ width: 49, height: 49, position: 'absolute', right: 10, zIndex: 1, bottom: 60 }}>
-                <Touch/>
+                <Touch />
             </View>
             {state.routes.map((route, index) => {
                 const { options } = descriptors[route.key];
@@ -58,7 +58,10 @@ function MyTabBar({ state, descriptors, navigation }) {
                     >
                         <Image
                             source={{ uri: isFocused ? title : label }}
-                            style={{ width: 18, height: 19 }}
+                            style={{
+                                width: index === 3 ? 16 : index === 0 ? 18 : index === 1 ? 19.24 : 19,
+                                height: index === 3 ? 19.07 : index === 0 ? 18 : index === 1 ? 17.46 : 19
+                            }}
                         />
                     </TouchableOpacity>
                 );
@@ -75,7 +78,7 @@ export default function BottomTab() {
             <Tab.Screen name="https://scontent.xx.fbcdn.net/v/t1.15752-9/cp0/166512902_823611061832198_3630534522690177023_n.png?_nc_cat=100&ccb=1-3&_nc_sid=58c789&_nc_ohc=SVcfdRV49RIAX8DVT9r&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&tp=30&oh=a68421e2577c2c8a61129383a4a4a609&oe=608C64AC" component={Home}
                 options={{ title: 'https://scontent.xx.fbcdn.net/v/t1.15752-9/cp0/166651262_2946139718952881_1709129165697467887_n.png?_nc_cat=107&ccb=1-3&_nc_sid=58c789&_nc_ohc=C16uT9WPkq8AX8t9kyP&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&tp=30&oh=7af37eed61b151e58863474aeb95cf58&oe=608CE35D' }}
             />
-            <Tab.Screen name="https://scontent.xx.fbcdn.net/v/t1.15752-9/cp0/165881518_1071745669986573_1066626200322223892_n.png?_nc_cat=107&ccb=1-3&_nc_sid=58c789&_nc_ohc=EnhppZ05qU4AX-obPXt&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&tp=30&oh=3618181b2d0ffe4ad1a41b8afe1676f1&oe=608ED148" component={Cart}
+            <Tab.Screen name="https://scontent.xx.fbcdn.net/v/t1.15752-9/cp0/165881518_1071745669986573_1066626200322223892_n.png?_nc_cat=107&ccb=1-3&_nc_sid=58c789&_nc_ohc=EnhppZ05qU4AX-obPXt&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&tp=30&oh=3618181b2d0ffe4ad1a41b8afe1676f1&oe=608ED148" component={MySchedule}
                 options={{ title: 'https://scontent.xx.fbcdn.net/v/t1.15752-9/cp0/165945940_3997123257012959_9077640271211792558_n.png?_nc_cat=107&ccb=1-3&_nc_sid=58c789&_nc_ohc=SAtp8BcKuLsAX8CZH0g&_nc_ad=z-m&_nc_cid=0&_nc_ht=scontent.xx&tp=30&oh=70cb122fb5ebe32c5ced80b77050c58d&oe=608F8001' }}
             />
             <Tab.Screen name=" " component={Search} />

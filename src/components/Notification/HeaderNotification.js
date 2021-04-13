@@ -2,19 +2,24 @@ import React, { useState } from "react";
 import { View, TextInput, Text, Image, TouchableOpacity, Dimensions, StyleSheet } from "react-native";
 import { scale, verticalScale } from "react-native-size-matters";
 const { width, height } = Dimensions.get('screen')
-const HeaderEdit = (props) => {
-    const onBack = props.onBack
-    const onSave = props.onSave
+const HeaderNotification = (props) => {
+    const onNotification = props.onNotification
+    const imgNotification = props.imgNotification
     const text = props.text
     return (
         <View style={styles.container}>
-            <Text style={styles.cancel} onPress={() => onBack()}>Huỷ</Text>
+            <Text style={styles.cancel}></Text>
             <Text style={styles.content}>{text}</Text>
-            <Text style={styles.save} onPress={() => onSave()}>Lưu</Text>
+            <TouchableOpacity style={styles.save}>
+                <Image
+                    source={imgNotification}
+                    style={styles.img}
+                />
+            </TouchableOpacity>
         </View>
     )
 }
-export default HeaderEdit;
+export default HeaderNotification;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
@@ -36,10 +41,13 @@ const styles = StyleSheet.create({
         marginLeft: scale(10)
     },
     save: {
-        color: '#FF5F24',
-        fontWeight: '600',
-        fontSize: scale(12),
+        width: scale(16),
+        height: scale(13),
         marginRight: scale(10)
+    },
+    img:{
+        width:'100%',
+        height:'100%'
     }
 
 })

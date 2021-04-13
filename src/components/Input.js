@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { View, Text, TouchableOpacity, StyleSheet, TextInput } from "react-native";
 import { scale } from "react-native-size-matters";
 import AppStyle from "../theme/index";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 const Input = (props) => {
     const value = props.value
     const text = props.text
@@ -10,8 +10,8 @@ const Input = (props) => {
     const selectTextOnFocus = props.selectTextOnFocus
     const dispatch = useDispatch()
     const onText = (val) => {
-        text === 'Họ' ? dispatch({ type: 'TEXT1', text1: val }) :
-            dispatch({ type: 'TEXT', text: val })
+        text === 'Họ' ? dispatch({ type: 'FISRTNAME', fisrtname: val }) :
+            dispatch({ type: 'LASTNAME', lastname: val })
     }
     return (
         <View style={styles.container}>
@@ -20,10 +20,12 @@ const Input = (props) => {
             </View>
             <TextInput
                 onChangeText={(val) => onText(val)}
-                value={value}
+                // value={value}
                 style={styles.textInput}
                 editable={editable}
                 selectTextOnFocus={selectTextOnFocus}
+                placeholder={value}
+                placeholderTextColor={'#000000'}
             />
         </View>
     )

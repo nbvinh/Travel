@@ -1,6 +1,5 @@
 import React, { useRef, useEffect, useState } from "react";
-import { View, Text, SafeAreaView, StyleSheet, TextInput, Platform, Image } from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
+import { View, Text, SafeAreaView, StyleSheet, TextInput, Platform, Image, ScrollView, TouchableOpacity } from "react-native";
 import { moderateScale, scale, verticalScale } from "react-native-size-matters";
 
 let OTP = '9999'
