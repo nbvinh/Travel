@@ -10,8 +10,7 @@ import Planes from "./Planes";
 import Hotel from "./Hotel";
 import Visit from "./Visit";
 const ScheduleOverview = ({ navigation, route }) => {
-    const dataheader = useSelector(store => store.Schedule.data)
-    const id = useSelector(store => store.Schedule.id)
+    const item = route.params.item;
     const filterMenu = useSelector(store => store.Schedule.filterMenu)
     const StyleOverview = (statusname) => {
         if (statusname == filterMenu) return [AppStyle.StyleScheduleOverview.MenuTop, { backgroundColor: '#FF5F24' }]
@@ -38,70 +37,63 @@ const ScheduleOverview = ({ navigation, route }) => {
         <SafeAreaView style={{ flex: 1, backgroundColor: '#E5E5E5' }}>
             <StatusBar backgroundColor='white' barStyle={"dark-content"} />
             <ScrollView style={{ flex: 1 }}>
-                {
-                    dataheader && dataheader.map((item) => {
-                        if (id === item.id)
-                            return (
-                                <View key={item.id.toString()} style={{ flex: 1 }}>
-                                    <View style={AppStyle.StyleScheduleDetails.container}>
-                                        <Image
-                                            source={{ uri: item.img1 }}
-                                            style={AppStyle.StyleScheduleDetails.img1}
-                                        />
-                                        <TouchableOpacity
-                                            onPress={() => navigation.goBack()}
-                                            style={AppStyle.StyleScheduleDetails.ChevronRight}
-                                        >
-                                            <Image
-                                                source={require('../../../../img/ChevronRight.png')}
-                                                style={AppStyle.StyleScheduleDetails.img2}
-                                            />
-                                        </TouchableOpacity>
-                                    </View>
-                                    <View style={AppStyle.StyleScheduleOverview.container}>
-                                        <View style={AppStyle.StyleScheduleOverview.viewAvatar}>
-                                            <Image
-                                                source={{ uri: item.avatar }}
-                                                style={AppStyle.StyleScheduleOverview.avatar}
-                                            />
-                                        </View>
-                                        <Text style={AppStyle.StyleScheduleOverview.text1}>{item.text1}</Text>
-                                        <Text style={AppStyle.StyleScheduleOverview.text2}>{item.day1} - {item.day4}</Text>
-                                    </View>
-                                    <ScrollView horizontal={true}>
-                                        <TouchableOpacity
-                                            onPress={() => onSchedule()}
-                                            style={StyleOverview('SCHEDULE')}
-                                        >
-                                            <Text style={StyleTextOverview('SCHEDULE')}>Lịch trình</Text>
-                                        </TouchableOpacity>
-                                        <TouchableOpacity
-                                            onPress={() => onPlanes()}
-                                            style={StyleOverview('PLANES')}
-                                        >
-                                            <Text style={StyleTextOverview('PLANES')}>Máy bay</Text>
-                                        </TouchableOpacity>
-                                        <TouchableOpacity
-                                            onPress={() => onHotel()}
-                                            style={StyleOverview('HOTEL')}
-                                        >
-                                            <Text style={StyleTextOverview('HOTEL')}>Khách sạn</Text>
-                                        </TouchableOpacity>
-                                        <TouchableOpacity
-                                            onPress={() => onVisit()}
-                                            style={StyleOverview('VISIT')}
-                                        >
-                                            <Text style={StyleTextOverview('VISIT')}>Thăm quan</Text>
-                                        </TouchableOpacity>
-                                    </ScrollView>
-                                    {
-                                        filterMenu === 'PLANES' ? <Planes /> : filterMenu === 'SCHEDULE' ? <Schedule /> : filterMenu === 'HOTEL' ? <Hotel /> : <Visit />
-                                    }
+                <View key={item.id.toString()} style={{ flex: 1 }}>
+                    <View style={AppStyle.StyleScheduleDetails.container}>
+                        <Image
+                            source={{ uri: item.img1 }}
+                            style={AppStyle.StyleScheduleDetails.img1}
+                        />
+                        <TouchableOpacity
+                            onPress={() => navigation.goBack()}
+                            style={AppStyle.StyleScheduleDetails.ChevronRight}
+                        >
+                            <Image
+                                source={require('../../../../img/ChevronRight.png')}
+                                style={AppStyle.StyleScheduleDetails.img2}
+                            />
+                        </TouchableOpacity>
+                    </View>
+                    <View style={AppStyle.StyleScheduleOverview.container}>
+                        <View style={AppStyle.StyleScheduleOverview.viewAvatar}>
+                            <Image
+                                source={{ uri: item.avatar }}
+                                style={AppStyle.StyleScheduleOverview.avatar}
+                            />
+                        </View>
+                        <Text style={AppStyle.StyleScheduleOverview.text1}>{item.text1}</Text>
+                        <Text style={AppStyle.StyleScheduleOverview.text2}>{item.day1} - {item.day4}</Text>
+                    </View>
+                    <ScrollView horizontal={true}>
+                        <TouchableOpacity
+                            onPress={() => onSchedule()}
+                            style={StyleOverview('SCHEDULE')}
+                        >
+                            <Text style={StyleTextOverview('SCHEDULE')}>Lịch trình</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            onPress={() => onPlanes()}
+                            style={StyleOverview('PLANES')}
+                        >
+                            <Text style={StyleTextOverview('PLANES')}>Máy bay</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            onPress={() => onHotel()}
+                            style={StyleOverview('HOTEL')}
+                        >
+                            <Text style={StyleTextOverview('HOTEL')}>Khách sạn</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            onPress={() => onVisit()}
+                            style={StyleOverview('VISIT')}
+                        >
+                            <Text style={StyleTextOverview('VISIT')}>Thăm quan</Text>
+                        </TouchableOpacity>
+                    </ScrollView>
+                    {
+                        filterMenu === 'PLANES' ? <Planes item={item} /> : filterMenu === 'SCHEDULE' ? <Schedule item={item} navigation={navigation}/> : filterMenu === 'HOTEL' ? <Hotel item={item} /> : <Visit item={item} />
+                    }
 
-                                </View>
-                            )
-                    })
-                }
+                </View>
             </ScrollView>
         </SafeAreaView >
     )

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { View, StyleSheet, TouchableHighlight, Animated, Text, Image } from "react-native";
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Feather from 'react-native-vector-icons/Feather';
@@ -7,18 +7,17 @@ import { useDispatch, useSelector } from "react-redux";
 const AddButton = () => {
     let mode = new Animated.Value(0);
     let buttonSize = new Animated.Value(0);
-    const check = useSelector(store => store.people.check)
     const dispatch = useDispatch()
     const handlePress = () => {
-
-        Animated.parallel([
+        Animated.sequence([
             Animated.timing(buttonSize, {
                 toValue: 1,
-                useNativeDriver: false
+                useNativeDriver: true,
+
             }),
             Animated.timing(mode, {
                 toValue: mode._value === 0 ? 1 : 0,
-                useNativeDriver: false
+                useNativeDriver: false,
             })
         ]).start();
     };
@@ -107,7 +106,7 @@ const AddButton = () => {
                         style={{ width: 20, height: 20 }}
                     />
                 </View>
-                <Animated.Text style={[styles.text1,{fontSize}]}>Tìm quanh đây</Animated.Text>
+                <Animated.Text style={[styles.text1, { fontSize }]}>Tìm quanh đây</Animated.Text>
             </Animated.View>
             <TouchableOpacity style={styles.Plus}
                 onPress={() => handlePress()}

@@ -25,6 +25,7 @@ import Heart from "../../components/Profile/Heart/Heart";
 import FollowScreen from "../../components/Profile/PersonalPage/FollowScreen";
 import FollowingScreen from "../../components/Profile/PersonalPage/FollowingScreen";
 import EditProfile from "../../components/Profile/PersonalPage/EditProfile";
+import Search from "../../components/Search/Search";
 const Root = createStackNavigator();
 const RootStack = () => {
     return (
@@ -53,6 +54,7 @@ const RootStack = () => {
                 <Root.Screen name="FollowScreen" component={FollowScreen} />
                 <Root.Screen name="FollowingScreen" component={FollowingScreen} />
                 <Root.Screen name="EditProfile" component={EditProfile} />
+                <Root.Screen name="Search" component={Search} />
             </Root.Navigator>
         </NavigationContainer>
     )

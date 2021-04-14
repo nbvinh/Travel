@@ -295,10 +295,24 @@ const initialState = {
     FilterName: 'OK',
     filterMenu: 'SCHEDULE',
     heartARR: [],
+    Walking: [],
 };
 
 export default function Schedule(state = initialState, action) {
     switch (action.type) {
+        case 'ADDWALKING':
+            const isExist1 = state.Walking.find(e => e.id === action.Walking?.id)
+            const updateWalking = !isExist1 ?
+                [...state.Walking, { ...action.Walking }]
+                : state.Walking.map(e => {
+                    if (e?.id === action.Walking?.id) {
+                        return ({ ...e, quantity: e.quantity + 1 })
+                    }
+                    return e
+                })
+            return {
+                ...state, Walking: updateWalking
+            }
         case 'ADDHEART':
             const isExist = state.heartARR.find(e => e.id === action.heartARR?.id)
             const updateProduct = !isExist ?

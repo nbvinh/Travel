@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, ImageBackground, SafeAreaView, StyleSheet, Dimensions, Image, TextInput, ScrollView, StatusBar } from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
 import { scale, verticalScale } from "react-native-size-matters";
 import { useSelector } from "react-redux";
 import AppStyle from "../../theme/index";
@@ -24,17 +23,16 @@ const MySchedule = ({ navigation }) => {
                             <Tab.Navigator
                                 tabBarOptions={{
                                     showLabel: true,
-                                    labelStyle: { fontSize: verticalScale(12), fontWeight: 'bold', color: '#FF5F24' },
-                                    indicatorStyle: { backgroundColor: '#FF5F24' },
-                                    style: { backgroundColor: '#E5E5E5' },
+                                    labelStyle: { fontSize: verticalScale(12), fontWeight: '500' },
+                                    activeTintColor: "#FF5F24",
+                                    inactiveTintColor: "black",
+                                    style: { backgroundColor: '#E5E5E5',marginBottom:scale(15) },
+                                    indicatorStyle: { backgroundColor: "#FF5F24" }
 
                                 }}>
-                                <Tab.Screen name="Upcoming" component={Upcoming}
-                                    options={{
-                                        tabBarLabel: "Sắp Tới",
-                                    }} />
-                                <Tab.Screen name="Walking" component={Walking} options={{ tabBarLabel: 'Đang đi' }} />
-                                <Tab.Screen name="Finish" component={Finish} options={{ tabBarLabel: 'Hoàn thành' }} />
+                                <Tab.Screen name="Upcoming" component={Upcoming} options={{ title: 'Sắp tới' }} />
+                                <Tab.Screen name="Walking" component={Walking} options={{ title: "Đang đi" }} />
+                                <Tab.Screen name="Finish" component={Finish} options={{ title: 'Hoàn thành' }} />
                             </Tab.Navigator>
                         </View>
                     </ScrollView>
@@ -47,6 +45,7 @@ export default MySchedule;
 const styles = StyleSheet.create({
     container: {
         flex: 10,
+        marginHorizontal: verticalScale(20),
     },
     textfocus: {
         fontSize: scale(12),

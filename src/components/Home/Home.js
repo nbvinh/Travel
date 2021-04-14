@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View,StatusBar, Text, ImageBackground, SafeAreaView, StyleSheet, Dimensions, Image, TextInput, ScrollView } from "react-native";
+import { View, StatusBar, Text, ImageBackground, SafeAreaView, StyleSheet, Dimensions, Image, TextInput, ScrollView } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { useSelector } from "react-redux";
 import ImgHeader from "./ImgHeader";
@@ -36,6 +36,7 @@ const Home = ({ navigation }) => {
                             maxLength={20}
                             onChangeText={(value) => setSearch(value)}
                             style={AppStyle.StyleHome.textinput}
+                            onFocus={() => navigation.navigate('Search')}
                         />
                     </View>
                 </ImageBackground>
@@ -70,7 +71,7 @@ const Home = ({ navigation }) => {
                     <View style={AppStyle.StyleHome.marginLeft}>
                         <DecemberDestination />
                     </View>
-                    <TextHome text1={'Khách sạn & Resort'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMoreHotel')}/>
+                    <TextHome text1={'Khách sạn & Resort'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMoreHotel')} />
                     <View style={AppStyle.StyleHome.marginLeft}>
                         <Hotel />
                     </View>

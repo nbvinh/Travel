@@ -7,15 +7,16 @@ import AppStyle from "../../src/theme/index";
 const Schedule = (props) => {
     const item = props.item
     const type = props.type
+    const typeNavigation = props.typeNavigation
     const onChangeHeart = () => {
-        console.log('itemheart',item.heart)
+        console.log('itemheart', item.heart)
         dispatch({ type: type === 'add' ? 'ADDHEART' : 'REMOVE_HEART', heartARR: item })
     }
     const navigation = props.navigation
     const onNavigation = () => {
-        type === 'add' ?
+        typeNavigation === 'add' ?
             navigation.navigate('ScheduleDetails',
-                { id: item.id }
+                { item: item }
             ) || dispatch({ type: 'ADDSCHEDULEITEM', ScheduleItem: item.imgday })
             : null
     }
@@ -79,6 +80,17 @@ const Schedule = (props) => {
 
             </View>
             <View style={AppStyle.StyleSeeMoreSchedule.footer}>
+                {
+                    type === 'finish' ?
+                        <TouchableOpacity>
+                            <Image
+                                source={require('../../src/img/vinhfinish.png')}
+                                style={AppStyle.StyleSeeMoreSchedule.img8}
+                            />
+
+                        </TouchableOpacity>
+                        : null
+                }
                 <TouchableOpacity>
                     <Image
                         source={require('../../src/img/img23.png')}

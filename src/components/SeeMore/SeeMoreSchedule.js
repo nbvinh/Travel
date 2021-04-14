@@ -12,12 +12,12 @@ const SeeMoreSchedule = ({ navigation }) => {
         <SafeAreaView style={{ flex: 1, backgroundColor: '#E5E5E5' }}>
             <StatusBar backgroundColor='white' barStyle={"dark-content"} />
             <Header text={'Lịch trình gần đây'} onBack={() => navigation.goBack()} />
-            <View style={{ flex: 10, flex: 10, marginHorizontal: verticalScale(20), marginVertical: scale(20) }}>
+            <View style={{ flex: 10, marginHorizontal: verticalScale(20), marginVertical: scale(20) }}>
                 <ScrollView style={{ flex: 1 }}>
                     {
                         dataheader && dataheader.map((item) => {
                             return (
-                                <Schedule item={item} key={item.id} type={'add'} navigation={navigation} />
+                                <Schedule item={item} key={item.id} typeNavigation={'add'} type={'add'} navigation={navigation} />
                             )
                         })
                     }

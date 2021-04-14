@@ -2,22 +2,30 @@ import {
     StyleSheet,
     Dimensions
 } from 'react-native';
+import { scale } from 'react-native-size-matters';
 const { height, width } = Dimensions.get('screen')
 const StyleSeeMoreSchedule = StyleSheet.create({
     img6: {
-        width: 13.2,
-        height: 14,
-        marginRight: 10
+        width: scale(13.2),
+        height: scale(14),
+        marginRight: scale(10),
+        marginTop:scale(2)
+    },
+    img8: {
+        width: scale(19),
+        height: scale(19),
+        marginRight: scale(10),
     },
     img7: {
-        width: 14,
-        height: 12,
-        marginRight: 10
+        width: scale(14),
+        height: scale(12),
+        marginRight: scale(10),
+        marginTop:scale(2)
     },
     footer: {
         flexDirection: 'row',
         justifyContent: 'flex-end',
-        marginBottom: 15
+        marginBottom: scale(10)
     },
     viewText1: {
         borderRadius: 5,
