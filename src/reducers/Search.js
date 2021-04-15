@@ -12,17 +12,16 @@ const initialState = {
         { id: 9, provincial: 'Hạ Long', label: 'Kỳ quan thế giới' },
         { id: 10, provincial: 'Ninh Bình', label: 'Cố đô Hoa Lư' },
     ],
-    masterDATA: []
+    search: '',
+    newsearch :[]
 };
 
 export default function Search(state = initialState, action) {
     switch (action.type) {
-        case "MASTERDATA":
-            const newData = [...state.masterDATA]
-            masterDATA.filter((item)=>{
-                
-            })
-            return { ...state, data: action.data }
+        case "NEWARR":
+            return { ...state, newsearch: action.newarr }
+        case "SEARCH":
+            return { ...state, search: action.search }
         default:
             return state;
     }

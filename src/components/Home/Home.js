@@ -44,7 +44,7 @@ const Home = ({ navigation }) => {
                 <View style={{ flex: 10 }}>
 
                     <View style={AppStyle.StyleHome.onpress}>
-                        <TouchableOpacity style={AppStyle.StyleHome.touchable}>
+                        <TouchableOpacity style={AppStyle.StyleHome.touchable} onPress={()=> navigation.navigate('Suggestion')}>
                             <Text style={AppStyle.StyleHome.text3}>Xem gợi ý</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={AppStyle.StyleHome.touchable}>

@@ -12,6 +12,7 @@ import Follow from "./Follow";
 import Notification from "./Notification";
 import MySchedule from "./MySchedule";
 import Search from "./Search";
+import Suggestion from "./Suggestion";
 const rootReducer = combineReducers({
   people,
   PopularPlace,
@@ -25,7 +26,9 @@ const rootReducer = combineReducers({
   Follow,
   Notification,
   MySchedule,
-  Search
+  Search,
+  Suggestion,
+  
 });
 
 export default rootReducer;

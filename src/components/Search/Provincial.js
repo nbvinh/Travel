@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
     container: {
         width: width,
         flexDirection: 'row',
-        marginBottom:scale(10)
+        marginBottom: scale(10)
     },
     body: {
         marginLeft: scale(10)

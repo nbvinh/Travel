@@ -1,12 +1,22 @@
 import React, { useEffect, useState } from "react";
 import { Dimensions, View, Text, TextInput, Image, StyleSheet } from "react-native";
 import { verticalScale, scale } from "react-native-size-matters";
+import { useDispatch, useSelector } from "react-redux";
 const { width, height } = Dimensions.get('screen')
 const InputItem = (props) => {
-    const [search, setSearch] = useState('')
+    const search = useSelector(store => store.Search.search)
     const navigation = props.navigation
-    const onSearch =(value) =>{
-        
+    const dispatch = useDispatch()
+    const filterItems = (query) => {
+        return data.filter((el) =>
+            el.provincial.toLowerCase().indexOf(query.toLowerCase()) > -1
+        );
+    }
+    const data = useSelector(store => store.Search.data)
+    const onSearch = (value) => {
+        console.log('vionh', filterItems(value))
+        dispatch({ type: 'NEWARR', newarr: filterItems(value) })
+        dispatch({ type: 'SEARCH', search: value })
     }
     return (
         <View style={styles.container}>
@@ -18,6 +28,7 @@ const InputItem = (props) => {
                 placeholder={'Bạn muốn đi đâu?'}
                 maxLength={20}
                 onChangeText={(value) => onSearch(value)}
+                value={search}
                 style={styles.textInput}
             />
             <Text onPress={() => navigation.goBack()} style={styles.cancel}>Hủy</Text>
