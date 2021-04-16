@@ -17,7 +17,7 @@ const Suggestion = ({ navigation }) => {
                 <View style={styles.container}>
                     <TopTab />
                     <Care navigation={navigation} />
-                    <Body />
+                    <Body navigation={navigation} />
                     <ButtonCF />
                 </View>
             </ScrollView>

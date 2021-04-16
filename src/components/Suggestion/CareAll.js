@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import AppStyle from "../../theme/index";
 import HeaderCare from "./HeaderCare";
 import Care2 from "./Care2";
+import { scale } from "react-native-size-matters";
 const CareAll = ({ navigation }) => {
     const data = useSelector(store => store.Suggestion.data)
     const dispatch = useDispatch()
@@ -14,11 +15,12 @@ const CareAll = ({ navigation }) => {
                 <HeaderCare text={'Có thể bạn quan tâm'} onBack={() => navigation.goBack()} />
                 <View style={styles.container}>
                     <FlatList
+                        horizontal={false}
                         data={data}
                         keyExtractor={(item) => item.id}
-                        renderItem={(item) => <Care2 item={item} />}
+                        numColumns={2}
+                        renderItem={({ item }) => <Care2 item={item} />}
                     />
-
                 </View>
             </View>
         </SafeAreaView>
@@ -28,5 +30,8 @@ export default CareAll;
 const styles = StyleSheet.create({
     container: {
         flex: 10,
+        justifyContent:'center',
+        alignItems:"center",
+        marginTop:scale(10)
     },
 })

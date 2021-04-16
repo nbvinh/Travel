@@ -19,17 +19,60 @@ const initialState = {
         { id: 1, icon: require('../img/vinh44.png'), label: 'Đích đến', width: 12.03, height: 18.27 },
         { id: 2, icon: require('../img/vinh45.png'), label: 'Thời gian', width: 16.62, height: 17 },
         { id: 3, icon: require('../img/vinh46.png'), label: 'Ngân sách', width: 18, height: 18 },
-        { id: 4, icon: require('../img/vinh47.png'), label: 'Xuất phát', width: 20, height: 20 }
+        { id: 4, icon: require('../img/vinh47.png'), label: 'Người tham gia', width: 20, height: 20 }
+    ],
+    ChooseTime: false,
+    ChooseBudget: false,
+    start: '',
+    end: '',
+    DataBudget: [
+        { id: 0, price1: "1.000.000 ~ 2.000.000" },
+        { id: 1, price1: "2.000.000 ~ 3.000.000" },
+        { id: 2, price1: "3.000.000 ~ 4.000.000" },
+        { id: 3, price1: "4.000.000 ~ 5.000.000" },
+        { id: 4, price1: "5.000.000 ~ 6.000.000" },
+    ],
+    price: '',
+    DataPerson: [
+        { id: 0, label: 'Người lớn', text: 'trên 12 tuổi', quantity: 1 },
+        { id: 1, label: 'Trẻ em', text: '2-11 tuổi', quantity: 1 },
+        { id: 2, label: 'Em bé', text: 'dưới 2 tuổi', quantity: 1 },
     ]
 };
 
 export default function Suggestion(state = initialState, action) {
     switch (action.type) {
+        case 'DOWN':
+            let newPerson = [...state.DataPerson]
+            newPerson.map((e) => {
+                if (e.id === action.id) {
+                    e.quantity - 1
+                }
+            })
+            return { ...state, DataPerson: newPerson }
+        case 'UP':
+            let newPersonUP = [...state.DataPerson]
+            newPersonUP.map((e) => {
+                if (e.id === action.id) {
+                    e.quantity + 1
+                }
+            })
+            return { ...state, DataPerson: newPersonUP }
+        case 'PRICE':
+            return { ...state, price: action.price }
+        case "START":
+            return { ...state, start: action.start }
+        case "END":
+            return { ...state, end: action.end }
+        case "CHOOSETIME":
+            return { ...state, ChooseTime: !state.ChooseTime }
+        case "CHOOSEBUDGET":
+            return { ...state, ChooseBudget: !state.ChooseBudget }
         case 'CHECK':
             let arr = [...state.data]
             arr.filter((item) => {
                 if (item.id === action.id) {
-                    item.check = true
+                    item.check = !item.check
                 }
             })
             return { ...state, data: arr }

@@ -5,7 +5,6 @@ import TextHome from "../TextHome";
 import styles from "./styles";
 const Care = (props) => {
     const item = props.item
-    console.log('vinh', item)
     const navigation = props.navigation
     const dispatch = useDispatch()
     return (
