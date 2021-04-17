@@ -24,7 +24,7 @@ const styles = StyleSheet.create({
         height: scale(162),
         borderRadius: scale(5),
         backgroundColor: 'white',
-        marginHorizontal: scale(5),
+        marginHorizontal: scale(6.5),
         marginVertical: scale(10)
     },
     img: {

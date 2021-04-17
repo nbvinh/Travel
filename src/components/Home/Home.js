@@ -47,7 +47,7 @@ const Home = ({ navigation }) => {
                         <TouchableOpacity style={AppStyle.StyleHome.touchable} onPress={()=> navigation.navigate('Suggestion')}>
                             <Text style={AppStyle.StyleHome.text3}>Xem gợi ý</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={AppStyle.StyleHome.touchable}>
+                        <TouchableOpacity style={AppStyle.StyleHome.touchable} onPress={()=> navigation.navigate('CreateSchedules')}>
                             <Text style={AppStyle.StyleHome.text3}>Tạo lịch trình</Text>
                         </TouchableOpacity>
                     </View>

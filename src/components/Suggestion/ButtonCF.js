@@ -3,10 +3,19 @@ import { Text, TouchableOpacity, View, Image, SafeAreaView, StatusBar, Dimension
 import { scale } from "react-native-size-matters";
 import { useSelector, useDispatch } from "react-redux";
 const { height, width } = Dimensions.get('screen')
-const ButtonCF = () => {
+const ButtonCF = (props) => {
+    const type = props.type
+    const onSeeSuggestion = () => {
+        type === 'Xem gợi ý' ? navigation.navigate('SeeSuggestion') : null
+    }
+    const navigation = props.navigation
     return (
-        <TouchableOpacity style={styles.container}>
-            <Text style={styles.text}>Xong</Text>
+        <TouchableOpacity onPress={() => onSeeSuggestion()}
+            style={[styles.container,
+            { opacity: type === "Tạo lịch trình" ? 0.5 : 1 }
+            ]}
+        >
+            <Text style={styles.text}>{type}</Text>
         </TouchableOpacity>
     )
 }
@@ -19,8 +28,8 @@ const styles = StyleSheet.create({
         height: scale(35),
         justifyContent: 'center',
         alignItems: 'center',
-        marginBottom:scale(20),
-        borderRadius:scale(5)
+        marginBottom: scale(20),
+        borderRadius: scale(5)
     },
     text: {
         fontSize: scale(14),

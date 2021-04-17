@@ -29,6 +29,8 @@ import Search from "../../components/Search/Search";
 import Suggestion from "../../components/Suggestion/index";
 import CareAll from "../../components/Suggestion/CareAll";
 import ChoosePerson from "../../components/Suggestion/ChoosePerson";
+import SeeSuggestion from "../../components/Suggestion/SeeSuggestion";
+import CreateSchedules from "../../components/CreateSchedules/index";
 const Root = createStackNavigator();
 const RootStack = () => {
     return (
@@ -61,6 +63,8 @@ const RootStack = () => {
                 <Root.Screen name="Suggestion" component={Suggestion} />
                 <Root.Screen name="CareAll" component={CareAll} />
                 <Root.Screen name="ChoosePerson" component={ChoosePerson} />
+                <Root.Screen name="SeeSuggestion" component={SeeSuggestion} />
+                <Root.Screen name="CreateSchedules" component={CreateSchedules} />
             </Root.Navigator>
         </NavigationContainer>
     )

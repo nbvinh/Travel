@@ -44,19 +44,11 @@ export default function Suggestion(state = initialState, action) {
     switch (action.type) {
         case 'DOWN':
             let newPerson = [...state.DataPerson]
-            newPerson.map((e) => {
-                if (e.id === action.id) {
-                    e.quantity - 1
-                }
-            })
+            newPerson.map((e) => e.quantity > 0 ? e.id === action.id ? e.quantity = e.quantity - 1 : null : null)
             return { ...state, DataPerson: newPerson }
         case 'UP':
             let newPersonUP = [...state.DataPerson]
-            newPersonUP.map((e) => {
-                if (e.id === action.id) {
-                    e.quantity + 1
-                }
-            })
+            newPersonUP.map((e) => e.id === action.id ? e.quantity = e.quantity + 1 : null)
             return { ...state, DataPerson: newPersonUP }
         case 'PRICE':
             return { ...state, price: action.price }

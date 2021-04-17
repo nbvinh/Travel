@@ -3,6 +3,7 @@ import { View, Text, SafeAreaView, Image, ScrollView, StatusBar, TouchableOpacit
 import { useDispatch, useSelector } from "react-redux";
 import AppStyle from "../../theme/index";
 import Header from "../Header";
+import ButtonCF from "./ButtonCF";
 import styles from "./styles";
 const ChoosePerson = ({ navigation }) => {
     const DataPerson = useSelector(store => store.Suggestion.DataPerson)
@@ -39,6 +40,7 @@ const ChoosePerson = ({ navigation }) => {
                     })}
                 </View>
             </ScrollView>
+            <ButtonCF type={"Xong"} />
         </SafeAreaView>
     )
 }

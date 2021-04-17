@@ -5,6 +5,7 @@ import AppStyle from "../../theme/index";
 import HeaderCare from "./HeaderCare";
 import Care2 from "./Care2";
 import { scale } from "react-native-size-matters";
+import ButtonCF from "./ButtonCF";
 const CareAll = ({ navigation }) => {
     const data = useSelector(store => store.Suggestion.data)
     const dispatch = useDispatch()
@@ -16,11 +17,14 @@ const CareAll = ({ navigation }) => {
                 <View style={styles.container}>
                     <FlatList
                         horizontal={false}
+                        showsVerticalScrollIndicator={false}
                         data={data}
                         keyExtractor={(item) => item.id}
                         numColumns={2}
                         renderItem={({ item }) => <Care2 item={item} />}
+                        ListFooterComponent={<ButtonCF type={"Xong"} />}
                     />
+
                 </View>
             </View>
         </SafeAreaView>
@@ -30,8 +34,8 @@ export default CareAll;
 const styles = StyleSheet.create({
     container: {
         flex: 10,
-        justifyContent:'center',
-        alignItems:"center",
-        marginTop:scale(10)
+        justifyContent: 'center',
+        alignItems: "center",
+        marginTop: scale(10)
     },
 })
