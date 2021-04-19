@@ -4,11 +4,14 @@ import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 import Feather from 'react-native-vector-icons/Feather';
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { useDispatch, useSelector } from "react-redux";
-const AddButton = () => {
+const AddButton = (props) => {
     let mode = new Animated.Value(0);
     let buttonSize = new Animated.Value(0);
+    const navigation = props.navigation
     const dispatch = useDispatch()
+    const [test, setTest] = useState(false)
     const handlePress = () => {
+        // setTest(!test)
         Animated.sequence([
             Animated.timing(buttonSize, {
                 toValue: 1,
@@ -101,10 +104,15 @@ const AddButton = () => {
             </Animated.View>
             <Animated.View style={{ position: "absolute", left: pulseX, top: pulseY }}>
                 <View style={styles.secondaryButton}>
-                    <Image
-                        source={require('../img/Search.png')}
-                        style={{ width: 20, height: 20 }}
-                    />
+                    <TouchableOpacity onPress={() => {
+                        navigation.navigate("Search")
+                    }}
+                        style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                        <Image
+                            source={require('../img/Search.png')}
+                            style={{ width: 20, height: 20 }}
+                        />
+                    </TouchableOpacity>
                 </View>
                 <Animated.Text style={[styles.text1, { fontSize }]}>Tìm quanh đây</Animated.Text>
             </Animated.View>

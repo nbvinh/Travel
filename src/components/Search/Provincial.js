@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
-import { Dimensions, View, Text, TextInput, Image, StyleSheet } from "react-native";
+import { Dimensions, View, Text, TextInput, Image, StyleSheet, TouchableOpacity } from "react-native";
 import { verticalScale, scale } from "react-native-size-matters";
 const { width, height } = Dimensions.get('screen')
 const Provincial = (props) => {
     const item = props.item
     const navigation = props.navigation
+    const FindAroundHere = () => {
+        navigation.navigate("FindAroundHere")
+    }
     return (
-        <View style={styles.container}>
+        <TouchableOpacity onPress={()=>FindAroundHere()} style={styles.container}>
             <Image
                 source={require('../../img/vinh30.png')}
                 style={styles.img}
@@ -15,7 +18,7 @@ const Provincial = (props) => {
                 <Text style={styles.provincial}>{item.provincial}</Text>
                 <Text style={styles.label}>{item.label}</Text>
             </View>
-        </View>
+        </TouchableOpacity>
     )
 }
 export default Provincial;

@@ -16,7 +16,7 @@ const Search = ({ navigation }) => {
             <StatusBar backgroundColor='white' barStyle={"dark-content"} />
             <ScrollView style={AppStyle.StyleHome.scrollview}>
                 <InputItem navigation={navigation} />
-                {data && data.map((item) => <Provincial key={item.id} item={item} />)}
+                {data && data.map((item) => <Provincial key={item.id} item={item} navigation={navigation}  />)}
             </ScrollView>
         </SafeAreaView>
     )

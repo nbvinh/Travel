@@ -13,7 +13,7 @@ function MyTabBar({ state, descriptors, navigation }) {
     return (
         <View style={{ flexDirection: 'row', height: 45, backgroundColor: 'white' }}>
             <View style={{ position: 'absolute', left: (width / 5) * 2, right: (width / 5) * 2, zIndex: 1, bottom: 20, alignItems: 'center' }}>
-                <AddButton />
+                <AddButton navigation={navigation} />
             </View>
             <View style={{ width: 49, height: 49, position: 'absolute', right: 10, zIndex: 1, bottom: 60 }}>
                 <Touch />
