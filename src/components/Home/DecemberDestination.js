@@ -4,8 +4,8 @@ import { View, Text, ImageBackground, SafeAreaView, StyleSheet, Dimensions, Imag
 import { useSelector, useDispatch } from "react-redux";
 import AppStyle from "../../theme/index";
 const { height, width } = Dimensions.get('screen')
-const DecemberDestination = () => {
-    const dataheader = useSelector(store => store.DecemberDestination.data)
+const DecemberDestination = (props) => {
+    const dataheader = props.data
     return (
         <ScrollView horizontal={true}>
             {

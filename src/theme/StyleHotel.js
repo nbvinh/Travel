@@ -8,7 +8,6 @@ const StyleHotel = StyleSheet.create({
     container: {
         marginRight: moderateScale(20),
         width: width / 2.34,
-        marginBottom: 30
     },
     img1: { width: '100%', height: height / 5.4, borderRadius: 5 },
     content: { flexDirection: 'row', justifyContent: 'space-between', width: '100%' },

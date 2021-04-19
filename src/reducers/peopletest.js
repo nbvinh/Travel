@@ -29,10 +29,13 @@ const initialState = {
   fisrtname: '',
   lastname: '',
   picture: '',
+  test: false
 };
 
 export default function peopleReducer(state = initialState, action) {
   switch (action.type) {
+    case "MODE":
+      return { ...state, test: !state.test }
     case 'PICTURE':
       return { ...state, picture: action.picture }
     case 'TEXT':

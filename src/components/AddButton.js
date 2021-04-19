@@ -9,21 +9,33 @@ const AddButton = (props) => {
     let buttonSize = new Animated.Value(0);
     const navigation = props.navigation
     const dispatch = useDispatch()
-    const [test, setTest] = useState(false)
+    const test = useSelector(store => store.people.test)
     const handlePress = () => {
-        // setTest(!test)
-        Animated.sequence([
-            Animated.timing(buttonSize, {
-                toValue: 1,
-                useNativeDriver: true,
+        dispatch({ type: 'MODE' })
+        // Animated.sequence([
+        //     Animated.timing(buttonSize, {
+        //         toValue: 1,
+        //         useNativeDriver: true,
 
-            }),
-            Animated.timing(mode, {
-                toValue: mode._value === 0 ? 1 : 0,
-                useNativeDriver: false,
-            })
-        ]).start();
+        //     }),
+        //     Animated.timing(mode, {
+        //         toValue: mode._value === 0 ? 1 : 0,
+        //         useNativeDriver: false,
+        //     })
+        // ]).start();
     };
+    useEffect(() => {
+        test ?
+            Animated.timing(mode, {
+                toValue: 1,
+                useNativeDriver: false,
+            }).start()
+            :
+            Animated.timing(mode, {
+                toValue: 0,
+                useNativeDriver: false,
+            }).start()
+    }, [test])
     const thermometerX = mode.interpolate({
         inputRange: [0, 1],
         outputRange: [-0, -90]

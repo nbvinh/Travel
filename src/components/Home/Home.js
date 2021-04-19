@@ -2,18 +2,13 @@ import React, { useEffect, useState } from "react";
 import { View, StatusBar, Text, ImageBackground, SafeAreaView, StyleSheet, Dimensions, Image, TextInput, ScrollView } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { useSelector } from "react-redux";
-import ImgHeader from "./ImgHeader";
-import Promotion from "./Promotion";
-import TextHome from "../TextHome";
-import Schedule from "./Schedule";
-import PopularPlace from "./PopularPlace";
-import Experience from "./Experience";
-import Hotel from "./Hotel";
-import DecemberDestination from "./DecemberDestination";
+import { Hotel, ImgHeader, Promotion, TextHome, Schedule, PopularPlace, Experience, DecemberDestination } from "./index";
 import AppStyle from "../../theme/index";
 const { height, width } = Dimensions.get('screen')
 const Home = ({ navigation }) => {
     const [search, setSearch] = useState('')
+    const data = useSelector(store => store.Hotel.data)
+    const DecemberDestinationArr = useSelector(store => store.DecemberDestination.data)
     return (
         <SafeAreaView style={AppStyle.StyleHome.container}>
             <StatusBar backgroundColor='white' barStyle={"dark-content"} />
@@ -44,10 +39,10 @@ const Home = ({ navigation }) => {
                 <View style={{ flex: 10 }}>
 
                     <View style={AppStyle.StyleHome.onpress}>
-                        <TouchableOpacity style={AppStyle.StyleHome.touchable} onPress={()=> navigation.navigate('Suggestion')}>
+                        <TouchableOpacity style={AppStyle.StyleHome.touchable} onPress={() => navigation.navigate('Suggestion')}>
                             <Text style={AppStyle.StyleHome.text3}>Xem gợi ý</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={AppStyle.StyleHome.touchable} onPress={()=> navigation.navigate('CreateSchedules')}>
+                        <TouchableOpacity style={AppStyle.StyleHome.touchable} onPress={() => navigation.navigate('CreateSchedules')}>
                             <Text style={AppStyle.StyleHome.text3}>Tạo lịch trình</Text>
                         </TouchableOpacity>
                     </View>
@@ -69,11 +64,11 @@ const Home = ({ navigation }) => {
                     </View>
                     <TextHome text1={'Điểm đến tháng 12'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMoreDecemberDestination')} />
                     <View style={AppStyle.StyleHome.marginLeft}>
-                        <DecemberDestination />
+                        <DecemberDestination data={DecemberDestinationArr} />
                     </View>
                     <TextHome text1={'Khách sạn & Resort'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMoreHotel')} />
                     <View style={AppStyle.StyleHome.marginLeft}>
-                        <Hotel />
+                        <Hotel data={data} type={"home"} />
                     </View>
                 </View>
             </ScrollView>

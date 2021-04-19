@@ -6,10 +6,10 @@ const Provincial = (props) => {
     const item = props.item
     const navigation = props.navigation
     const FindAroundHere = () => {
-        navigation.navigate("FindAroundHere")
+        navigation.navigate("FindAroundHere", { item: item })
     }
     return (
-        <TouchableOpacity onPress={()=>FindAroundHere()} style={styles.container}>
+        <TouchableOpacity onPress={() => FindAroundHere()} style={styles.container}>
             <Image
                 source={require('../../img/vinh30.png')}
                 style={styles.img}
