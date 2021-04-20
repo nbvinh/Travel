@@ -1,12 +1,12 @@
 import React, { useState } from "react";
-import { View, TextInput, Text } from "react-native";
+import { View, TextInput, ScrollView } from "react-native";
 import Schedule from "../Schedule";
 import { useSelector, useDispatch } from "react-redux";
 import { verticalScale } from "react-native-size-matters";
 const Walking = ({ navigation }) => {
     const data = useSelector(store => store.Schedule.Walking)
     return (
-        <View>
+        <ScrollView>
             {
                 data && data.map((item) => {
                     return (
@@ -14,7 +14,7 @@ const Walking = ({ navigation }) => {
                     )
                 })
             }
-        </View>
+        </ScrollView>
     )
 }
 export default Walking;

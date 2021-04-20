@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import { Text, TouchableOpacity, View, Image, SafeAreaView, StatusBar, Dimensions, ScrollView, StyleSheet } from "react-native";
 import { scale } from "react-native-size-matters";
 import { useSelector, useDispatch } from "react-redux";
+import { useNavigation } from '@react-navigation/native';
 const { height, width } = Dimensions.get('screen')
 const ButtonCF = (props) => {
     const type = props.type
     const onSeeSuggestion = () => {
         type === 'Xem gợi ý' ? navigation.navigate('SeeSuggestion') : null
     }
-    const navigation = props.navigation
+    const navigation = useNavigation();
     return (
         <TouchableOpacity onPress={() => onSeeSuggestion()}
             style={[styles.container,

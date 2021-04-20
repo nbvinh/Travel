@@ -8,14 +8,17 @@ import Home from "../../components/Home/Home";
 import * as React from 'react';
 import { View, Text, TouchableOpacity, Image, Dimensions } from 'react-native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { useDispatch } from "react-redux";
+import { scale } from "react-native-size-matters";
 const { width, height } = Dimensions.get('screen')
 function MyTabBar({ state, descriptors, navigation }) {
+    const dispatch = useDispatch()
     return (
-        <View style={{ flexDirection: 'row', height: 45, backgroundColor: 'white' }}>
-            <View style={{ position: 'absolute', left: (width / 5) * 2, right: (width / 5) * 2, zIndex: 1, bottom: 20, alignItems: 'center' }}>
+        <View style={{ flexDirection: 'row', height: scale(45), backgroundColor: 'white' }}>
+            <View style={{ position: 'absolute', left: (width / 5) * 2, right: (width / 5) * 2, zIndex: 1, bottom: scale(20), alignItems: 'center' }}>
                 <AddButton navigation={navigation} />
             </View>
-            <View style={{ width: 49, height: 49, position: 'absolute', right: 10, zIndex: 1, bottom: 60 }}>
+            <View style={{ width: scale(49), height: scale(49), position: 'absolute', right: scale(10), zIndex: 1, bottom: scale(60) }}>
                 <Touch />
             </View>
             {state.routes.map((route, index) => {
@@ -34,6 +37,7 @@ function MyTabBar({ state, descriptors, navigation }) {
                         null
                     }
                     else {
+                        dispatch({ type: 'MODE1' })
                         navigation.navigate(route.name);
                     }
 
@@ -59,8 +63,8 @@ function MyTabBar({ state, descriptors, navigation }) {
                         <Image
                             source={{ uri: isFocused ? title : label }}
                             style={{
-                                width: index === 3 ? 16 : index === 0 ? 18 : index === 1 ? 19.24 : 19,
-                                height: index === 3 ? 19.07 : index === 0 ? 18 : index === 1 ? 17.46 : 19
+                                width: index === 3 ? scale(16) : index === 0 ? scale(18) : index === 1 ? scale(19.24) : scale(19),
+                                height: index === 3 ? scale(19.07) : index === 0 ? scale(18) : index === 1 ? scale(17.46) : scale(19)
                             }}
                         />
                     </TouchableOpacity>

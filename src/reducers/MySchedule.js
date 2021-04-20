@@ -584,6 +584,12 @@ const initialState = {
 
 export default function MySchedule(state = initialState, action) {
     switch (action.type) {
+        case "RATING":
+            let newarr = [...state.finish]
+            newarr.find((e) => {
+                e.id === action.id ? e.rating = true : null
+            })
+            return { ...state, finish: newarr }
         default:
             return state;
     }

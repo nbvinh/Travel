@@ -3,9 +3,10 @@ import { Text, TouchableOpacity, View, Image, SafeAreaView, StatusBar, Dimension
 import { useSelector, useDispatch } from "react-redux";
 import TextHome from "../TextHome";
 import styles from "./styles";
+import { useNavigation } from '@react-navigation/native';
 const Care = (props) => {
     const data = useSelector(store => store.Suggestion.data)
-    const navigation = props.navigation
+    const navigation = useNavigation();
     const dispatch = useDispatch()
     return (
         <View style={styles.container}>

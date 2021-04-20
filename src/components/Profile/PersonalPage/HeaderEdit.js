@@ -6,11 +6,12 @@ const HeaderEdit = (props) => {
     const onBack = props.onBack
     const onSave = props.onSave
     const text = props.text
+    const type = props.type
     return (
         <View style={styles.container}>
             <Text style={styles.cancel} onPress={() => onBack()}>Huỷ</Text>
             <Text style={styles.content}>{text}</Text>
-            <Text style={styles.save} onPress={() => onSave()}>Lưu</Text>
+            <Text style={styles.save} onPress={() => onSave()}>{type === 'Rating' ? "Gửi" : "Lưu"}</Text>
         </View>
     )
 }

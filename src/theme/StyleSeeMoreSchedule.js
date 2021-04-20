@@ -9,7 +9,7 @@ const StyleSeeMoreSchedule = StyleSheet.create({
         width: scale(13.2),
         height: scale(14),
         marginRight: scale(10),
-        marginTop:scale(2)
+        marginTop: scale(2)
     },
     img8: {
         width: scale(19),
@@ -20,7 +20,7 @@ const StyleSeeMoreSchedule = StyleSheet.create({
         width: scale(14),
         height: scale(12),
         marginRight: scale(10),
-        marginTop:scale(2)
+        marginTop: scale(2)
     },
     footer: {
         flexDirection: 'row',
@@ -28,10 +28,13 @@ const StyleSeeMoreSchedule = StyleSheet.create({
         marginBottom: scale(10)
     },
     viewText1: {
-        borderRadius: 5,
-        width: '100%',
+        borderRadius: scale(5),
+        width: scale(104),
         backgroundColor: '#FF5F24',
-        marginVertical: 10
+        height: scale(20),
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginRight: scale(5)
     },
     container: {
         backgroundColor: 'white',
@@ -60,35 +63,31 @@ const StyleSeeMoreSchedule = StyleSheet.create({
         justifyContent: 'space-between'
     },
     viewIMG2: {
-        marginTop: 15,
         flexDirection: 'row',
         justifyContent: 'space-between',
         width: '100%'
     },
     viewText: {
         flexDirection: 'row',
-        marginBottom: 10,
-        marginLeft: 5
+        marginBottom: scale(10),
+        marginLeft: scale(5),
     },
     img4: {
-        width: 25,
-        height: 25,
-        borderRadius: 15,
-        marginRight: 10,
-        marginTop: 5
+        width: scale(25),
+        height: scale(25),
+        borderRadius: scale(15),
+        marginRight: scale(10),
     },
     img5: {
-        width: 10,
-        height: 13,
-        marginRight: 5,
-        marginTop: 3
+        width: scale(10),
+        height: scale(13),
+        marginRight: scale(5),
     },
     text1: {
-        marginHorizontal: 5,
-        marginVertical: 5,
-        color: 'white'
+        color: 'white',
+        fontSize: scale(10)
     },
-    content:{ flexDirection: 'row', justifyContent: 'flex-end' }
+    content: { flexDirection: 'row', marginRight: scale(5) }
 
 })
 export default StyleSeeMoreSchedule;

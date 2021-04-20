@@ -2,31 +2,24 @@ import React, { useEffect, useState } from "react";
 import { View, Text, ImageBackground, SafeAreaView, StyleSheet, Dimensions, Image, TextInput, ScrollView, StatusBar } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
 import AppStyle from "../../theme/index";
-import Header from "../Header";
-import TopTab from "./TopTab";
-import Care from "./Care";
-import Body from "./Body";
-import ButtonCF from "./ButtonCF";
-const Suggestion = ({ navigation }) => {
+import Header from "../FindAroundHere/Header";
+import Input from "./Input";
+import styles from "./styles";
+const HotelScreen = ({ navigation, route }) => {
     const dispatch = useDispatch()
     return (
         <SafeAreaView style={AppStyle.StyleHome.container}>
             <StatusBar backgroundColor='white' barStyle={"dark-content"} />
             <ScrollView style={AppStyle.StyleHome.scrollview}>
-                <Header text={'Xem gợi ý'} onBack={() => navigation.goBack()} />
+                <Header text={'Khách sạn'} onBack={() => navigation.goBack()} />
                 <View style={styles.container}>
-                    <TopTab />
-                    <Care />
-                    <Body />
-                    <ButtonCF type={"Xem gợi ý"} />
+                    <View style={styles.body}>
+                        <Input />
+
+                    </View>
                 </View>
             </ScrollView>
         </SafeAreaView>
     )
 }
-export default Suggestion;
-const styles = StyleSheet.create({
-    container: {
-        flex: 10,
-    },
-})
+export default HotelScreen;

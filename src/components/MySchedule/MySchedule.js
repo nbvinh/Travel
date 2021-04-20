@@ -8,36 +8,33 @@ import { createMaterialTopTabNavigator } from "@react-navigation/material-top-ta
 import Finish from "./Finish";
 import Upcoming from "./Upcoming";
 import Walking from "./Walking";
-const { height, width } = Dimensions.get('screen')
 const MySchedule = ({ navigation }) => {
     const data = useSelector(store => store.Notification.data)
     const Tab = createMaterialTopTabNavigator()
     return (
         <SafeAreaView style={AppStyle.StyleHome.container}>
             <StatusBar backgroundColor='white' barStyle={"dark-content"} />
-            <ScrollView style={AppStyle.StyleHome.scrollview}>
+            <View style={AppStyle.StyleHome.scrollview}>
                 <HeaderBottomTab text={'Lịch trình của tôi'} />
                 <View style={AppStyle.StyleProfile.body}>
-                    <ScrollView style={AppStyle.StyleHome.scrollview}>
-                        <View style={styles.container}>
-                            <Tab.Navigator
-                                tabBarOptions={{
-                                    showLabel: true,
-                                    labelStyle: { fontSize: verticalScale(12), fontWeight: '500' },
-                                    activeTintColor: "#FF5F24",
-                                    inactiveTintColor: "black",
-                                    style: { backgroundColor: '#E5E5E5',marginBottom:scale(15) },
-                                    indicatorStyle: { backgroundColor: "#FF5F24" }
+                    <View style={styles.container}>
+                        <Tab.Navigator
+                            tabBarOptions={{
+                                showLabel: true,
+                                labelStyle: { fontSize: verticalScale(12), fontWeight: '500' },
+                                activeTintColor: "#FF5F24",
+                                inactiveTintColor: "black",
+                                style: { backgroundColor: '#E5E5E5', marginBottom: scale(15) },
+                                indicatorStyle: { backgroundColor: "#FF5F24" }
 
-                                }}>
-                                <Tab.Screen name="Upcoming" component={Upcoming} options={{ title: 'Sắp tới' }} />
-                                <Tab.Screen name="Walking" component={Walking} options={{ title: "Đang đi" }} />
-                                <Tab.Screen name="Finish" component={Finish} options={{ title: 'Hoàn thành' }} />
-                            </Tab.Navigator>
-                        </View>
-                    </ScrollView>
+                            }}>
+                            <Tab.Screen name="Upcoming" component={Upcoming} options={{ title: 'Sắp tới' }} />
+                            <Tab.Screen name="Walking" component={Walking} options={{ title: "Đang đi" }} />
+                            <Tab.Screen name="Finish" component={Finish} options={{ title: 'Hoàn thành' }} />
+                        </Tab.Navigator>
+                    </View>
                 </View>
-            </ScrollView>
+            </View>
         </SafeAreaView>
     )
 }

@@ -2,36 +2,13 @@ import React, { useEffect } from "react";
 import { View, Text } from 'react-native';
 import { createStackNavigator } from '@react-navigation/stack'
 import { NavigationContainer } from "@react-navigation/native";
-import ScreenFirst from "../../components/ScreenFirst/ScreenFirst";
-import ScreenSecond from "../../components/ScreenSecond/ScreenSecond";
-import ScreenOTP from "../../components/SreenOTP/ScreenOTP";
-import ScreenUpdateProfile from "../../components/ScreenUpdateProfile/ScreenUpdateProfile";
-import BottomTab from "../../navigators/Screen/BottomTab";
-import SeeMorePromotions from "../../components/SeeMore/SeeMorePromotions";
-import PromotionDetails from "../../components/Details/PromotionDetails";
-import SeeMoreSchedule from "../../components/SeeMore/SeeMoreSchedule";
-import SeeMorePopularPlace from "../../components/SeeMore/SeeMorePopularPlace";
-import SeeMoreExperience from "../../components/SeeMore/SeeMoreExperience";
-import SeeMoreDecemberDestination from "../../components/SeeMore/SeeMoreDecemberDestination";
-import SeeMoreHotel from "../../components/SeeMore/SeeMoreHotel";
-import ScheduleDetails from "../../components/Details/ScheduleDetails/ScheduleDetails";
-import PopularPlaceDetails from "../../components/Details/PopularPlace/PopularPlaceDetails";
-import ScheduleOverview from "../../components/Details/ScheduleDetails/ScheduleOverview/ScheduleOverview";
-import Setting from "../../components/Profile/Setting/Setting";
-import PrivacyPolicy from "../../components/Profile/Setting/PrivacyPolicy";
-import TermsOfUse from "../../components/Profile/Setting/TermsOfUse";
-import PersonalPage from "../../components/Profile/PersonalPage/PersonalPage";
-import Heart from "../../components/Profile/Heart/Heart";
-import FollowScreen from "../../components/Profile/PersonalPage/FollowScreen";
-import FollowingScreen from "../../components/Profile/PersonalPage/FollowingScreen";
-import EditProfile from "../../components/Profile/PersonalPage/EditProfile";
-import Search from "../../components/Search/Search";
-import Suggestion from "../../components/Suggestion/index";
-import CareAll from "../../components/Suggestion/CareAll";
-import ChoosePerson from "../../components/Suggestion/ChoosePerson";
-import SeeSuggestion from "../../components/Suggestion/SeeSuggestion";
-import CreateSchedules from "../../components/CreateSchedules/index";
-import FindAroundHere from "../../components/FindAroundHere";
+import {
+    ScreenFirst, ScreenSecond, ScreenOTP, Suggestion, CareAll, FindAroundHere, CreateSchedules,
+    ChoosePerson, SeeMoreDecemberDestination, TermsOfUse, PersonalPage, Heart, FollowScreen, FollowingScreen,
+    EditProfile, Search, SeeSuggestion, PrivacyPolicy, Setting, ScheduleDetails, PopularPlaceDetails, ScheduleOverview,
+    SeeMoreHotel, SeeMoreExperience, SeeMorePopularPlace, SeeMoreSchedule, PromotionDetails,
+    SeeMorePromotions, BottomTab, ScreenUpdateProfile, ChooseRating, Rating, HotelScreen
+} from "../../components/index";
 const Root = createStackNavigator();
 const RootStack = () => {
     return (
@@ -67,6 +44,9 @@ const RootStack = () => {
                 <Root.Screen name="SeeSuggestion" component={SeeSuggestion} />
                 <Root.Screen name="CreateSchedules" component={CreateSchedules} />
                 <Root.Screen name="FindAroundHere" component={FindAroundHere} />
+                <Root.Screen name="ChooseRating" component={ChooseRating} />
+                <Root.Screen name="Rating" component={Rating} />
+                <Root.Screen name="HotelScreen" component={HotelScreen} />
             </Root.Navigator>
         </NavigationContainer>
     )

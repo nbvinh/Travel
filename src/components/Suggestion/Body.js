@@ -5,13 +5,14 @@ import { useSelector, useDispatch } from "react-redux";
 import Time from "./Time";
 import styles from "./styles";
 import Budget from "./Budget";
+import { useNavigation } from '@react-navigation/native';
 const Body = (props) => {
     const DataContent = useSelector(store => store.Suggestion.DataContent)
     const dispatch = useDispatch()
     const start = useSelector(store => store.Suggestion.start)
     const end = useSelector(store => store.Suggestion.end)
     const price = useSelector(store => store.Suggestion.price)
-    const navigation = props.navigation
+    const navigation = useNavigation();
     const onChoose = (item) => {
         item.id === 2 ?
             dispatch({ type: 'CHOOSETIME' }) : item.id === 3 ?
