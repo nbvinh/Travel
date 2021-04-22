@@ -89,7 +89,7 @@ const StyleHome = StyleSheet.create({
         fontSize: scale(12),
     },
     marginLeft: {
-        marginLeft: moderateVerticalScale(20)
+        marginLeft: scale(16)
     }
 })
 export default StyleHome;

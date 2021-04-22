@@ -31,6 +31,8 @@ import FindAroundHere from "./FindAroundHere";
 import ChooseRating from "./ChooseRating/index";
 import Rating from "./ChooseRating/Rating";
 import HotelScreen from "./ScreenHeader/HotelScreen";
+import Restaurant from "./ScreenHeader/Restaurant";
+import Combo from "./ScreenHeader/Combo";
 export {
     ScreenFirst,
     ScreenSecond,
@@ -64,5 +66,7 @@ export {
     ScreenUpdateProfile,
     ChooseRating,
     Rating,
-    HotelScreen
+    HotelScreen,
+    Restaurant,
+    Combo
 }

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, ImageBackground, SafeAreaView, StyleSheet, Dimensions, Image, TextInput, ScrollView, FlatList } from "react-native";
+import { scale } from "react-native-size-matters";
 import { useSelector, useDispatch } from "react-redux";
 import AppStyle from "../../theme/index";
 const { height, width } = Dimensions.get('screen')
@@ -33,36 +34,35 @@ const Schedule = () => {
                                     </View>
                                 </View>
                             </View>
-                            <View style={AppStyle.StyleSchedule.content}>
-                                <View style={{ flex: 1 }}>
-                                    <View style={AppStyle.StyleSchedule.content1}>
-                                        <Text style={{ fontWeight: 'bold' }}>{item.text1} </Text>
-                                        <Text style={{ color: '#494949' }}>({item.text2})</Text>
-                                    </View>
-                                    <View style={AppStyle.StyleSchedule.content2}>
-                                        <Image
-                                            source={{ uri: item.avatar }}
-                                            style={AppStyle.StyleSchedule.img4}
-                                        />
-                                        <View>
-                                            <Text style={{ color: 'black' }}>{item.name}</Text>
-                                            <Text style={{ color: '#494949' }}>{item.time}</Text>
-                                        </View>
+                            <View style={{
+                                marginTop: scale(15), flexDirection: 'row',
+                                justifyContent: 'space-between',
+                            }}>
+                                <Text style={{ fontSize: scale(12), fontWeight: '700', textAlign: 'center', marginLeft: scale(5) }}>{item.text1}
+                                    <Text style={{ color: '#494949', fontSize: scale(12) }}>({item.text2})</Text>
+                                </Text>
+                                <View style={AppStyle.StyleSeeMoreSchedule.content}>
+                                    <Image
+                                        source={require('../../img/location.png')}
+                                        style={AppStyle.StyleSeeMoreSchedule.img5}
+                                    />
+                                    <Text style={{ color: '#3076FE', fontSize: scale(10) }}>Việt Nam</Text>
+                                </View>
+                            </View>
+                            <View style={[AppStyle.StyleSeeMoreSchedule.viewIMG2, { marginTop: scale(5) }]}>
+                                <View style={AppStyle.StyleSeeMoreSchedule.viewText}>
+                                    <Image
+                                        source={{ uri: item.avatar }}
+                                        style={AppStyle.StyleSeeMoreSchedule.img4}
+                                    />
+                                    <View>
+                                        <Text style={{ fontSize: scale(10), color: '#000000' }}>{item.name}</Text>
+                                        <Text style={{ color: '#494949', fontSize: scale(8) }}>{item.time}</Text>
                                     </View>
                                 </View>
-                                <View style={{ marginRight: 5 }}>
-                                    <View style={AppStyle.StyleSchedule.content3}>
-                                        <Image
-                                            source={require('../../img/location.png')}
-                                            style={AppStyle.StyleSchedule.img5}
-                                        />
-                                        <Text style={{ color: '#3076FE' }}>Việt Nam</Text>
-                                    </View>
-                                    <View style={AppStyle.StyleSchedule.footer}>
-                                        <Text style={AppStyle.StyleSchedule.text2}>{item.price}</Text>
-                                    </View>
+                                <View style={AppStyle.StyleSeeMoreSchedule.viewText1}>
+                                    <Text style={AppStyle.StyleSeeMoreSchedule.text1}>{item.price}</Text>
                                 </View>
-
                             </View>
                         </View>
                     )

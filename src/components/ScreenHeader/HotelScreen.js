@@ -5,6 +5,7 @@ import AppStyle from "../../theme/index";
 import Header from "../FindAroundHere/Header";
 import Input from "./Input";
 import styles from "./styles";
+import Body from "./Body";
 const HotelScreen = ({ navigation, route }) => {
     const dispatch = useDispatch()
     return (
@@ -13,10 +14,14 @@ const HotelScreen = ({ navigation, route }) => {
             <ScrollView style={AppStyle.StyleHome.scrollview}>
                 <Header text={'Khách sạn'} onBack={() => navigation.goBack()} />
                 <View style={styles.container}>
-                    <View style={styles.body}>
+                    <View style={styles.header}>
                         <Input />
-
+                        <Image
+                            source={require('../../img/vinh56.png')}
+                            style={styles.img1}
+                        />
                     </View>
+                    <Body type={"Hotel"} />
                 </View>
             </ScrollView>
         </SafeAreaView>

@@ -9,10 +9,9 @@ const ItemNotification = (props) => {
     const onChoose = () => {
         dispatch({ type: 'NEWNOTIFICATION', id: item.id })
     }
-    const test = useSelector(store => store.people.test)
     return (
         <TouchableOpacity
-            onPress={() => !test ? onChoose() : null}
+            onPress={() => onChoose()}
             style={[styles.container, { backgroundColor: item.color }]}
         >
             <Image

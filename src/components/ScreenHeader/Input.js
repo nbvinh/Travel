@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, Text, TextInput, StyleSheet } from "react-native";
-import { scale } from "react-native-size-matters";
+import styles from "./styles";
 
 const Input = () => {
     const [input, setInput] = useState('')
@@ -15,20 +15,3 @@ const Input = () => {
     )
 }
 export default Input;
-const styles = StyleSheet.create({
-    input: {
-        backgroundColor: '#EAEAEA',
-        width: '100%',
-        height: scale(40),
-        fontSize: scale(12),
-        color: '#000000',
-        marginVertical: scale(16),
-        borderRadius: scale(5),
-        shadowColor: 'black',
-        shadowOpacity: 0.26,
-        shadowOffset: { width: 0, height: 2 },
-        shadowRadius: 10,
-        elevation: 3,
-        paddingLeft: scale(16)
-    }
-})

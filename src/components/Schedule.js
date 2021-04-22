@@ -9,7 +9,6 @@ const Schedule = (props) => {
     const type = props.type
     const typeNavigation = props.typeNavigation
     const onChangeHeart = () => {
-        console.log('itemheart', item.heart)
         dispatch({ type: type === 'add' ? 'ADDHEART' : 'REMOVE_HEART', heartARR: item })
     }
     const navigation = props.navigation
@@ -24,10 +23,9 @@ const Schedule = (props) => {
                 : null
     }
     const dispatch = useDispatch()
-    const test = useSelector(store => store.people.test)
     return (
         <TouchableOpacity
-            onPress={() => !test ? onNavigation() : null}
+            onPress={() => onNavigation()}
             style={{ backgroundColor: 'white', marginBottom: scale(10), borderRadius: scale(5) }}
         >
             <View style={AppStyle.StylePersonalPage.SeeIMG}>

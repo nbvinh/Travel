@@ -1,6 +1,7 @@
 
 import React, { useEffect, useState } from "react";
 import { View, Text, ImageBackground, SafeAreaView, StyleSheet, Dimensions, Image, TextInput, ScrollView, FlatList } from "react-native";
+import { scale } from "react-native-size-matters";
 import { useSelector, useDispatch } from "react-redux";
 import AppStyle from "../../theme/index";
 const { height, width } = Dimensions.get('screen')
@@ -11,7 +12,7 @@ const DecemberDestination = (props) => {
             {
                 dataheader && dataheader.map((item) => {
                     return (
-                        <View key={item.id.toString()} style={{ marginRight: 20 }}>
+                        <View key={item.id.toString()} style={{ marginRight: scale(16) }}>
                             <Image
                                 source={{ uri: item.img }}
                                 style={AppStyle.StyleSchedule.img6}

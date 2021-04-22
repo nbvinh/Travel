@@ -2,10 +2,11 @@ import {
     StyleSheet,
     Dimensions
 } from 'react-native';
+import { scale } from 'react-native-size-matters';
 const { height, width } = Dimensions.get('screen')
 const StyleExpenrience = StyleSheet.create({
     container: {
-        marginRight: 20,
+        marginRight: scale(16),
         width: width / 1.70
     },
     img1: {

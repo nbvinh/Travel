@@ -73,7 +73,7 @@ const Form = (props) => {
         inputRange: [0, 1],
         outputRange: [0, scale(10)]
     });
-    const onTest =()=>{
+    const onTest = () => {
         navigation.navigate('ScreenFirst')
         dispatch({ type: 'MODE' })
     }
@@ -83,10 +83,35 @@ const Form = (props) => {
             transparent={true}
             visible={test}
         >
-            <StatusBar backgroundColor={'rgba(0, 0, 0, 0.3)'} />
+            <StatusBar backgroundColor={'rgba(0, 0, 0, 0.7)'} />
             <View style={styles.container}>
-                <TouchableOpacity onPress={() => onTest()}>
-                    <Text>sjhdsgsd</Text>
+                <TouchableOpacity
+                    onPress={() => {
+                        dispatch({ type: 'MODE' })
+                        navigation.navigate("CreateSchedules")
+                    }}
+                    style={{ position: 'absolute', width: scale(48), height: scale(48), left: scale(60.5), bottom: scale(72), zIndex: 1 }}>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    onPress={() => {
+                        dispatch({ type: 'MODE' })
+                        navigation.navigate("Search")
+                    }}
+                    style={{ position: 'absolute', width: scale(48), height: scale(48), right: scale(62), bottom: scale(72), zIndex: 1 }}>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    onPress={() => {
+                        dispatch({ type: 'MODE' })
+                        navigation.navigate("ChooseRating")
+                    }}
+                    style={{ position: 'absolute', width: scale(48), height: scale(48), right: scale(112), bottom: scale(142), zIndex: 1 }}>
+                </TouchableOpacity>
+                <TouchableOpacity
+                    onPress={() => {
+                        dispatch({ type: 'MODE' })
+                        navigation.navigate("Suggestion")
+                    }}
+                    style={{ position: 'absolute', width: scale(48), height: scale(48), left: scale(110.5), bottom: scale(142), zIndex: 1 }}>
                 </TouchableOpacity>
                 <View style={{ position: 'absolute', bottom: 0, height: scale(45), left: 0, right: 0 }}>
                     <View style={{ position: 'absolute', left: (width / 5) * 2, right: (width / 5) * 2, zIndex: 1, bottom: scale(20), alignItems: 'center' }}>
@@ -119,12 +144,12 @@ const Form = (props) => {
                                 <Animated.Text style={[styles.text2, { fontSize }]}>Đánh giá</Animated.Text>
                             </Animated.View>
                             <Animated.View style={{ position: "absolute", left: pulseX, top: pulseY }}>
-                                <TouchableOpacity style={styles.secondaryButton}>
+                                <View style={styles.secondaryButton}>
                                     <Image
                                         source={require('../img/Search.png')}
                                         style={{ width: scale(20), height: scale(20) }}
                                     />
-                                </TouchableOpacity>
+                                </View>
                                 <Animated.Text style={[styles.text1, { fontSize }]}>Tìm quanh đây</Animated.Text>
                             </Animated.View>
                             <TouchableOpacity style={styles.Plus}
@@ -145,7 +170,7 @@ export default Form;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: 'rgba(0, 0, 0, 0.3)',
+        backgroundColor: 'rgba(0, 0, 0, 0.7)',
         justifyContent: 'center',
         alignItems: 'center'
     },

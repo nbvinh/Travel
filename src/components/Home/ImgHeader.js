@@ -10,7 +10,11 @@ const ImgHeader = () => {
     const onChoose = (item) => {
         item.id === 1 ?
             navigation.navigate('HotelScreen')
-            : null
+            : item.id === 4 ?
+                navigation.navigate('Restaurant')
+                : item.id === 3 ?
+                    navigation.navigate('Combo')
+                    : null
     }
     return (
         <ScrollView horizontal={true}>

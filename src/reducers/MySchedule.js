@@ -76,7 +76,7 @@ const initialState = {
             id: 1,
             img1: 'https://nld.mediacdn.vn/2020/3/13/dsc7339-15840709916941262751452.jpg',
             img2: 'https://znews-photo.zadn.vn/w660/Uploaded/jaroin/2017_08_25/hoi_an_dem.jpg',
-            img3: 'https://lh3.googleusercontent.com/proxy/ZWXxAPYfx-qVYdAFFCwaOEB4s-Et132NEBPd6-zQVbOQTgyaGJU087s1RkP-suqgTzlkpQ44e4uj5rqSvS6Ml1LlFn1oWkcnRel4t-Cd9tJ-p1YeGXK67w',
+            img3: 'https://scontent.fhph1-2.fna.fbcdn.net/v/t1.15752-9/85139992_570060053853478_7786359817374793728_n.png?_nc_cat=105&ccb=1-3&_nc_sid=ae9488&_nc_ohc=huhzw_YXCQAAX-a7FjQ&_nc_ht=scontent.fhph1-2.fna&oh=a62098a4244626fabd4173c09fa1ecbd&oe=60A5F20D',
             img4: 'https://image.thanhnien.vn/768/uploaded/cuongnv/2020_09_22/img_4223_wvgq.jpg',
             text1: 'Hội An, Đà Nẵng',
             text2: '4 Ngày 3 đêm',
@@ -293,7 +293,7 @@ const initialState = {
     finish: [
         {
             id: 0,
-            img1: 'https://lh3.googleusercontent.com/proxy/11TnEoLZxZssxFn4fGpDFMWov5GrIAL9yJZy0YiKkGox9PuSFbFsdJFWIHNy59WmfTZC2VOcCC1L7_RfJuzm9YIjSKQ5A1GbQvdcLOkoHuwzMYLkQH98VQhhYQY',
+            img1: 'https://scontent.fhph1-2.fna.fbcdn.net/v/t1.15752-9/128616223_490604568585959_8949518090671959845_n.jpg?_nc_cat=103&ccb=1-3&_nc_sid=ae9488&_nc_ohc=1Y8km2ezux4AX8EIupx&_nc_ht=scontent.fhph1-2.fna&oh=eade5d0ffe9d53200621a3b417b46dfd&oe=60A7BF5B',
             img2: 'http://media.hanoitv.vn/files/nguyennga/2020-12-03/a1.jpg',
             img3: 'https://tourdulichviet.com/storage/upload/images/800x600/tour-da-nang-ha-long.jpg',
             img4: 'https://image.thanhnien.vn/800/uploaded/thanhtrung/2020_03_28/sg13_rhjg.jpg',
@@ -367,7 +367,7 @@ const initialState = {
             id: 1,
             img1: 'https://nld.mediacdn.vn/2020/3/13/dsc7339-15840709916941262751452.jpg',
             img2: 'https://znews-photo.zadn.vn/w660/Uploaded/jaroin/2017_08_25/hoi_an_dem.jpg',
-            img3: 'https://lh3.googleusercontent.com/proxy/ZWXxAPYfx-qVYdAFFCwaOEB4s-Et132NEBPd6-zQVbOQTgyaGJU087s1RkP-suqgTzlkpQ44e4uj5rqSvS6Ml1LlFn1oWkcnRel4t-Cd9tJ-p1YeGXK67w',
+            img3: 'https://scontent.fhph1-2.fna.fbcdn.net/v/t1.15752-9/85139992_570060053853478_7786359817374793728_n.png?_nc_cat=105&ccb=1-3&_nc_sid=ae9488&_nc_ohc=huhzw_YXCQAAX-a7FjQ&_nc_ht=scontent.fhph1-2.fna&oh=a62098a4244626fabd4173c09fa1ecbd&oe=60A5F20D',
             img4: 'https://image.thanhnien.vn/768/uploaded/cuongnv/2020_09_22/img_4223_wvgq.jpg',
             text1: 'Hội An, Đà Nẵng',
             text2: '4 Ngày 3 đêm',
