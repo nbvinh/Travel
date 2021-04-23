@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, TextInput, Text, Image, TouchableOpacity, StyleSheet,Dimensions } from "react-native";
-import { moderateVerticalScale } from "react-native-size-matters";
+import { moderateVerticalScale, scale } from "react-native-size-matters";
 const { height, width } = Dimensions.get('screen')
 const TextHome = (props) => {
     const text1 = props.text1
@@ -24,10 +24,10 @@ const styles = StyleSheet.create({
     },
     text4: {
         fontWeight: 'bold',
-        fontSize: height / 45
+        fontSize: scale(14)
     },
     text5: {
-        fontSize: height / 45,
+        fontSize: scale(12),
         color: '#9E9E9E',
         fontWeight: '600'
     }

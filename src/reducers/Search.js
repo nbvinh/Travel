@@ -13,7 +13,8 @@ const initialState = {
         { id: 10, provincial: 'Ninh Bình', label: 'Cố đô Hoa Lư' },
     ],
     search: '',
-    newsearch :[]
+    newsearch: [],
+    dataRestaurant: []
 };
 
 export default function Search(state = initialState, action) {

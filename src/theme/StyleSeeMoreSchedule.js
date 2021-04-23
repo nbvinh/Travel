@@ -39,27 +39,29 @@ const StyleSeeMoreSchedule = StyleSheet.create({
     container: {
         backgroundColor: 'white',
         borderRadius: 5,
-        marginBottom: width / 37.5
+        marginBottom: scale(16),
+        width: scale(323)
     },
     img1: {
-        width: width / 3.1,
-        height: height / 5.075,
-        marginRight: 5,
-        borderTopLeftRadius: 5
+        width: scale(127),
+        height: scale(160),
+        marginRight: scale(7),
+        borderTopLeftRadius: scale(5)
     },
     img2: {
-        width: width - 20 + width / 3.1 + 5,
-        height: height / 5.075 / 2 - 2.5
+        width: scale(189),
+        height: scale(77),
+        borderTopRightRadius:scale(5)
     },
     img3: {
-        width: '49%',
+        width: scale(91),
         height: '100%'
     },
     viewIMG: {
         flexDirection: 'row',
-        width: '50%',
-        height: height / 5.075 / 2 - 2.5,
-        marginTop: 4,
+        width: scale(189),
+        height: scale(77),
+        marginTop: scale(6),
         justifyContent: 'space-between'
     },
     viewIMG2: {

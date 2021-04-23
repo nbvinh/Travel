@@ -6,6 +6,7 @@ import AppStyle from "../../theme/index";
 const { height, width } = Dimensions.get('screen')
 const SeeMorePopularPlace = ({ navigation }) => {
     const dataheader = useSelector(store => store.PopularPlace.data)
+    const dispatch = useDispatch()
     return (
         <SafeAreaView style={AppStyle.StyleSeeMorePopularPlace.container}>
             <StatusBar backgroundColor='white' barStyle={"dark-content"} />
@@ -16,9 +17,10 @@ const SeeMorePopularPlace = ({ navigation }) => {
                         dataheader && dataheader.map((item) => {
                             return (
                                 <TouchableOpacity
-                                    onPress={() => navigation.navigate('PopularPlaceDetails',
-                                        { id: item.id }
-                                    )}
+                                    onPress={() => {
+                                        dispatch({ type: 'IDPOPULARPLACE', item: item })
+                                        navigation.navigate('PopularPlaceDetails')
+                                    }}
                                     key={item.id.toString()}
                                     style={{ marginBottom: width / 18.75 }}
                                 >

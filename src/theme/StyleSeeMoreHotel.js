@@ -2,6 +2,7 @@ import {
     StyleSheet,
     Dimensions
 } from 'react-native';
+import { scale } from 'react-native-size-matters';
 const { height, width } = Dimensions.get('screen')
 const StyleSeeMoreHotel = StyleSheet.create({
     container: {
@@ -21,18 +22,16 @@ const StyleSeeMoreHotel = StyleSheet.create({
     text2: {
         color: '#3076FE',
         marginBottom: 5,
-        fontSize: width / 37.5,
-        marginTop:3
+        fontSize: scale(10),
     },
     text3: {
         color: 'red',
-        fontSize: height / 50,
         fontWeight: '600',
 
     },
     text4: {
         color: 'black',
-        fontSize: height / 50,
+        fontSize: scale(12),
         fontWeight: '600',
     },
     viewText:{

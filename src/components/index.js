@@ -33,6 +33,8 @@ import Rating from "./ChooseRating/Rating";
 import HotelScreen from "./ScreenHeader/HotelScreen";
 import Restaurant from "./ScreenHeader/Restaurant";
 import Combo from "./ScreenHeader/Combo";
+import SearchRestaurant from "./SearchRestaurant/SearchRestaurant";
+import HotelDetails from "./Details/HotelDetails/index";
 export {
     ScreenFirst,
     ScreenSecond,
@@ -68,5 +70,7 @@ export {
     Rating,
     HotelScreen,
     Restaurant,
-    Combo
+    Combo,
+    SearchRestaurant,
+    HotelDetails
 }

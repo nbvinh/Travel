@@ -6,6 +6,7 @@ import Header from "../FindAroundHere/Header";
 import Input from "./Input";
 import styles from "./styles";
 import BodyCombo from "./BodyCombo";
+import { scale } from "react-native-size-matters";
 const Combo = ({ navigation, route }) => {
     const dispatch = useDispatch()
     return (
@@ -13,7 +14,7 @@ const Combo = ({ navigation, route }) => {
             <StatusBar backgroundColor='white' barStyle={"dark-content"} />
             <ScrollView style={AppStyle.StyleHome.scrollview}>
                 <Header text={'Combo'} onBack={() => navigation.goBack()} />
-                <View style={styles.container}>
+                <View style={[styles.container,{marginBottom:scale(20)}]}>
                     <View style={styles.header}>
                         <Input />
                     </View>

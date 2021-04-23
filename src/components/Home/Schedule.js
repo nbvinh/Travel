@@ -4,12 +4,12 @@ import { scale } from "react-native-size-matters";
 import { useSelector, useDispatch } from "react-redux";
 import AppStyle from "../../theme/index";
 const { height, width } = Dimensions.get('screen')
-const Schedule = () => {
-    const dataheader = useSelector(store => store.Schedule.data)
+const Schedule = (props) => {
+    const data = props.data
     return (
         <ScrollView horizontal={true}>
             {
-                dataheader && dataheader.map((item) => {
+                data && data.map((item) => {
                     return (
                         <View key={item.id.toString()} style={AppStyle.StyleSchedule.container}>
                             <View style={{ flexDirection: 'row' }}>

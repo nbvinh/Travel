@@ -9,6 +9,7 @@ const Home = ({ navigation }) => {
     const [search, setSearch] = useState('')
     const data = useSelector(store => store.Hotel.data)
     const DecemberDestinationArr = useSelector(store => store.DecemberDestination.data)
+    const dataSchedule = useSelector(store => store.Schedule.data)
     return (
         <SafeAreaView style={AppStyle.StyleHome.container}>
             <StatusBar backgroundColor='white' barStyle={"dark-content"} />
@@ -50,7 +51,7 @@ const Home = ({ navigation }) => {
                     </View>
                     <TextHome text1={'Lịch trình gần đây'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMoreSchedule')} />
                     <View style={AppStyle.StyleHome.marginLeft}>
-                        <Schedule />
+                        <Schedule data ={dataSchedule}/>
                     </View>
                     <TextHome text1={'Địa điểm phổ biến'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMorePopularPlace')} />
                     <View style={AppStyle.StyleHome.marginLeft}>

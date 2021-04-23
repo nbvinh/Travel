@@ -7,7 +7,7 @@ import {
     ChoosePerson, SeeMoreDecemberDestination, TermsOfUse, PersonalPage, Heart, FollowScreen, FollowingScreen,
     EditProfile, Search, SeeSuggestion, PrivacyPolicy, Setting, ScheduleDetails, PopularPlaceDetails, ScheduleOverview,
     SeeMoreHotel, SeeMoreExperience, SeeMorePopularPlace, SeeMoreSchedule, PromotionDetails,
-    SeeMorePromotions, BottomTab, ScreenUpdateProfile, ChooseRating, Rating, HotelScreen, Restaurant, Combo
+    SeeMorePromotions, BottomTab, ScreenUpdateProfile, ChooseRating, Rating, HotelScreen, Restaurant, Combo, SearchRestaurant, HotelDetails
 } from "../../components/index";
 const Root = createStackNavigator();
 const RootStack = () => {
@@ -49,6 +49,8 @@ const RootStack = () => {
                 <Root.Screen name="HotelScreen" component={HotelScreen} />
                 <Root.Screen name="Restaurant" component={Restaurant} />
                 <Root.Screen name="Combo" component={Combo} />
+                <Root.Screen name="SearchRestaurant" component={SearchRestaurant} />
+                <Root.Screen name="HotelDetails" component={HotelDetails} />
             </Root.Navigator>
         </NavigationContainer>
     )

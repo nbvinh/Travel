@@ -3,19 +3,28 @@ import { View, TouchableOpacity, Text, ImageBackground, SafeAreaView, StatusBar,
 import { useSelector, useDispatch } from "react-redux";
 import Header from "../Header";
 import AppStyle from "../../theme/index";
-const { height, width } = Dimensions.get('screen')
+import { scale } from "react-native-size-matters";
 const SeeMoreHotel = ({ navigation }) => {
-    const dataheader = useSelector(store => store.Hotel.data)
+    const data = useSelector(store => store.Hotel.data)
+    const dispatch = useDispatch()
+    const onHotel = (item) => {
+        navigation.navigate('HotelDetails')
+        dispatch({ type: 'ITEM', item: item })
+    }
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: '#E5E5E5' }}>
             <StatusBar backgroundColor='white' barStyle={"dark-content"} />
-            <Header text={'Khách sạn & Resort'} onBack={() => navigation.goBack()} />
-            <View style={{ flex: 10, marginHorizontal: 10 }}>
-                <ScrollView style={{ flex: 1 }}>
+            <ScrollView showsVerticalScrollIndicator={false} style={{ flex: 1 }}>
+                <Header text={'Khách sạn & Resort'} onBack={() => navigation.goBack()} />
+                <View style={{ flex: 10, alignItems: 'center', marginTop: scale(16) }}>
                     {
-                        dataheader && dataheader.map((item) => {
+                        data && data.map((item) => {
                             return (
-                                <TouchableOpacity key={item.id.toString()} style={AppStyle.StyleSeeMoreSchedule.container}>
+                                <TouchableOpacity
+                                    onPress={() => onHotel(item)}
+                                    key={item.id.toString()}
+                                    style={AppStyle.StyleSeeMoreSchedule.container}
+                                >
                                     <View style={{ flexDirection: 'row' }}>
                                         <Image
                                             source={{ uri: item.img }}
@@ -72,7 +81,7 @@ const SeeMoreHotel = ({ navigation }) => {
                                         <View style={AppStyle.StyleSeeMoreHotel.viewText}>
                                             <Text style={AppStyle.StyleSeeMoreHotel.text2}>{item.text1}</Text>
                                             <Text style={AppStyle.StyleSeeMoreHotel.text4}>Từ
-                                                <Text style={AppStyle.StyleSeeMoreHotel.text3}> {item.price} đ/ đêm</Text>
+                                                <Text style={AppStyle.StyleSeeMoreHotel.text3}> {item.price}</Text>
                                             </Text>
 
                                         </View>
@@ -81,8 +90,8 @@ const SeeMoreHotel = ({ navigation }) => {
                             )
                         })
                     }
-                </ScrollView>
-            </View>
+                </View>
+            </ScrollView>
         </SafeAreaView>
     )
 }

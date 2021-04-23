@@ -15,7 +15,7 @@ const Restaurant = ({ navigation, route }) => {
                 <Header text={'Nhà hàng'} onBack={() => navigation.goBack()} />
                 <View style={styles.container}>
                     <View style={styles.header}>
-                        <Input />
+                        <Input type={"SearchRestaurant"} />
                     </View>
                     <Body type={"RestaurantScreen"} />
                 </View>
