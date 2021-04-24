@@ -5,7 +5,6 @@ import HeaderEdit from "./HeaderEdit";
 import { useDispatch, useSelector } from "react-redux";
 import AppStyle from "../../../theme/index";
 import { scale, verticalScale } from "react-native-size-matters";
-import Follower from "../../Follower";
 import Input from "../../Input";
 import ImagePicker from 'react-native-image-crop-picker';
 const EditProfile = ({ navigation }) => {
@@ -19,16 +18,18 @@ const EditProfile = ({ navigation }) => {
         { lastname: lastname, fisrtname: fisrtname, id: Math.random(), phone: phone, avatar: picture },
     ]
     const onSave = () => {
-        dispatch({ type: 'PROFILE', data: data })
-        navigation.goBack()
+        picture ?
+            dispatch({ type: 'PROFILE', data: data }) &&
+            navigation.goBack()
+            : navigation.goBack()
     }
-    const onPicture = () => {
+    const onPicture = (item) => {
         ImagePicker.openPicker({
             width: 300,
             height: 400,
             cropping: true
         }).then(image => {
-            dispatch({ type: 'PICTURE', picture: image.path })
+            dispatch({ type: 'PICTURE', avatar: image.path, id: item.id })
         });
     }
     return (
@@ -44,12 +45,12 @@ const EditProfile = ({ navigation }) => {
                                     source={{ uri: item.avatar }}
                                     style={styles.avatar}
                                 />
-                                <Text onPress={() => onPicture()} style={styles.edit}>Thay ảnh đại diện</Text>
+                                <Text onPress={() => onPicture(item)} style={styles.edit}>Thay ảnh đại diện</Text>
                             </View>
-                            <Input value={item.fisrtname} text={'Họ'} editable={true} selectTextOnFocus={true} />
-                            <Input value={item.lastname} text={'Tên'} editable={true} selectTextOnFocus={true} />
-                            <Input value={"Vinh230620@gmail.com"} text={'Email'} editable={false} selectTextOnFocus={false} />
-                            <Input value={item.phone} text={'Số điện thoại'} editable={false} selectTextOnFocus={false} />
+                            <Input value={item.fisrtname} item={item} text={'Họ'} editable={true} selectTextOnFocus={true} />
+                            <Input value={item.lastname} item={item} text={'Tên'} editable={true} selectTextOnFocus={true} />
+                            <Input value={"Vinh230620@gmail.com"} item={item} text={'Email'} editable={false} selectTextOnFocus={false} />
+                            <Input value={item.phone} item={item} text={'Số điện thoại'} editable={true} selectTextOnFocus={true} keyboardType={"numeric"} />
                         </View>
                     )
                 })}

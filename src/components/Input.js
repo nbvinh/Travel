@@ -10,9 +10,12 @@ const Input = (props) => {
     const selectTextOnFocus = props.selectTextOnFocus
     const dispatch = useDispatch()
     const onText = (val) => {
-        text === 'Họ' ? dispatch({ type: 'FISRTNAME', fisrtname: val }) :
-            dispatch({ type: 'LASTNAME', lastname: val })
+        text === 'Họ' ? dispatch({ type: 'FISRTNAME', fisrtname: val, id: item.id }) :
+            text === "Tên" ? dispatch({ type: 'LASTNAME', lastname: val, id: item.id }) :
+                dispatch({ type: 'PHONEEDIT', phone: val, id: item.id })
     }
+    const item = props.item
+    const keyboardType = props.keyboardType
     return (
         <View style={styles.container}>
             <View style={styles.body}>
@@ -20,12 +23,12 @@ const Input = (props) => {
             </View>
             <TextInput
                 onChangeText={(val) => onText(val)}
-                // value={value}
+                value={value}
                 style={styles.textInput}
                 editable={editable}
                 selectTextOnFocus={selectTextOnFocus}
-                placeholder={value}
-                placeholderTextColor={'#000000'}
+                keyboardType={keyboardType}
+                maxLength={text === "Số điện thoại" ? 10 : 15}
             />
         </View>
     )

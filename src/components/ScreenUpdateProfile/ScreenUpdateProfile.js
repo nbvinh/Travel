@@ -38,7 +38,7 @@ const ScreenUpdateProfile = ({ navigation }) => {
         }
     }
     const data = [
-        { lastname: text, fisrtname: text1, id: Math.random(), phone: phone, avatar: 'https://thuthuatnhanh.com/wp-content/uploads/2019/07/anh-girl-xinh-facebook-tuyet-dep-387x580.jpg' },
+        { lastname: text, fisrtname: text1, id: Math.random(), phone: phone, avatar: 'https://cdn0.iconfinder.com/data/icons/set-ui-app-android/32/8-512.png' },
     ]
     useEffect(() => {
         dispatch({ type: 'PROFILE', data: data })
@@ -75,7 +75,7 @@ const ScreenUpdateProfile = ({ navigation }) => {
                     />
                     <TextInput
                         style={[styles.text2, { borderColor: '#E0E0E0' }]}
-                        placeholder={'0' + phone}
+                        placeholder={phone}
                         placeholderTextColor={'#BDBDBD'}
                         editable={false}
                         selectTextOnFocus={false}

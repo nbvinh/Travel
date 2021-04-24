@@ -294,7 +294,60 @@ const initialState = {
           img1: 'https://pix10.agoda.net/hotelImages/358/3582444/3582444_17112918230060038374.jpg',
           img2: 'https://du-lich.chudu24.com/f/m/1712/25/nepn4377-hdr-1139515.jpg?w=550&c=1',
           img3: 'https://i.vntrip.vn/584x290/smart/https://statics.vntrip.vn/data-v2/hotels/11393/img_max/11393_1513224223_theherriotthotel&suite_16.jpg',
-          price: '500,000 đ/đêm'
+          price: '500,000 đ/đêm',
+          address: "An Hải Bắc, Sơn Trà, Quảng Ngãi",
+          timeOpen: " 05:00 - 23:00",
+          priceDetails: "500.000đ - 6.950.00đ",
+          map: require('../img/vinh57.png'),
+          introduce1: require('../img/vinh58.png'),
+          introduce2: require('../img/vinh59.png'),
+          introduce3: require('../img/vinh60.png'),
+          NearHotel: [
+            {
+              id: 0,
+              text: 'Khách sạn Hoa Lư',
+              text2: 'Khách sạn',
+              text1: 'Hoa Lư, Ninh Bình',
+              img: 'https://media-cdn.tripadvisor.com/media/photo-s/0e/d2/e1/73/nh-toan-c-nh.jpg',
+              img1: 'https://pix10.agoda.net/hotelImages/358/3582444/3582444_17112918230060038374.jpg',
+              img2: 'https://du-lich.chudu24.com/f/m/1712/25/nepn4377-hdr-1139515.jpg?w=550&c=1',
+              img3: 'https://i.vntrip.vn/584x290/smart/https://statics.vntrip.vn/data-v2/hotels/11393/img_max/11393_1513224223_theherriotthotel&suite_16.jpg',
+              price: '350,000đ/ đêm'
+            },
+            {
+              id: 1,
+              text: 'Emeralda Resort & Spa',
+              text2: 'Resort',
+              text1: 'Gia Viễn, Ninh Bình',
+              img: 'https://namanretreat.com/media/1813/beachfront-villa-1.jpg',
+              img1: 'https://q-cf.bstatic.com/images/hotel/max1024x768/120/120233599.jpg',
+              img2: 'https://cf.bstatic.com/images/hotel/max1024x768/120/120280555.jpg',
+              img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
+              price: '2,570,000đ/ đêm'
+            },
+            {
+              id: 2,
+              text: 'Naman Retreat',
+              text2: 'Khách sạn',
+              text1: 'Gia Viễn, Ninh Bình',
+              img: 'https://pix10.agoda.net/hotelImages/1624612/-1/e83069440bf0d6965fa4d3274b318ad4.jpg?s=1024x768',
+              img1: 'https://i2.wp.com/du-lich.net/wp-content/uploads/2019/07/Review-kh%C3%A1ch-s%E1%BA%A1n-Herriott-Hotel-%C4%90%C3%A0-N%E1%BA%B5ng-6.jpg?resize=810%2C539&ssl=1',
+              img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--15-800x450.jpg',
+              img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
+              price: '800,000đ/ đêm'
+            },
+            {
+              id: 3,
+              text: 'The Vissai',
+              text2: 'Khách sạn',
+              text1: 'Tp.Ninh Bình, Ninh Bình',
+              img: 'https://dulichhalongquangninh.com/wp-content/uploads/2016/07/hinh-anh-du-lich-ha-long.jpg',
+              img1: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--2-800x450.jpg',
+              img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--1-800x450.jpg',
+              img3: 'https://q-cf.bstatic.com/images/hotel/max1024x768/227/227459882.jpg',
+              price: '500,000đ/ đêm'
+            },
+          ]
         },
         {
           id: 1,
@@ -305,7 +358,60 @@ const initialState = {
           img1: 'https://q-cf.bstatic.com/images/hotel/max1024x768/120/120233599.jpg',
           img2: 'https://cf.bstatic.com/images/hotel/max1024x768/120/120280555.jpg',
           img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
-          price: '700,000 đ/đêm'
+          price: '700,000 đ/đêm',
+          address: "An Hải Bắc, Sơn Trà, Đà Nẵng",
+          timeOpen: " 05:00 - 23:00",
+          priceDetails: "700.000đ - 6.950.00đ",
+          map: require('../img/vinh57.png'),
+          introduce1: require('../img/vinh58.png'),
+          introduce2: require('../img/vinh59.png'),
+          introduce3: require('../img/vinh60.png'),
+          NearHotel: [
+            {
+              id: 0,
+              text: 'Khách sạn Hoa Lư',
+              text2: 'Khách sạn',
+              text1: 'Hoa Lư, Ninh Bình',
+              img: 'https://media-cdn.tripadvisor.com/media/photo-s/0e/d2/e1/73/nh-toan-c-nh.jpg',
+              img1: 'https://pix10.agoda.net/hotelImages/358/3582444/3582444_17112918230060038374.jpg',
+              img2: 'https://du-lich.chudu24.com/f/m/1712/25/nepn4377-hdr-1139515.jpg?w=550&c=1',
+              img3: 'https://i.vntrip.vn/584x290/smart/https://statics.vntrip.vn/data-v2/hotels/11393/img_max/11393_1513224223_theherriotthotel&suite_16.jpg',
+              price: '350,000đ/ đêm'
+            },
+            {
+              id: 1,
+              text: 'Emeralda Resort & Spa',
+              text2: 'Resort',
+              text1: 'Gia Viễn, Ninh Bình',
+              img: 'https://namanretreat.com/media/1813/beachfront-villa-1.jpg',
+              img1: 'https://q-cf.bstatic.com/images/hotel/max1024x768/120/120233599.jpg',
+              img2: 'https://cf.bstatic.com/images/hotel/max1024x768/120/120280555.jpg',
+              img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
+              price: '2,570,000đ/ đêm'
+            },
+            {
+              id: 2,
+              text: 'Naman Retreat',
+              text2: 'Khách sạn',
+              text1: 'Gia Viễn, Ninh Bình',
+              img: 'https://pix10.agoda.net/hotelImages/1624612/-1/e83069440bf0d6965fa4d3274b318ad4.jpg?s=1024x768',
+              img1: 'https://i2.wp.com/du-lich.net/wp-content/uploads/2019/07/Review-kh%C3%A1ch-s%E1%BA%A1n-Herriott-Hotel-%C4%90%C3%A0-N%E1%BA%B5ng-6.jpg?resize=810%2C539&ssl=1',
+              img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--15-800x450.jpg',
+              img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
+              price: '800,000đ/ đêm'
+            },
+            {
+              id: 3,
+              text: 'The Vissai',
+              text2: 'Khách sạn',
+              text1: 'Tp.Ninh Bình, Ninh Bình',
+              img: 'https://dulichhalongquangninh.com/wp-content/uploads/2016/07/hinh-anh-du-lich-ha-long.jpg',
+              img1: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--2-800x450.jpg',
+              img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--1-800x450.jpg',
+              img3: 'https://q-cf.bstatic.com/images/hotel/max1024x768/227/227459882.jpg',
+              price: '500,000đ/ đêm'
+            },
+          ]
         },
         {
           id: 2,
@@ -316,7 +422,60 @@ const initialState = {
           img1: 'https://i2.wp.com/du-lich.net/wp-content/uploads/2019/07/Review-kh%C3%A1ch-s%E1%BA%A1n-Herriott-Hotel-%C4%90%C3%A0-N%E1%BA%B5ng-6.jpg?resize=810%2C539&ssl=1',
           img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--15-800x450.jpg',
           img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
-          price: '800,000 đ/đêm'
+          price: '800,000 đ/đêm',
+          address: "Thôn Đông, Xã An Vĩnh, Lý Sơn, Quảng Ngãi",
+          timeOpen: " 05:00 - 23:00",
+          priceDetails: "850.000đ - 6.950.00đ",
+          map: require('../img/vinh57.png'),
+          introduce1: require('../img/vinh58.png'),
+          introduce2: require('../img/vinh59.png'),
+          introduce3: require('../img/vinh60.png'),
+          NearHotel: [
+            {
+              id: 0,
+              text: 'Khách sạn Hoa Lư',
+              text2: 'Khách sạn',
+              text1: 'Hoa Lư, Ninh Bình',
+              img: 'https://media-cdn.tripadvisor.com/media/photo-s/0e/d2/e1/73/nh-toan-c-nh.jpg',
+              img1: 'https://pix10.agoda.net/hotelImages/358/3582444/3582444_17112918230060038374.jpg',
+              img2: 'https://du-lich.chudu24.com/f/m/1712/25/nepn4377-hdr-1139515.jpg?w=550&c=1',
+              img3: 'https://i.vntrip.vn/584x290/smart/https://statics.vntrip.vn/data-v2/hotels/11393/img_max/11393_1513224223_theherriotthotel&suite_16.jpg',
+              price: '350,000đ/ đêm'
+            },
+            {
+              id: 1,
+              text: 'Emeralda Resort & Spa',
+              text2: 'Resort',
+              text1: 'Gia Viễn, Ninh Bình',
+              img: 'https://namanretreat.com/media/1813/beachfront-villa-1.jpg',
+              img1: 'https://q-cf.bstatic.com/images/hotel/max1024x768/120/120233599.jpg',
+              img2: 'https://cf.bstatic.com/images/hotel/max1024x768/120/120280555.jpg',
+              img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
+              price: '2,570,000đ/ đêm'
+            },
+            {
+              id: 2,
+              text: 'Naman Retreat',
+              text2: 'Khách sạn',
+              text1: 'Gia Viễn, Ninh Bình',
+              img: 'https://pix10.agoda.net/hotelImages/1624612/-1/e83069440bf0d6965fa4d3274b318ad4.jpg?s=1024x768',
+              img1: 'https://i2.wp.com/du-lich.net/wp-content/uploads/2019/07/Review-kh%C3%A1ch-s%E1%BA%A1n-Herriott-Hotel-%C4%90%C3%A0-N%E1%BA%B5ng-6.jpg?resize=810%2C539&ssl=1',
+              img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--15-800x450.jpg',
+              img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
+              price: '800,000đ/ đêm'
+            },
+            {
+              id: 3,
+              text: 'The Vissai',
+              text2: 'Khách sạn',
+              text1: 'Tp.Ninh Bình, Ninh Bình',
+              img: 'https://dulichhalongquangninh.com/wp-content/uploads/2016/07/hinh-anh-du-lich-ha-long.jpg',
+              img1: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--2-800x450.jpg',
+              img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--1-800x450.jpg',
+              img3: 'https://q-cf.bstatic.com/images/hotel/max1024x768/227/227459882.jpg',
+              price: '500,000đ/ đêm'
+            },
+          ]
         },
         {
           id: 3,
@@ -327,7 +486,60 @@ const initialState = {
           img1: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--2-800x450.jpg',
           img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--1-800x450.jpg',
           img3: 'https://q-cf.bstatic.com/images/hotel/max1024x768/227/227459882.jpg',
-          price: '500,000 đ/đêm'
+          price: '500,000 đ/đêm',
+          address: "Thành phố Hạ Long, Hạ LongF",
+          timeOpen: " 05:00 - 23:00",
+          priceDetails: "850.000đ - 6.950.00đ",
+          map: require('../img/vinh57.png'),
+          introduce1: require('../img/vinh58.png'),
+          introduce2: require('../img/vinh59.png'),
+          introduce3: require('../img/vinh60.png'),
+          NearHotel: [
+            {
+              id: 0,
+              text: 'Khách sạn Hoa Lư',
+              text2: 'Khách sạn',
+              text1: 'Hoa Lư, Ninh Bình',
+              img: 'https://media-cdn.tripadvisor.com/media/photo-s/0e/d2/e1/73/nh-toan-c-nh.jpg',
+              img1: 'https://pix10.agoda.net/hotelImages/358/3582444/3582444_17112918230060038374.jpg',
+              img2: 'https://du-lich.chudu24.com/f/m/1712/25/nepn4377-hdr-1139515.jpg?w=550&c=1',
+              img3: 'https://i.vntrip.vn/584x290/smart/https://statics.vntrip.vn/data-v2/hotels/11393/img_max/11393_1513224223_theherriotthotel&suite_16.jpg',
+              price: '350,000đ/ đêm'
+            },
+            {
+              id: 1,
+              text: 'Emeralda Resort & Spa',
+              text2: 'Resort',
+              text1: 'Gia Viễn, Ninh Bình',
+              img: 'https://namanretreat.com/media/1813/beachfront-villa-1.jpg',
+              img1: 'https://q-cf.bstatic.com/images/hotel/max1024x768/120/120233599.jpg',
+              img2: 'https://cf.bstatic.com/images/hotel/max1024x768/120/120280555.jpg',
+              img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
+              price: '2,570,000đ/ đêm'
+            },
+            {
+              id: 2,
+              text: 'Naman Retreat',
+              text2: 'Khách sạn',
+              text1: 'Gia Viễn, Ninh Bình',
+              img: 'https://pix10.agoda.net/hotelImages/1624612/-1/e83069440bf0d6965fa4d3274b318ad4.jpg?s=1024x768',
+              img1: 'https://i2.wp.com/du-lich.net/wp-content/uploads/2019/07/Review-kh%C3%A1ch-s%E1%BA%A1n-Herriott-Hotel-%C4%90%C3%A0-N%E1%BA%B5ng-6.jpg?resize=810%2C539&ssl=1',
+              img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--15-800x450.jpg',
+              img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
+              price: '800,000đ/ đêm'
+            },
+            {
+              id: 3,
+              text: 'The Vissai',
+              text2: 'Khách sạn',
+              text1: 'Tp.Ninh Bình, Ninh Bình',
+              img: 'https://dulichhalongquangninh.com/wp-content/uploads/2016/07/hinh-anh-du-lich-ha-long.jpg',
+              img1: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--2-800x450.jpg',
+              img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--1-800x450.jpg',
+              img3: 'https://q-cf.bstatic.com/images/hotel/max1024x768/227/227459882.jpg',
+              price: '500,000đ/ đêm'
+            },
+          ]
         },
       ],
       Restaurant: [
@@ -337,10 +549,52 @@ const initialState = {
           text2: 'Nhà Hàng',
           text1: 'Lý Sơn, Quảng Ngãi',
           img: 'https://image.phunuonline.com.vn/news/2020/20200227/thumbnail/470x300/giai-cuu-tom-hum-xong-dot-nhien-bi-_1582808538.jpg',
-          img1: 'https://pix10.agoda.net/hotelImages/358/3582444/3582444_17112918230060038374.jpg',
-          img2: 'https://du-lich.chudu24.com/f/m/1712/25/nepn4377-hdr-1139515.jpg?w=550&c=1',
-          img3: 'https://i.vntrip.vn/584x290/smart/https://statics.vntrip.vn/data-v2/hotels/11393/img_max/11393_1513224223_theherriotthotel&suite_16.jpg',
-          price: '20.000 - 400.000 đ'
+          img1: 'https://vinmec-prod.s3.amazonaws.com/images/20200410_160048_715088_hai-san-co-tot-cho-.max-1800x1800.jpg',
+          img2: 'https://image-us.eva.vn/upload/2-2021/images/2021-04-09/anh-1617941273-413-width600height399.jpg',
+          img3: 'https://vuahaisanhalong.vn/public/files/upload/default/images/slide/banner-3.jpg',
+          price: '20.000 - 400.000 đ',
+          address: "Thôn Đông, Xã An Vĩnh, Lý Sơn, Quảng Ngãi",
+          timeOpen: " 10:00 - 23:59",
+          priceDetails: "20.000đ - 400.00đ",
+          map: require('../img/vinh57.png'),
+          introduce1: require('../img/vinh61.png'),
+          introduce2: require('../img/vinh62.png'),
+          introduce3: require('../img/vinh63.png'),
+          NearHotel: [
+            {
+              id: 0,
+              text: 'Nhà hàng Long Hiền',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://owa.bestprice.vn/images/articles/uploads/diem-danh-cac-dia-chi-an-tom-hum-o-da-nang-ngon-bo-re-5f50acdb76c96.jpg',
+              img1: 'https://product.hstatic.net/1000275435/product/7_c227865275b549e5ab47cdbaa8a7d0fc.jpg',
+              img2: 'https://files.giaoducthoidai.vn/Uploaded/thuyvt/2019-07-18/4NewFolder/1-DLYI.jpg',
+              img3: 'https://kinhnghiemdulichdn.com/wp-content/uploads/2018/04/6-min.jpg',
+              price: '40.000 - 300.000 đ'
+            },
+            {
+              id: 1,
+              text: 'Hải Sản Thịnh Phát',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://canghaisan.com/wp-content/uploads/2020/11/81-2.jpg',
+              img1: 'https://file.hstatic.net/1000030244/file/buffet-hai-san-galina-hotel-nha-trang-2_ee3fb913291346f8bfbbd2c6455b993c_grande.jpg',
+              img2: 'https://vinmec-prod.s3.amazonaws.com/images/20200410_160048_715088_hai-san-co-tot-cho-.max-1800x1800.jpg',
+              img3: 'https://www.kiotviet.vn/wp-content/uploads/2019/12/kinh-doanh-hai-san-4.png',
+              price: '40.000 - 300.000 đ'
+            },
+            {
+              id: 2,
+              text: 'Nhà Hàng Vinh Anh',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://kinhnghiemdulichdn.com/wp-content/uploads/2018/04/6-min.jpg',
+              img1: 'https://www.kiotviet.vn/wp-content/uploads/2019/12/kinh-doanh-hai-san-4.png',
+              img2: 'https://vuahaisanhalong.vn/public/files/upload/default/images/slide/banner-3.jpg',
+              img3: 'https://files.giaoducthoidai.vn/Uploaded/thuyvt/2019-07-18/4NewFolder/1-DLYI.jpg',
+              price: '40.000 - 300.000 đ'
+            },
+          ]
         },
         {
           id: 1,
@@ -348,10 +602,52 @@ const initialState = {
           text2: 'Nhà Hàng',
           text1: 'Lý Sơn, Quảng Ngãi',
           img: 'https://canghaisan.com/wp-content/uploads/2020/11/81-2.jpg',
-          img1: 'https://q-cf.bstatic.com/images/hotel/max1024x768/120/120233599.jpg',
-          img2: 'https://cf.bstatic.com/images/hotel/max1024x768/120/120280555.jpg',
-          img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
-          price: '40.000 - 300.000 đ'
+          img1: 'https://file.hstatic.net/1000030244/file/buffet-hai-san-galina-hotel-nha-trang-2_ee3fb913291346f8bfbbd2c6455b993c_grande.jpg',
+          img2: 'https://vinmec-prod.s3.amazonaws.com/images/20200410_160048_715088_hai-san-co-tot-cho-.max-1800x1800.jpg',
+          img3: 'https://www.kiotviet.vn/wp-content/uploads/2019/12/kinh-doanh-hai-san-4.png',
+          price: '40.000 - 300.000 đ',
+          address: "Thôn Đông, Xã An Vĩnh, Lý Sơn, Quảng Ngãi",
+          timeOpen: " 10:00 - 23:59",
+          priceDetails: "20.000đ - 400.00đ",
+          map: require('../img/vinh57.png'),
+          introduce1: require('../img/vinh61.png'),
+          introduce2: require('../img/vinh62.png'),
+          introduce3: require('../img/vinh63.png'),
+          NearHotel: [
+            {
+              id: 0,
+              text: 'Nhà hàng Long Hiền',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://owa.bestprice.vn/images/articles/uploads/diem-danh-cac-dia-chi-an-tom-hum-o-da-nang-ngon-bo-re-5f50acdb76c96.jpg',
+              img1: 'https://product.hstatic.net/1000275435/product/7_c227865275b549e5ab47cdbaa8a7d0fc.jpg',
+              img2: 'https://files.giaoducthoidai.vn/Uploaded/thuyvt/2019-07-18/4NewFolder/1-DLYI.jpg',
+              img3: 'https://kinhnghiemdulichdn.com/wp-content/uploads/2018/04/6-min.jpg',
+              price: '40.000 - 300.000 đ'
+            },
+            {
+              id: 1,
+              text: 'Hải Sản Khói Chiều',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://image.phunuonline.com.vn/news/2020/20200227/thumbnail/470x300/giai-cuu-tom-hum-xong-dot-nhien-bi-_1582808538.jpg',
+              img1: 'https://vinmec-prod.s3.amazonaws.com/images/20200410_160048_715088_hai-san-co-tot-cho-.max-1800x1800.jpg',
+              img2: 'https://image-us.eva.vn/upload/2-2021/images/2021-04-09/anh-1617941273-413-width600height399.jpg',
+              img3: 'https://vuahaisanhalong.vn/public/files/upload/default/images/slide/banner-3.jpg',
+              price: '20.000 - 400.000 đ'
+            },
+            {
+              id: 2,
+              text: 'Nhà Hàng Vinh Anh',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://kinhnghiemdulichdn.com/wp-content/uploads/2018/04/6-min.jpg',
+              img1: 'https://www.kiotviet.vn/wp-content/uploads/2019/12/kinh-doanh-hai-san-4.png',
+              img2: 'https://vuahaisanhalong.vn/public/files/upload/default/images/slide/banner-3.jpg',
+              img3: 'https://files.giaoducthoidai.vn/Uploaded/thuyvt/2019-07-18/4NewFolder/1-DLYI.jpg',
+              price: '40.000 - 300.000 đ'
+            },
+          ]
         },
         {
           id: 2,
@@ -359,10 +655,52 @@ const initialState = {
           text2: 'Nhà Hàng',
           text1: 'Lý Sơn, Quảng Ngãi',
           img: 'https://owa.bestprice.vn/images/articles/uploads/diem-danh-cac-dia-chi-an-tom-hum-o-da-nang-ngon-bo-re-5f50acdb76c96.jpg',
-          img1: 'https://i2.wp.com/du-lich.net/wp-content/uploads/2019/07/Review-kh%C3%A1ch-s%E1%BA%A1n-Herriott-Hotel-%C4%90%C3%A0-N%E1%BA%B5ng-6.jpg?resize=810%2C539&ssl=1',
-          img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--15-800x450.jpg',
-          img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
-          price: '40.000 - 300.000 đ'
+          img1: 'https://product.hstatic.net/1000275435/product/7_c227865275b549e5ab47cdbaa8a7d0fc.jpg',
+          img2: 'https://files.giaoducthoidai.vn/Uploaded/thuyvt/2019-07-18/4NewFolder/1-DLYI.jpg',
+          img3: 'https://kinhnghiemdulichdn.com/wp-content/uploads/2018/04/6-min.jpg',
+          price: '40.000 - 300.000 đ',
+          address: "Thôn Đông, Xã An Vĩnh, Lý Sơn, Quảng Ngãi",
+          timeOpen: " 10:00 - 23:59",
+          priceDetails: "20.000đ - 400.00đ",
+          map: require('../img/vinh57.png'),
+          introduce1: require('../img/vinh61.png'),
+          introduce2: require('../img/vinh62.png'),
+          introduce3: require('../img/vinh63.png'),
+          NearHotel: [
+            {
+              id: 0,
+              text: 'Hải Sản Khói Chiều',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://image.phunuonline.com.vn/news/2020/20200227/thumbnail/470x300/giai-cuu-tom-hum-xong-dot-nhien-bi-_1582808538.jpg',
+              img1: 'https://vinmec-prod.s3.amazonaws.com/images/20200410_160048_715088_hai-san-co-tot-cho-.max-1800x1800.jpg',
+              img2: 'https://image-us.eva.vn/upload/2-2021/images/2021-04-09/anh-1617941273-413-width600height399.jpg',
+              img3: 'https://vuahaisanhalong.vn/public/files/upload/default/images/slide/banner-3.jpg',
+              price: '20.000 - 400.000 đ'
+            },
+            {
+              id: 1,
+              text: 'Hải Sản Thịnh Phát',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://canghaisan.com/wp-content/uploads/2020/11/81-2.jpg',
+              img1: 'https://file.hstatic.net/1000030244/file/buffet-hai-san-galina-hotel-nha-trang-2_ee3fb913291346f8bfbbd2c6455b993c_grande.jpg',
+              img2: 'https://vinmec-prod.s3.amazonaws.com/images/20200410_160048_715088_hai-san-co-tot-cho-.max-1800x1800.jpg',
+              img3: 'https://www.kiotviet.vn/wp-content/uploads/2019/12/kinh-doanh-hai-san-4.png',
+              price: '40.000 - 300.000 đ'
+            },
+            {
+              id: 2,
+              text: 'Nhà Hàng Vinh Anh',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://kinhnghiemdulichdn.com/wp-content/uploads/2018/04/6-min.jpg',
+              img1: 'https://www.kiotviet.vn/wp-content/uploads/2019/12/kinh-doanh-hai-san-4.png',
+              img2: 'https://vuahaisanhalong.vn/public/files/upload/default/images/slide/banner-3.jpg',
+              img3: 'https://files.giaoducthoidai.vn/Uploaded/thuyvt/2019-07-18/4NewFolder/1-DLYI.jpg',
+              price: '40.000 - 300.000 đ'
+            },
+          ]
         },
         {
           id: 3,
@@ -370,10 +708,52 @@ const initialState = {
           text2: 'Nhà Hàng',
           text1: 'Lý Sơn, Quảng Ngãi',
           img: 'https://kinhnghiemdulichdn.com/wp-content/uploads/2018/04/6-min.jpg',
-          img1: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--2-800x450.jpg',
-          img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--1-800x450.jpg',
-          img3: 'https://q-cf.bstatic.com/images/hotel/max1024x768/227/227459882.jpg',
-          price: '40.000 - 300.000 đ'
+          img1: 'https://www.kiotviet.vn/wp-content/uploads/2019/12/kinh-doanh-hai-san-4.png',
+          img2: 'https://vuahaisanhalong.vn/public/files/upload/default/images/slide/banner-3.jpg',
+          img3: 'https://files.giaoducthoidai.vn/Uploaded/thuyvt/2019-07-18/4NewFolder/1-DLYI.jpg',
+          price: '40.000 - 300.000 đ',
+          address: "Thôn Đông, Xã An Vĩnh, Lý Sơn, Quảng Ngãi",
+          timeOpen: " 10:00 - 23:59",
+          priceDetails: "20.000đ - 400.00đ",
+          map: require('../img/vinh57.png'),
+          introduce1: require('../img/vinh61.png'),
+          introduce2: require('../img/vinh62.png'),
+          introduce3: require('../img/vinh63.png'),
+          NearHotel: [
+            {
+              id: 0,
+              text: 'Nhà hàng Long Hiền',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://owa.bestprice.vn/images/articles/uploads/diem-danh-cac-dia-chi-an-tom-hum-o-da-nang-ngon-bo-re-5f50acdb76c96.jpg',
+              img1: 'https://product.hstatic.net/1000275435/product/7_c227865275b549e5ab47cdbaa8a7d0fc.jpg',
+              img2: 'https://files.giaoducthoidai.vn/Uploaded/thuyvt/2019-07-18/4NewFolder/1-DLYI.jpg',
+              img3: 'https://kinhnghiemdulichdn.com/wp-content/uploads/2018/04/6-min.jpg',
+              price: '40.000 - 300.000 đ'
+            },
+            {
+              id: 1,
+              text: 'Hải Sản Thịnh Phát',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://canghaisan.com/wp-content/uploads/2020/11/81-2.jpg',
+              img1: 'https://file.hstatic.net/1000030244/file/buffet-hai-san-galina-hotel-nha-trang-2_ee3fb913291346f8bfbbd2c6455b993c_grande.jpg',
+              img2: 'https://vinmec-prod.s3.amazonaws.com/images/20200410_160048_715088_hai-san-co-tot-cho-.max-1800x1800.jpg',
+              img3: 'https://www.kiotviet.vn/wp-content/uploads/2019/12/kinh-doanh-hai-san-4.png',
+              price: '40.000 - 300.000 đ'
+            },
+            {
+              id: 2,
+              text: 'Hải Sản Khói Chiều',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://image.phunuonline.com.vn/news/2020/20200227/thumbnail/470x300/giai-cuu-tom-hum-xong-dot-nhien-bi-_1582808538.jpg',
+              img1: 'https://vinmec-prod.s3.amazonaws.com/images/20200410_160048_715088_hai-san-co-tot-cho-.max-1800x1800.jpg',
+              img2: 'https://image-us.eva.vn/upload/2-2021/images/2021-04-09/anh-1617941273-413-width600height399.jpg',
+              img3: 'https://vuahaisanhalong.vn/public/files/upload/default/images/slide/banner-3.jpg',
+              price: '20.000 - 400.000 đ'
+            },
+          ]
         },
       ],
       Experience: [
@@ -701,7 +1081,60 @@ const initialState = {
           img1: 'https://pix10.agoda.net/hotelImages/358/3582444/3582444_17112918230060038374.jpg',
           img2: 'https://du-lich.chudu24.com/f/m/1712/25/nepn4377-hdr-1139515.jpg?w=550&c=1',
           img3: 'https://i.vntrip.vn/584x290/smart/https://statics.vntrip.vn/data-v2/hotels/11393/img_max/11393_1513224223_theherriotthotel&suite_16.jpg',
-          price: '500,000 đ/đêm'
+          price: '500,000 đ/đêm',
+          address: "An Hải Bắc, Sơn Trà, Quảng Ngãi",
+          timeOpen: " 05:00 - 23:00",
+          priceDetails: "500.000đ - 6.950.00đ",
+          map: require('../img/vinh57.png'),
+          introduce1: require('../img/vinh58.png'),
+          introduce2: require('../img/vinh59.png'),
+          introduce3: require('../img/vinh60.png'),
+          NearHotel: [
+            {
+              id: 0,
+              text: 'Khách sạn Hoa Lư',
+              text2: 'Khách sạn',
+              text1: 'Hoa Lư, Ninh Bình',
+              img: 'https://media-cdn.tripadvisor.com/media/photo-s/0e/d2/e1/73/nh-toan-c-nh.jpg',
+              img1: 'https://pix10.agoda.net/hotelImages/358/3582444/3582444_17112918230060038374.jpg',
+              img2: 'https://du-lich.chudu24.com/f/m/1712/25/nepn4377-hdr-1139515.jpg?w=550&c=1',
+              img3: 'https://i.vntrip.vn/584x290/smart/https://statics.vntrip.vn/data-v2/hotels/11393/img_max/11393_1513224223_theherriotthotel&suite_16.jpg',
+              price: '350,000đ/ đêm'
+            },
+            {
+              id: 1,
+              text: 'Emeralda Resort & Spa',
+              text2: 'Resort',
+              text1: 'Gia Viễn, Ninh Bình',
+              img: 'https://namanretreat.com/media/1813/beachfront-villa-1.jpg',
+              img1: 'https://q-cf.bstatic.com/images/hotel/max1024x768/120/120233599.jpg',
+              img2: 'https://cf.bstatic.com/images/hotel/max1024x768/120/120280555.jpg',
+              img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
+              price: '2,570,000đ/ đêm'
+            },
+            {
+              id: 2,
+              text: 'Naman Retreat',
+              text2: 'Khách sạn',
+              text1: 'Gia Viễn, Ninh Bình',
+              img: 'https://pix10.agoda.net/hotelImages/1624612/-1/e83069440bf0d6965fa4d3274b318ad4.jpg?s=1024x768',
+              img1: 'https://i2.wp.com/du-lich.net/wp-content/uploads/2019/07/Review-kh%C3%A1ch-s%E1%BA%A1n-Herriott-Hotel-%C4%90%C3%A0-N%E1%BA%B5ng-6.jpg?resize=810%2C539&ssl=1',
+              img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--15-800x450.jpg',
+              img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
+              price: '800,000đ/ đêm'
+            },
+            {
+              id: 3,
+              text: 'The Vissai',
+              text2: 'Khách sạn',
+              text1: 'Tp.Ninh Bình, Ninh Bình',
+              img: 'https://dulichhalongquangninh.com/wp-content/uploads/2016/07/hinh-anh-du-lich-ha-long.jpg',
+              img1: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--2-800x450.jpg',
+              img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--1-800x450.jpg',
+              img3: 'https://q-cf.bstatic.com/images/hotel/max1024x768/227/227459882.jpg',
+              price: '500,000đ/ đêm'
+            },
+          ]
         },
         {
           id: 1,
@@ -712,7 +1145,60 @@ const initialState = {
           img1: 'https://q-cf.bstatic.com/images/hotel/max1024x768/120/120233599.jpg',
           img2: 'https://cf.bstatic.com/images/hotel/max1024x768/120/120280555.jpg',
           img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
-          price: '700,000 đ/đêm'
+          price: '700,000 đ/đêm',
+          address: "An Hải Bắc, Sơn Trà, Quảng Ngãi",
+          timeOpen: " 05:00 - 23:00",
+          priceDetails: "500.000đ - 6.950.00đ",
+          map: require('../img/vinh57.png'),
+          introduce1: require('../img/vinh58.png'),
+          introduce2: require('../img/vinh59.png'),
+          introduce3: require('../img/vinh60.png'),
+          NearHotel: [
+            {
+              id: 0,
+              text: 'Khách sạn Hoa Lư',
+              text2: 'Khách sạn',
+              text1: 'Hoa Lư, Ninh Bình',
+              img: 'https://media-cdn.tripadvisor.com/media/photo-s/0e/d2/e1/73/nh-toan-c-nh.jpg',
+              img1: 'https://pix10.agoda.net/hotelImages/358/3582444/3582444_17112918230060038374.jpg',
+              img2: 'https://du-lich.chudu24.com/f/m/1712/25/nepn4377-hdr-1139515.jpg?w=550&c=1',
+              img3: 'https://i.vntrip.vn/584x290/smart/https://statics.vntrip.vn/data-v2/hotels/11393/img_max/11393_1513224223_theherriotthotel&suite_16.jpg',
+              price: '350,000đ/ đêm'
+            },
+            {
+              id: 1,
+              text: 'Emeralda Resort & Spa',
+              text2: 'Resort',
+              text1: 'Gia Viễn, Ninh Bình',
+              img: 'https://namanretreat.com/media/1813/beachfront-villa-1.jpg',
+              img1: 'https://q-cf.bstatic.com/images/hotel/max1024x768/120/120233599.jpg',
+              img2: 'https://cf.bstatic.com/images/hotel/max1024x768/120/120280555.jpg',
+              img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
+              price: '2,570,000đ/ đêm'
+            },
+            {
+              id: 2,
+              text: 'Naman Retreat',
+              text2: 'Khách sạn',
+              text1: 'Gia Viễn, Ninh Bình',
+              img: 'https://pix10.agoda.net/hotelImages/1624612/-1/e83069440bf0d6965fa4d3274b318ad4.jpg?s=1024x768',
+              img1: 'https://i2.wp.com/du-lich.net/wp-content/uploads/2019/07/Review-kh%C3%A1ch-s%E1%BA%A1n-Herriott-Hotel-%C4%90%C3%A0-N%E1%BA%B5ng-6.jpg?resize=810%2C539&ssl=1',
+              img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--15-800x450.jpg',
+              img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
+              price: '800,000đ/ đêm'
+            },
+            {
+              id: 3,
+              text: 'The Vissai',
+              text2: 'Khách sạn',
+              text1: 'Tp.Ninh Bình, Ninh Bình',
+              img: 'https://dulichhalongquangninh.com/wp-content/uploads/2016/07/hinh-anh-du-lich-ha-long.jpg',
+              img1: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--2-800x450.jpg',
+              img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--1-800x450.jpg',
+              img3: 'https://q-cf.bstatic.com/images/hotel/max1024x768/227/227459882.jpg',
+              price: '500,000đ/ đêm'
+            },
+          ]
         },
         {
           id: 2,
@@ -723,7 +1209,60 @@ const initialState = {
           img1: 'https://i2.wp.com/du-lich.net/wp-content/uploads/2019/07/Review-kh%C3%A1ch-s%E1%BA%A1n-Herriott-Hotel-%C4%90%C3%A0-N%E1%BA%B5ng-6.jpg?resize=810%2C539&ssl=1',
           img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--15-800x450.jpg',
           img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
-          price: '800,000 đ/đêm'
+          price: '800,000 đ/đêm',
+          address: "An Hải Bắc, Sơn Trà, Quảng Ngãi",
+          timeOpen: " 05:00 - 23:00",
+          priceDetails: "500.000đ - 6.950.00đ",
+          map: require('../img/vinh57.png'),
+          introduce1: require('../img/vinh58.png'),
+          introduce2: require('../img/vinh59.png'),
+          introduce3: require('../img/vinh60.png'),
+          NearHotel: [
+            {
+              id: 0,
+              text: 'Khách sạn Hoa Lư',
+              text2: 'Khách sạn',
+              text1: 'Hoa Lư, Ninh Bình',
+              img: 'https://media-cdn.tripadvisor.com/media/photo-s/0e/d2/e1/73/nh-toan-c-nh.jpg',
+              img1: 'https://pix10.agoda.net/hotelImages/358/3582444/3582444_17112918230060038374.jpg',
+              img2: 'https://du-lich.chudu24.com/f/m/1712/25/nepn4377-hdr-1139515.jpg?w=550&c=1',
+              img3: 'https://i.vntrip.vn/584x290/smart/https://statics.vntrip.vn/data-v2/hotels/11393/img_max/11393_1513224223_theherriotthotel&suite_16.jpg',
+              price: '350,000đ/ đêm'
+            },
+            {
+              id: 1,
+              text: 'Emeralda Resort & Spa',
+              text2: 'Resort',
+              text1: 'Gia Viễn, Ninh Bình',
+              img: 'https://namanretreat.com/media/1813/beachfront-villa-1.jpg',
+              img1: 'https://q-cf.bstatic.com/images/hotel/max1024x768/120/120233599.jpg',
+              img2: 'https://cf.bstatic.com/images/hotel/max1024x768/120/120280555.jpg',
+              img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
+              price: '2,570,000đ/ đêm'
+            },
+            {
+              id: 2,
+              text: 'Naman Retreat',
+              text2: 'Khách sạn',
+              text1: 'Gia Viễn, Ninh Bình',
+              img: 'https://pix10.agoda.net/hotelImages/1624612/-1/e83069440bf0d6965fa4d3274b318ad4.jpg?s=1024x768',
+              img1: 'https://i2.wp.com/du-lich.net/wp-content/uploads/2019/07/Review-kh%C3%A1ch-s%E1%BA%A1n-Herriott-Hotel-%C4%90%C3%A0-N%E1%BA%B5ng-6.jpg?resize=810%2C539&ssl=1',
+              img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--15-800x450.jpg',
+              img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
+              price: '800,000đ/ đêm'
+            },
+            {
+              id: 3,
+              text: 'The Vissai',
+              text2: 'Khách sạn',
+              text1: 'Tp.Ninh Bình, Ninh Bình',
+              img: 'https://dulichhalongquangninh.com/wp-content/uploads/2016/07/hinh-anh-du-lich-ha-long.jpg',
+              img1: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--2-800x450.jpg',
+              img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--1-800x450.jpg',
+              img3: 'https://q-cf.bstatic.com/images/hotel/max1024x768/227/227459882.jpg',
+              price: '500,000đ/ đêm'
+            },
+          ]
         },
         {
           id: 3,
@@ -734,7 +1273,60 @@ const initialState = {
           img1: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--2-800x450.jpg',
           img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--1-800x450.jpg',
           img3: 'https://q-cf.bstatic.com/images/hotel/max1024x768/227/227459882.jpg',
-          price: '500,000 đ/đêm'
+          price: '500,000 đ/đêm',
+          address: "An Hải Bắc, Sơn Trà, Quảng Ngãi",
+          timeOpen: " 05:00 - 23:00",
+          priceDetails: "500.000đ - 6.950.00đ",
+          map: require('../img/vinh57.png'),
+          introduce1: require('../img/vinh58.png'),
+          introduce2: require('../img/vinh59.png'),
+          introduce3: require('../img/vinh60.png'),
+          NearHotel: [
+            {
+              id: 0,
+              text: 'Khách sạn Hoa Lư',
+              text2: 'Khách sạn',
+              text1: 'Hoa Lư, Ninh Bình',
+              img: 'https://media-cdn.tripadvisor.com/media/photo-s/0e/d2/e1/73/nh-toan-c-nh.jpg',
+              img1: 'https://pix10.agoda.net/hotelImages/358/3582444/3582444_17112918230060038374.jpg',
+              img2: 'https://du-lich.chudu24.com/f/m/1712/25/nepn4377-hdr-1139515.jpg?w=550&c=1',
+              img3: 'https://i.vntrip.vn/584x290/smart/https://statics.vntrip.vn/data-v2/hotels/11393/img_max/11393_1513224223_theherriotthotel&suite_16.jpg',
+              price: '350,000đ/ đêm'
+            },
+            {
+              id: 1,
+              text: 'Emeralda Resort & Spa',
+              text2: 'Resort',
+              text1: 'Gia Viễn, Ninh Bình',
+              img: 'https://namanretreat.com/media/1813/beachfront-villa-1.jpg',
+              img1: 'https://q-cf.bstatic.com/images/hotel/max1024x768/120/120233599.jpg',
+              img2: 'https://cf.bstatic.com/images/hotel/max1024x768/120/120280555.jpg',
+              img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
+              price: '2,570,000đ/ đêm'
+            },
+            {
+              id: 2,
+              text: 'Naman Retreat',
+              text2: 'Khách sạn',
+              text1: 'Gia Viễn, Ninh Bình',
+              img: 'https://pix10.agoda.net/hotelImages/1624612/-1/e83069440bf0d6965fa4d3274b318ad4.jpg?s=1024x768',
+              img1: 'https://i2.wp.com/du-lich.net/wp-content/uploads/2019/07/Review-kh%C3%A1ch-s%E1%BA%A1n-Herriott-Hotel-%C4%90%C3%A0-N%E1%BA%B5ng-6.jpg?resize=810%2C539&ssl=1',
+              img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--15-800x450.jpg',
+              img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
+              price: '800,000đ/ đêm'
+            },
+            {
+              id: 3,
+              text: 'The Vissai',
+              text2: 'Khách sạn',
+              text1: 'Tp.Ninh Bình, Ninh Bình',
+              img: 'https://dulichhalongquangninh.com/wp-content/uploads/2016/07/hinh-anh-du-lich-ha-long.jpg',
+              img1: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--2-800x450.jpg',
+              img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--1-800x450.jpg',
+              img3: 'https://q-cf.bstatic.com/images/hotel/max1024x768/227/227459882.jpg',
+              price: '500,000đ/ đêm'
+            },
+          ]
         },
       ],
       Restaurant: [
@@ -744,10 +1336,52 @@ const initialState = {
           text2: 'Nhà Hàng',
           text1: 'Lý Sơn, Quảng Ngãi',
           img: 'https://image.phunuonline.com.vn/news/2020/20200227/thumbnail/470x300/giai-cuu-tom-hum-xong-dot-nhien-bi-_1582808538.jpg',
-          img1: 'https://pix10.agoda.net/hotelImages/358/3582444/3582444_17112918230060038374.jpg',
-          img2: 'https://du-lich.chudu24.com/f/m/1712/25/nepn4377-hdr-1139515.jpg?w=550&c=1',
-          img3: 'https://i.vntrip.vn/584x290/smart/https://statics.vntrip.vn/data-v2/hotels/11393/img_max/11393_1513224223_theherriotthotel&suite_16.jpg',
-          price: '20.000 - 400.000 đ'
+          img1: 'https://vinmec-prod.s3.amazonaws.com/images/20200410_160048_715088_hai-san-co-tot-cho-.max-1800x1800.jpg',
+          img2: 'https://image-us.eva.vn/upload/2-2021/images/2021-04-09/anh-1617941273-413-width600height399.jpg',
+          img3: 'https://vuahaisanhalong.vn/public/files/upload/default/images/slide/banner-3.jpg',
+          price: '20.000 - 400.000 đ',
+          address: "Thôn Đông, Xã An Vĩnh, Lý Sơn, Quảng Ngãi",
+          timeOpen: " 10:00 - 23:59",
+          priceDetails: "20.000đ - 400.00đ",
+          map: require('../img/vinh57.png'),
+          introduce1: require('../img/vinh61.png'),
+          introduce2: require('../img/vinh62.png'),
+          introduce3: require('../img/vinh63.png'),
+          NearHotel: [
+            {
+              id: 0,
+              text: 'Nhà hàng Long Hiền',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://owa.bestprice.vn/images/articles/uploads/diem-danh-cac-dia-chi-an-tom-hum-o-da-nang-ngon-bo-re-5f50acdb76c96.jpg',
+              img1: 'https://product.hstatic.net/1000275435/product/7_c227865275b549e5ab47cdbaa8a7d0fc.jpg',
+              img2: 'https://files.giaoducthoidai.vn/Uploaded/thuyvt/2019-07-18/4NewFolder/1-DLYI.jpg',
+              img3: 'https://kinhnghiemdulichdn.com/wp-content/uploads/2018/04/6-min.jpg',
+              price: '40.000 - 300.000 đ'
+            },
+            {
+              id: 1,
+              text: 'Hải Sản Thịnh Phát',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://canghaisan.com/wp-content/uploads/2020/11/81-2.jpg',
+              img1: 'https://file.hstatic.net/1000030244/file/buffet-hai-san-galina-hotel-nha-trang-2_ee3fb913291346f8bfbbd2c6455b993c_grande.jpg',
+              img2: 'https://vinmec-prod.s3.amazonaws.com/images/20200410_160048_715088_hai-san-co-tot-cho-.max-1800x1800.jpg',
+              img3: 'https://www.kiotviet.vn/wp-content/uploads/2019/12/kinh-doanh-hai-san-4.png',
+              price: '40.000 - 300.000 đ'
+            },
+            {
+              id: 2,
+              text: 'Nhà Hàng Vinh Anh',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://kinhnghiemdulichdn.com/wp-content/uploads/2018/04/6-min.jpg',
+              img1: 'https://www.kiotviet.vn/wp-content/uploads/2019/12/kinh-doanh-hai-san-4.png',
+              img2: 'https://vuahaisanhalong.vn/public/files/upload/default/images/slide/banner-3.jpg',
+              img3: 'https://files.giaoducthoidai.vn/Uploaded/thuyvt/2019-07-18/4NewFolder/1-DLYI.jpg',
+              price: '40.000 - 300.000 đ'
+            },
+          ]
         },
         {
           id: 1,
@@ -755,10 +1389,52 @@ const initialState = {
           text2: 'Nhà Hàng',
           text1: 'Lý Sơn, Quảng Ngãi',
           img: 'https://canghaisan.com/wp-content/uploads/2020/11/81-2.jpg',
-          img1: 'https://q-cf.bstatic.com/images/hotel/max1024x768/120/120233599.jpg',
-          img2: 'https://cf.bstatic.com/images/hotel/max1024x768/120/120280555.jpg',
-          img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
-          price: '40.000 - 300.000 đ'
+          img1: 'https://file.hstatic.net/1000030244/file/buffet-hai-san-galina-hotel-nha-trang-2_ee3fb913291346f8bfbbd2c6455b993c_grande.jpg',
+          img2: 'https://vinmec-prod.s3.amazonaws.com/images/20200410_160048_715088_hai-san-co-tot-cho-.max-1800x1800.jpg',
+          img3: 'https://www.kiotviet.vn/wp-content/uploads/2019/12/kinh-doanh-hai-san-4.png',
+          price: '40.000 - 300.000 đ',
+          address: "Thôn Đông, Xã An Vĩnh, Lý Sơn, Quảng Ngãi",
+          timeOpen: " 10:00 - 23:59",
+          priceDetails: "20.000đ - 400.00đ",
+          map: require('../img/vinh57.png'),
+          introduce1: require('../img/vinh61.png'),
+          introduce2: require('../img/vinh62.png'),
+          introduce3: require('../img/vinh63.png'),
+          NearHotel: [
+            {
+              id: 0,
+              text: 'Nhà hàng Long Hiền',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://owa.bestprice.vn/images/articles/uploads/diem-danh-cac-dia-chi-an-tom-hum-o-da-nang-ngon-bo-re-5f50acdb76c96.jpg',
+              img1: 'https://product.hstatic.net/1000275435/product/7_c227865275b549e5ab47cdbaa8a7d0fc.jpg',
+              img2: 'https://files.giaoducthoidai.vn/Uploaded/thuyvt/2019-07-18/4NewFolder/1-DLYI.jpg',
+              img3: 'https://kinhnghiemdulichdn.com/wp-content/uploads/2018/04/6-min.jpg',
+              price: '40.000 - 300.000 đ'
+            },
+            {
+              id: 1,
+              text: 'Hải Sản Khói Chiều',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://image.phunuonline.com.vn/news/2020/20200227/thumbnail/470x300/giai-cuu-tom-hum-xong-dot-nhien-bi-_1582808538.jpg',
+              img1: 'https://vinmec-prod.s3.amazonaws.com/images/20200410_160048_715088_hai-san-co-tot-cho-.max-1800x1800.jpg',
+              img2: 'https://image-us.eva.vn/upload/2-2021/images/2021-04-09/anh-1617941273-413-width600height399.jpg',
+              img3: 'https://vuahaisanhalong.vn/public/files/upload/default/images/slide/banner-3.jpg',
+              price: '20.000 - 400.000 đ'
+            },
+            {
+              id: 2,
+              text: 'Nhà Hàng Vinh Anh',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://kinhnghiemdulichdn.com/wp-content/uploads/2018/04/6-min.jpg',
+              img1: 'https://www.kiotviet.vn/wp-content/uploads/2019/12/kinh-doanh-hai-san-4.png',
+              img2: 'https://vuahaisanhalong.vn/public/files/upload/default/images/slide/banner-3.jpg',
+              img3: 'https://files.giaoducthoidai.vn/Uploaded/thuyvt/2019-07-18/4NewFolder/1-DLYI.jpg',
+              price: '40.000 - 300.000 đ'
+            },
+          ]
         },
         {
           id: 2,
@@ -766,10 +1442,52 @@ const initialState = {
           text2: 'Nhà Hàng',
           text1: 'Lý Sơn, Quảng Ngãi',
           img: 'https://owa.bestprice.vn/images/articles/uploads/diem-danh-cac-dia-chi-an-tom-hum-o-da-nang-ngon-bo-re-5f50acdb76c96.jpg',
-          img1: 'https://i2.wp.com/du-lich.net/wp-content/uploads/2019/07/Review-kh%C3%A1ch-s%E1%BA%A1n-Herriott-Hotel-%C4%90%C3%A0-N%E1%BA%B5ng-6.jpg?resize=810%2C539&ssl=1',
-          img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--15-800x450.jpg',
-          img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
-          price: '40.000 - 300.000 đ'
+          img1: 'https://product.hstatic.net/1000275435/product/7_c227865275b549e5ab47cdbaa8a7d0fc.jpg',
+          img2: 'https://files.giaoducthoidai.vn/Uploaded/thuyvt/2019-07-18/4NewFolder/1-DLYI.jpg',
+          img3: 'https://kinhnghiemdulichdn.com/wp-content/uploads/2018/04/6-min.jpg',
+          price: '40.000 - 300.000 đ',
+          address: "Thôn Đông, Xã An Vĩnh, Lý Sơn, Quảng Ngãi",
+          timeOpen: " 10:00 - 23:59",
+          priceDetails: "20.000đ - 400.00đ",
+          map: require('../img/vinh57.png'),
+          introduce1: require('../img/vinh61.png'),
+          introduce2: require('../img/vinh62.png'),
+          introduce3: require('../img/vinh63.png'),
+          NearHotel: [
+            {
+              id: 0,
+              text: 'Hải Sản Khói Chiều',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://image.phunuonline.com.vn/news/2020/20200227/thumbnail/470x300/giai-cuu-tom-hum-xong-dot-nhien-bi-_1582808538.jpg',
+              img1: 'https://vinmec-prod.s3.amazonaws.com/images/20200410_160048_715088_hai-san-co-tot-cho-.max-1800x1800.jpg',
+              img2: 'https://image-us.eva.vn/upload/2-2021/images/2021-04-09/anh-1617941273-413-width600height399.jpg',
+              img3: 'https://vuahaisanhalong.vn/public/files/upload/default/images/slide/banner-3.jpg',
+              price: '20.000 - 400.000 đ'
+            },
+            {
+              id: 1,
+              text: 'Hải Sản Thịnh Phát',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://canghaisan.com/wp-content/uploads/2020/11/81-2.jpg',
+              img1: 'https://file.hstatic.net/1000030244/file/buffet-hai-san-galina-hotel-nha-trang-2_ee3fb913291346f8bfbbd2c6455b993c_grande.jpg',
+              img2: 'https://vinmec-prod.s3.amazonaws.com/images/20200410_160048_715088_hai-san-co-tot-cho-.max-1800x1800.jpg',
+              img3: 'https://www.kiotviet.vn/wp-content/uploads/2019/12/kinh-doanh-hai-san-4.png',
+              price: '40.000 - 300.000 đ'
+            },
+            {
+              id: 2,
+              text: 'Nhà Hàng Vinh Anh',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://kinhnghiemdulichdn.com/wp-content/uploads/2018/04/6-min.jpg',
+              img1: 'https://www.kiotviet.vn/wp-content/uploads/2019/12/kinh-doanh-hai-san-4.png',
+              img2: 'https://vuahaisanhalong.vn/public/files/upload/default/images/slide/banner-3.jpg',
+              img3: 'https://files.giaoducthoidai.vn/Uploaded/thuyvt/2019-07-18/4NewFolder/1-DLYI.jpg',
+              price: '40.000 - 300.000 đ'
+            },
+          ]
         },
         {
           id: 3,
@@ -777,10 +1495,52 @@ const initialState = {
           text2: 'Nhà Hàng',
           text1: 'Lý Sơn, Quảng Ngãi',
           img: 'https://kinhnghiemdulichdn.com/wp-content/uploads/2018/04/6-min.jpg',
-          img1: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--2-800x450.jpg',
-          img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--1-800x450.jpg',
-          img3: 'https://q-cf.bstatic.com/images/hotel/max1024x768/227/227459882.jpg',
-          price: '40.000 - 300.000 đ'
+          img1: 'https://www.kiotviet.vn/wp-content/uploads/2019/12/kinh-doanh-hai-san-4.png',
+          img2: 'https://vuahaisanhalong.vn/public/files/upload/default/images/slide/banner-3.jpg',
+          img3: 'https://files.giaoducthoidai.vn/Uploaded/thuyvt/2019-07-18/4NewFolder/1-DLYI.jpg',
+          price: '40.000 - 300.000 đ',
+          address: "Thôn Đông, Xã An Vĩnh, Lý Sơn, Quảng Ngãi",
+          timeOpen: " 10:00 - 23:59",
+          priceDetails: "20.000đ - 400.00đ",
+          map: require('../img/vinh57.png'),
+          introduce1: require('../img/vinh61.png'),
+          introduce2: require('../img/vinh62.png'),
+          introduce3: require('../img/vinh63.png'),
+          NearHotel: [
+            {
+              id: 0,
+              text: 'Nhà hàng Long Hiền',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://owa.bestprice.vn/images/articles/uploads/diem-danh-cac-dia-chi-an-tom-hum-o-da-nang-ngon-bo-re-5f50acdb76c96.jpg',
+              img1: 'https://product.hstatic.net/1000275435/product/7_c227865275b549e5ab47cdbaa8a7d0fc.jpg',
+              img2: 'https://files.giaoducthoidai.vn/Uploaded/thuyvt/2019-07-18/4NewFolder/1-DLYI.jpg',
+              img3: 'https://kinhnghiemdulichdn.com/wp-content/uploads/2018/04/6-min.jpg',
+              price: '40.000 - 300.000 đ'
+            },
+            {
+              id: 1,
+              text: 'Hải Sản Thịnh Phát',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://canghaisan.com/wp-content/uploads/2020/11/81-2.jpg',
+              img1: 'https://file.hstatic.net/1000030244/file/buffet-hai-san-galina-hotel-nha-trang-2_ee3fb913291346f8bfbbd2c6455b993c_grande.jpg',
+              img2: 'https://vinmec-prod.s3.amazonaws.com/images/20200410_160048_715088_hai-san-co-tot-cho-.max-1800x1800.jpg',
+              img3: 'https://www.kiotviet.vn/wp-content/uploads/2019/12/kinh-doanh-hai-san-4.png',
+              price: '40.000 - 300.000 đ'
+            },
+            {
+              id: 2,
+              text: 'Hải Sản Khói Chiều',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://image.phunuonline.com.vn/news/2020/20200227/thumbnail/470x300/giai-cuu-tom-hum-xong-dot-nhien-bi-_1582808538.jpg',
+              img1: 'https://vinmec-prod.s3.amazonaws.com/images/20200410_160048_715088_hai-san-co-tot-cho-.max-1800x1800.jpg',
+              img2: 'https://image-us.eva.vn/upload/2-2021/images/2021-04-09/anh-1617941273-413-width600height399.jpg',
+              img3: 'https://vuahaisanhalong.vn/public/files/upload/default/images/slide/banner-3.jpg',
+              price: '20.000 - 400.000 đ'
+            },
+          ]
         },
       ],
       Experience: [
@@ -1108,7 +1868,60 @@ const initialState = {
           img1: 'https://pix10.agoda.net/hotelImages/358/3582444/3582444_17112918230060038374.jpg',
           img2: 'https://du-lich.chudu24.com/f/m/1712/25/nepn4377-hdr-1139515.jpg?w=550&c=1',
           img3: 'https://i.vntrip.vn/584x290/smart/https://statics.vntrip.vn/data-v2/hotels/11393/img_max/11393_1513224223_theherriotthotel&suite_16.jpg',
-          price: '500,000 đ/đêm'
+          price: '500,000 đ/đêm',
+          address: "An Hải Bắc, Sơn Trà, Quảng Ngãi",
+          timeOpen: " 05:00 - 23:00",
+          priceDetails: "500.000đ - 6.950.00đ",
+          map: require('../img/vinh57.png'),
+          introduce1: require('../img/vinh58.png'),
+          introduce2: require('../img/vinh59.png'),
+          introduce3: require('../img/vinh60.png'),
+          NearHotel: [
+            {
+              id: 0,
+              text: 'Khách sạn Hoa Lư',
+              text2: 'Khách sạn',
+              text1: 'Hoa Lư, Ninh Bình',
+              img: 'https://media-cdn.tripadvisor.com/media/photo-s/0e/d2/e1/73/nh-toan-c-nh.jpg',
+              img1: 'https://pix10.agoda.net/hotelImages/358/3582444/3582444_17112918230060038374.jpg',
+              img2: 'https://du-lich.chudu24.com/f/m/1712/25/nepn4377-hdr-1139515.jpg?w=550&c=1',
+              img3: 'https://i.vntrip.vn/584x290/smart/https://statics.vntrip.vn/data-v2/hotels/11393/img_max/11393_1513224223_theherriotthotel&suite_16.jpg',
+              price: '350,000đ/ đêm'
+            },
+            {
+              id: 1,
+              text: 'Emeralda Resort & Spa',
+              text2: 'Resort',
+              text1: 'Gia Viễn, Ninh Bình',
+              img: 'https://namanretreat.com/media/1813/beachfront-villa-1.jpg',
+              img1: 'https://q-cf.bstatic.com/images/hotel/max1024x768/120/120233599.jpg',
+              img2: 'https://cf.bstatic.com/images/hotel/max1024x768/120/120280555.jpg',
+              img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
+              price: '2,570,000đ/ đêm'
+            },
+            {
+              id: 2,
+              text: 'Naman Retreat',
+              text2: 'Khách sạn',
+              text1: 'Gia Viễn, Ninh Bình',
+              img: 'https://pix10.agoda.net/hotelImages/1624612/-1/e83069440bf0d6965fa4d3274b318ad4.jpg?s=1024x768',
+              img1: 'https://i2.wp.com/du-lich.net/wp-content/uploads/2019/07/Review-kh%C3%A1ch-s%E1%BA%A1n-Herriott-Hotel-%C4%90%C3%A0-N%E1%BA%B5ng-6.jpg?resize=810%2C539&ssl=1',
+              img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--15-800x450.jpg',
+              img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
+              price: '800,000đ/ đêm'
+            },
+            {
+              id: 3,
+              text: 'The Vissai',
+              text2: 'Khách sạn',
+              text1: 'Tp.Ninh Bình, Ninh Bình',
+              img: 'https://dulichhalongquangninh.com/wp-content/uploads/2016/07/hinh-anh-du-lich-ha-long.jpg',
+              img1: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--2-800x450.jpg',
+              img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--1-800x450.jpg',
+              img3: 'https://q-cf.bstatic.com/images/hotel/max1024x768/227/227459882.jpg',
+              price: '500,000đ/ đêm'
+            },
+          ]
         },
         {
           id: 1,
@@ -1119,7 +1932,60 @@ const initialState = {
           img1: 'https://q-cf.bstatic.com/images/hotel/max1024x768/120/120233599.jpg',
           img2: 'https://cf.bstatic.com/images/hotel/max1024x768/120/120280555.jpg',
           img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
-          price: '700,000 đ/đêm'
+          price: '700,000 đ/đêm',
+          address: "An Hải Bắc, Sơn Trà, Quảng Ngãi",
+          timeOpen: " 05:00 - 23:00",
+          priceDetails: "500.000đ - 6.950.00đ",
+          map: require('../img/vinh57.png'),
+          introduce1: require('../img/vinh58.png'),
+          introduce2: require('../img/vinh59.png'),
+          introduce3: require('../img/vinh60.png'),
+          NearHotel: [
+            {
+              id: 0,
+              text: 'Khách sạn Hoa Lư',
+              text2: 'Khách sạn',
+              text1: 'Hoa Lư, Ninh Bình',
+              img: 'https://media-cdn.tripadvisor.com/media/photo-s/0e/d2/e1/73/nh-toan-c-nh.jpg',
+              img1: 'https://pix10.agoda.net/hotelImages/358/3582444/3582444_17112918230060038374.jpg',
+              img2: 'https://du-lich.chudu24.com/f/m/1712/25/nepn4377-hdr-1139515.jpg?w=550&c=1',
+              img3: 'https://i.vntrip.vn/584x290/smart/https://statics.vntrip.vn/data-v2/hotels/11393/img_max/11393_1513224223_theherriotthotel&suite_16.jpg',
+              price: '350,000đ/ đêm'
+            },
+            {
+              id: 1,
+              text: 'Emeralda Resort & Spa',
+              text2: 'Resort',
+              text1: 'Gia Viễn, Ninh Bình',
+              img: 'https://namanretreat.com/media/1813/beachfront-villa-1.jpg',
+              img1: 'https://q-cf.bstatic.com/images/hotel/max1024x768/120/120233599.jpg',
+              img2: 'https://cf.bstatic.com/images/hotel/max1024x768/120/120280555.jpg',
+              img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
+              price: '2,570,000đ/ đêm'
+            },
+            {
+              id: 2,
+              text: 'Naman Retreat',
+              text2: 'Khách sạn',
+              text1: 'Gia Viễn, Ninh Bình',
+              img: 'https://pix10.agoda.net/hotelImages/1624612/-1/e83069440bf0d6965fa4d3274b318ad4.jpg?s=1024x768',
+              img1: 'https://i2.wp.com/du-lich.net/wp-content/uploads/2019/07/Review-kh%C3%A1ch-s%E1%BA%A1n-Herriott-Hotel-%C4%90%C3%A0-N%E1%BA%B5ng-6.jpg?resize=810%2C539&ssl=1',
+              img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--15-800x450.jpg',
+              img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
+              price: '800,000đ/ đêm'
+            },
+            {
+              id: 3,
+              text: 'The Vissai',
+              text2: 'Khách sạn',
+              text1: 'Tp.Ninh Bình, Ninh Bình',
+              img: 'https://dulichhalongquangninh.com/wp-content/uploads/2016/07/hinh-anh-du-lich-ha-long.jpg',
+              img1: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--2-800x450.jpg',
+              img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--1-800x450.jpg',
+              img3: 'https://q-cf.bstatic.com/images/hotel/max1024x768/227/227459882.jpg',
+              price: '500,000đ/ đêm'
+            },
+          ]
         },
         {
           id: 2,
@@ -1130,7 +1996,60 @@ const initialState = {
           img1: 'https://i2.wp.com/du-lich.net/wp-content/uploads/2019/07/Review-kh%C3%A1ch-s%E1%BA%A1n-Herriott-Hotel-%C4%90%C3%A0-N%E1%BA%B5ng-6.jpg?resize=810%2C539&ssl=1',
           img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--15-800x450.jpg',
           img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
-          price: '800,000 đ/đêm'
+          price: '800,000 đ/đêm',
+          address: "An Hải Bắc, Sơn Trà, Quảng Ngãi",
+          timeOpen: " 05:00 - 23:00",
+          priceDetails: "500.000đ - 6.950.00đ",
+          map: require('../img/vinh57.png'),
+          introduce1: require('../img/vinh58.png'),
+          introduce2: require('../img/vinh59.png'),
+          introduce3: require('../img/vinh60.png'),
+          NearHotel: [
+            {
+              id: 0,
+              text: 'Khách sạn Hoa Lư',
+              text2: 'Khách sạn',
+              text1: 'Hoa Lư, Ninh Bình',
+              img: 'https://media-cdn.tripadvisor.com/media/photo-s/0e/d2/e1/73/nh-toan-c-nh.jpg',
+              img1: 'https://pix10.agoda.net/hotelImages/358/3582444/3582444_17112918230060038374.jpg',
+              img2: 'https://du-lich.chudu24.com/f/m/1712/25/nepn4377-hdr-1139515.jpg?w=550&c=1',
+              img3: 'https://i.vntrip.vn/584x290/smart/https://statics.vntrip.vn/data-v2/hotels/11393/img_max/11393_1513224223_theherriotthotel&suite_16.jpg',
+              price: '350,000đ/ đêm'
+            },
+            {
+              id: 1,
+              text: 'Emeralda Resort & Spa',
+              text2: 'Resort',
+              text1: 'Gia Viễn, Ninh Bình',
+              img: 'https://namanretreat.com/media/1813/beachfront-villa-1.jpg',
+              img1: 'https://q-cf.bstatic.com/images/hotel/max1024x768/120/120233599.jpg',
+              img2: 'https://cf.bstatic.com/images/hotel/max1024x768/120/120280555.jpg',
+              img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
+              price: '2,570,000đ/ đêm'
+            },
+            {
+              id: 2,
+              text: 'Naman Retreat',
+              text2: 'Khách sạn',
+              text1: 'Gia Viễn, Ninh Bình',
+              img: 'https://pix10.agoda.net/hotelImages/1624612/-1/e83069440bf0d6965fa4d3274b318ad4.jpg?s=1024x768',
+              img1: 'https://i2.wp.com/du-lich.net/wp-content/uploads/2019/07/Review-kh%C3%A1ch-s%E1%BA%A1n-Herriott-Hotel-%C4%90%C3%A0-N%E1%BA%B5ng-6.jpg?resize=810%2C539&ssl=1',
+              img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--15-800x450.jpg',
+              img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
+              price: '800,000đ/ đêm'
+            },
+            {
+              id: 3,
+              text: 'The Vissai',
+              text2: 'Khách sạn',
+              text1: 'Tp.Ninh Bình, Ninh Bình',
+              img: 'https://dulichhalongquangninh.com/wp-content/uploads/2016/07/hinh-anh-du-lich-ha-long.jpg',
+              img1: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--2-800x450.jpg',
+              img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--1-800x450.jpg',
+              img3: 'https://q-cf.bstatic.com/images/hotel/max1024x768/227/227459882.jpg',
+              price: '500,000đ/ đêm'
+            },
+          ]
         },
         {
           id: 3,
@@ -1141,7 +2060,60 @@ const initialState = {
           img1: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--2-800x450.jpg',
           img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--1-800x450.jpg',
           img3: 'https://q-cf.bstatic.com/images/hotel/max1024x768/227/227459882.jpg',
-          price: '500,000 đ/đêm'
+          price: '500,000 đ/đêm',
+          address: "An Hải Bắc, Sơn Trà, Quảng Ngãi",
+          timeOpen: " 05:00 - 23:00",
+          priceDetails: "500.000đ - 6.950.00đ",
+          map: require('../img/vinh57.png'),
+          introduce1: require('../img/vinh58.png'),
+          introduce2: require('../img/vinh59.png'),
+          introduce3: require('../img/vinh60.png'),
+          NearHotel: [
+            {
+              id: 0,
+              text: 'Khách sạn Hoa Lư',
+              text2: 'Khách sạn',
+              text1: 'Hoa Lư, Ninh Bình',
+              img: 'https://media-cdn.tripadvisor.com/media/photo-s/0e/d2/e1/73/nh-toan-c-nh.jpg',
+              img1: 'https://pix10.agoda.net/hotelImages/358/3582444/3582444_17112918230060038374.jpg',
+              img2: 'https://du-lich.chudu24.com/f/m/1712/25/nepn4377-hdr-1139515.jpg?w=550&c=1',
+              img3: 'https://i.vntrip.vn/584x290/smart/https://statics.vntrip.vn/data-v2/hotels/11393/img_max/11393_1513224223_theherriotthotel&suite_16.jpg',
+              price: '350,000đ/ đêm'
+            },
+            {
+              id: 1,
+              text: 'Emeralda Resort & Spa',
+              text2: 'Resort',
+              text1: 'Gia Viễn, Ninh Bình',
+              img: 'https://namanretreat.com/media/1813/beachfront-villa-1.jpg',
+              img1: 'https://q-cf.bstatic.com/images/hotel/max1024x768/120/120233599.jpg',
+              img2: 'https://cf.bstatic.com/images/hotel/max1024x768/120/120280555.jpg',
+              img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
+              price: '2,570,000đ/ đêm'
+            },
+            {
+              id: 2,
+              text: 'Naman Retreat',
+              text2: 'Khách sạn',
+              text1: 'Gia Viễn, Ninh Bình',
+              img: 'https://pix10.agoda.net/hotelImages/1624612/-1/e83069440bf0d6965fa4d3274b318ad4.jpg?s=1024x768',
+              img1: 'https://i2.wp.com/du-lich.net/wp-content/uploads/2019/07/Review-kh%C3%A1ch-s%E1%BA%A1n-Herriott-Hotel-%C4%90%C3%A0-N%E1%BA%B5ng-6.jpg?resize=810%2C539&ssl=1',
+              img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--15-800x450.jpg',
+              img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
+              price: '800,000đ/ đêm'
+            },
+            {
+              id: 3,
+              text: 'The Vissai',
+              text2: 'Khách sạn',
+              text1: 'Tp.Ninh Bình, Ninh Bình',
+              img: 'https://dulichhalongquangninh.com/wp-content/uploads/2016/07/hinh-anh-du-lich-ha-long.jpg',
+              img1: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--2-800x450.jpg',
+              img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--1-800x450.jpg',
+              img3: 'https://q-cf.bstatic.com/images/hotel/max1024x768/227/227459882.jpg',
+              price: '500,000đ/ đêm'
+            },
+          ]
         },
       ],
       Restaurant: [
@@ -1151,10 +2123,52 @@ const initialState = {
           text2: 'Nhà Hàng',
           text1: 'Lý Sơn, Quảng Ngãi',
           img: 'https://image.phunuonline.com.vn/news/2020/20200227/thumbnail/470x300/giai-cuu-tom-hum-xong-dot-nhien-bi-_1582808538.jpg',
-          img1: 'https://pix10.agoda.net/hotelImages/358/3582444/3582444_17112918230060038374.jpg',
-          img2: 'https://du-lich.chudu24.com/f/m/1712/25/nepn4377-hdr-1139515.jpg?w=550&c=1',
-          img3: 'https://i.vntrip.vn/584x290/smart/https://statics.vntrip.vn/data-v2/hotels/11393/img_max/11393_1513224223_theherriotthotel&suite_16.jpg',
-          price: '20.000 - 400.000 đ'
+          img1: 'https://vinmec-prod.s3.amazonaws.com/images/20200410_160048_715088_hai-san-co-tot-cho-.max-1800x1800.jpg',
+          img2: 'https://image-us.eva.vn/upload/2-2021/images/2021-04-09/anh-1617941273-413-width600height399.jpg',
+          img3: 'https://vuahaisanhalong.vn/public/files/upload/default/images/slide/banner-3.jpg',
+          price: '20.000 - 400.000 đ',
+          address: "Thôn Đông, Xã An Vĩnh, Lý Sơn, Quảng Ngãi",
+          timeOpen: " 10:00 - 23:59",
+          priceDetails: "20.000đ - 400.00đ",
+          map: require('../img/vinh57.png'),
+          introduce1: require('../img/vinh61.png'),
+          introduce2: require('../img/vinh62.png'),
+          introduce3: require('../img/vinh63.png'),
+          NearHotel: [
+            {
+              id: 0,
+              text: 'Nhà hàng Long Hiền',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://owa.bestprice.vn/images/articles/uploads/diem-danh-cac-dia-chi-an-tom-hum-o-da-nang-ngon-bo-re-5f50acdb76c96.jpg',
+              img1: 'https://product.hstatic.net/1000275435/product/7_c227865275b549e5ab47cdbaa8a7d0fc.jpg',
+              img2: 'https://files.giaoducthoidai.vn/Uploaded/thuyvt/2019-07-18/4NewFolder/1-DLYI.jpg',
+              img3: 'https://kinhnghiemdulichdn.com/wp-content/uploads/2018/04/6-min.jpg',
+              price: '40.000 - 300.000 đ'
+            },
+            {
+              id: 1,
+              text: 'Hải Sản Thịnh Phát',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://canghaisan.com/wp-content/uploads/2020/11/81-2.jpg',
+              img1: 'https://file.hstatic.net/1000030244/file/buffet-hai-san-galina-hotel-nha-trang-2_ee3fb913291346f8bfbbd2c6455b993c_grande.jpg',
+              img2: 'https://vinmec-prod.s3.amazonaws.com/images/20200410_160048_715088_hai-san-co-tot-cho-.max-1800x1800.jpg',
+              img3: 'https://www.kiotviet.vn/wp-content/uploads/2019/12/kinh-doanh-hai-san-4.png',
+              price: '40.000 - 300.000 đ'
+            },
+            {
+              id: 2,
+              text: 'Nhà Hàng Vinh Anh',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://kinhnghiemdulichdn.com/wp-content/uploads/2018/04/6-min.jpg',
+              img1: 'https://www.kiotviet.vn/wp-content/uploads/2019/12/kinh-doanh-hai-san-4.png',
+              img2: 'https://vuahaisanhalong.vn/public/files/upload/default/images/slide/banner-3.jpg',
+              img3: 'https://files.giaoducthoidai.vn/Uploaded/thuyvt/2019-07-18/4NewFolder/1-DLYI.jpg',
+              price: '40.000 - 300.000 đ'
+            },
+          ]
         },
         {
           id: 1,
@@ -1162,10 +2176,52 @@ const initialState = {
           text2: 'Nhà Hàng',
           text1: 'Lý Sơn, Quảng Ngãi',
           img: 'https://canghaisan.com/wp-content/uploads/2020/11/81-2.jpg',
-          img1: 'https://q-cf.bstatic.com/images/hotel/max1024x768/120/120233599.jpg',
-          img2: 'https://cf.bstatic.com/images/hotel/max1024x768/120/120280555.jpg',
-          img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
-          price: '40.000 - 300.000 đ'
+          img1: 'https://file.hstatic.net/1000030244/file/buffet-hai-san-galina-hotel-nha-trang-2_ee3fb913291346f8bfbbd2c6455b993c_grande.jpg',
+          img2: 'https://vinmec-prod.s3.amazonaws.com/images/20200410_160048_715088_hai-san-co-tot-cho-.max-1800x1800.jpg',
+          img3: 'https://www.kiotviet.vn/wp-content/uploads/2019/12/kinh-doanh-hai-san-4.png',
+          price: '40.000 - 300.000 đ',
+          address: "Thôn Đông, Xã An Vĩnh, Lý Sơn, Quảng Ngãi",
+          timeOpen: " 10:00 - 23:59",
+          priceDetails: "20.000đ - 400.00đ",
+          map: require('../img/vinh57.png'),
+          introduce1: require('../img/vinh61.png'),
+          introduce2: require('../img/vinh62.png'),
+          introduce3: require('../img/vinh63.png'),
+          NearHotel: [
+            {
+              id: 0,
+              text: 'Nhà hàng Long Hiền',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://owa.bestprice.vn/images/articles/uploads/diem-danh-cac-dia-chi-an-tom-hum-o-da-nang-ngon-bo-re-5f50acdb76c96.jpg',
+              img1: 'https://product.hstatic.net/1000275435/product/7_c227865275b549e5ab47cdbaa8a7d0fc.jpg',
+              img2: 'https://files.giaoducthoidai.vn/Uploaded/thuyvt/2019-07-18/4NewFolder/1-DLYI.jpg',
+              img3: 'https://kinhnghiemdulichdn.com/wp-content/uploads/2018/04/6-min.jpg',
+              price: '40.000 - 300.000 đ'
+            },
+            {
+              id: 1,
+              text: 'Hải Sản Khói Chiều',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://image.phunuonline.com.vn/news/2020/20200227/thumbnail/470x300/giai-cuu-tom-hum-xong-dot-nhien-bi-_1582808538.jpg',
+              img1: 'https://vinmec-prod.s3.amazonaws.com/images/20200410_160048_715088_hai-san-co-tot-cho-.max-1800x1800.jpg',
+              img2: 'https://image-us.eva.vn/upload/2-2021/images/2021-04-09/anh-1617941273-413-width600height399.jpg',
+              img3: 'https://vuahaisanhalong.vn/public/files/upload/default/images/slide/banner-3.jpg',
+              price: '20.000 - 400.000 đ'
+            },
+            {
+              id: 2,
+              text: 'Nhà Hàng Vinh Anh',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://kinhnghiemdulichdn.com/wp-content/uploads/2018/04/6-min.jpg',
+              img1: 'https://www.kiotviet.vn/wp-content/uploads/2019/12/kinh-doanh-hai-san-4.png',
+              img2: 'https://vuahaisanhalong.vn/public/files/upload/default/images/slide/banner-3.jpg',
+              img3: 'https://files.giaoducthoidai.vn/Uploaded/thuyvt/2019-07-18/4NewFolder/1-DLYI.jpg',
+              price: '40.000 - 300.000 đ'
+            },
+          ]
         },
         {
           id: 2,
@@ -1173,10 +2229,52 @@ const initialState = {
           text2: 'Nhà Hàng',
           text1: 'Lý Sơn, Quảng Ngãi',
           img: 'https://owa.bestprice.vn/images/articles/uploads/diem-danh-cac-dia-chi-an-tom-hum-o-da-nang-ngon-bo-re-5f50acdb76c96.jpg',
-          img1: 'https://i2.wp.com/du-lich.net/wp-content/uploads/2019/07/Review-kh%C3%A1ch-s%E1%BA%A1n-Herriott-Hotel-%C4%90%C3%A0-N%E1%BA%B5ng-6.jpg?resize=810%2C539&ssl=1',
-          img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--15-800x450.jpg',
-          img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
-          price: '40.000 - 300.000 đ'
+          img1: 'https://product.hstatic.net/1000275435/product/7_c227865275b549e5ab47cdbaa8a7d0fc.jpg',
+          img2: 'https://files.giaoducthoidai.vn/Uploaded/thuyvt/2019-07-18/4NewFolder/1-DLYI.jpg',
+          img3: 'https://kinhnghiemdulichdn.com/wp-content/uploads/2018/04/6-min.jpg',
+          price: '40.000 - 300.000 đ',
+          address: "Thôn Đông, Xã An Vĩnh, Lý Sơn, Quảng Ngãi",
+          timeOpen: " 10:00 - 23:59",
+          priceDetails: "20.000đ - 400.00đ",
+          map: require('../img/vinh57.png'),
+          introduce1: require('../img/vinh61.png'),
+          introduce2: require('../img/vinh62.png'),
+          introduce3: require('../img/vinh63.png'),
+          NearHotel: [
+            {
+              id: 0,
+              text: 'Hải Sản Khói Chiều',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://image.phunuonline.com.vn/news/2020/20200227/thumbnail/470x300/giai-cuu-tom-hum-xong-dot-nhien-bi-_1582808538.jpg',
+              img1: 'https://vinmec-prod.s3.amazonaws.com/images/20200410_160048_715088_hai-san-co-tot-cho-.max-1800x1800.jpg',
+              img2: 'https://image-us.eva.vn/upload/2-2021/images/2021-04-09/anh-1617941273-413-width600height399.jpg',
+              img3: 'https://vuahaisanhalong.vn/public/files/upload/default/images/slide/banner-3.jpg',
+              price: '20.000 - 400.000 đ'
+            },
+            {
+              id: 1,
+              text: 'Hải Sản Thịnh Phát',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://canghaisan.com/wp-content/uploads/2020/11/81-2.jpg',
+              img1: 'https://file.hstatic.net/1000030244/file/buffet-hai-san-galina-hotel-nha-trang-2_ee3fb913291346f8bfbbd2c6455b993c_grande.jpg',
+              img2: 'https://vinmec-prod.s3.amazonaws.com/images/20200410_160048_715088_hai-san-co-tot-cho-.max-1800x1800.jpg',
+              img3: 'https://www.kiotviet.vn/wp-content/uploads/2019/12/kinh-doanh-hai-san-4.png',
+              price: '40.000 - 300.000 đ'
+            },
+            {
+              id: 2,
+              text: 'Nhà Hàng Vinh Anh',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://kinhnghiemdulichdn.com/wp-content/uploads/2018/04/6-min.jpg',
+              img1: 'https://www.kiotviet.vn/wp-content/uploads/2019/12/kinh-doanh-hai-san-4.png',
+              img2: 'https://vuahaisanhalong.vn/public/files/upload/default/images/slide/banner-3.jpg',
+              img3: 'https://files.giaoducthoidai.vn/Uploaded/thuyvt/2019-07-18/4NewFolder/1-DLYI.jpg',
+              price: '40.000 - 300.000 đ'
+            },
+          ]
         },
         {
           id: 3,
@@ -1184,10 +2282,52 @@ const initialState = {
           text2: 'Nhà Hàng',
           text1: 'Lý Sơn, Quảng Ngãi',
           img: 'https://kinhnghiemdulichdn.com/wp-content/uploads/2018/04/6-min.jpg',
-          img1: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--2-800x450.jpg',
-          img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--1-800x450.jpg',
-          img3: 'https://q-cf.bstatic.com/images/hotel/max1024x768/227/227459882.jpg',
-          price: '40.000 - 300.000 đ'
+          img1: 'https://www.kiotviet.vn/wp-content/uploads/2019/12/kinh-doanh-hai-san-4.png',
+          img2: 'https://vuahaisanhalong.vn/public/files/upload/default/images/slide/banner-3.jpg',
+          img3: 'https://files.giaoducthoidai.vn/Uploaded/thuyvt/2019-07-18/4NewFolder/1-DLYI.jpg',
+          price: '40.000 - 300.000 đ',
+          address: "Thôn Đông, Xã An Vĩnh, Lý Sơn, Quảng Ngãi",
+          timeOpen: " 10:00 - 23:59",
+          priceDetails: "20.000đ - 400.00đ",
+          map: require('../img/vinh57.png'),
+          introduce1: require('../img/vinh61.png'),
+          introduce2: require('../img/vinh62.png'),
+          introduce3: require('../img/vinh63.png'),
+          NearHotel: [
+            {
+              id: 0,
+              text: 'Nhà hàng Long Hiền',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://owa.bestprice.vn/images/articles/uploads/diem-danh-cac-dia-chi-an-tom-hum-o-da-nang-ngon-bo-re-5f50acdb76c96.jpg',
+              img1: 'https://product.hstatic.net/1000275435/product/7_c227865275b549e5ab47cdbaa8a7d0fc.jpg',
+              img2: 'https://files.giaoducthoidai.vn/Uploaded/thuyvt/2019-07-18/4NewFolder/1-DLYI.jpg',
+              img3: 'https://kinhnghiemdulichdn.com/wp-content/uploads/2018/04/6-min.jpg',
+              price: '40.000 - 300.000 đ'
+            },
+            {
+              id: 1,
+              text: 'Hải Sản Thịnh Phát',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://canghaisan.com/wp-content/uploads/2020/11/81-2.jpg',
+              img1: 'https://file.hstatic.net/1000030244/file/buffet-hai-san-galina-hotel-nha-trang-2_ee3fb913291346f8bfbbd2c6455b993c_grande.jpg',
+              img2: 'https://vinmec-prod.s3.amazonaws.com/images/20200410_160048_715088_hai-san-co-tot-cho-.max-1800x1800.jpg',
+              img3: 'https://www.kiotviet.vn/wp-content/uploads/2019/12/kinh-doanh-hai-san-4.png',
+              price: '40.000 - 300.000 đ'
+            },
+            {
+              id: 2,
+              text: 'Hải Sản Khói Chiều',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://image.phunuonline.com.vn/news/2020/20200227/thumbnail/470x300/giai-cuu-tom-hum-xong-dot-nhien-bi-_1582808538.jpg',
+              img1: 'https://vinmec-prod.s3.amazonaws.com/images/20200410_160048_715088_hai-san-co-tot-cho-.max-1800x1800.jpg',
+              img2: 'https://image-us.eva.vn/upload/2-2021/images/2021-04-09/anh-1617941273-413-width600height399.jpg',
+              img3: 'https://vuahaisanhalong.vn/public/files/upload/default/images/slide/banner-3.jpg',
+              price: '20.000 - 400.000 đ'
+            },
+          ]
         },
       ],
       Experience: [
@@ -1515,7 +2655,60 @@ const initialState = {
           img1: 'https://pix10.agoda.net/hotelImages/358/3582444/3582444_17112918230060038374.jpg',
           img2: 'https://du-lich.chudu24.com/f/m/1712/25/nepn4377-hdr-1139515.jpg?w=550&c=1',
           img3: 'https://i.vntrip.vn/584x290/smart/https://statics.vntrip.vn/data-v2/hotels/11393/img_max/11393_1513224223_theherriotthotel&suite_16.jpg',
-          price: '500,000 đ/đêm'
+          price: '500,000 đ/đêm',
+          address: "An Hải Bắc, Sơn Trà, Quảng Ngãi",
+          timeOpen: " 05:00 - 23:00",
+          priceDetails: "500.000đ - 6.950.00đ",
+          map: require('../img/vinh57.png'),
+          introduce1: require('../img/vinh58.png'),
+          introduce2: require('../img/vinh59.png'),
+          introduce3: require('../img/vinh60.png'),
+          NearHotel: [
+            {
+              id: 0,
+              text: 'Khách sạn Hoa Lư',
+              text2: 'Khách sạn',
+              text1: 'Hoa Lư, Ninh Bình',
+              img: 'https://media-cdn.tripadvisor.com/media/photo-s/0e/d2/e1/73/nh-toan-c-nh.jpg',
+              img1: 'https://pix10.agoda.net/hotelImages/358/3582444/3582444_17112918230060038374.jpg',
+              img2: 'https://du-lich.chudu24.com/f/m/1712/25/nepn4377-hdr-1139515.jpg?w=550&c=1',
+              img3: 'https://i.vntrip.vn/584x290/smart/https://statics.vntrip.vn/data-v2/hotels/11393/img_max/11393_1513224223_theherriotthotel&suite_16.jpg',
+              price: '350,000đ/ đêm'
+            },
+            {
+              id: 1,
+              text: 'Emeralda Resort & Spa',
+              text2: 'Resort',
+              text1: 'Gia Viễn, Ninh Bình',
+              img: 'https://namanretreat.com/media/1813/beachfront-villa-1.jpg',
+              img1: 'https://q-cf.bstatic.com/images/hotel/max1024x768/120/120233599.jpg',
+              img2: 'https://cf.bstatic.com/images/hotel/max1024x768/120/120280555.jpg',
+              img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
+              price: '2,570,000đ/ đêm'
+            },
+            {
+              id: 2,
+              text: 'Naman Retreat',
+              text2: 'Khách sạn',
+              text1: 'Gia Viễn, Ninh Bình',
+              img: 'https://pix10.agoda.net/hotelImages/1624612/-1/e83069440bf0d6965fa4d3274b318ad4.jpg?s=1024x768',
+              img1: 'https://i2.wp.com/du-lich.net/wp-content/uploads/2019/07/Review-kh%C3%A1ch-s%E1%BA%A1n-Herriott-Hotel-%C4%90%C3%A0-N%E1%BA%B5ng-6.jpg?resize=810%2C539&ssl=1',
+              img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--15-800x450.jpg',
+              img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
+              price: '800,000đ/ đêm'
+            },
+            {
+              id: 3,
+              text: 'The Vissai',
+              text2: 'Khách sạn',
+              text1: 'Tp.Ninh Bình, Ninh Bình',
+              img: 'https://dulichhalongquangninh.com/wp-content/uploads/2016/07/hinh-anh-du-lich-ha-long.jpg',
+              img1: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--2-800x450.jpg',
+              img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--1-800x450.jpg',
+              img3: 'https://q-cf.bstatic.com/images/hotel/max1024x768/227/227459882.jpg',
+              price: '500,000đ/ đêm'
+            },
+          ]
         },
         {
           id: 1,
@@ -1526,7 +2719,60 @@ const initialState = {
           img1: 'https://q-cf.bstatic.com/images/hotel/max1024x768/120/120233599.jpg',
           img2: 'https://cf.bstatic.com/images/hotel/max1024x768/120/120280555.jpg',
           img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
-          price: '700,000 đ/đêm'
+          price: '700,000 đ/đêm',
+          address: "An Hải Bắc, Sơn Trà, Quảng Ngãi",
+          timeOpen: " 05:00 - 23:00",
+          priceDetails: "500.000đ - 6.950.00đ",
+          map: require('../img/vinh57.png'),
+          introduce1: require('../img/vinh58.png'),
+          introduce2: require('../img/vinh59.png'),
+          introduce3: require('../img/vinh60.png'),
+          NearHotel: [
+            {
+              id: 0,
+              text: 'Khách sạn Hoa Lư',
+              text2: 'Khách sạn',
+              text1: 'Hoa Lư, Ninh Bình',
+              img: 'https://media-cdn.tripadvisor.com/media/photo-s/0e/d2/e1/73/nh-toan-c-nh.jpg',
+              img1: 'https://pix10.agoda.net/hotelImages/358/3582444/3582444_17112918230060038374.jpg',
+              img2: 'https://du-lich.chudu24.com/f/m/1712/25/nepn4377-hdr-1139515.jpg?w=550&c=1',
+              img3: 'https://i.vntrip.vn/584x290/smart/https://statics.vntrip.vn/data-v2/hotels/11393/img_max/11393_1513224223_theherriotthotel&suite_16.jpg',
+              price: '350,000đ/ đêm'
+            },
+            {
+              id: 1,
+              text: 'Emeralda Resort & Spa',
+              text2: 'Resort',
+              text1: 'Gia Viễn, Ninh Bình',
+              img: 'https://namanretreat.com/media/1813/beachfront-villa-1.jpg',
+              img1: 'https://q-cf.bstatic.com/images/hotel/max1024x768/120/120233599.jpg',
+              img2: 'https://cf.bstatic.com/images/hotel/max1024x768/120/120280555.jpg',
+              img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
+              price: '2,570,000đ/ đêm'
+            },
+            {
+              id: 2,
+              text: 'Naman Retreat',
+              text2: 'Khách sạn',
+              text1: 'Gia Viễn, Ninh Bình',
+              img: 'https://pix10.agoda.net/hotelImages/1624612/-1/e83069440bf0d6965fa4d3274b318ad4.jpg?s=1024x768',
+              img1: 'https://i2.wp.com/du-lich.net/wp-content/uploads/2019/07/Review-kh%C3%A1ch-s%E1%BA%A1n-Herriott-Hotel-%C4%90%C3%A0-N%E1%BA%B5ng-6.jpg?resize=810%2C539&ssl=1',
+              img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--15-800x450.jpg',
+              img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
+              price: '800,000đ/ đêm'
+            },
+            {
+              id: 3,
+              text: 'The Vissai',
+              text2: 'Khách sạn',
+              text1: 'Tp.Ninh Bình, Ninh Bình',
+              img: 'https://dulichhalongquangninh.com/wp-content/uploads/2016/07/hinh-anh-du-lich-ha-long.jpg',
+              img1: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--2-800x450.jpg',
+              img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--1-800x450.jpg',
+              img3: 'https://q-cf.bstatic.com/images/hotel/max1024x768/227/227459882.jpg',
+              price: '500,000đ/ đêm'
+            },
+          ]
         },
         {
           id: 2,
@@ -1537,7 +2783,60 @@ const initialState = {
           img1: 'https://i2.wp.com/du-lich.net/wp-content/uploads/2019/07/Review-kh%C3%A1ch-s%E1%BA%A1n-Herriott-Hotel-%C4%90%C3%A0-N%E1%BA%B5ng-6.jpg?resize=810%2C539&ssl=1',
           img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--15-800x450.jpg',
           img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
-          price: '800,000 đ/đêm'
+          price: '800,000 đ/đêm',
+          address: "An Hải Bắc, Sơn Trà, Quảng Ngãi",
+          timeOpen: " 05:00 - 23:00",
+          priceDetails: "500.000đ - 6.950.00đ",
+          map: require('../img/vinh57.png'),
+          introduce1: require('../img/vinh58.png'),
+          introduce2: require('../img/vinh59.png'),
+          introduce3: require('../img/vinh60.png'),
+          NearHotel: [
+            {
+              id: 0,
+              text: 'Khách sạn Hoa Lư',
+              text2: 'Khách sạn',
+              text1: 'Hoa Lư, Ninh Bình',
+              img: 'https://media-cdn.tripadvisor.com/media/photo-s/0e/d2/e1/73/nh-toan-c-nh.jpg',
+              img1: 'https://pix10.agoda.net/hotelImages/358/3582444/3582444_17112918230060038374.jpg',
+              img2: 'https://du-lich.chudu24.com/f/m/1712/25/nepn4377-hdr-1139515.jpg?w=550&c=1',
+              img3: 'https://i.vntrip.vn/584x290/smart/https://statics.vntrip.vn/data-v2/hotels/11393/img_max/11393_1513224223_theherriotthotel&suite_16.jpg',
+              price: '350,000đ/ đêm'
+            },
+            {
+              id: 1,
+              text: 'Emeralda Resort & Spa',
+              text2: 'Resort',
+              text1: 'Gia Viễn, Ninh Bình',
+              img: 'https://namanretreat.com/media/1813/beachfront-villa-1.jpg',
+              img1: 'https://q-cf.bstatic.com/images/hotel/max1024x768/120/120233599.jpg',
+              img2: 'https://cf.bstatic.com/images/hotel/max1024x768/120/120280555.jpg',
+              img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
+              price: '2,570,000đ/ đêm'
+            },
+            {
+              id: 2,
+              text: 'Naman Retreat',
+              text2: 'Khách sạn',
+              text1: 'Gia Viễn, Ninh Bình',
+              img: 'https://pix10.agoda.net/hotelImages/1624612/-1/e83069440bf0d6965fa4d3274b318ad4.jpg?s=1024x768',
+              img1: 'https://i2.wp.com/du-lich.net/wp-content/uploads/2019/07/Review-kh%C3%A1ch-s%E1%BA%A1n-Herriott-Hotel-%C4%90%C3%A0-N%E1%BA%B5ng-6.jpg?resize=810%2C539&ssl=1',
+              img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--15-800x450.jpg',
+              img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
+              price: '800,000đ/ đêm'
+            },
+            {
+              id: 3,
+              text: 'The Vissai',
+              text2: 'Khách sạn',
+              text1: 'Tp.Ninh Bình, Ninh Bình',
+              img: 'https://dulichhalongquangninh.com/wp-content/uploads/2016/07/hinh-anh-du-lich-ha-long.jpg',
+              img1: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--2-800x450.jpg',
+              img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--1-800x450.jpg',
+              img3: 'https://q-cf.bstatic.com/images/hotel/max1024x768/227/227459882.jpg',
+              price: '500,000đ/ đêm'
+            },
+          ]
         },
         {
           id: 3,
@@ -1548,7 +2847,60 @@ const initialState = {
           img1: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--2-800x450.jpg',
           img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--1-800x450.jpg',
           img3: 'https://q-cf.bstatic.com/images/hotel/max1024x768/227/227459882.jpg',
-          price: '500,000 đ/đêm'
+          price: '500,000 đ/đêm',
+          address: "An Hải Bắc, Sơn Trà, Quảng Ngãi",
+          timeOpen: " 05:00 - 23:00",
+          priceDetails: "500.000đ - 6.950.00đ",
+          map: require('../img/vinh57.png'),
+          introduce1: require('../img/vinh58.png'),
+          introduce2: require('../img/vinh59.png'),
+          introduce3: require('../img/vinh60.png'),
+          NearHotel: [
+            {
+              id: 0,
+              text: 'Khách sạn Hoa Lư',
+              text2: 'Khách sạn',
+              text1: 'Hoa Lư, Ninh Bình',
+              img: 'https://media-cdn.tripadvisor.com/media/photo-s/0e/d2/e1/73/nh-toan-c-nh.jpg',
+              img1: 'https://pix10.agoda.net/hotelImages/358/3582444/3582444_17112918230060038374.jpg',
+              img2: 'https://du-lich.chudu24.com/f/m/1712/25/nepn4377-hdr-1139515.jpg?w=550&c=1',
+              img3: 'https://i.vntrip.vn/584x290/smart/https://statics.vntrip.vn/data-v2/hotels/11393/img_max/11393_1513224223_theherriotthotel&suite_16.jpg',
+              price: '350,000đ/ đêm'
+            },
+            {
+              id: 1,
+              text: 'Emeralda Resort & Spa',
+              text2: 'Resort',
+              text1: 'Gia Viễn, Ninh Bình',
+              img: 'https://namanretreat.com/media/1813/beachfront-villa-1.jpg',
+              img1: 'https://q-cf.bstatic.com/images/hotel/max1024x768/120/120233599.jpg',
+              img2: 'https://cf.bstatic.com/images/hotel/max1024x768/120/120280555.jpg',
+              img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
+              price: '2,570,000đ/ đêm'
+            },
+            {
+              id: 2,
+              text: 'Naman Retreat',
+              text2: 'Khách sạn',
+              text1: 'Gia Viễn, Ninh Bình',
+              img: 'https://pix10.agoda.net/hotelImages/1624612/-1/e83069440bf0d6965fa4d3274b318ad4.jpg?s=1024x768',
+              img1: 'https://i2.wp.com/du-lich.net/wp-content/uploads/2019/07/Review-kh%C3%A1ch-s%E1%BA%A1n-Herriott-Hotel-%C4%90%C3%A0-N%E1%BA%B5ng-6.jpg?resize=810%2C539&ssl=1',
+              img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--15-800x450.jpg',
+              img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
+              price: '800,000đ/ đêm'
+            },
+            {
+              id: 3,
+              text: 'The Vissai',
+              text2: 'Khách sạn',
+              text1: 'Tp.Ninh Bình, Ninh Bình',
+              img: 'https://dulichhalongquangninh.com/wp-content/uploads/2016/07/hinh-anh-du-lich-ha-long.jpg',
+              img1: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--2-800x450.jpg',
+              img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--1-800x450.jpg',
+              img3: 'https://q-cf.bstatic.com/images/hotel/max1024x768/227/227459882.jpg',
+              price: '500,000đ/ đêm'
+            },
+          ]
         },
       ],
       Restaurant: [
@@ -1558,10 +2910,52 @@ const initialState = {
           text2: 'Nhà Hàng',
           text1: 'Lý Sơn, Quảng Ngãi',
           img: 'https://image.phunuonline.com.vn/news/2020/20200227/thumbnail/470x300/giai-cuu-tom-hum-xong-dot-nhien-bi-_1582808538.jpg',
-          img1: 'https://pix10.agoda.net/hotelImages/358/3582444/3582444_17112918230060038374.jpg',
-          img2: 'https://du-lich.chudu24.com/f/m/1712/25/nepn4377-hdr-1139515.jpg?w=550&c=1',
-          img3: 'https://i.vntrip.vn/584x290/smart/https://statics.vntrip.vn/data-v2/hotels/11393/img_max/11393_1513224223_theherriotthotel&suite_16.jpg',
-          price: '20.000 - 400.000 đ'
+          img1: 'https://vinmec-prod.s3.amazonaws.com/images/20200410_160048_715088_hai-san-co-tot-cho-.max-1800x1800.jpg',
+          img2: 'https://image-us.eva.vn/upload/2-2021/images/2021-04-09/anh-1617941273-413-width600height399.jpg',
+          img3: 'https://vuahaisanhalong.vn/public/files/upload/default/images/slide/banner-3.jpg',
+          price: '20.000 - 400.000 đ',
+          address: "Thôn Đông, Xã An Vĩnh, Lý Sơn, Quảng Ngãi",
+          timeOpen: " 10:00 - 23:59",
+          priceDetails: "20.000đ - 400.00đ",
+          map: require('../img/vinh57.png'),
+          introduce1: require('../img/vinh61.png'),
+          introduce2: require('../img/vinh62.png'),
+          introduce3: require('../img/vinh63.png'),
+          NearHotel: [
+            {
+              id: 0,
+              text: 'Nhà hàng Long Hiền',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://owa.bestprice.vn/images/articles/uploads/diem-danh-cac-dia-chi-an-tom-hum-o-da-nang-ngon-bo-re-5f50acdb76c96.jpg',
+              img1: 'https://product.hstatic.net/1000275435/product/7_c227865275b549e5ab47cdbaa8a7d0fc.jpg',
+              img2: 'https://files.giaoducthoidai.vn/Uploaded/thuyvt/2019-07-18/4NewFolder/1-DLYI.jpg',
+              img3: 'https://kinhnghiemdulichdn.com/wp-content/uploads/2018/04/6-min.jpg',
+              price: '40.000 - 300.000 đ'
+            },
+            {
+              id: 1,
+              text: 'Hải Sản Thịnh Phát',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://canghaisan.com/wp-content/uploads/2020/11/81-2.jpg',
+              img1: 'https://file.hstatic.net/1000030244/file/buffet-hai-san-galina-hotel-nha-trang-2_ee3fb913291346f8bfbbd2c6455b993c_grande.jpg',
+              img2: 'https://vinmec-prod.s3.amazonaws.com/images/20200410_160048_715088_hai-san-co-tot-cho-.max-1800x1800.jpg',
+              img3: 'https://www.kiotviet.vn/wp-content/uploads/2019/12/kinh-doanh-hai-san-4.png',
+              price: '40.000 - 300.000 đ'
+            },
+            {
+              id: 2,
+              text: 'Nhà Hàng Vinh Anh',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://kinhnghiemdulichdn.com/wp-content/uploads/2018/04/6-min.jpg',
+              img1: 'https://www.kiotviet.vn/wp-content/uploads/2019/12/kinh-doanh-hai-san-4.png',
+              img2: 'https://vuahaisanhalong.vn/public/files/upload/default/images/slide/banner-3.jpg',
+              img3: 'https://files.giaoducthoidai.vn/Uploaded/thuyvt/2019-07-18/4NewFolder/1-DLYI.jpg',
+              price: '40.000 - 300.000 đ'
+            },
+          ]
         },
         {
           id: 1,
@@ -1569,10 +2963,52 @@ const initialState = {
           text2: 'Nhà Hàng',
           text1: 'Lý Sơn, Quảng Ngãi',
           img: 'https://canghaisan.com/wp-content/uploads/2020/11/81-2.jpg',
-          img1: 'https://q-cf.bstatic.com/images/hotel/max1024x768/120/120233599.jpg',
-          img2: 'https://cf.bstatic.com/images/hotel/max1024x768/120/120280555.jpg',
-          img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
-          price: '40.000 - 300.000 đ'
+          img1: 'https://file.hstatic.net/1000030244/file/buffet-hai-san-galina-hotel-nha-trang-2_ee3fb913291346f8bfbbd2c6455b993c_grande.jpg',
+          img2: 'https://vinmec-prod.s3.amazonaws.com/images/20200410_160048_715088_hai-san-co-tot-cho-.max-1800x1800.jpg',
+          img3: 'https://www.kiotviet.vn/wp-content/uploads/2019/12/kinh-doanh-hai-san-4.png',
+          price: '40.000 - 300.000 đ',
+          address: "Thôn Đông, Xã An Vĩnh, Lý Sơn, Quảng Ngãi",
+          timeOpen: " 10:00 - 23:59",
+          priceDetails: "20.000đ - 400.00đ",
+          map: require('../img/vinh57.png'),
+          introduce1: require('../img/vinh61.png'),
+          introduce2: require('../img/vinh62.png'),
+          introduce3: require('../img/vinh63.png'),
+          NearHotel: [
+            {
+              id: 0,
+              text: 'Nhà hàng Long Hiền',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://owa.bestprice.vn/images/articles/uploads/diem-danh-cac-dia-chi-an-tom-hum-o-da-nang-ngon-bo-re-5f50acdb76c96.jpg',
+              img1: 'https://product.hstatic.net/1000275435/product/7_c227865275b549e5ab47cdbaa8a7d0fc.jpg',
+              img2: 'https://files.giaoducthoidai.vn/Uploaded/thuyvt/2019-07-18/4NewFolder/1-DLYI.jpg',
+              img3: 'https://kinhnghiemdulichdn.com/wp-content/uploads/2018/04/6-min.jpg',
+              price: '40.000 - 300.000 đ'
+            },
+            {
+              id: 1,
+              text: 'Hải Sản Khói Chiều',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://image.phunuonline.com.vn/news/2020/20200227/thumbnail/470x300/giai-cuu-tom-hum-xong-dot-nhien-bi-_1582808538.jpg',
+              img1: 'https://vinmec-prod.s3.amazonaws.com/images/20200410_160048_715088_hai-san-co-tot-cho-.max-1800x1800.jpg',
+              img2: 'https://image-us.eva.vn/upload/2-2021/images/2021-04-09/anh-1617941273-413-width600height399.jpg',
+              img3: 'https://vuahaisanhalong.vn/public/files/upload/default/images/slide/banner-3.jpg',
+              price: '20.000 - 400.000 đ'
+            },
+            {
+              id: 2,
+              text: 'Nhà Hàng Vinh Anh',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://kinhnghiemdulichdn.com/wp-content/uploads/2018/04/6-min.jpg',
+              img1: 'https://www.kiotviet.vn/wp-content/uploads/2019/12/kinh-doanh-hai-san-4.png',
+              img2: 'https://vuahaisanhalong.vn/public/files/upload/default/images/slide/banner-3.jpg',
+              img3: 'https://files.giaoducthoidai.vn/Uploaded/thuyvt/2019-07-18/4NewFolder/1-DLYI.jpg',
+              price: '40.000 - 300.000 đ'
+            },
+          ]
         },
         {
           id: 2,
@@ -1580,10 +3016,52 @@ const initialState = {
           text2: 'Nhà Hàng',
           text1: 'Lý Sơn, Quảng Ngãi',
           img: 'https://owa.bestprice.vn/images/articles/uploads/diem-danh-cac-dia-chi-an-tom-hum-o-da-nang-ngon-bo-re-5f50acdb76c96.jpg',
-          img1: 'https://i2.wp.com/du-lich.net/wp-content/uploads/2019/07/Review-kh%C3%A1ch-s%E1%BA%A1n-Herriott-Hotel-%C4%90%C3%A0-N%E1%BA%B5ng-6.jpg?resize=810%2C539&ssl=1',
-          img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--15-800x450.jpg',
-          img3: 'https://www.hotel-board.com/picture/the-herriott-hotel-suite-hotel-15445282.jpg',
-          price: '40.000 - 300.000 đ'
+          img1: 'https://product.hstatic.net/1000275435/product/7_c227865275b549e5ab47cdbaa8a7d0fc.jpg',
+          img2: 'https://files.giaoducthoidai.vn/Uploaded/thuyvt/2019-07-18/4NewFolder/1-DLYI.jpg',
+          img3: 'https://kinhnghiemdulichdn.com/wp-content/uploads/2018/04/6-min.jpg',
+          price: '40.000 - 300.000 đ',
+          address: "Thôn Đông, Xã An Vĩnh, Lý Sơn, Quảng Ngãi",
+          timeOpen: " 10:00 - 23:59",
+          priceDetails: "20.000đ - 400.00đ",
+          map: require('../img/vinh57.png'),
+          introduce1: require('../img/vinh61.png'),
+          introduce2: require('../img/vinh62.png'),
+          introduce3: require('../img/vinh63.png'),
+          NearHotel: [
+            {
+              id: 0,
+              text: 'Hải Sản Khói Chiều',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://image.phunuonline.com.vn/news/2020/20200227/thumbnail/470x300/giai-cuu-tom-hum-xong-dot-nhien-bi-_1582808538.jpg',
+              img1: 'https://vinmec-prod.s3.amazonaws.com/images/20200410_160048_715088_hai-san-co-tot-cho-.max-1800x1800.jpg',
+              img2: 'https://image-us.eva.vn/upload/2-2021/images/2021-04-09/anh-1617941273-413-width600height399.jpg',
+              img3: 'https://vuahaisanhalong.vn/public/files/upload/default/images/slide/banner-3.jpg',
+              price: '20.000 - 400.000 đ'
+            },
+            {
+              id: 1,
+              text: 'Hải Sản Thịnh Phát',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://canghaisan.com/wp-content/uploads/2020/11/81-2.jpg',
+              img1: 'https://file.hstatic.net/1000030244/file/buffet-hai-san-galina-hotel-nha-trang-2_ee3fb913291346f8bfbbd2c6455b993c_grande.jpg',
+              img2: 'https://vinmec-prod.s3.amazonaws.com/images/20200410_160048_715088_hai-san-co-tot-cho-.max-1800x1800.jpg',
+              img3: 'https://www.kiotviet.vn/wp-content/uploads/2019/12/kinh-doanh-hai-san-4.png',
+              price: '40.000 - 300.000 đ'
+            },
+            {
+              id: 2,
+              text: 'Nhà Hàng Vinh Anh',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://kinhnghiemdulichdn.com/wp-content/uploads/2018/04/6-min.jpg',
+              img1: 'https://www.kiotviet.vn/wp-content/uploads/2019/12/kinh-doanh-hai-san-4.png',
+              img2: 'https://vuahaisanhalong.vn/public/files/upload/default/images/slide/banner-3.jpg',
+              img3: 'https://files.giaoducthoidai.vn/Uploaded/thuyvt/2019-07-18/4NewFolder/1-DLYI.jpg',
+              price: '40.000 - 300.000 đ'
+            },
+          ]
         },
         {
           id: 3,
@@ -1591,10 +3069,52 @@ const initialState = {
           text2: 'Nhà Hàng',
           text1: 'Lý Sơn, Quảng Ngãi',
           img: 'https://kinhnghiemdulichdn.com/wp-content/uploads/2018/04/6-min.jpg',
-          img1: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--2-800x450.jpg',
-          img2: 'https://cdn1.ivivu.com/iVivu/2018/01/06/10/the-herriott-hotel--1-800x450.jpg',
-          img3: 'https://q-cf.bstatic.com/images/hotel/max1024x768/227/227459882.jpg',
-          price: '40.000 - 300.000 đ'
+          img1: 'https://www.kiotviet.vn/wp-content/uploads/2019/12/kinh-doanh-hai-san-4.png',
+          img2: 'https://vuahaisanhalong.vn/public/files/upload/default/images/slide/banner-3.jpg',
+          img3: 'https://files.giaoducthoidai.vn/Uploaded/thuyvt/2019-07-18/4NewFolder/1-DLYI.jpg',
+          price: '40.000 - 300.000 đ',
+          address: "Thôn Đông, Xã An Vĩnh, Lý Sơn, Quảng Ngãi",
+          timeOpen: " 10:00 - 23:59",
+          priceDetails: "20.000đ - 400.00đ",
+          map: require('../img/vinh57.png'),
+          introduce1: require('../img/vinh61.png'),
+          introduce2: require('../img/vinh62.png'),
+          introduce3: require('../img/vinh63.png'),
+          NearHotel: [
+            {
+              id: 0,
+              text: 'Nhà hàng Long Hiền',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://owa.bestprice.vn/images/articles/uploads/diem-danh-cac-dia-chi-an-tom-hum-o-da-nang-ngon-bo-re-5f50acdb76c96.jpg',
+              img1: 'https://product.hstatic.net/1000275435/product/7_c227865275b549e5ab47cdbaa8a7d0fc.jpg',
+              img2: 'https://files.giaoducthoidai.vn/Uploaded/thuyvt/2019-07-18/4NewFolder/1-DLYI.jpg',
+              img3: 'https://kinhnghiemdulichdn.com/wp-content/uploads/2018/04/6-min.jpg',
+              price: '40.000 - 300.000 đ'
+            },
+            {
+              id: 1,
+              text: 'Hải Sản Thịnh Phát',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://canghaisan.com/wp-content/uploads/2020/11/81-2.jpg',
+              img1: 'https://file.hstatic.net/1000030244/file/buffet-hai-san-galina-hotel-nha-trang-2_ee3fb913291346f8bfbbd2c6455b993c_grande.jpg',
+              img2: 'https://vinmec-prod.s3.amazonaws.com/images/20200410_160048_715088_hai-san-co-tot-cho-.max-1800x1800.jpg',
+              img3: 'https://www.kiotviet.vn/wp-content/uploads/2019/12/kinh-doanh-hai-san-4.png',
+              price: '40.000 - 300.000 đ'
+            },
+            {
+              id: 2,
+              text: 'Hải Sản Khói Chiều',
+              text2: 'Nhà Hàng',
+              text1: 'Lý Sơn, Quảng Ngãi',
+              img: 'https://image.phunuonline.com.vn/news/2020/20200227/thumbnail/470x300/giai-cuu-tom-hum-xong-dot-nhien-bi-_1582808538.jpg',
+              img1: 'https://vinmec-prod.s3.amazonaws.com/images/20200410_160048_715088_hai-san-co-tot-cho-.max-1800x1800.jpg',
+              img2: 'https://image-us.eva.vn/upload/2-2021/images/2021-04-09/anh-1617941273-413-width600height399.jpg',
+              img3: 'https://vuahaisanhalong.vn/public/files/upload/default/images/slide/banner-3.jpg',
+              price: '20.000 - 400.000 đ'
+            },
+          ]
         },
       ],
       Experience: [

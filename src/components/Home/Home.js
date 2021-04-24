@@ -1,15 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { View, StatusBar, Text, ImageBackground, SafeAreaView, StyleSheet, Dimensions, Image, TextInput, ScrollView } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { Hotel, ImgHeader, Promotion, TextHome, Schedule, PopularPlace, Experience, DecemberDestination } from "./index";
 import AppStyle from "../../theme/index";
 const { height, width } = Dimensions.get('screen')
-const Home = ({ navigation }) => {
+const Home = ({ navigation, route }) => {
     const [search, setSearch] = useState('')
+    const dispatch = useDispatch()
     const data = useSelector(store => store.Hotel.data)
     const DecemberDestinationArr = useSelector(store => store.DecemberDestination.data)
     const dataSchedule = useSelector(store => store.Schedule.data)
+    const userInfo = useSelector(store => store.people.userInfo)
+    console.log('useFvinh', userInfo)
     return (
         <SafeAreaView style={AppStyle.StyleHome.container}>
             <StatusBar backgroundColor='white' barStyle={"dark-content"} />
@@ -51,7 +54,7 @@ const Home = ({ navigation }) => {
                     </View>
                     <TextHome text1={'Lịch trình gần đây'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMoreSchedule')} />
                     <View style={AppStyle.StyleHome.marginLeft}>
-                        <Schedule data ={dataSchedule}/>
+                        <Schedule data={dataSchedule} />
                     </View>
                     <TextHome text1={'Địa điểm phổ biến'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMorePopularPlace')} />
                     <View style={AppStyle.StyleHome.marginLeft}>
@@ -65,7 +68,12 @@ const Home = ({ navigation }) => {
                     <View style={AppStyle.StyleHome.marginLeft}>
                         <DecemberDestination data={DecemberDestinationArr} />
                     </View>
-                    <TextHome text1={'Khách sạn & Resort'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMoreHotel')} />
+                    <TextHome text1={'Khách sạn & Resort'} text2={'Xem Thêm >'}
+                        onSeeMore={() => {
+                            dispatch({ type: 'TYPE', typeHotel: "Hotel" })
+                            navigation.navigate('SeeMoreHotel', { dataHotel: data })
+                        }}
+                    />
                     <View style={AppStyle.StyleHome.marginLeft}>
                         <Hotel data={data} type={"home"} />
                     </View>

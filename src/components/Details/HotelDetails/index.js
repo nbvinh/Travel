@@ -8,10 +8,9 @@ import { useNavigation } from "@react-navigation/native";
 import styles from "./styles";
 import HeaderHotelDetails from "./HeaderHotelDetails";
 import Body from "./Body";
-const HotelDetails = (props) => {
+const HotelDetails = ({ route }) => {
     const dispatch = useDispatch()
     const item = useSelector(store => store.Hotel.item)
-    const navigation = useNavigation()
     return (
         <SafeAreaView style={AppStyle.StyleHome.container}>
             <StatusBar backgroundColor='white' barStyle={"dark-content"} />

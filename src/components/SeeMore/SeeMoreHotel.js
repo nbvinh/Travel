@@ -4,8 +4,9 @@ import { useSelector, useDispatch } from "react-redux";
 import Header from "../Header";
 import AppStyle from "../../theme/index";
 import { scale } from "react-native-size-matters";
-const SeeMoreHotel = ({ navigation }) => {
-    const data = useSelector(store => store.Hotel.data)
+const SeeMoreHotel = ({ navigation, route }) => {
+    const data = route.params.dataHotel
+    const type = useSelector(store => store.Hotel.typeHotel)
     const dispatch = useDispatch()
     const onHotel = (item) => {
         navigation.navigate('HotelDetails')
@@ -15,7 +16,7 @@ const SeeMoreHotel = ({ navigation }) => {
         <SafeAreaView style={{ flex: 1, backgroundColor: '#E5E5E5' }}>
             <StatusBar backgroundColor='white' barStyle={"dark-content"} />
             <ScrollView showsVerticalScrollIndicator={false} style={{ flex: 1 }}>
-                <Header text={'Khách sạn & Resort'} onBack={() => navigation.goBack()} />
+                <Header text={type === "Hotel" ? 'Khách sạn & Resort' : "Nhà hàng"} onBack={() => navigation.goBack()} />
                 <View style={{ flex: 10, alignItems: 'center', marginTop: scale(16) }}>
                     {
                         data && data.map((item) => {

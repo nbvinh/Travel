@@ -353,6 +353,8 @@ const initialState = {
 
 export default function Hotel(state = initialState, action) {
   switch (action.type) {
+    case "TYPE":
+      return { ...state, typeHotel: action.typeHotel }
     case "ITEM":
       return { ...state, item: action.item }
     default:

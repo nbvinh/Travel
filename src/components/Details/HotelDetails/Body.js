@@ -12,6 +12,7 @@ const Body = (props) => {
     const navigation = useNavigation()
     const item = useSelector(store => store.Hotel.item)
     const Star = useSelector(store => store.people.Star)
+    const type = useSelector(store => store.Hotel.typeHotel)
     return (
         <View style={styles.body}>
             <View style={styles.middle}>
@@ -43,8 +44,8 @@ const Body = (props) => {
                 style={styles.map}
             />
             <Introduce />
-            <TextHome text1={"Khách sạn lân cận"} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMoreHotel')} />
-            <View style={{marginLeft:scale(16),marginBottom:scale(46)}}>
+            <TextHome text1={type === "Hotel" ? "Khách sạn lân cận" : "Nhà hàng lận cận"} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMoreHotel')} />
+            <View style={{ marginLeft: scale(16), marginBottom: scale(46) }}>
                 <Hotel data={item.NearHotel} />
             </View>
         </View>

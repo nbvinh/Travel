@@ -65,11 +65,17 @@ const PopularPlaceDetails = ({ navigation, route }) => {
                     <View style={{ marginLeft: scale(16) }}>
                         <Schedule data={item.ScheduleOK} />
                     </View>
-                    <TextHome text1={'Khách sạn & Resort'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMoreDecemberDestination')} />
+                    <TextHome text1={'Khách sạn & Resort'} text2={'Xem Thêm >'} onSeeMore={() => {
+                        navigation.navigate('SeeMoreHotel', { dataHotel: item.HotelLySon })
+                        dispatch({ type: 'TYPE', typeHotel: "Hotel" })
+                    }} />
                     <View style={{ marginLeft: scale(16) }}>
                         <Hotel data={item.HotelLySon} />
                     </View>
-                    <TextHome text1={'Nhà Hàng'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMoreDecemberDestination')} />
+                    <TextHome text1={'Nhà Hàng'} text2={'Xem Thêm >'} onSeeMore={() => {
+                        dispatch({ type: 'TYPE', typeHotel: "Restaurant" })
+                        navigation.navigate('SeeMoreHotel', { dataHotel: item.Restaurant })
+                    }} />
                     <View style={{ marginLeft: scale(16) }}>
                         <Hotel data={item.Restaurant} />
                     </View>

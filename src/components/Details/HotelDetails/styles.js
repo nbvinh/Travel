@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
         backgroundColor: "white",
     },
     textView: {
-        marginHorizontal: scale(17),
+        marginHorizontal: scale(15),
         marginVertical: scale(14),
     },
     addressDetails: {

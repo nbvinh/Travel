@@ -29,23 +29,55 @@ const initialState = {
   fisrtname: '',
   lastname: '',
   picture: '',
-  test: false
+  test: false,
+  userInfo: {},
+  phone: ''
 };
 
 export default function peopleReducer(state = initialState, action) {
   switch (action.type) {
+    case "ITEMPROFILE":
+      return { ...state, item: action.item }
+    case "USERFACEBOOK":
+      return { ...state, userInfo: action.userInfo }
     case "MODE1":
       return { ...state, test: false }
     case "MODE":
       return { ...state, test: !state.test }
     case 'PICTURE':
-      return { ...state, picture: action.picture }
+      let newuser3 = [...state.user]
+      newuser3.map((e) => {
+        if (e.id === action.id) {
+          e.avatar = action.avatar
+        }
+      })
+      return { ...state, user: newuser3 }
     case 'TEXT':
       return { ...state, text: action.text }
     case 'LASTNAME':
-      return { ...state, lastname: action.lastname }
+      let newuser = [...state.user]
+      newuser.map((e) => {
+        if (e.id === action.id) {
+          e.lastname = action.lastname
+        }
+      })
+      return { ...state, user: newuser }
     case 'FISRTNAME':
-      return { ...state, fisrtname: action.fisrtname }
+      let newuser1 = [...state.user]
+      newuser1.map((e) => {
+        if (e.id === action.id) {
+          e.fisrtname = action.fisrtname
+        }
+      })
+      return { ...state, user: newuser1 }
+    case 'PHONEEDIT':
+      let newuser2 = [...state.user]
+      newuser2.map((e) => {
+        if (e.id === action.id) {
+          e.phone = action.phone
+        }
+      })
+      return { ...state, user: newuser2 }
     case 'TEXT1':
       return { ...state, text1: action.text1 }
     case 'CHOOSE':
