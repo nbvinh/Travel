@@ -37,17 +37,13 @@ const ScreenUpdateProfile = ({ navigation }) => {
             setFinish1(false)
         }
     }
-    const data = [
-        { lastname: text, fisrtname: text1, id: Math.random(), phone: phone, avatar: 'https://cdn0.iconfinder.com/data/icons/set-ui-app-android/32/8-512.png' },
-    ]
+    const data =   { lastname: text, fisrtname: text1, id: Math.random(), phone: phone, avatar: 'https://cdn0.iconfinder.com/data/icons/set-ui-app-android/32/8-512.png' }
     useEffect(() => {
         dispatch({ type: 'PROFILE', data: data })
     }, [data])
     return (
         <SafeAreaView style={styles.container}>
-            <ScrollView>
-
-                <Header onBack={onBack} />
+                <Header style={{marginTop:scale(5)}} onBack={onBack} />
                 <View style={styles.content}>
                     <Text style={styles.text1}>Cập Nhật Thông Tin</Text>
                     <TextInput
@@ -99,7 +95,6 @@ const ScreenUpdateProfile = ({ navigation }) => {
                     </View>
                 </View>
                 <Form />
-            </ScrollView>
         </SafeAreaView>
     )
 }

@@ -9,7 +9,7 @@ const PromotionDetails = ({ navigation, route }) => {
     const id = route.params.id;
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: '#E5E5E5' }}>
-            <StatusBar backgroundColor='white' barStyle={"dark-content"} />
+            <StatusBar backgroundColor='transparent' translucent animated barStyle={"light-content"} />
             <ScrollView style={{ flex: 1 }}>
                 {
                     dataheader && dataheader.map((item) => {
@@ -17,6 +17,9 @@ const PromotionDetails = ({ navigation, route }) => {
                             return (
                                 <View key={item.id.toString()} style={{ flex: 1 }}>
                                     <View style={AppStyle.StylePromotionDetails.container}>
+                                        <TouchableOpacity style={AppStyle.StylePromotionDetails.ChevronRight} onPress={() => navigation.goBack()}>
+                                            <Image source={require('../../img/ChevronRight.png')} style={{ width: '100%', height: '100%' }} />
+                                        </TouchableOpacity>
                                         <Image
                                             source={item.img}
                                             style={AppStyle.StylePromotionDetails.img}

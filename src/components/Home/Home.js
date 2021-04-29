@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
-import { View, StatusBar, Text, ImageBackground, SafeAreaView, StyleSheet, Dimensions, Image, TextInput, ScrollView } from "react-native";
+import { View, StatusBar, Text, ImageBackground, SafeAreaView, StyleSheet, Dimensions, Image, TextInput, ScrollView, Linking } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { useDispatch, useSelector } from "react-redux";
 import { Hotel, ImgHeader, Promotion, TextHome, Schedule, PopularPlace, Experience, DecemberDestination } from "./index";
 import AppStyle from "../../theme/index";
+import Draggable from 'react-native-draggable';
+import { scale } from "react-native-size-matters";
 const { height, width } = Dimensions.get('screen')
 const Home = ({ navigation, route }) => {
     const [search, setSearch] = useState('')
@@ -11,11 +13,9 @@ const Home = ({ navigation, route }) => {
     const data = useSelector(store => store.Hotel.data)
     const DecemberDestinationArr = useSelector(store => store.DecemberDestination.data)
     const dataSchedule = useSelector(store => store.Schedule.data)
-    const userInfo = useSelector(store => store.people.userInfo)
-    console.log('useFvinh', userInfo)
     return (
         <SafeAreaView style={AppStyle.StyleHome.container}>
-            <StatusBar backgroundColor='white' barStyle={"dark-content"} />
+            <StatusBar backgroundColor='transparent' translucent animated barStyle={"light-content"} />
             <ScrollView style={AppStyle.StyleHome.scrollview}>
                 <ImageBackground source={require('../../img/khampha.png')} style={{ height: height / 3.8 }}>
                     <View style={AppStyle.StyleHome.textHeader}>
@@ -79,6 +79,11 @@ const Home = ({ navigation, route }) => {
                     </View>
                 </View>
             </ScrollView>
+            <Draggable x={width - scale(70)} y={height - scale(150)} minX={scale(10)} minY={scale(20)} maxX={width - scale(10)} maxY={height - scale(95)}>
+                <TouchableOpacity style={AppStyle.StyleHome.touch} onPress={() => { Linking.openURL('https://t.me/UBGKenhThongBao') }}>
+                    <Image style={{ width: '100%', height: '100%' }} source={require('../../img/touchable.png')} />
+                </TouchableOpacity>
+            </Draggable>
         </SafeAreaView>
     )
 }

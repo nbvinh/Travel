@@ -81,7 +81,7 @@ const ScreenFirst = ({ navigation }) => {
     })
     return (
         <SafeAreaView style={styles.container}>
-            <StatusBar backgroundColor='white' barStyle={"dark-content"} />
+            <StatusBar backgroundColor='transparent' translucent animated barStyle={"light-content"} />
             <View style={styles.content}>
                 <View style={styles.header}>
                     <Animated.Image

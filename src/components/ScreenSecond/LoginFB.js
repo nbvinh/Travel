@@ -19,13 +19,11 @@ const LoginFB = () => {
     const navigation = useNavigation()
     const userInfo = useSelector(store => store.people.userInfo)
     const dispatch = useDispatch()
-    const data = [
-        { lastname: userInfo.last_name, fisrtname: userInfo.first_name, id: Math.random(), phone: null, avatar: "https://cdn0.iconfinder.com/data/icons/set-ui-app-android/32/8-512.png" },
-    ]
+    const data = { lastname: userInfo.last_name, fisrtname: userInfo.first_name, id: Math.random(), phone: null, avatar: "https://cdn0.iconfinder.com/data/icons/set-ui-app-android/32/8-512.png" }
     const getInfoFromToken = token => {
         const PROFILE_REQUEST_PARAMS = {
             fields: {
-                string: 'id,name,first_name,last_name',
+                string: 'id,name,first_name,last_name,picture',
             },
         };
         const profileRequest = new GraphRequest(

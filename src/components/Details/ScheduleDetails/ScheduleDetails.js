@@ -16,7 +16,7 @@ const ScheduleDetails = ({ navigation, route }) => {
     const Tab = createMaterialTopTabNavigator()
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: '#E5E5E5' }}>
-            <StatusBar backgroundColor='#E5E5E5' barStyle={"dark-content"} />
+              <StatusBar backgroundColor='transparent' translucent animated barStyle={"light-content"} />
             <ScrollView style={{ flex: 1 }}>
                 <View key={item.id.toString()} style={{ flex: 1 }}>
                     <View style={AppStyle.StyleScheduleDetails.container}>

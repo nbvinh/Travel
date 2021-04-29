@@ -35,7 +35,7 @@ const ScheduleOverview = ({ navigation, route }) => {
     }
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: '#E5E5E5' }}>
-            <StatusBar backgroundColor='white' barStyle={"dark-content"} />
+            <StatusBar backgroundColor='transparent' translucent animated barStyle={"light-content"} />
             <ScrollView style={{ flex: 1 }}>
                 <View key={item.id.toString()} style={{ flex: 1 }}>
                     <View style={AppStyle.StyleScheduleDetails.container}>
@@ -90,7 +90,7 @@ const ScheduleOverview = ({ navigation, route }) => {
                         </TouchableOpacity>
                     </ScrollView>
                     {
-                        filterMenu === 'PLANES' ? <Planes item={item} /> : filterMenu === 'SCHEDULE' ? <Schedule item={item} navigation={navigation}/> : filterMenu === 'HOTEL' ? <Hotel item={item} /> : <Visit item={item} />
+                        filterMenu === 'PLANES' ? <Planes item={item} /> : filterMenu === 'SCHEDULE' ? <Schedule item={item} navigation={navigation} /> : filterMenu === 'HOTEL' ? <Hotel item={item} /> : <Visit item={item} />
                     }
 
                 </View>

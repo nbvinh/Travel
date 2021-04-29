@@ -10,7 +10,7 @@ const PopularPlaceDetails = ({ navigation, route }) => {
     const dispatch = useDispatch()
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: '#E5E5E5' }}>
-            <StatusBar backgroundColor='white' barStyle={"dark-content"} />
+            <StatusBar backgroundColor='transparent' translucent animated barStyle={"light-content"} />
             <ScrollView style={{ flex: 1 }}>
                 <View style={{ flex: 1 }}>
                     <View style={AppStyle.StylePopularPlaceDetails.container}>

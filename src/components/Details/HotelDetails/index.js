@@ -13,7 +13,7 @@ const HotelDetails = ({ route }) => {
     const item = useSelector(store => store.Hotel.item)
     return (
         <SafeAreaView style={AppStyle.StyleHome.container}>
-            <StatusBar backgroundColor='white' barStyle={"dark-content"} />
+            <StatusBar backgroundColor='transparent' translucent animated barStyle={"light-content"} />
             <ScrollView style={AppStyle.StyleHome.scrollview} showsVerticalScrollIndicator={false}>
                 <HeaderHotelDetails />
                 <Body />

@@ -9,51 +9,49 @@ import Input from "../../Input";
 import ImagePicker from 'react-native-image-crop-picker';
 const EditProfile = ({ navigation }) => {
     const user = useSelector(store => store.people.user)
-    const fisrtname = useSelector(store => store.people.fisrtname)
-    const lastname = useSelector(store => store.people.lastname)
-    const picture = useSelector(store => store.people.picture)
-    const phone = useSelector(store => store.people.phone)
+    const [fisrtname, setFirstname] = useState("");
+    const [lastname, setLastname] = useState("");
+    const [avatar, setAvatar] = useState()
+    const [phone, setphone] = useState("")
     const dispatch = useDispatch()
-    const data = [
-        { lastname: lastname, fisrtname: fisrtname, id: Math.random(), phone: phone, avatar: picture },
-    ]
+    const data = { lastname: lastname, fisrtname: fisrtname, phone: phone, avatar: avatar }
     const onSave = () => {
-        picture ?
-            dispatch({ type: 'PROFILE', data: data }) &&
+        dispatch({ type: 'PROFILE', data: data }) &&
             navigation.goBack()
-            : navigation.goBack()
     }
-    const onPicture = (item) => {
+    const onPicture = () => {
         ImagePicker.openPicker({
             width: 300,
             height: 400,
             cropping: true
         }).then(image => {
-            dispatch({ type: 'PICTURE', avatar: image.path, id: item.id })
+            setAvatar(image.path)
         });
     }
+    useEffect(() => {
+        setFirstname(user.fisrtname)
+        setLastname(user.lastname)
+        setAvatar(user.avatar)
+        setphone(user.phone)
+    }, [navigation])
     return (
         <SafeAreaView style={AppStyle.StyleHome.container}>
             <StatusBar backgroundColor='white' barStyle={"dark-content"} />
             <ScrollView style={AppStyle.StyleHome.scrollview}>
                 <HeaderEdit text={'Sửa thông tin cá nhân'} onBack={() => navigation.goBack()} onSave={() => onSave()} />
-                {user && user.map((item) => {
-                    return (
-                        <View key={item.id.toString()} style={styles.container} >
-                            <View style={styles.body}>
-                                <Image
-                                    source={{ uri: item.avatar }}
-                                    style={styles.avatar}
-                                />
-                                <Text onPress={() => onPicture(item)} style={styles.edit}>Thay ảnh đại diện</Text>
-                            </View>
-                            <Input value={item.fisrtname} item={item} text={'Họ'} editable={true} selectTextOnFocus={true} />
-                            <Input value={item.lastname} item={item} text={'Tên'} editable={true} selectTextOnFocus={true} />
-                            <Input value={"Vinh230620@gmail.com"} item={item} text={'Email'} editable={false} selectTextOnFocus={false} />
-                            <Input value={item.phone} item={item} text={'Số điện thoại'} editable={true} selectTextOnFocus={true} keyboardType={"numeric"} />
-                        </View>
-                    )
-                })}
+                <View style={styles.container} >
+                    <View style={styles.body}>
+                        <Image
+                            source={{ uri: avatar }}
+                            style={styles.avatar}
+                        />
+                        <Text onPress={() => onPicture()} style={styles.edit}>Thay ảnh đại diện</Text>
+                    </View>
+                    <Input value={fisrtname} setValue={setFirstname} text={'Họ'} editable={true} selectTextOnFocus={true} />
+                    <Input value={lastname} setValue={setLastname} text={'Tên'} editable={true} selectTextOnFocus={true} />
+                    <Input value={"Vinh230620@gmail.com"} text={'Email'} editable={false} selectTextOnFocus={false} />
+                    <Input value={phone} setValue={setphone} text={'Số điện thoại'} editable={true} selectTextOnFocus={true} keyboardType={"numeric"} />
+                </View>
             </ScrollView>
         </SafeAreaView>
     )

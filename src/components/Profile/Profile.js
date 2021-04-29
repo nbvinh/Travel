@@ -34,17 +34,13 @@ const Profile = ({ navigation }) => {
                 <HeaderBottomTab text={'Thông tin cá nhân'} />
                 <View style={AppStyle.StyleProfile.body}>
                     <ScrollView style={AppStyle.StyleHome.scrollview}>
-                        {user && user.map((item) => {
-                            return (
-                                <TouchableOpacity key={item.id.toString()} style={AppStyle.StyleProfile.avatar} onPress={() => navigation.navigate('PersonalPage')}>
-                                    <Image
-                                        source={{ uri: item.avatar }}
-                                        style={AppStyle.StyleProfile.imgAvatar}
-                                    />
-                                    <Text style={AppStyle.StyleProfile.name}>{item.lastname} {item.fisrtname}</Text>
-                                </TouchableOpacity>
-                            )
-                        })}
+                        <TouchableOpacity style={AppStyle.StyleProfile.avatar} onPress={() => navigation.navigate('PersonalPage')}>
+                            <Image
+                                source={{ uri: user.avatar }}
+                                style={AppStyle.StyleProfile.imgAvatar}
+                            />
+                            <Text style={AppStyle.StyleProfile.name}>{user.lastname} {user.fisrtname}</Text>
+                        </TouchableOpacity>
                         <View style={AppStyle.StyleProfile.content}>
                             {dataItem && dataItem.map((item) => <Item key={item.id.toString()} item={item} onScreen={() => onScreen(item)} />)}
                         </View>

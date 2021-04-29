@@ -23,7 +23,6 @@ const styles = StyleSheet.create({
     footer: {
         // flex: 1,
         position: 'absolute',
-        zIndex: 1,
         top: '45%'
     },
     img: {
@@ -113,7 +112,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#1864FD',
         marginTop: scale(20),
         width: '100%',
-        height: 40,
+        height: scale(40),
         borderRadius: scale(8),
         flexDirection: 'row',
     },

@@ -10,7 +10,7 @@ const SeeMoreSchedule = ({ navigation }) => {
     const dataheader = useSelector(store => store.Schedule.data)
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: '#E5E5E5' }}>
-            <StatusBar backgroundColor='white' barStyle={"dark-content"} />
+            <StatusBar backgroundColor='transparent' translucent animated barStyle={"dark-content"} />
             <Header text={'Lịch trình gần đây'} onBack={() => navigation.goBack()} />
             <View style={{ flex: 10, marginHorizontal: verticalScale(20), marginVertical: scale(20) }}>
                 <ScrollView style={{ flex: 1 }}>

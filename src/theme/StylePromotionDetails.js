@@ -2,18 +2,19 @@ import {
     StyleSheet,
     Dimensions
 } from 'react-native';
+import { scale } from 'react-native-size-matters';
 const { height, width } = Dimensions.get('screen')
 const StylePromotionDetails = StyleSheet.create({
     text3: {
-        fontSize: width / 23.43,
+        fontSize: scale(16),
         color: '#FF5F24',
         fontWeight: '700'
     },
     footer: {
-        marginTop: width / 12.5,
+        marginTop: scale(60),
         justifyContent: 'center',
         alignItems: 'center',
-        marginBottom: width / 18.5
+        marginBottom: scale(30)
     },
     colorblack: {
         color: 'black'
@@ -25,16 +26,16 @@ const StylePromotionDetails = StyleSheet.create({
         fontWeight: 'bold'
     },
     text2: {
-        fontSize: width / 28.8,
-        marginVertical: 10
+        fontSize: scale(13),
+        marginVertical: scale(10)
     },
     content: {
-        marginHorizontal: 15,
-        marginVertical: 15
+        marginHorizontal: scale(15),
+        marginVertical: scale(15)
     },
     text1: {
         fontWeight: 'bold',
-        fontSize: width / 26.7
+        fontSize: scale(14)
     },
     img: {
         width: '100%',
@@ -42,7 +43,16 @@ const StylePromotionDetails = StyleSheet.create({
     },
     container: {
         width: width,
-        height: height / 4.5
+        height: scale(180)
+    },
+    ChevronRight:{
+        position:'absolute',
+        left:scale(16),
+        top:scale(48),
+        bottom:scale(120),
+        zIndex:1,
+        width:scale(6.61),
+        height:scale(12)
     }
 
 })

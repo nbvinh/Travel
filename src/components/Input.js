@@ -5,16 +5,17 @@ import AppStyle from "../theme/index";
 import { useDispatch, useSelector } from "react-redux";
 const Input = (props) => {
     const value = props.value
+    const setValue = props.setValue
     const text = props.text
     const editable = props.editable
     const selectTextOnFocus = props.selectTextOnFocus
     const dispatch = useDispatch()
-    const onText = (val) => {
-        text === 'Họ' ? dispatch({ type: 'FISRTNAME', fisrtname: val, id: item.id }) :
-            text === "Tên" ? dispatch({ type: 'LASTNAME', lastname: val, id: item.id }) :
-                dispatch({ type: 'PHONEEDIT', phone: val, id: item.id })
-    }
-    const item = props.item
+    // const onText = (val) => {
+    //     text === 'Họ' ? dispatch({ type: 'FISRTNAME', fisrtname: val, id: item.id }) :
+    //         text === "Tên" ? dispatch({ type: 'LASTNAME', lastname: val, id: item.id }) :
+    //             dispatch({ type: 'PHONEEDIT', phone: val, id: item.id })
+    // }
+    // const item = props.item
     const keyboardType = props.keyboardType
     return (
         <View style={styles.container}>
@@ -22,13 +23,13 @@ const Input = (props) => {
                 <Text style={styles.text}>{text}</Text>
             </View>
             <TextInput
-                onChangeText={(val) => onText(val)}
+                onChangeText={(val) => setValue(val)}
                 value={value}
                 style={styles.textInput}
                 editable={editable}
                 selectTextOnFocus={selectTextOnFocus}
                 keyboardType={keyboardType}
-                maxLength={text === "Số điện thoại" ? 10 : 15}
+                maxLength={text === "Số điện thoại" ? 10 : null}
             />
         </View>
     )

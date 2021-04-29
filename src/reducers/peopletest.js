@@ -1,5 +1,5 @@
 const initialState = {
-  user: [],
+  user: {},
   count: 0,
   modalProfile: false,
   check: false,

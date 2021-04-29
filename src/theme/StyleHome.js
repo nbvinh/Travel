@@ -33,7 +33,7 @@ const StyleHome = StyleSheet.create({
     },
     textHeader: {
         marginHorizontal: moderateVerticalScale(20),
-        marginTop: moderateVerticalScale(10)
+        marginTop: moderateVerticalScale(20)
     },
     text1: {
         fontSize: verticalScale(18),
@@ -90,6 +90,13 @@ const StyleHome = StyleSheet.create({
     },
     marginLeft: {
         marginLeft: scale(16)
+    },
+    touch:{
+        width: scale(49),
+        height: scale(49),
+        justifyContent: 'center',
+        alignItems: 'center',
+        borderRadius: scale(30)
     }
 })
 export default StyleHome;

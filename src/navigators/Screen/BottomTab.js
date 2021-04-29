@@ -18,9 +18,6 @@ function MyTabBar({ state, descriptors, navigation }) {
             <View style={{ position: 'absolute', left: (width / 5) * 2, right: (width / 5) * 2, zIndex: 1, bottom: scale(20), alignItems: 'center' }}>
                 <AddButton navigation={navigation} />
             </View>
-            <View style={{ width: scale(49), height: scale(49), position: 'absolute', right: scale(10), zIndex: 1, bottom: scale(60) }}>
-                <Touch />
-            </View>
             {state.routes.map((route, index) => {
                 const { options } = descriptors[route.key];
                 const label = route.name;

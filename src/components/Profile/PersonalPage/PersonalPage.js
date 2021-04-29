@@ -12,7 +12,7 @@ import { verticalScale } from "react-native-size-matters";
 import Follow from "../../Follow";
 const { height, width } = Dimensions.get('screen')
 const PersonalPage = ({ navigation }) => {
-    const user = useSelector(store => store.people.user)
+    const item = useSelector(store => store.people.user)
     const data = useSelector(store => store.Schedule.data)
     return (
         <SafeAreaView style={AppStyle.StyleHome.container}>
@@ -21,31 +21,29 @@ const PersonalPage = ({ navigation }) => {
                 <Header text={'Thông tin cá nhân'} onBack={() => navigation.goBack()} />
                 <View style={AppStyle.StyleProfile.body}>
                     <ScrollView style={AppStyle.StyleHome.scrollview}>
-                        {user && user.map((item) =>
-                            <View key={item.id.toString()} style={AppStyle.StylePersonalPage.container}>
-                                <View style={AppStyle.StylePersonalPage.avatar}>
-                                    <Image
-                                        source={{ uri: item.avatar }}
-                                        style={AppStyle.StylePersonalPage.img1}
-                                    />
-                                    <Text style={AppStyle.StylePersonalPage.name}>{item.lastname} {item.fisrtname}</Text>
-                                </View>
-                                <View style={AppStyle.StylePersonalPage.body}>
-                                    <View style={AppStyle.StylePersonalPage.follow}>
-                                        <Text />
-                                        <Follow quantity={100} text={'Người theo dõi'} type={'follow'} navigation={navigation} />
-                                        <Follow quantity={200} text={'Đang theo dõi'} type={'following'} navigation={navigation} />
-                                        <Text />
-                                    </View>
-                                    <TouchableOpacity
-                                        onPress={() => navigation.navigate('EditProfile')}
-                                        style={AppStyle.StylePersonalPage.Edit}
-                                    >
-                                        <Text style={AppStyle.StylePersonalPage.text3}>Sửa thông tin cá nhân</Text>
-                                    </TouchableOpacity>
-                                </View>
+                        <View style={AppStyle.StylePersonalPage.container}>
+                            <View style={AppStyle.StylePersonalPage.avatar}>
+                                <Image
+                                    source={{ uri: item.avatar }}
+                                    style={AppStyle.StylePersonalPage.img1}
+                                />
+                                <Text style={AppStyle.StylePersonalPage.name}>{item.lastname} {item.fisrtname}</Text>
                             </View>
-                        )}
+                            <View style={AppStyle.StylePersonalPage.body}>
+                                <View style={AppStyle.StylePersonalPage.follow}>
+                                    <Text />
+                                    <Follow quantity={100} text={'Người theo dõi'} type={'follow'} navigation={navigation} />
+                                    <Follow quantity={200} text={'Đang theo dõi'} type={'following'} navigation={navigation} />
+                                    <Text />
+                                </View>
+                                <TouchableOpacity
+                                    onPress={() => navigation.navigate('EditProfile')}
+                                    style={AppStyle.StylePersonalPage.Edit}
+                                >
+                                    <Text style={AppStyle.StylePersonalPage.text3}>Sửa thông tin cá nhân</Text>
+                                </TouchableOpacity>
+                            </View>
+                        </View>
                         <Review />
                         <TextHome text1={'Xem ảnh'} text2={'Xem thêm >'} />
                         <SeeIMG />
