@@ -5,14 +5,13 @@ import {
 const { height, width } = Dimensions.get('screen')
 const StyleSeeMoreExperience = StyleSheet.create({
     container: {
-        flex: 10,
-        marginHorizontal: 10
+        flex: 10
     },
     content: {
-        width: '100%',
         backgroundColor: 'white',
         marginBottom: width / 18.75,
-        borderRadius: 5
+        borderRadius: 5,
+        marginHorizontal: 10
     },
     img: {
         width: '100%',

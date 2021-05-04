@@ -20,13 +20,14 @@ const Schedule = (props) => {
             :
             typeNavigation === 'finish' ?
                 navigation.navigate('Rating') || dispatch({ type: 'RATING', id: item.id })
-                : null
+                : typeNavigation === "walking" ?
+                    navigation.navigate('Walkingschedule') : null
     }
     const dispatch = useDispatch()
     return (
         <TouchableOpacity
             onPress={() => onNavigation()}
-            style={{ backgroundColor: 'white', marginBottom: scale(10), borderRadius: scale(5) }}
+            style={[{ backgroundColor: 'white', marginBottom: scale(10), borderRadius: scale(5) }, { ...props.style }]}
         >
             <View style={AppStyle.StylePersonalPage.SeeIMG}>
                 <Image

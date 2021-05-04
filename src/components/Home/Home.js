@@ -13,9 +13,10 @@ const Home = ({ navigation, route }) => {
     const data = useSelector(store => store.Hotel.data)
     const DecemberDestinationArr = useSelector(store => store.DecemberDestination.data)
     const dataSchedule = useSelector(store => store.Schedule.data)
+    const statusBar = useSelector(store => store.people.statusBar)
     return (
         <SafeAreaView style={AppStyle.StyleHome.container}>
-            <StatusBar backgroundColor='transparent' translucent animated barStyle={"light-content"} />
+            <StatusBar backgroundColor={statusBar ? 'transparent' : "white"} translucent animated barStyle={statusBar ? "light-content" : "dark-content"} />
             <ScrollView style={AppStyle.StyleHome.scrollview}>
                 <ImageBackground source={require('../../img/khampha.png')} style={{ height: height / 3.8 }}>
                     <View style={AppStyle.StyleHome.textHeader}>

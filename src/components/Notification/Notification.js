@@ -11,7 +11,7 @@ const Notification = ({ navigation }) => {
     const data = useSelector(store => store.Notification.data)
     return (
         <SafeAreaView style={AppStyle.StyleHome.container}>
-            <StatusBar backgroundColor='white' barStyle={"dark-content"} />
+            {/* <StatusBar backgroundColor='transparent' translucent animated barStyle={"dark-content"} /> */}
             <ScrollView style={AppStyle.StyleHome.scrollview}>
                 <HeaderNotification text={'Thông báo'} imgNotification={require('../../img/Notification.png')} />
                 <View style={AppStyle.StyleProfile.body}>

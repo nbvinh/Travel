@@ -13,7 +13,7 @@ const MySchedule = ({ navigation }) => {
     const Tab = createMaterialTopTabNavigator()
     return (
         <SafeAreaView style={AppStyle.StyleHome.container}>
-            <StatusBar backgroundColor='white' barStyle={"dark-content"} />
+           {/* <StatusBar backgroundColor='white' translucent animated barStyle={"dark-content"} /> */}
             <View style={AppStyle.StyleHome.scrollview}>
                 <HeaderBottomTab text={'Lịch trình của tôi'} />
                 <View style={AppStyle.StyleProfile.body}>

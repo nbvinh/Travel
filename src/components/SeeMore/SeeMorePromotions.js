@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Text,TouchableOpacity, View, Image, SafeAreaView, StatusBar, Dimensions, ScrollView, StyleSheet } from "react-native";
+import { Text, TouchableOpacity, View, Image, SafeAreaView, StatusBar, Dimensions, ScrollView, StyleSheet } from "react-native";
 import Header from "../Header";
 const { height, width } = Dimensions.get('screen')
 import { useSelector } from "react-redux";
@@ -8,10 +8,10 @@ const SeeMorePromotions = ({ navigation }) => {
     const dataheader = useSelector(store => store.Promotion.data)
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: '#E5E5E5' }}>
-            <StatusBar backgroundColor='white' barStyle={"dark-content"} />
-            <Header text={'Khuyến Mại'} onBack={() => navigation.goBack()} />
-            <View style={{ flex: 10, marginHorizontal: 10 }}>
+            <StatusBar backgroundColor='white' translucent animated barStyle={"dark-content"} />
+            <View style={{ flex: 10 }}>
                 <ScrollView style={{ flex: 1 }}>
+                    <Header text={'Khuyến Mại'} onBack={() => navigation.goBack()} />
                     {
                         dataheader && dataheader.map((item) => {
                             return (

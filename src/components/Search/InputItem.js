@@ -43,7 +43,7 @@ const styles = StyleSheet.create({
         width: width,
         alignItems: 'center',
         flexDirection: 'row',
-        marginBottom: scale(20)
+        marginVertical: scale(20)
     },
     textInput: {
         height: scale(40),

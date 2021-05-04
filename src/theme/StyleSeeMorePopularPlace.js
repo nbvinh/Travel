@@ -10,7 +10,7 @@ const StyleSeeMorePopularPlace = StyleSheet.create({
     },
     content: {
         flex: 10,
-        marginHorizontal: 10
+        
     },
     img1: {
         width: '100%', height: height / 4.511, borderRadius: 5

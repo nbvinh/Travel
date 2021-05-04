@@ -29,6 +29,7 @@ const Setting = ({ navigation }) => {
     };
     const Logout = () => {
         logoutWithFacebook()
+        dispatch({ type: "LOGOUT" })
         navigation.reset({
             index: 0,
             routes: [{ name: 'ScreenFirst' }],
@@ -36,7 +37,7 @@ const Setting = ({ navigation }) => {
     }
     return (
         <SafeAreaView style={AppStyle.StyleHome.container}>
-            <StatusBar backgroundColor='white' barStyle={"dark-content"} />
+            <StatusBar backgroundColor='white' translucent animated barStyle={"dark-content"} />
             <ScrollView style={AppStyle.StyleHome.scrollview}>
                 <Header text={'Cài đặt'} onBack={() => navigation.goBack()} />
                 <View style={AppStyle.StyleProfile.body}>

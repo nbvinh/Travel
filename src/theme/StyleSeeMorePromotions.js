@@ -7,7 +7,9 @@ const StyleSeeMorePromotions = StyleSheet.create({
     container: {
         marginBottom: 20,
         backgroundColor: 'white',
-        borderRadius: 5
+        borderRadius: 5,
+        marginHorizontal: 10
+
     },
     img: {
         width: '100%',

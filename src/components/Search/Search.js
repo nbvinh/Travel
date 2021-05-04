@@ -13,10 +13,10 @@ const Search = ({ navigation }) => {
     const dispatch = useDispatch()
     return (
         <SafeAreaView style={AppStyle.StyleHome.container}>
-            <StatusBar backgroundColor='white' barStyle={"dark-content"} />
             <ScrollView style={AppStyle.StyleHome.scrollview}>
+                <StatusBar backgroundColor='white' translucent animated barStyle={"dark-content"} />
                 <InputItem navigation={navigation} />
-                {data && data.map((item) => <Provincial key={item.id} item={item} navigation={navigation}  />)}
+                {data && data.map((item) => <Provincial key={item.id} item={item} navigation={navigation} />)}
             </ScrollView>
         </SafeAreaView>
     )

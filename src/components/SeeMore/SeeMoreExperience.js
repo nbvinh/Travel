@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { View,TouchableOpacity, Text, ImageBackground, SafeAreaView, StatusBar, StyleSheet, Dimensions, Image, TextInput, ScrollView, FlatList } from "react-native";
+import { View, TouchableOpacity, Text, ImageBackground, SafeAreaView, StatusBar, StyleSheet, Dimensions, Image, TextInput, ScrollView, FlatList } from "react-native";
 import { useSelector, useDispatch } from "react-redux";
 import Header from "../Header";
 import AppStyle from "../../theme/index";
@@ -9,9 +9,9 @@ const SeeMoreExperience = ({ navigation }) => {
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: '#E5E5E5' }}>
             <StatusBar backgroundColor='white' barStyle={"dark-content"} />
-            <Header text={'Trải nghiệm nổi bật'} onBack={() => navigation.goBack()} />
             <View style={AppStyle.StyleSeeMoreExperience.container}>
                 <ScrollView style={{ flex: 1 }}>
+                    <Header text={'Trải nghiệm nổi bật'} onBack={() => navigation.goBack()} />
                     {
                         dataheader && dataheader.map((item) => {
                             return (
@@ -27,7 +27,7 @@ const SeeMoreExperience = ({ navigation }) => {
                                                 source={require('../../img/location.png')}
                                                 style={AppStyle.StyleSeeMoreExperience.img1}
                                             />
-                                            <Text style={ AppStyle.StyleSeeMoreExperience.text2}>{item.text1}</Text>
+                                            <Text style={AppStyle.StyleSeeMoreExperience.text2}>{item.text1}</Text>
                                         </View>
                                         <Text style={AppStyle.StyleSeeMoreExperience.text3}>Từ
                                             <Text style={AppStyle.StyleSeeMoreExperience.text4}> {item.price}</Text>

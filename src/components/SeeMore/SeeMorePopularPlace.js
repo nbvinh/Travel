@@ -10,9 +10,9 @@ const SeeMorePopularPlace = ({ navigation }) => {
     return (
         <SafeAreaView style={AppStyle.StyleSeeMorePopularPlace.container}>
             <StatusBar backgroundColor='white' barStyle={"dark-content"} />
-            <Header text={'Địa điểm phổ biến'} onBack={() => navigation.goBack()} />
             <View style={AppStyle.StyleSeeMorePopularPlace.content}>
                 <ScrollView style={{ flex: 1 }}>
+                    <Header text={'Địa điểm phổ biến'} onBack={() => navigation.goBack()} />
                     {
                         dataheader && dataheader.map((item) => {
                             return (
@@ -22,7 +22,7 @@ const SeeMorePopularPlace = ({ navigation }) => {
                                         navigation.navigate('PopularPlaceDetails')
                                     }}
                                     key={item.id.toString()}
-                                    style={{ marginBottom: width / 18.75 }}
+                                    style={{ marginBottom: width / 18.75,marginHorizontal: 10 }}
                                 >
                                     <Image
                                         source={{ uri: item.img }}

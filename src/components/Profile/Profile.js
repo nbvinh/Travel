@@ -29,7 +29,7 @@ const Profile = ({ navigation }) => {
     const dataItem = useSelector(store => store.people.dataItem)
     return (
         <SafeAreaView style={AppStyle.StyleHome.container}>
-            <StatusBar backgroundColor='white' barStyle={"dark-content"} />
+            {/* <StatusBar backgroundColor='white' translucent animated barStyle={"dark-content"} /> */}
             <ScrollView style={AppStyle.StyleHome.scrollview}>
                 <HeaderBottomTab text={'Thông tin cá nhân'} />
                 <View style={AppStyle.StyleProfile.body}>

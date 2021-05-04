@@ -14,7 +14,7 @@ import MySchedule from "./MySchedule";
 import Search from "./Search";
 import Suggestion from "./Suggestion";
 import CreateSchedules from "./CreateSchedules";
-const rootReducer = combineReducers({
+const allReducers = combineReducers({
   people,
   PopularPlace,
   dataheader,
@@ -31,5 +31,12 @@ const rootReducer = combineReducers({
   Suggestion,
   CreateSchedules,
 });
+const rootReducer = (state, action) => {
+  if (action.type === "LOGOUT") {
+    state = {}
+  }
+
+  return allReducers(state, action);
+};
 
 export default rootReducer;

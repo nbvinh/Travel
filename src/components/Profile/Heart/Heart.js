@@ -10,7 +10,7 @@ const Heart = ({ navigation }) => {
     const heart = useSelector(store => store.Schedule.heartARR)
     return (
         <SafeAreaView style={AppStyle.StyleHome.container}>
-            <StatusBar backgroundColor='white' barStyle={"dark-content"} />
+            <StatusBar backgroundColor='white' translucent animated barStyle={"dark-content"} />
             <ScrollView style={AppStyle.StyleHome.scrollview}>
                 <Header text={'Yêu thích'} onBack={() => navigation.goBack()} />
                 <View style={{ flex: 10, marginHorizontal: verticalScale(20), marginVertical: scale(20) }}>

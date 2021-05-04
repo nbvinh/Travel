@@ -6,7 +6,7 @@ const Header = (props) => {
     const onBack = props.onBack
     const text = props.text
     return (
-        <View style={[{ flex: 1.3, alignItems: 'center', flexDirection: 'row', backgroundColor: 'white' }, { ...props.style }]}>
+        <View style={[{height:scale(50),marginTop:scale(10), alignItems: 'center', flexDirection: 'row', backgroundColor: 'white' }, { ...props.style }]}>
             <TouchableOpacity onPress={() => onBack()}>
                 <Image
                     source={require('../img/arrow-left.png')}

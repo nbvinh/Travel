@@ -19,10 +19,11 @@ export default HeaderEdit;
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        height: verticalScale(50),
+        height: scale(50),
         alignItems: 'center',
         flexDirection: 'row',
         backgroundColor: 'white',
+        marginTop:scale(10)
     },
     content: {
         textAlign: 'center',

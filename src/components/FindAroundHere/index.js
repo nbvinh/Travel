@@ -11,7 +11,7 @@ const FindAroundHere = ({ navigation, route }) => {
     const dispatch = useDispatch()
     return (
         <SafeAreaView style={AppStyle.StyleHome.container}>
-            <StatusBar backgroundColor='white' barStyle={"dark-content"} />
+            <StatusBar backgroundColor='white' translucent animated barStyle={"dark-content"} />
             <ScrollView style={AppStyle.StyleHome.scrollview}>
                 <Header text={'Gợi ý gần đây'} onBack={() => navigation.goBack()} />
                 <Item navigation={navigation} item={item} />

@@ -9,7 +9,7 @@ import Item from "./Item";
 const PrivacyPolicy = ({ navigation }) => {
     return (
         <SafeAreaView style={AppStyle.StyleHome.container}>
-            <StatusBar backgroundColor='white' barStyle={"dark-content"} />
+            <StatusBar backgroundColor='white' translucent animated barStyle={"dark-content"} />
             <ScrollView style={AppStyle.StyleHome.scrollview}>
                 <Header text={'Chính sách bảo mật'} onBack={() => navigation.goBack()} />
                 <View style={AppStyle.StyleProfile.body}>

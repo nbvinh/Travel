@@ -9,6 +9,7 @@ import {
     SeeMoreHotel, SeeMoreExperience, SeeMorePopularPlace, SeeMoreSchedule, PromotionDetails,
     SeeMorePromotions, BottomTab, ScreenUpdateProfile, ChooseRating, Rating, HotelScreen, Restaurant, Combo, SearchRestaurant, HotelDetails
 } from "../../components/index";
+import Walkingschedule from "../../components/Walkingschedule";
 const Root = createStackNavigator();
 const RootStack = () => {
     return (
@@ -51,6 +52,7 @@ const RootStack = () => {
                 <Root.Screen name="Combo" component={Combo} />
                 <Root.Screen name="SearchRestaurant" component={SearchRestaurant} />
                 <Root.Screen name="HotelDetails" component={HotelDetails} />
+                <Root.Screen name="Walkingschedule" component={Walkingschedule} />
             </Root.Navigator>
         </NavigationContainer>
     )

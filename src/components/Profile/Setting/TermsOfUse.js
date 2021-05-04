@@ -8,7 +8,7 @@ const { height, width } = Dimensions.get('screen');
 const TermsOfUse = ({ navigation }) => {
     return (
         <SafeAreaView style={AppStyle.StyleHome.container}>
-            <StatusBar backgroundColor='white' barStyle={"dark-content"} />
+            <StatusBar backgroundColor='white' translucent animated barStyle={"dark-content"} />
             <ScrollView style={AppStyle.StyleHome.scrollview}>
                 <Header text={'Điều khoản sử dụng'} onBack={() => navigation.goBack()} />
                 <View style={AppStyle.StyleProfile.body}>

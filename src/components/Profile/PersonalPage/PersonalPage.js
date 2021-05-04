@@ -16,7 +16,7 @@ const PersonalPage = ({ navigation }) => {
     const data = useSelector(store => store.Schedule.data)
     return (
         <SafeAreaView style={AppStyle.StyleHome.container}>
-            <StatusBar backgroundColor='white' barStyle={"dark-content"} />
+            <StatusBar backgroundColor='white' translucent animated barStyle={"dark-content"} />
             <ScrollView style={AppStyle.StyleHome.scrollview}>
                 <Header text={'Thông tin cá nhân'} onBack={() => navigation.goBack()} />
                 <View style={AppStyle.StyleProfile.body}>

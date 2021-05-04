@@ -29,6 +29,7 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         flexDirection: 'row',
         backgroundColor: 'white',
+        marginTop: scale(10)
     },
     content: {
         textAlign: 'center',
