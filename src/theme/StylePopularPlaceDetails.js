@@ -51,7 +51,7 @@ const StylePopularPlaceDetails = StyleSheet.create({
         fontSize: scale(12),
         fontWeight: '400',
         color: 'black',
-        textAlign: 'center',
+        textAlign: 'left',
         marginBottom: scale(10)
     },
     button: {

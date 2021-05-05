@@ -10,11 +10,17 @@ import {
 } from 'react-native-fbsdk';
 import { useDispatch, useSelector } from 'react-redux';
 import styles from './styles';
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
 const LoginFB = () => {
     const [tongle, setTongle] = useState(false)
     useEffect(() => {
         dispatch({ type: 'PROFILE', data: data })
+        const jsonValue = AsyncStorage.getItem('DATA')
+        if (jsonValue === null) {
+            AsyncStorage.setItem('DATA', JSON.stringify(data))
+            dispatch({ type: 'PROFILE', data: data })
+        }
+
     }, [tongle])
     const navigation = useNavigation()
     const userInfo = useSelector(store => store.people.userInfo)
@@ -29,10 +35,11 @@ const LoginFB = () => {
         const profileRequest = new GraphRequest(
             '/me',
             { token, parameters: PROFILE_REQUEST_PARAMS },
-            (error, user) => {
+            async (error, user) => {
                 if (error) {
                     console.log('login info has error: ' + error);
                 } else {
+                    await AsyncStorage.setItem('Token', JSON.stringify(token))
                     dispatch({ type: 'USERFACEBOOK', userInfo: user })
                     setTongle(true)
                     navigation.navigate("BottomTab")

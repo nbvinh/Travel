@@ -6,7 +6,7 @@ const initialState = {
       text1: 'Lý Sơn',
       img: 'http://pystravel.vn/wp-content/uploads/2015/06/ly-son-pys-travel0061.jpg',
       name: 'Đảo Lý Sơn - Vương quốc tỏi',
-      label: 'Đảo Lý Sơn không chỉ được mệnh danh là “Vương quốc tỏi” mà còn có “Đảo ngọc” Cù Lao Ré. Sức hút của đảo Lý Sơn nằm ở chiến tích lịch sử lẫy lừng, ở những con người miền...',
+      label: 'Đảo Lý Sơn không chỉ được mệnh danh là “Vương quốc tỏi” mà còn có “Đảo ngọc” Cù Lao Ré. Sức hút của đảo Lý Sơn nằm ở chiến tích lịch sử lẫy lừng, ở những con người miền test tetstetetsttstsstststtstsstt',
       ScheduleOK: [
         {
           id: 0,
@@ -793,7 +793,7 @@ const initialState = {
       text1: 'Nha Trang',
       name: 'Nha Trang - Vương quốc tỏi',
       img: 'https://nhatrangsensetravel.com/view/at_tong-quan-du-lich-nha-trang_acc7a58da8c62a5da6d0d6d678a79618.jpg',
-      label: 'Đảo Lý Sơn không chỉ được mệnh danh là “Vương quốc tỏi” mà còn có “Đảo ngọc” Cù Lao Ré. Sức hút của đảo Lý Sơn nằm ở chiến tích lịch sử lẫy lừng, ở những con người miền...',
+      label: 'Đảo Lý Sơn không chỉ được mệnh danh là “Vương quốc tỏi” mà còn có “Đảo ngọc” Cù Lao Ré. Sức hút của đảo Lý Sơn nằm ở chiến tích lịch sử lẫy lừng, ở những con người miền tseeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
       ScheduleOK: [
         {
           id: 0,
@@ -1580,7 +1580,7 @@ const initialState = {
       text1: 'Phú Quốc',
       name: 'Phú Quốc - Vương quốc tỏi',
       img: 'https://www.asas.com.vn/wp-content/uploads/2019/01/3430_tf_180426053143_680291.gif',
-      label: 'Đảo Lý Sơn không chỉ được mệnh danh là “Vương quốc tỏi” mà còn có “Đảo ngọc” Cù Lao Ré. Sức hút của đảo Lý Sơn nằm ở chiến tích lịch sử lẫy lừng, ở những con người miền...',
+      label: 'Đảo Lý Sơn không chỉ được mệnh danh là “Vương quốc tỏi” mà còn có “Đảo ngọc” Cù Lao Ré. Sức hút của đảo Lý Sơn nằm ở chiến tích lịch sử lẫy lừng, ở những con người miền tseeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
       ScheduleOK: [
         {
           id: 0,
@@ -2367,7 +2367,7 @@ const initialState = {
       text1: 'Vịnh Hạ Long',
       name: 'Đảo Lý Sơn - Vương quốc tỏi',
       img: 'https://dulichhalongquangninh.com/wp-content/uploads/2016/07/hinh-anh-du-lich-ha-long.jpg',
-      label: 'Đảo Lý Sơn không chỉ được mệnh danh là “Vương quốc tỏi” mà còn có “Đảo ngọc” Cù Lao Ré. Sức hút của đảo Lý Sơn nằm ở chiến tích lịch sử lẫy lừng, ở những con người miền...',
+      label: 'Đảo Lý Sơn không chỉ được mệnh danh là “Vương quốc tỏi” mà còn có “Đảo ngọc” Cù Lao Ré. Sức hút của đảo Lý Sơn nằm ở chiến tích lịch sử lẫy lừng, ở những con người miền tseeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee',
       ScheduleOK: [
         {
           id: 0,

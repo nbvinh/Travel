@@ -4,7 +4,7 @@ import Header from "../Header";
 import { useDispatch, useSelector } from "react-redux";
 import Form from "./Form";
 import { verticalScale, moderateScale, scale } from "react-native-size-matters";
-
+import AsyncStorage from '@react-native-async-storage/async-storage';
 const { width, height } = Dimensions.get('screen')
 const ScreenUpdateProfile = ({ navigation }) => {
     const onBack = () => {
@@ -37,64 +37,66 @@ const ScreenUpdateProfile = ({ navigation }) => {
             setFinish1(false)
         }
     }
-    const data =   { lastname: text, fisrtname: text1, id: Math.random(), phone: phone, avatar: 'https://cdn0.iconfinder.com/data/icons/set-ui-app-android/32/8-512.png' }
-    useEffect(() => {
-        dispatch({ type: 'PROFILE', data: data })
-    }, [data])
+    const data = { lastname: text, fisrtname: text1, id: Math.random(), phone: phone, avatar: 'https://cdn0.iconfinder.com/data/icons/set-ui-app-android/32/8-512.png', token: Math.random() }
     return (
         <SafeAreaView style={styles.container}>
-                <Header style={{marginTop:scale(5)}} onBack={onBack} />
-                <View style={styles.content}>
-                    <Text style={styles.text1}>Cập Nhật Thông Tin</Text>
-                    <TextInput
-                        onChangeText={(value) => onChangelastname(value)}
-                        value={text}
-                        style={[styles.text2, { borderColor: lastname ? '#F17A4F' : '#E0E0E0', }]}
-                        autoFocus={true}
-                        placeholder={'Họ'}
-                        placeholderTextColor={'#BDBDBD'}
-                        onFocus={() => {
-                            setLastname(true)
-                            setFisrtname(false)
-                        }}
-                    />
-                    <TextInput
-                        onChangeText={(value) => onChangefisrtname(value)}
-                        value={text1}
-                        style={[styles.text2, { marginVertical: scale(20), borderColor: fisrtname ? '#F17A4F' : '#E0E0E0' }]}
-                        placeholder={'Tên'}
-                        placeholderTextColor={'#BDBDBD'}
-                        onFocus={() => {
-                            setLastname(false)
-                            setFisrtname(true)
-                        }}
-                    />
-                    <TextInput
-                        style={[styles.text2, { borderColor: '#E0E0E0' }]}
-                        placeholder={phone}
-                        placeholderTextColor={'#BDBDBD'}
-                        editable={false}
-                        selectTextOnFocus={false}
-                    />
-                    {
-                        finish || finish1 ?
-                            <TouchableOpacity style={styles.finish} onPress={() => navigation.navigate('BottomTab')}>
-                                <Text style={styles.textfinish}>Hoàn Thành</Text>
-                            </TouchableOpacity>
-                            :
-                            <TouchableOpacity style={styles.finishfall}>
-                                <Text style={styles.textfinish}>Hoàn Thành</Text>
+            <Header style={{ marginTop: scale(5) }} onBack={onBack} />
+            <View style={styles.content}>
+                <Text style={styles.text1}>Cập Nhật Thông Tin</Text>
+                <TextInput
+                    onChangeText={(value) => onChangelastname(value)}
+                    value={text}
+                    style={[styles.text2, { borderColor: lastname ? '#F17A4F' : '#E0E0E0', }]}
+                    autoFocus={true}
+                    placeholder={'Họ'}
+                    placeholderTextColor={'#BDBDBD'}
+                    onFocus={() => {
+                        setLastname(true)
+                        setFisrtname(false)
+                    }}
+                />
+                <TextInput
+                    onChangeText={(value) => onChangefisrtname(value)}
+                    value={text1}
+                    style={[styles.text2, { marginVertical: scale(20), borderColor: fisrtname ? '#F17A4F' : '#E0E0E0' }]}
+                    placeholder={'Tên'}
+                    placeholderTextColor={'#BDBDBD'}
+                    onFocus={() => {
+                        setLastname(false)
+                        setFisrtname(true)
+                    }}
+                />
+                <TextInput
+                    style={[styles.text2, { borderColor: '#E0E0E0' }]}
+                    placeholder={phone}
+                    placeholderTextColor={'#BDBDBD'}
+                    editable={false}
+                    selectTextOnFocus={false}
+                />
+                {
+                    finish || finish1 ?
+                        <TouchableOpacity style={styles.finish} onPress={async () => {
+                            await AsyncStorage.setItem('Token', JSON.stringify(data.token))
+                            await AsyncStorage.setItem('DATA', JSON.stringify(data))
+                            dispatch({ type: 'PROFILE', data: data })
+                            navigation.navigate('BottomTab')
+                        }}>
+                            <Text style={styles.textfinish}>Hoàn Thành</Text>
+                        </TouchableOpacity>
+                        :
+                        <TouchableOpacity style={styles.finishfall}>
+                            <Text style={styles.textfinish}>Hoàn Thành</Text>
 
-                            </TouchableOpacity>
-                    }
-                    <View style={styles.rules}>
-                        <Text style={styles.text3}>Bằng cách tham gia OKGO, bạn đã đồng ý với
+                        </TouchableOpacity>
+                }
+                <View style={styles.rules}>
+                    <Text style={styles.text3}>Bằng cách tham gia OKGO, bạn đã đồng ý với
                         <Text onPress={() => { dispatch({ type: 'MODALPROFILE' }) }} style={{ textDecorationLine: 'underline' }}> Chính sách bảo mật và Điều khoản sử dụng </Text>
                         của chúng tôi
                     </Text>
-                    </View>
                 </View>
-                <Form />
+            </View>
+            <Form />
         </SafeAreaView>
     )
 }

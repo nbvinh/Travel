@@ -7,6 +7,7 @@ import AppStyle from "../../../theme/index";
 import { scale, verticalScale } from "react-native-size-matters";
 import Input from "../../Input";
 import ImagePicker from 'react-native-image-crop-picker';
+import AsyncStorage from '@react-native-async-storage/async-storage';
 const EditProfile = ({ navigation }) => {
     const user = useSelector(store => store.people.user)
     const [fisrtname, setFirstname] = useState("");
@@ -15,9 +16,10 @@ const EditProfile = ({ navigation }) => {
     const [phone, setphone] = useState("")
     const dispatch = useDispatch()
     const data = { lastname: lastname, fisrtname: fisrtname, phone: phone, avatar: avatar }
-    const onSave = () => {
-        dispatch({ type: 'PROFILE', data: data }) &&
-            navigation.goBack()
+    const onSave = async () => {
+        dispatch({ type: 'PROFILE', data: data })
+        navigation.goBack()
+        await AsyncStorage.setItem('DATA', JSON.stringify(data))
     }
     const onPicture = () => {
         ImagePicker.openPicker({

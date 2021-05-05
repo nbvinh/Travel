@@ -5,6 +5,7 @@ import { TouchableOpacity } from "react-native-gesture-handler";
 import { useDispatch, useSelector } from "react-redux";
 import AppStyle from "../../../theme/index";
 import Header from "../../Header";
+import AsyncStorage from '@react-native-async-storage/async-storage';
 const { height, width } = Dimensions.get('screen');
 import Item from "./Item";
 const Setting = ({ navigation }) => {
@@ -25,15 +26,17 @@ const Setting = ({ navigation }) => {
     }
     const logoutWithFacebook = () => {
         LoginManager.logOut();
-        dispatch({ type: 'USERFACEBOOK', userInfo: {} })
+        // dispatch({ type: 'USERFACEBOOK', userInfo: {} })
     };
-    const Logout = () => {
+    const Logout = async () => {
+        await AsyncStorage.removeItem('Token')
         logoutWithFacebook()
         dispatch({ type: "LOGOUT" })
         navigation.reset({
             index: 0,
             routes: [{ name: 'ScreenFirst' }],
         })
+
     }
     return (
         <SafeAreaView style={AppStyle.StyleHome.container}>

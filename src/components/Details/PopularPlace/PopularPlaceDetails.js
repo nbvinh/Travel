@@ -8,6 +8,7 @@ import Experience from "./Experience";
 const PopularPlaceDetails = ({ navigation, route }) => {
     const item = useSelector(store => store.PopularPlace.item)
     const dispatch = useDispatch()
+    const [tongle, setTongle] = useState(false)
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: '#E5E5E5' }}>
             <StatusBar backgroundColor='transparent' translucent animated barStyle={"light-content"} />
@@ -44,10 +45,10 @@ const PopularPlaceDetails = ({ navigation, route }) => {
                                     source={require('../../../img/location.png')}
                                     style={AppStyle.StyleSchedule.img5}
                                 />
-                                <Text style={{ color: '#3076FE' }}>{item.text} Việt Nam</Text>
+                                <Text style={{ color: '#3076FE', fontSize: scale(10) }}>{item.text} Việt Nam</Text>
                             </View>
-                            <Text style={AppStyle.StylePopularPlaceDetails.label}>{item.label}</Text>
-                            <Text style={AppStyle.StylePopularPlaceDetails.Seemore}>Xem Thêm</Text>
+                            <Text numberOfLines={tongle ? null : 3} style={AppStyle.StylePopularPlaceDetails.label}>{item.label}</Text>
+                            <Text onPress={() => setTongle(!tongle)} style={AppStyle.StylePopularPlaceDetails.Seemore}>Xem Thêm</Text>
                             <TouchableOpacity style={AppStyle.StylePopularPlaceDetails.button}>
                                 <Text style={AppStyle.StylePopularPlaceDetails.textButton}>Tạo lịch trình</Text>
                             </TouchableOpacity>

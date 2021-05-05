@@ -32,8 +32,8 @@ const StyleHome = StyleSheet.create({
         marginRight: moderateVerticalScale(10)
     },
     textHeader: {
-        marginHorizontal: moderateVerticalScale(20),
-        marginTop: moderateVerticalScale(20)
+        marginHorizontal: moderateVerticalScale(16),
+        marginTop: moderateVerticalScale(44)
     },
     text1: {
         fontSize: verticalScale(18),

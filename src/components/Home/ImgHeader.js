@@ -24,11 +24,11 @@ const ImgHeader = () => {
                         <TouchableOpacity
                             onPress={() => onChoose(item)}
                             key={item.id.toString()}
-                            style={{ marginTop: height / 40, marginRight: 30 }}
+                            style={{ marginTop: scale(19), marginRight: scale(34) }}
                         >
                             <Image
                                 source={item.img}
-                                style={{ width: scale(35), height: scale(35) }}
+                                style={{ width: scale(35), height: scale(35), marginBottom:scale(5) }}
                             />
                             <Text style={{ color: 'white', fontSize: height / 68, textAlign: 'center' }}>{item.text}</Text>
                         </TouchableOpacity>

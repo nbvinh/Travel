@@ -13,7 +13,7 @@ const ScreenFirst = ({ navigation }) => {
         animated2()
         animated3()
         setTimeout(() => {
-            navigation.navigate('ScreenSecond')
+            navigation.navigate('AuthLoading')
         }, 3000)
     }, [])
     const animated3 = () => {

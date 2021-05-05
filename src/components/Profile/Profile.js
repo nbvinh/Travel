@@ -24,7 +24,7 @@ const Profile = ({ navigation }) => {
                     item.id === 1 ?
                         navigation.navigate('SeeMorePromotions')
                         :
-                        null
+                        navigation.navigate('Walkingschedule')
     }
     const dataItem = useSelector(store => store.people.dataItem)
     return (
