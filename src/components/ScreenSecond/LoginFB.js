@@ -15,12 +15,7 @@ const LoginFB = () => {
     const [tongle, setTongle] = useState(false)
     useEffect(() => {
         dispatch({ type: 'PROFILE', data: data })
-        const jsonValue = AsyncStorage.getItem('DATA')
-        if (jsonValue === null) {
-            AsyncStorage.setItem('DATA', JSON.stringify(data))
-            dispatch({ type: 'PROFILE', data: data })
-        }
-
+        AsyncStorage.setItem('DATA', JSON.stringify(data))
     }, [tongle])
     const navigation = useNavigation()
     const userInfo = useSelector(store => store.people.userInfo)

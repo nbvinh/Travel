@@ -17,7 +17,7 @@ const AddButton = (props) => {
         outputRange: ["0deg", "45deg"]
     });
     return (
-        <View style={{ flex: 1 }}>
+        <View>
             <Form mode={mode} />
             <TouchableOpacity style={styles.Plus}
                 onPress={() => handlePress()}
@@ -75,6 +75,7 @@ const styles = StyleSheet.create({
         backgroundColor: '#FF5F24',
         justifyContent: 'center',
         alignItems: 'center',
-        borderRadius: scale(30)
+        borderRadius: scale(30),
+        marginTop: scale(-25),
     }
 });

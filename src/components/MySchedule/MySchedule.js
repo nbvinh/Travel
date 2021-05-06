@@ -8,12 +8,26 @@ import { createMaterialTopTabNavigator } from "@react-navigation/material-top-ta
 import Finish from "./Finish";
 import Upcoming from "./Upcoming";
 import Walking from "./Walking";
+import ImageHeader from "../ImageHeader";
+import { useHeaderHeight } from "@react-navigation/stack";
 const MySchedule = ({ navigation }) => {
     const data = useSelector(store => store.Notification.data)
     const Tab = createMaterialTopTabNavigator()
+    const headerHeight = useHeaderHeight();
+    navigation.setOptions({
+        header: (e) => (
+            <ImageHeader
+                navigation={e.navigation}
+                height={headerHeight}
+                title={"Lịch trình của tôi"}
+                left={true}
+                right ={true}
+            />
+        ),
+    });
     return (
         <SafeAreaView style={AppStyle.StyleHome.container}>
-           {/* <StatusBar backgroundColor='white' translucent animated barStyle={"dark-content"} /> */}
+            {/* <StatusBar backgroundColor='white' translucent animated barStyle={"dark-content"} /> */}
             <View style={AppStyle.StyleHome.scrollview}>
                 <HeaderBottomTab text={'Lịch trình của tôi'} />
                 <View style={AppStyle.StyleProfile.body}>

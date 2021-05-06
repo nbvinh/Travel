@@ -10,15 +10,29 @@ import SeeIMG from "./SeeIMG";
 import Schedule from "../../Home/Schedule";
 import { verticalScale } from "react-native-size-matters";
 import Follow from "../../Follow";
+import { useHeaderHeight } from "@react-navigation/stack";
+import ImageHeader from "../../ImageHeader";
 const { height, width } = Dimensions.get('screen')
 const PersonalPage = ({ navigation }) => {
     const item = useSelector(store => store.people.user)
     const data = useSelector(store => store.Schedule.data)
+    const headerHeight = useHeaderHeight();
+    navigation.setOptions({
+        header: (e) => (
+            <ImageHeader
+                navigation={e.navigation}
+                height={headerHeight}
+                title={"Lịch trình của tôi"}
+                left={true}
+                right={true}
+            />
+        ),
+    });
     return (
-        <SafeAreaView style={AppStyle.StyleHome.container}>
-            <StatusBar backgroundColor='white' translucent animated barStyle={"dark-content"} />
+        // <SafeAreaView style={AppStyle.StyleHome.container}>
+        //     <StatusBar backgroundColor='white' translucent animated barStyle={"dark-content"} />
             <ScrollView style={AppStyle.StyleHome.scrollview}>
-                <Header text={'Thông tin cá nhân'} onBack={() => navigation.goBack()} />
+                {/* <Header text={'Thông tin cá nhân'} onBack={() => navigation.goBack()} /> */}
                 <View style={AppStyle.StyleProfile.body}>
                     <ScrollView style={AppStyle.StyleHome.scrollview}>
                         <View style={AppStyle.StylePersonalPage.container}>
@@ -54,7 +68,7 @@ const PersonalPage = ({ navigation }) => {
                     </ScrollView>
                 </View>
             </ScrollView>
-        </SafeAreaView>
+        // </SafeAreaView>
     )
 }
 export default PersonalPage;

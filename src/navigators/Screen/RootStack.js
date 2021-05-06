@@ -11,50 +11,55 @@ import {
 } from "../../components/index";
 import Walkingschedule from "../../components/Walkingschedule";
 import AuthLoading from "../../components/AuthLoading/AuthLoading";
+import Maps from "../../components/Details/PopularPlace/Maps";
+import MySchedule from "../../components/MySchedule/MySchedule";
 const Root = createStackNavigator();
 const RootStack = () => {
     return (
         <NavigationContainer >
-            <Root.Navigator headerMode="none">
-                <Root.Screen name="ScreenFirst" component={ScreenFirst} />
-                <Root.Screen name="AuthLoading" component={AuthLoading} />
-                <Root.Screen name="BottomTab" component={BottomTab} />
-                <Root.Screen name="ScreenSecond" component={ScreenSecond} />
-                <Root.Screen name="ScreenOTP" component={ScreenOTP} />
-                <Root.Screen name="ScreenUpdateProfile" component={ScreenUpdateProfile} />
-                <Root.Screen name="SeeMorePromotions" component={SeeMorePromotions} />
-                <Root.Screen name="PromotionDetails" component={PromotionDetails} />
-                <Root.Screen name="SeeMoreSchedule" component={SeeMoreSchedule} />
-                <Root.Screen name="SeeMorePopularPlace" component={SeeMorePopularPlace} />
-                <Root.Screen name="SeeMoreExperience" component={SeeMoreExperience} />
-                <Root.Screen name="SeeMoreDecemberDestination" component={SeeMoreDecemberDestination} />
-                <Root.Screen name="SeeMoreHotel" component={SeeMoreHotel} />
-                <Root.Screen name="ScheduleDetails" component={ScheduleDetails} />
-                <Root.Screen name="PopularPlaceDetails" component={PopularPlaceDetails} />
-                <Root.Screen name="ScheduleOverview" component={ScheduleOverview} />
-                <Root.Screen name="Setting" component={Setting} />
-                <Root.Screen name="PrivacyPolicy" component={PrivacyPolicy} />
-                <Root.Screen name="TermsOfUse" component={TermsOfUse} />
-                <Root.Screen name="PersonalPage" component={PersonalPage} />
-                <Root.Screen name="Heart" component={Heart} />
-                <Root.Screen name="FollowScreen" component={FollowScreen} />
-                <Root.Screen name="FollowingScreen" component={FollowingScreen} />
-                <Root.Screen name="EditProfile" component={EditProfile} />
-                <Root.Screen name="Search" component={Search} />
-                <Root.Screen name="Suggestion" component={Suggestion} />
-                <Root.Screen name="CareAll" component={CareAll} />
-                <Root.Screen name="ChoosePerson" component={ChoosePerson} />
-                <Root.Screen name="SeeSuggestion" component={SeeSuggestion} />
-                <Root.Screen name="CreateSchedules" component={CreateSchedules} />
-                <Root.Screen name="FindAroundHere" component={FindAroundHere} />
-                <Root.Screen name="ChooseRating" component={ChooseRating} />
-                <Root.Screen name="Rating" component={Rating} />
-                <Root.Screen name="HotelScreen" component={HotelScreen} />
-                <Root.Screen name="Restaurant" component={Restaurant} />
-                <Root.Screen name="Combo" component={Combo} />
-                <Root.Screen name="SearchRestaurant" component={SearchRestaurant} />
-                <Root.Screen name="HotelDetails" component={HotelDetails} />
-                <Root.Screen name="Walkingschedule" component={Walkingschedule} />
+            {/* <Root.Navigator headerMode="none"> */}
+            <Root.Navigator>
+                <Root.Screen name="ScreenFirst" component={ScreenFirst} options={{ header: () => null }}options={{ header: () => null }} />
+                <Root.Screen name="AuthLoading" component={AuthLoading} options={{ header: () => null }}options={{ header: () => null }} />
+                <Root.Screen name="BottomTab" component={BottomTab} options={{ header: () => null }}options={{ header: () => null }} />
+                <Root.Screen name="ScreenSecond" component={ScreenSecond} options={{ header: () => null }}options={{ header: () => null }} />
+                <Root.Screen name="ScreenOTP" component={ScreenOTP} options={{ header: () => null }}options={{ header: () => null }} />
+                <Root.Screen name="ScreenUpdateProfile" component={ScreenUpdateProfile} options={{ header: () => null }}options={{ header: () => null }} />
+                <Root.Screen name="SeeMorePromotions" component={SeeMorePromotions} options={{ header: () => null }}options={{ header: () => null }} />
+                <Root.Screen name="PromotionDetails" component={PromotionDetails} options={{ header: () => null }}options={{ header: () => null }} />
+                <Root.Screen name="SeeMoreSchedule" component={SeeMoreSchedule} options={{ header: () => null }}options={{ header: () => null }} />
+                <Root.Screen name="SeeMorePopularPlace" component={SeeMorePopularPlace} options={{ header: () => null }}options={{ header: () => null }} />
+                <Root.Screen name="SeeMoreExperience" component={SeeMoreExperience} options={{ header: () => null }}options={{ header: () => null }} />
+                <Root.Screen name="SeeMoreDecemberDestination" component={SeeMoreDecemberDestination} options={{ header: () => null }}options={{ header: () => null }} />
+                <Root.Screen name="SeeMoreHotel" component={SeeMoreHotel} options={{ header: () => null }}options={{ header: () => null }} />
+                <Root.Screen name="ScheduleDetails" component={ScheduleDetails} options={{ header: () => null }}options={{ header: () => null }} />
+                <Root.Screen name="PopularPlaceDetails" component={PopularPlaceDetails} options={{ header: () => null }}options={{ header: () => null }} />
+                <Root.Screen name="ScheduleOverview" component={ScheduleOverview} options={{ header: () => null }} />
+                <Root.Screen name="Setting" component={Setting} options={{ header: () => null }} />
+                <Root.Screen name="PrivacyPolicy" component={PrivacyPolicy} options={{ header: () => null }} />
+                <Root.Screen name="TermsOfUse" component={TermsOfUse} options={{ header: () => null }} />
+                <Root.Screen name="PersonalPage" component={PersonalPage} options={{ header: () => null }} />
+                <Root.Screen name="Heart" component={Heart} options={{ header: () => null }} />
+                <Root.Screen name="FollowScreen" component={FollowScreen} options={{ header: () => null }} />
+                <Root.Screen name="FollowingScreen" component={FollowingScreen} options={{ header: () => null }} />
+                <Root.Screen name="EditProfile" component={EditProfile} options={{ header: () => null }} />
+                <Root.Screen name="Search" component={Search} options={{ header: () => null }} />
+                <Root.Screen name="Suggestion" component={Suggestion} options={{ header: () => null }} />
+                <Root.Screen name="CareAll" component={CareAll} options={{ header: () => null }} />
+                <Root.Screen name="ChoosePerson" component={ChoosePerson} options={{ header: () => null }} />
+                <Root.Screen name="SeeSuggestion" component={SeeSuggestion} options={{ header: () => null }} />
+                <Root.Screen name="CreateSchedules" component={CreateSchedules} options={{ header: () => null }} />
+                <Root.Screen name="FindAroundHere" component={FindAroundHere} options={{ header: () => null }} />
+                <Root.Screen name="ChooseRating" component={ChooseRating} options={{ header: () => null }} />
+                <Root.Screen name="Rating" component={Rating} options={{ header: () => null }} />
+                <Root.Screen name="HotelScreen" component={HotelScreen} options={{ header: () => null }} />
+                <Root.Screen name="Restaurant" component={Restaurant} options={{ header: () => null }} />
+                <Root.Screen name="Combo" component={Combo} options={{ header: () => null }} />
+                <Root.Screen name="SearchRestaurant" component={SearchRestaurant} options={{ header: () => null }} />
+                <Root.Screen name="HotelDetails" component={HotelDetails} options={{ header: () => null }} />
+                <Root.Screen name="Walkingschedule" component={Walkingschedule} options={{ header: () => null }} />
+                <Root.Screen name="Maps" component={Maps} options={{ header: () => null }} />
+                <Root.Screen name="MySchedule" component={MySchedule} />
             </Root.Navigator>
         </NavigationContainer>
     )

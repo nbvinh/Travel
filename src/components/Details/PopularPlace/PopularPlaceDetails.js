@@ -54,10 +54,12 @@ const PopularPlaceDetails = ({ navigation, route }) => {
                             </TouchableOpacity>
                         </View>
                     </View>
-                    <Image
-                        source={require('../../../img/mapPlace.png')}
-                        style={AppStyle.StylePopularPlaceDetails.img2}
-                    />
+                    <TouchableOpacity onPress={() => navigation.navigate("Maps")}>
+                        <Image
+                            source={require('../../../img/mapPlace.png')}
+                            style={AppStyle.StylePopularPlaceDetails.img2}
+                        />
+                    </TouchableOpacity>
                     <TextHome text1={'Lịch trình OKGO đề xuất'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMoreDecemberDestination')} />
                     <View style={{ marginLeft: scale(16) }}>
                         <Schedule data={item.ScheduleOK} />
