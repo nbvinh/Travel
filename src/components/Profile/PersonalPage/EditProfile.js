@@ -8,6 +8,8 @@ import { scale, verticalScale } from "react-native-size-matters";
 import Input from "../../Input";
 import ImagePicker from 'react-native-image-crop-picker';
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useHeaderHeight } from "@react-navigation/stack";
+import ImageHeader from "../../ImageHeader";
 const EditProfile = ({ navigation }) => {
     const user = useSelector(store => store.people.user)
     const [fisrtname, setFirstname] = useState("");
@@ -36,26 +38,36 @@ const EditProfile = ({ navigation }) => {
         setAvatar(user.avatar)
         setphone(user.phone)
     }, [navigation])
+    const headerHeight = useHeaderHeight();
+    navigation.setOptions({
+        header: (e) => (
+            <ImageHeader
+                navigation={e.navigation}
+                height={headerHeight}
+                title={"Sửa thông tin cá nhân"}
+                left={true}
+                EditProfile={true}
+                onSave={() => onSave()}
+                right={true}
+            />
+        ),
+    });
     return (
-        <SafeAreaView style={AppStyle.StyleHome.container}>
-            <StatusBar backgroundColor='white' translucent animated barStyle={"dark-content"} />
-            <ScrollView style={AppStyle.StyleHome.scrollview}>
-                <HeaderEdit text={'Sửa thông tin cá nhân'} onBack={() => navigation.goBack()} onSave={() => onSave()} />
-                <View style={styles.container} >
-                    <View style={styles.body}>
-                        <Image
-                            source={{ uri: avatar }}
-                            style={styles.avatar}
-                        />
-                        <Text onPress={() => onPicture()} style={styles.edit}>Thay ảnh đại diện</Text>
-                    </View>
-                    <Input value={fisrtname} setValue={setFirstname} text={'Họ'} editable={true} selectTextOnFocus={true} />
-                    <Input value={lastname} setValue={setLastname} text={'Tên'} editable={true} selectTextOnFocus={true} />
-                    <Input value={"Vinh230620@gmail.com"} text={'Email'} editable={false} selectTextOnFocus={false} />
-                    <Input value={phone} setValue={setphone} text={'Số điện thoại'} editable={true} selectTextOnFocus={true} keyboardType={"numeric"} />
+        <ScrollView style={AppStyle.StyleHome.scrollview}>
+            <View style={styles.container} >
+                <View style={styles.body}>
+                    <Image
+                        source={{ uri: avatar }}
+                        style={styles.avatar}
+                    />
+                    <Text onPress={() => onPicture()} style={styles.edit}>Thay ảnh đại diện</Text>
                 </View>
-            </ScrollView>
-        </SafeAreaView>
+                <Input value={fisrtname} setValue={setFirstname} text={'Họ'} editable={true} selectTextOnFocus={true} />
+                <Input value={lastname} setValue={setLastname} text={'Tên'} editable={true} selectTextOnFocus={true} />
+                <Input value={"Vinh230620@gmail.com"} text={'Email'} editable={false} selectTextOnFocus={false} />
+                <Input value={phone} setValue={setphone} text={'Số điện thoại'} editable={true} selectTextOnFocus={true} keyboardType={"numeric"} />
+            </View>
+        </ScrollView>
     )
 }
 export default EditProfile;

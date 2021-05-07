@@ -54,22 +54,22 @@ const PopularPlaceDetails = ({ navigation, route }) => {
                             </TouchableOpacity>
                         </View>
                     </View>
-                    <TouchableOpacity onPress={() => navigation.navigate("Maps")}>
+                    <TouchableOpacity onPress={() => navigation.navigate("HomeStack", { screen: "Maps" })}>
                         <Image
                             source={require('../../../img/mapPlace.png')}
                             style={AppStyle.StylePopularPlaceDetails.img2}
                         />
                     </TouchableOpacity>
-                    <TextHome text1={'Lịch trình OKGO đề xuất'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMoreDecemberDestination')} />
+                    <TextHome text1={'Lịch trình OKGO đề xuất'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate("HomeStack", { screen: 'SeeMoreDecemberDestination' })} />
                     <View style={{ marginLeft: scale(16) }}>
                         <Schedule data={item.ScheduleOK} />
                     </View>
-                    <TextHome text1={'Lịch trình tạo gần đây'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMoreDecemberDestination')} />
+                    <TextHome text1={'Lịch trình tạo gần đây'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate("HomeStack", { screen: 'SeeMoreDecemberDestination' })} />
                     <View style={{ marginLeft: scale(16) }}>
                         <Schedule data={item.ScheduleOK} />
                     </View>
                     <TextHome text1={'Khách sạn & Resort'} text2={'Xem Thêm >'} onSeeMore={() => {
-                        navigation.navigate('SeeMoreHotel', { dataHotel: item.HotelLySon })
+                        navigation.navigate("HomeStack", { screen: 'SeeMoreHotel', params: { dataHotel: item.HotelLySon } })
                         dispatch({ type: 'TYPE', typeHotel: "Hotel" })
                     }} />
                     <View style={{ marginLeft: scale(16) }}>
@@ -77,12 +77,12 @@ const PopularPlaceDetails = ({ navigation, route }) => {
                     </View>
                     <TextHome text1={'Nhà Hàng'} text2={'Xem Thêm >'} onSeeMore={() => {
                         dispatch({ type: 'TYPE', typeHotel: "Restaurant" })
-                        navigation.navigate('SeeMoreHotel', { dataHotel: item.Restaurant })
+                        navigation.navigate("HomeStack", { screen: 'SeeMoreHotel', params: { dataHotel: item.Restaurant } })
                     }} />
                     <View style={{ marginLeft: scale(16) }}>
                         <Hotel data={item.Restaurant} />
                     </View>
-                    <TextHome text1={'Khám Phá'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMoreDecemberDestination')} />
+                    <TextHome text1={'Khám Phá'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate("HomeStack", { screen:'SeeMoreDecemberDestination'})} />
                     <Experience />
                 </View>
             </ScrollView>

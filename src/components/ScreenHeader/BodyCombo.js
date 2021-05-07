@@ -14,7 +14,7 @@ const BodyCombo = (props) => {
     const dataHaGiang = useSelector(store => store.dataheader.dataHaGiang)
     return (
         <View>
-            <TextHome text1={'Gợi ý tại điểm đến'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMorePopularPlace')} />
+            <TextHome text1={'Gợi ý tại điểm đến'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate("HomeStack", { screen:'SeeMorePopularPlace'})} />
             <ScrollView horizontal={true} style={styles.body}>
                 {
                     data && data.map((item) => {
@@ -30,15 +30,15 @@ const BodyCombo = (props) => {
                     })
                 }
             </ScrollView>
-            <TextHome text1={'Combo giá rẻ'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMoreSchedule')} />
+            <TextHome text1={'Combo giá rẻ'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate("HomeStack", { screen:'SeeMoreSchedule'})} />
             <View style={AppStyle.StyleHome.marginLeft}>
                 <Schedule data={dataSchedule} />
             </View>
-            <TextHome text1={'Combo Huế'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMoreSchedule')} />
+            <TextHome text1={'Combo Huế'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate("HomeStack", { screen:'SeeMoreSchedule'})} />
             <View style={AppStyle.StyleHome.marginLeft}>
                 <Schedule data={dataHue} />
             </View>
-            <TextHome text1={'Combo Hà Giang'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMoreSchedule')} />
+            <TextHome text1={'Combo Hà Giang'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate("HomeStack", { screen:'SeeMoreSchedule'})} />
             <View style={AppStyle.StyleHome.marginLeft}>
                 <Schedule data={dataHaGiang}/>
             </View>

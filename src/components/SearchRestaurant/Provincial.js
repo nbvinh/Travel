@@ -8,7 +8,7 @@ const Provincial = (props) => {
     const item = props.item
     const navigation = useNavigation()
     const FindAroundHere = () => {
-        navigation.navigate("FindAroundHere", { item: item })
+        navigation.navigate("HomeStack", { screen:"FindAroundHere", params:{ item: item }})
     }
     return (
         <TouchableOpacity onPress={() => FindAroundHere()} style={styles.container}>

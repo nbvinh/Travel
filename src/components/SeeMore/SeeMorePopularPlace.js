@@ -19,7 +19,7 @@ const SeeMorePopularPlace = ({ navigation }) => {
                                 <TouchableOpacity
                                     onPress={() => {
                                         dispatch({ type: 'IDPOPULARPLACE', item: item })
-                                        navigation.navigate('PopularPlaceDetails')
+                                        navigation.navigate("HomeStack", { screen:'PopularPlaceDetails'})
                                     }}
                                     key={item.id.toString()}
                                     style={{ marginBottom: width / 18.75,marginHorizontal: 10 }}

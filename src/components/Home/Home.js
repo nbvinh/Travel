@@ -36,43 +36,43 @@ const Home = ({ navigation, route }) => {
                             maxLength={20}
                             onChangeText={(value) => setSearch(value)}
                             style={AppStyle.StyleHome.textinput}
-                            onFocus={() => navigation.navigate('Search')}
+                            onFocus={() => navigation.navigate("HomeStack", { screen:'Search'})}
                         />
                     </View>
                 </ImageBackground>
                 <View style={{ flex: 10 }}>
                     <View style={AppStyle.StyleHome.onpress}>
-                        <TouchableOpacity style={AppStyle.StyleHome.touchable} onPress={() => navigation.navigate('Suggestion')}>
+                        <TouchableOpacity style={AppStyle.StyleHome.touchable} onPress={() => navigation.navigate("HomeStack", { screen: 'Suggestion' })}>
                             <Text style={AppStyle.StyleHome.text3}>Xem gợi ý</Text>
                         </TouchableOpacity>
-                        <TouchableOpacity style={AppStyle.StyleHome.touchable} onPress={() => navigation.navigate('CreateSchedules')}>
+                        <TouchableOpacity style={AppStyle.StyleHome.touchable} onPress={() => navigation.navigate("HomeStack", { screen: 'CreateSchedules' })}>
                             <Text style={AppStyle.StyleHome.text3}>Tạo lịch trình</Text>
                         </TouchableOpacity>
                     </View>
-                    <TextHome text1={'Khuyến Mại'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMorePromotions')} />
+                    <TextHome text1={'Khuyến Mại'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate("HomeStack", { screen: 'SeeMorePromotions' })} />
                     <View style={AppStyle.StyleHome.marginLeft}>
                         <Promotion />
                     </View>
-                    <TextHome text1={'Lịch trình gần đây'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMoreSchedule')} />
+                    <TextHome text1={'Lịch trình gần đây'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate("HomeStack", { screen: 'SeeMoreSchedule' })} />
                     <View style={AppStyle.StyleHome.marginLeft}>
                         <Schedule data={dataSchedule} />
                     </View>
-                    <TextHome text1={'Địa điểm phổ biến'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMorePopularPlace')} />
+                    <TextHome text1={'Địa điểm phổ biến'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate("HomeStack", { screen: 'SeeMorePopularPlace' })} />
                     <View style={AppStyle.StyleHome.marginLeft}>
                         <PopularPlace />
                     </View>
-                    <TextHome text1={'Trải Nghiệm nổi bật'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMoreExperience')} />
+                    <TextHome text1={'Trải Nghiệm nổi bật'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate("HomeStack", { screen: 'SeeMoreExperience' })} />
                     <View style={AppStyle.StyleHome.marginLeft}>
                         <Experience />
                     </View>
-                    <TextHome text1={'Điểm đến tháng 12'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMoreDecemberDestination')} />
+                    <TextHome text1={'Điểm đến tháng 12'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate("HomeStack", { screen: 'SeeMoreDecemberDestination' })} />
                     <View style={AppStyle.StyleHome.marginLeft}>
                         <DecemberDestination data={DecemberDestinationArr} />
                     </View>
                     <TextHome text1={'Khách sạn & Resort'} text2={'Xem Thêm >'}
                         onSeeMore={() => {
                             dispatch({ type: 'TYPE', typeHotel: "Hotel" })
-                            navigation.navigate('SeeMoreHotel', { dataHotel: data })
+                            navigation.navigate("HomeStack", { screen: 'SeeMoreHotel', params: { dataHotel: data } })
                         }}
                     />
                     <View style={AppStyle.StyleHome.marginLeft}>

@@ -14,7 +14,7 @@ const ScreenSecond = ({ navigation }) => {
         }
     }
     const onOK = () => {
-        navigation.navigate('ScreenOTP')
+        navigation.navigate("AuthStack", { screen:'ScreenOTP'})
         dispatch({ type: 'PHONE', phone: "0" + text })
     }
     const dispatch = useDispatch()

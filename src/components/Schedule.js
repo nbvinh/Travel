@@ -14,14 +14,16 @@ const Schedule = (props) => {
     const navigation = props.navigation
     const onNavigation = () => {
         typeNavigation === 'add' ?
-            navigation.navigate('ScheduleDetails',
-                { item: item }
+            navigation.navigate("HomeStack", {
+                screen: 'ScheduleDetails',
+                params: { item: item }
+            }
             ) || dispatch({ type: 'ADDSCHEDULEITEM', ScheduleItem: item.imgday })
             :
             typeNavigation === 'finish' ?
-                navigation.navigate('Rating') || dispatch({ type: 'RATING', id: item.id })
+                navigation.navigate("HomeStack", { screen:'Rating'}) || dispatch({ type: 'RATING', id: item.id })
                 : typeNavigation === "walking" ?
-                    navigation.navigate('Walkingschedule') : null
+                    navigation.navigate("HomeStack", { screen:'Walkingschedule'}) : null
     }
     const dispatch = useDispatch()
     return (

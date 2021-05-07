@@ -14,8 +14,7 @@ const Body = (props) => {
         item.id === 2 ?
             dispatch({ type: 'CHOOSETIME' }) :
             item.id === 3 ?
-                navigation.navigate('ChoosePerson')
-
+                navigation.navigate("HomeStack", { screen: 'ChoosePerson' })
                 : null
     }
     const [isEnabled, setIsEnabled] = useState(false);
@@ -44,7 +43,7 @@ const Body = (props) => {
                                 style={{
                                     position: 'absolute',
                                     right: 0,
-                                    bottom:scale(5)
+                                    bottom: scale(5)
                                 }}
                                 trackColor={{ false: "#767577", true: "#00D42F" }}
                                 thumbColor={isEnabled ? "#f4f3f4" : "#f4f3f4"}

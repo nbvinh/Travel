@@ -14,7 +14,7 @@ const Schedule = (props) => {
                 text: "Có",
                 onPress: () => {
                     dispatch({ type: 'ADDWALKING', Walking: item })
-                    navigation.navigate('BottomTab')
+                    navigation.navigate("MainTab", { screen: 'BottomTab' })
                 }
             },
             {
@@ -29,7 +29,7 @@ const Schedule = (props) => {
         <View style={AppStyle.StyleScheduleOverview.containerSchedule}>
             <View key={item.id.toString()} >
                 <TextHome text1={'Kế hoạch'} text2={'Tất cả >'} onSeeMore={() => console.log('Truong Anh Vinh')} />
-                <ScrollView horizontal={true} showsHorizontalScrollIndicator ={false} style={AppStyle.StyleScheduleOverView2.container}>
+                <ScrollView horizontal={true} showsHorizontalScrollIndicator={false} style={AppStyle.StyleScheduleOverView2.container}>
                     {ScheduleItem && ScheduleItem.map((item) => {
                         return (
                             <View key={item.imgId} >

@@ -5,19 +5,28 @@ import Header from '../../Header'
 import { useSelector } from "react-redux";
 import AppStyle from "../../../theme/index";
 import Schedule from "../../Schedule";
+import { useHeaderHeight } from "@react-navigation/stack";
+import ImageHeader from "../../ImageHeader";
 const { height, width } = Dimensions.get('screen')
 const Heart = ({ navigation }) => {
     const heart = useSelector(store => store.Schedule.heartARR)
+    const headerHeight = useHeaderHeight();
+    navigation.setOptions({
+        header: (e) => (
+            <ImageHeader
+                navigation={e.navigation}
+                height={headerHeight}
+                title={"Yêu thích"}
+                left={true}
+            />
+        ),
+    });
     return (
-        <SafeAreaView style={AppStyle.StyleHome.container}>
-            <StatusBar backgroundColor='white' translucent animated barStyle={"dark-content"} />
             <ScrollView style={AppStyle.StyleHome.scrollview}>
-                <Header text={'Yêu thích'} onBack={() => navigation.goBack()} />
                 <View style={{ flex: 10, marginHorizontal: verticalScale(20), marginVertical: scale(20) }}>
                     {heart && heart.map((item) => <Schedule item={item} key={item.id} type={'heart'} />)}
                 </View>
             </ScrollView>
-        </SafeAreaView>
     )
 }
 export default Heart;

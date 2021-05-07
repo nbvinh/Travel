@@ -16,7 +16,7 @@ const Input = (props) => {
             maxLength={30}
             onFocus={() => {
                 type === 'SearchRestaurant' ?
-                    navigation.navigate('SearchRestaurant')
+                    navigation.navigate("HomeStack", { screen:'SearchRestaurant'})
                     : null
             }}
         />

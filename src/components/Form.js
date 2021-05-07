@@ -73,10 +73,6 @@ const Form = (props) => {
         inputRange: [0, 1],
         outputRange: [0, scale(10)]
     });
-    const onTest = () => {
-        navigation.navigate('ScreenFirst')
-        dispatch({ type: 'MODE' })
-    }
     return (
         <Modal
             animationType='fade'
@@ -88,28 +84,28 @@ const Form = (props) => {
                 <TouchableOpacity
                     onPress={() => {
                         dispatch({ type: 'MODE' })
-                        navigation.navigate("CreateSchedules")
+                        navigation.navigate("HomeStack", { screen: "CreateSchedules" })
                     }}
                     style={{ position: 'absolute', width: scale(48), height: scale(48), left: scale(60.5), bottom: scale(72), zIndex: 1 }}>
                 </TouchableOpacity>
                 <TouchableOpacity
                     onPress={() => {
                         dispatch({ type: 'MODE' })
-                        navigation.navigate("Search")
+                        navigation.navigate("HomeStack", { screen:"Search"})
                     }}
                     style={{ position: 'absolute', width: scale(48), height: scale(48), right: scale(62), bottom: scale(72), zIndex: 1 }}>
                 </TouchableOpacity>
                 <TouchableOpacity
                     onPress={() => {
                         dispatch({ type: 'MODE' })
-                        navigation.navigate("ChooseRating")
+                        navigation.navigate("HomeStack", { screen:"ChooseRating"})
                     }}
                     style={{ position: 'absolute', width: scale(48), height: scale(48), right: scale(112), bottom: scale(142), zIndex: 1 }}>
                 </TouchableOpacity>
                 <TouchableOpacity
                     onPress={() => {
                         dispatch({ type: 'MODE' })
-                        navigation.navigate("Suggestion")
+                        navigation.navigate("HomeStack", { screen:"Suggestion"})
                     }}
                     style={{ position: 'absolute', width: scale(48), height: scale(48), left: scale(110.5), bottom: scale(142), zIndex: 1 }}>
                 </TouchableOpacity>

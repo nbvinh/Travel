@@ -7,7 +7,7 @@ const { height, width } = Dimensions.get('screen')
 const ButtonCF = (props) => {
     const type = props.type
     const onSeeSuggestion = () => {
-        type === 'Xem gợi ý' ? navigation.navigate('SeeSuggestion') : type === "Xong" ? navigation.goBack() : null
+        type === 'Xem gợi ý' ? navigation.navigate("HomeStack", { screen:'SeeSuggestion'}) : type === "Xong" ? navigation.goBack() : null
     }
     const navigation = useNavigation();
     return (

@@ -17,27 +17,27 @@ const Item = (props) => {
             {item.id === 10 ?
                 <View>
                     <TextHome text1={'Khách sạn gần đây'} text2={'Xem Thêm >'} onSeeMore={() => {
-                        navigation.navigate('SeeMoreHotel', { dataHotel: dataFind })
+                        navigation.navigate("HomeStack", { screen: 'SeeMoreHotel', params: { dataHotel: dataFind } })
                         dispatch({ type: 'TYPE', typeHotel: "Hotel" })
                     }} />
                     <View style={AppStyle.StyleHome.marginLeft}>
                         <Hotel data={dataFind} type={"FindHotel"} />
                     </View>
                     <TextHome text1={'Nhà hàng gần đây'} text2={'Xem Thêm >'} onSeeMore={() => {
-                        navigation.navigate('SeeMoreHotel', { dataHotel: restaurant })
+                        navigation.navigate("HomeStack", { screen: 'SeeMoreHotel', params: { dataHotel: restaurant } })
                         dispatch({ type: 'TYPE', typeHotel: "Restaurant" })
                     }} />
                     <View style={AppStyle.StyleHome.marginLeft}>
                         <Hotel data={restaurant} type={"FindDestination"} />
                     </View>
-                    <TextHome text1={'Điểm đến gần đây'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMoreDecemberDestination')} />
+                    <TextHome text1={'Điểm đến gần đây'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate("HomeStack", { screen:'SeeMoreDecemberDestination'})} />
 
                     <View style={AppStyle.StyleHome.marginLeft}>
                         <DecemberDestination data={DestinationFind} />
                     </View>
-                    <TextHome text1={'Lịch trình gợi ý'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMoreSchedule')} />
+                    <TextHome text1={'Lịch trình gợi ý'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate("HomeStack", { screen:'SeeMoreSchedule'})} />
                     <View style={[AppStyle.StyleHome.marginLeft, { marginBottom: scale(30) }]}>
-                        <Schedule data={data}/>
+                        <Schedule data={data} />
                     </View>
                 </View>
                 :
@@ -45,12 +45,12 @@ const Item = (props) => {
                     <View style={styles.FindFailed}>
                         <Text style={styles.text1}>Chưa có kết quả nào phù hợp</Text>
                     </View>
-                    <TextHome text1={'Điểm đến gần đây'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMoreDecemberDestination')} />
+                    <TextHome text1={'Điểm đến gần đây'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate("HomeStack", { screen:'SeeMoreDecemberDestination'})} />
 
                     <View style={AppStyle.StyleHome.marginLeft}>
                         <DecemberDestination data={DestinationFind} />
                     </View>
-                    <TextHome text1={'Lịch trình gợi ý'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMoreSchedule')} />
+                    <TextHome text1={'Lịch trình gợi ý'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate("HomeStack", { screen:'SeeMoreSchedule'})} />
                     <View style={[AppStyle.StyleHome.marginLeft, { marginBottom: scale(30) }]}>
                         <Schedule data={data} />
                     </View>

@@ -9,7 +9,7 @@ const SeeMoreHotel = ({ navigation, route }) => {
     const type = useSelector(store => store.Hotel.typeHotel)
     const dispatch = useDispatch()
     const onHotel = (item) => {
-        navigation.navigate('HotelDetails')
+        navigation.navigate("HomeStack", { screen:'HotelDetails'})
         dispatch({ type: 'ITEM', item: item })
     }
     return (

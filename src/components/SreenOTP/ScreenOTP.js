@@ -18,7 +18,7 @@ const ScreenOTP = ({ navigation }) => {
     const inputRef4 = useRef();
     const onConFirm = () => {
         if (OTP === OTP1 + OTP2 + OTP3 + OTP4) {
-            navigation.navigate('ScreenUpdateProfile')
+            navigation.navigate("AuthStack", { screen: 'ScreenUpdateProfile' })
         }
     }
     const [TimeDown, setTimeDown] = useState(59);

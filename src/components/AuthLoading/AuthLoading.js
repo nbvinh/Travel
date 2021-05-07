@@ -12,13 +12,13 @@ const AuthLoading = ({ navigation }) => {
     async function checkApp() {
         let Token = await AsyncStorage.getItem('Token');
         if (Token === null) {
-            navigation.navigate('ScreenSecond')
+            navigation.navigate("AuthStack", { screen: 'ScreenSecond' })
         }
         else {
             const jsonValue = await AsyncStorage.getItem('DATA')
             const data = jsonValue != null ? JSON.parse(jsonValue) : null;
             dispatch({ type: 'PROFILE', data: data })
-            navigation.navigate('BottomTab')
+            navigation.navigate("MainTab", { screen: 'BottomTab' })
         }
     }
     return (

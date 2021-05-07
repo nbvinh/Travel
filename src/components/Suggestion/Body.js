@@ -18,7 +18,7 @@ const Body = (props) => {
             dispatch({ type: 'CHOOSETIME' }) : item.id === 3 ?
                 dispatch({ type: 'CHOOSEBUDGET' }) :
                 item.id === 4 ?
-                    navigation.navigate('ChoosePerson')
+                    navigation.navigate("HomeStack", { screen: 'ChoosePerson' })
                     : null
     }
     return (

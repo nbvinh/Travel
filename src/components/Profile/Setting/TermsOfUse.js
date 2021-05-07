@@ -1,16 +1,27 @@
+import { useHeaderHeight } from "@react-navigation/stack";
 import React, { useEffect, useState } from "react";
 import { View, Text, ImageBackground, SafeAreaView, StyleSheet, Dimensions, Image, TextInput, ScrollView, StatusBar } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { useSelector } from "react-redux";
 import AppStyle from "../../../theme/index";
 import Header from "../../Header";
+import ImageHeader from "../../ImageHeader";
 const { height, width } = Dimensions.get('screen');
 const TermsOfUse = ({ navigation }) => {
+    const headerHeight = useHeaderHeight();
+    navigation.setOptions({
+        header: (e) => (
+            <ImageHeader
+                navigation={e.navigation}
+                height={headerHeight}
+                title={"Điều khoản sử dụng"}
+                left={true}
+            />
+        ),
+    });
     return (
         <SafeAreaView style={AppStyle.StyleHome.container}>
-            <StatusBar backgroundColor='white' translucent animated barStyle={"dark-content"} />
             <ScrollView style={AppStyle.StyleHome.scrollview}>
-                <Header text={'Điều khoản sử dụng'} onBack={() => navigation.goBack()} />
                 <View style={AppStyle.StyleProfile.body}>
                     <ScrollView style={AppStyle.StyleHome.scrollview}>
                         <View style={AppStyle.StyleProfile.setting}>

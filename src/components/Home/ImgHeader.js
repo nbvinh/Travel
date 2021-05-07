@@ -9,11 +9,11 @@ const ImgHeader = () => {
     const navigation = useNavigation();
     const onChoose = (item) => {
         item.id === 1 ?
-            navigation.navigate('HotelScreen')
+            navigation.navigate("HomeStack", { screen:'HotelScreen'})
             : item.id === 4 ?
-                navigation.navigate('Restaurant')
+                navigation.navigate("HomeStack", { screen:'Restaurant'})
                 : item.id === 3 ?
-                    navigation.navigate('Combo')
+                    navigation.navigate("HomeStack", { screen:'Combo'})
                     : null
     }
     return (

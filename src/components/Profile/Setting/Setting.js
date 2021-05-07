@@ -8,16 +8,18 @@ import Header from "../../Header";
 import AsyncStorage from '@react-native-async-storage/async-storage';
 const { height, width } = Dimensions.get('screen');
 import Item from "./Item";
+import { useHeaderHeight } from "@react-navigation/stack";
+import ImageHeader from "../../ImageHeader";
 const Setting = ({ navigation }) => {
     const dispatch = useDispatch()
     const dataItem = useSelector(store => store.people.dataSetting)
     const userInfo = useSelector(store => store.people.userInfo)
     const onScreen = (item) => {
         item.id === 0 ?
-            navigation.navigate('PrivacyPolicy')
+            navigation.navigate("ProfileStack", { screen: 'PrivacyPolicy' })
             :
             item.id === 1 ?
-                navigation.navigate('TermsOfUse')
+                navigation.navigate("ProfileStack", { screen: 'TermsOfUse' })
                 :
                 item.id === 3 ?
                     Logout()
@@ -32,17 +34,22 @@ const Setting = ({ navigation }) => {
         await AsyncStorage.removeItem('Token')
         logoutWithFacebook()
         dispatch({ type: "LOGOUT" })
-        navigation.reset({
-            index: 0,
-            routes: [{ name: 'ScreenFirst' }],
-        })
-
+        navigation.replace("AuthStack", { screen: 'ScreenFirst' });
     }
+    const headerHeight = useHeaderHeight();
+    navigation.setOptions({
+        header: (e) => (
+            <ImageHeader
+                navigation={e.navigation}
+                height={headerHeight}
+                title={"Cài đặt"}
+                left={true}
+            />
+        ),
+    });
     return (
         <SafeAreaView style={AppStyle.StyleHome.container}>
-            <StatusBar backgroundColor='white' translucent animated barStyle={"dark-content"} />
             <ScrollView style={AppStyle.StyleHome.scrollview}>
-                <Header text={'Cài đặt'} onBack={() => navigation.goBack()} />
                 <View style={AppStyle.StyleProfile.body}>
                     <ScrollView style={AppStyle.StyleHome.scrollview}>
                         <View style={AppStyle.StyleProfile.setting}>

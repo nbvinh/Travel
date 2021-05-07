@@ -7,7 +7,7 @@ const Follow = (props) => {
     const type = props.type
     const navigation = props.navigation
     const onChangeFollow = () => {
-        type === 'follow' ? navigation.navigate('FollowScreen') : navigation.navigate('FollowingScreen')
+        type === 'follow' ? navigation.navigate("ProfileStack", { screen:'FollowScreen'}) : navigation.navigate("ProfileStack", { screen:'FollowingScreen'})
     }
     return (
         <TouchableOpacity onPress={() => onChangeFollow()}>

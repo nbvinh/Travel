@@ -21,7 +21,7 @@ const Body = (props) => {
     const offer2 = type === "Hotel" ? Homestay : RestaurantFamily
     return (
         <View>
-            <TextHome text1={'Gợi ý tại điểm đến'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMorePopularPlace')} />
+            <TextHome text1={'Gợi ý tại điểm đến'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate("HomeStack", { screen: 'SeeMorePopularPlace' })} />
             <ScrollView horizontal={true} style={styles.body}>
                 {
                     data && data.map((item) => {
@@ -37,15 +37,15 @@ const Body = (props) => {
                     })
                 }
             </ScrollView>
-            <TextHome text1={"Đề Xuất cho bạn"} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMoreHotel')} />
+            <TextHome text1={"Đề Xuất cho bạn"} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate("HomeStack", { screen: 'SeeMoreHotel' })} />
             <View style={AppStyle.StyleHome.marginLeft}>
                 <Hotel data={offer1} type={"FindHotel"} />
             </View>
-            <TextHome text1={type === "Hotel" ? 'Homestay' : "Nhà hàng cho gia đình"} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMoreHotel')} />
+            <TextHome text1={type === "Hotel" ? 'Homestay' : "Nhà hàng cho gia đình"} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate("HomeStack", { screen: 'SeeMoreHotel' })} />
             <View style={AppStyle.StyleHome.marginLeft}>
                 <Hotel data={offer2} type={"FindHotel"} />
             </View>
-            <TextHome text1={type === "Hotel" ? 'Đề Xuất cho cặp đôi' : "Cafe cho cặp đôi"} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMoreHotel')} />
+            <TextHome text1={type === "Hotel" ? 'Đề Xuất cho cặp đôi' : "Cafe cho cặp đôi"} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate("HomeStack", { screen: 'SeeMoreHotel' })} />
             <View style={AppStyle.StyleHome.marginLeft}>
                 <Hotel data={couple} type={"home"} />
             </View>

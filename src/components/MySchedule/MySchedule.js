@@ -20,36 +20,33 @@ const MySchedule = ({ navigation }) => {
                 navigation={e.navigation}
                 height={headerHeight}
                 title={"Lịch trình của tôi"}
-                left={true}
-                right ={true}
             />
         ),
     });
     return (
-        <SafeAreaView style={AppStyle.StyleHome.container}>
-            {/* <StatusBar backgroundColor='white' translucent animated barStyle={"dark-content"} /> */}
-            <View style={AppStyle.StyleHome.scrollview}>
-                <HeaderBottomTab text={'Lịch trình của tôi'} />
-                <View style={AppStyle.StyleProfile.body}>
-                    <View style={styles.container}>
-                        <Tab.Navigator
-                            tabBarOptions={{
-                                showLabel: true,
-                                labelStyle: { fontSize: verticalScale(12), fontWeight: '500' },
-                                activeTintColor: "#FF5F24",
-                                inactiveTintColor: "black",
-                                style: { backgroundColor: '#E5E5E5', marginBottom: scale(15) },
-                                indicatorStyle: { backgroundColor: "#FF5F24" }
+        // <SafeAreaView style={AppStyle.StyleHome.container}>
+        <View style={AppStyle.StyleHome.scrollview}>
+            {/* <HeaderBottomTab text={'Lịch trình của tôi'} /> */}
+            <View style={AppStyle.StyleProfile.body}>
+                <View style={styles.container}>
+                    <Tab.Navigator
+                        tabBarOptions={{
+                            showLabel: true,
+                            labelStyle: { fontSize: verticalScale(12), fontWeight: '500' },
+                            activeTintColor: "#FF5F24",
+                            inactiveTintColor: "black",
+                            style: { backgroundColor: '#E5E5E5', marginBottom: scale(15) },
+                            indicatorStyle: { backgroundColor: "#FF5F24" }
 
-                            }}>
-                            <Tab.Screen name="Upcoming" component={Upcoming} options={{ title: 'Sắp tới' }} />
-                            <Tab.Screen name="Walking" component={Walking} options={{ title: "Đang đi" }} />
-                            <Tab.Screen name="Finish" component={Finish} options={{ title: 'Hoàn thành' }} />
-                        </Tab.Navigator>
-                    </View>
+                        }}>
+                        <Tab.Screen name="Upcoming" component={Upcoming} options={{ title: 'Sắp tới' }} />
+                        <Tab.Screen name="Walking" component={Walking} options={{ title: "Đang đi" }} />
+                        <Tab.Screen name="Finish" component={Finish} options={{ title: 'Hoàn thành' }} />
+                    </Tab.Navigator>
                 </View>
             </View>
-        </SafeAreaView>
+        </View>
+        //  </SafeAreaView> 
     )
 }
 export default MySchedule;

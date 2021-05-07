@@ -44,7 +44,7 @@ const Body = (props) => {
                 style={styles.map}
             />
             <Introduce />
-            <TextHome text1={type === "Hotel" ? "Khách sạn lân cận" : "Nhà hàng lận cận"} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate('SeeMoreHotel')} />
+            <TextHome text1={type === "Hotel" ? "Khách sạn lân cận" : "Nhà hàng lận cận"} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate("HomeStack", { screen:'SeeMoreHotel'})} />
             <View style={{ marginLeft: scale(16), marginBottom: scale(46) }}>
                 <Hotel data={item.NearHotel} />
             </View>

@@ -6,13 +6,24 @@ import { useDispatch, useSelector } from "react-redux";
 import AppStyle from "../../../theme/index";
 import Follower from "../../Follower";
 import { scale } from "react-native-size-matters";
+import { useHeaderHeight } from "@react-navigation/stack";
+import ImageHeader from "../../ImageHeader";
 const FollowScreen = ({ navigation }) => {
+    const headerHeight = useHeaderHeight();
+    navigation.setOptions({
+        header: (e) => (
+            <ImageHeader
+                navigation={e.navigation}
+                height={headerHeight}
+                title={"Người theo dõi"}
+                left={true}
+            />
+        ),
+    });
     const data = useSelector(store => store.Follow.data)
     return (
         <SafeAreaView style={AppStyle.StyleHome.container}>
-            <StatusBar backgroundColor='white' barStyle={"dark-content"} />
             <ScrollView style={AppStyle.StyleHome.scrollview}>
-                <Header text={'Người theo dõi'} onBack={() => navigation.goBack()} />
                 <View style={styles.container} >
                     {data && data.map((item) => <Follower key={item.id.toString()} item={item} type={'follow'} />)}
                 </View>
@@ -22,9 +33,9 @@ const FollowScreen = ({ navigation }) => {
 }
 export default FollowScreen;
 const styles = StyleSheet.create({
-    container:{
+    container: {
         marginTop: scale(20),
-        backgroundColor:'white'
+        backgroundColor: 'white'
     }
 })
 

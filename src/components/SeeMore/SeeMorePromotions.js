@@ -18,7 +18,7 @@ const SeeMorePromotions = ({ navigation }) => {
                                 <TouchableOpacity
                                     key={item.id.toString()}
                                     style={AppStyle.StyleSeeMorePromotions.container}
-                                    onPress={() => navigation.navigate('PromotionDetails', { id: item.id })}
+                                    onPress={() => navigation.navigate("HomeStack", { screen: 'PromotionDetails', params: { id: item.id } })}
                                 >
                                     <Image
                                         source={item.img}

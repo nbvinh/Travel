@@ -10,6 +10,11 @@ import { View, Text, TouchableOpacity, Image, Dimensions, FlatList } from 'react
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { useDispatch } from "react-redux";
 import { scale } from "react-native-size-matters";
+import HomeStack from "./Stack/HomeStack";
+import MyScheduleStack from "./Stack/MyScheduleStack";
+import NotificationStack from "./Stack/NotificationStack";
+import ProfileStack from "./Stack/ProfileStack";
+import { createStackNavigator } from "@react-navigation/stack";
 const { width, height } = Dimensions.get('screen')
 
 function MyTabBar({ state, descriptors, navigation }) {
@@ -52,7 +57,7 @@ function MyTabBar({ state, descriptors, navigation }) {
                 };
                 return (
                     index === 2 ?
-                        <View key={index} style={{ width:(width / 5), alignItems:'center'}}>
+                        <View key={index} style={{ width: (width / 5), alignItems: 'center' }}>
                             <AddButton navigation={navigation} />
                         </View> :
                         <TouchableOpacity
@@ -97,14 +102,56 @@ function MyTabBar({ state, descriptors, navigation }) {
 
 const Tab = createBottomTabNavigator();
 
-export default function BottomTab() {
+// export default function BottomTab() {
+//     return (
+//         <Tab.Navigator
+//             headerMode={'none'}
+//             tabBarOptions={{
+//                 showLabel: false
+//             }}
+//             lazy={true}
+//             initialRouteName={'HomeTab'}
+//             backBehavior="history"
+//             tabBar={props => <MyTabBar {...props} />}>
+//             <Tab.Screen name="Home" component={Home} />
+//             <Tab.Screen name="MySchedule" component={MySchedule} />
+//             <Tab.Screen name=" " component={Search} />
+//             < Tab.Screen name="Notification" component={Notification} />
+//             < Tab.Screen name="Profile" component={Profile} />
+//         </Tab.Navigator>
+//     );
+// }
+
+function BottomTab() {
     return (
-        <Tab.Navigator tabBar={props => <MyTabBar {...props} />}>
-            <Tab.Screen name="Home" component={Home} />
-            <Tab.Screen name="MySchedule" component={MySchedule} />
+        <Tab.Navigator
+            headerMode={'none'}
+            tabBarOptions={{
+                showLabel: false
+            }}
+            lazy={true}
+            initialRouteName={'HomeTab'}
+            backBehavior="history"
+            tabBar={props => <MyTabBar {...props} />}>
+            <Tab.Screen name="HomeTab" component={HomeStack} />
+            <Tab.Screen name="MySchedule" component={MyScheduleStack} />
             <Tab.Screen name=" " component={Search} />
-            < Tab.Screen name="Notification" component={Notification} />
-            < Tab.Screen name="Profile" component={Profile} />
+            < Tab.Screen name="Notification" component={NotificationStack} />
+            < Tab.Screen name="Profile" component={ProfileStack} />
         </Tab.Navigator>
     );
 }
+
+const Switch = createStackNavigator();
+const MainTab = () => {
+    return (
+        <Switch.Navigator headerMode={'none'} screenOptions={() => ({ gestureEnabled: false })}>
+            <Switch.Screen name="BottomTab" component={BottomTab} />
+            <Switch.Screen name="HomeStack" component={HomeStack} />
+            <Switch.Screen name="ProfileStack" component={ProfileStack} />
+            <Switch.Screen name="NotificationStack" component={NotificationStack} />
+            <Switch.Screen name="MySchedule" component={MyScheduleStack} />
+        </Switch.Navigator>
+    )
+}
+export default MainTab;

@@ -13,18 +13,18 @@ const Profile = ({ navigation }) => {
     const dispatch = useDispatch()
     const onScreen = (item) => {
         item.id === 4 ?
-            navigation.navigate('Setting')
+            navigation.navigate("ProfileStack", { screen: 'Setting' })
             :
             item.id === 3 ?
                 dispatch({ type: 'MODALREVIEW' })
                 :
                 item.id === 2 ?
-                    navigation.navigate('Heart')
+                    navigation.navigate("ProfileStack", { screen: 'Heart'})
                     :
                     item.id === 1 ?
-                        navigation.navigate('SeeMorePromotions')
+                        navigation.navigate("HomeStack", { screen: 'SeeMorePromotions' })
                         :
-                        navigation.navigate('Walkingschedule')
+                        navigation.navigate("HomeStack", { screen: 'Walkingschedule' })
     }
     const dataItem = useSelector(store => store.people.dataItem)
     return (
@@ -34,7 +34,7 @@ const Profile = ({ navigation }) => {
                 <HeaderBottomTab text={'Thông tin cá nhân'} />
                 <View style={AppStyle.StyleProfile.body}>
                     <ScrollView style={AppStyle.StyleHome.scrollview}>
-                        <TouchableOpacity style={AppStyle.StyleProfile.avatar} onPress={() => navigation.navigate('PersonalPage')}>
+                        <TouchableOpacity style={AppStyle.StyleProfile.avatar} onPress={() => navigation.navigate("ProfileStack", { screen: 'PersonalPage' })}>
                             <Image
                                 source={{ uri: user.avatar }}
                                 style={AppStyle.StyleProfile.imgAvatar}

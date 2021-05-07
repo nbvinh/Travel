@@ -37,7 +37,7 @@ const LoginFB = () => {
                     await AsyncStorage.setItem('Token', JSON.stringify(token))
                     dispatch({ type: 'USERFACEBOOK', userInfo: user })
                     setTongle(true)
-                    navigation.navigate("BottomTab")
+                    navigation.navigate("MainTab", { screen: "BottomTab"})
                 }
             },
         );

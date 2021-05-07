@@ -10,7 +10,7 @@ const Care = (props) => {
     const dispatch = useDispatch()
     return (
         <View style={styles.container}>
-            <TextHome text1={"Có thể bạn quan tâm"} text2={'Tất cả >'} onSeeMore={() => navigation.navigate('CareAll')} />
+            <TextHome text1={"Có thể bạn quan tâm"} text2={'Tất cả >'} onSeeMore={() => navigation.navigate("HomeStack", { screen: 'CareAll' })} />
             <ScrollView style={styles.body} horizontal={true} showsHorizontalScrollIndicator={false}>
                 {data && data.map((item) => {
                     return (

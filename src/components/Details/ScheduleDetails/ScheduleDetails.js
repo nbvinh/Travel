@@ -16,7 +16,7 @@ const ScheduleDetails = ({ navigation, route }) => {
     const Tab = createMaterialTopTabNavigator()
     return (
         <SafeAreaView style={{ flex: 1, backgroundColor: '#E5E5E5' }}>
-              <StatusBar backgroundColor='transparent' translucent animated barStyle={"light-content"} />
+            <StatusBar backgroundColor='transparent' translucent animated barStyle={"light-content"} />
             <ScrollView style={{ flex: 1 }}>
                 <View key={item.id.toString()} style={{ flex: 1 }}>
                     <View style={AppStyle.StyleScheduleDetails.container}>
@@ -57,7 +57,7 @@ const ScheduleDetails = ({ navigation, route }) => {
             <View key={item.id.toString()} style={AppStyle.StyleScheduleDetails.footer}>
                 <Text style={AppStyle.StyleScheduleDetails.textPrice}>{item.price}</Text>
                 <TouchableOpacity
-                    onPress={() => navigation.navigate('ScheduleOverview', { item: item })}
+                    onPress={() => navigation.navigate("HomeStack", { screen: 'ScheduleOverview', params: { item: item } })}
                     style={AppStyle.StyleScheduleDetails.BookNow}
                 >
                     <Text style={AppStyle.StyleScheduleDetails.textBookNow}>Đặt Ngay</Text>
