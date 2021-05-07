@@ -6,7 +6,7 @@ const MyScheduleStack = () => {
     const Root = createStackNavigator();
     return (
         <Stack.Navigator headerMode={'screen'} screenOptions={() => ({ gestureEnabled: false })}>
-             <Root.Screen name="MySchedule" component={MySchedule} options={{ header: () => null }}/>
+             <Root.Screen name="MySchedule" component={MySchedule} />
         </Stack.Navigator>
     );
 }

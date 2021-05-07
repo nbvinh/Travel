@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, ImageBackground, SafeAreaView, StyleSheet, Dimensions, Image, TextInput, ScrollView, StatusBar } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
-import HeaderEdit from "./HeaderEdit";
 import { useDispatch, useSelector } from "react-redux";
 import AppStyle from "../../../theme/index";
 import { scale, verticalScale } from "react-native-size-matters";

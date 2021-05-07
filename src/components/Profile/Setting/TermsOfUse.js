@@ -4,7 +4,6 @@ import { View, Text, ImageBackground, SafeAreaView, StyleSheet, Dimensions, Imag
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { useSelector } from "react-redux";
 import AppStyle from "../../../theme/index";
-import Header from "../../Header";
 import ImageHeader from "../../ImageHeader";
 const { height, width } = Dimensions.get('screen');
 const TermsOfUse = ({ navigation }) => {

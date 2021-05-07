@@ -1,28 +1,33 @@
+import { useHeaderHeight } from "@react-navigation/stack";
 import React, { useEffect, useState } from "react";
 import { View, Text, ImageBackground, SafeAreaView, StyleSheet, Dimensions, Image, TextInput, ScrollView, StatusBar } from "react-native";
-import { TouchableOpacity } from "react-native-gesture-handler";
 import { scale } from "react-native-size-matters";
 import { useSelector } from "react-redux";
 import AppStyle from "../../theme/index";
-import HeaderNotification from "./HeaderNotification";
+import ImageHeader from "../ImageHeader";
 import ItemNotification from "./ItemNotification";
-const { height, width } = Dimensions.get('screen')
 const Notification = ({ navigation }) => {
     const data = useSelector(store => store.Notification.data)
+    const headerHeight = useHeaderHeight();
+    navigation.setOptions({
+        header: (e) => (
+            <ImageHeader
+                navigation={e.navigation}
+                height={headerHeight}
+                title={"Thông báo"}
+                right={true}
+            />
+        ),
+    });
     return (
-        <SafeAreaView style={AppStyle.StyleHome.container}>
-            {/* <StatusBar backgroundColor='transparent' translucent animated barStyle={"dark-content"} /> */}
+        <ScrollView style={[AppStyle.StyleHome.scrollview, { backgroundColor: '#E5E5E5' }]}>
+            {/* <HeaderNotification text={'Thông báo'} imgNotification={require('../../img/Notification.png')} /> */}
             <ScrollView style={AppStyle.StyleHome.scrollview}>
-                <HeaderNotification text={'Thông báo'} imgNotification={require('../../img/Notification.png')} />
-                <View style={AppStyle.StyleProfile.body}>
-                    <ScrollView style={AppStyle.StyleHome.scrollview}>
-                        <View style={styles.container}>
-                            {data && data.map((item) => <ItemNotification key={item.id.toString()} item={item} />)}
-                        </View>
-                    </ScrollView>
+                <View style={styles.container}>
+                    {data && data.map((item) => <ItemNotification key={item.id.toString()} item={item} />)}
                 </View>
             </ScrollView>
-        </SafeAreaView>
+        </ScrollView>
     )
 }
 export default Notification;

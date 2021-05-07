@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, ImageBackground, SafeAreaView, StyleSheet, Dimensions, Image, TextInput, ScrollView, StatusBar, TouchableOpacity } from "react-native";
 import { scale, verticalScale } from "react-native-size-matters";
-import Header from '../../Header'
 import { useSelector } from "react-redux";
 import AppStyle from "../../../theme/index";
 import Schedule from "../../Schedule";

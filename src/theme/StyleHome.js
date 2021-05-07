@@ -61,11 +61,10 @@ const StyleHome = StyleSheet.create({
     },
     text3: {
         color: 'white',
-        fontSize:moderateVerticalScale(12)
+        fontSize: moderateVerticalScale(12)
     },
     scrollview: {
-        flex: 1,
-
+        flex: 1
     },
     textPromotion: {
         flexDirection: 'row',
@@ -91,7 +90,7 @@ const StyleHome = StyleSheet.create({
     marginLeft: {
         marginLeft: scale(16)
     },
-    touch:{
+    touch: {
         width: scale(49),
         height: scale(49),
         justifyContent: 'center',

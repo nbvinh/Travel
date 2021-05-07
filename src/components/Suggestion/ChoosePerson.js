@@ -1,19 +1,30 @@
+import { useHeaderHeight } from "@react-navigation/stack";
 import React, { useEffect, useState } from "react";
 import { View, Text, SafeAreaView, Image, ScrollView, StatusBar, TouchableOpacity } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
 import AppStyle from "../../theme/index";
-import Header from "../Header";
+import ImageHeader from "../ImageHeader";
 import ButtonCF from "./ButtonCF";
 import styles from "./styles";
 const ChoosePerson = ({ navigation }) => {
     const DataPerson = useSelector(store => store.Suggestion.DataPerson)
     const dispatch = useDispatch()
+    const headerHeight = useHeaderHeight();
+    navigation.setOptions({
+        header: (e) => (
+            <ImageHeader
+                navigation={e.navigation}
+                height={headerHeight}
+                title={"Người tham gia"}
+                left={true}
+            />
+        ),
+    });
     return (
-        <SafeAreaView style={AppStyle.StyleHome.container}>
+        <View style={AppStyle.StyleHome.container}>
             <StatusBar backgroundColor='white' barStyle={"dark-content"} />
             <ScrollView style={AppStyle.StyleHome.scrollview}>
-                <Header text={'Người tham gia'} onBack={() => navigation.goBack()} />
-                <View style={[styles.container, { flex: 10 }]}>
+                <View style={styles.container}>
                     {DataPerson && DataPerson.map((item) => {
                         return (
                             <View key={item.id} style={styles.bodyPerson}>
@@ -41,7 +52,7 @@ const ChoosePerson = ({ navigation }) => {
                 </View>
             </ScrollView>
             <ButtonCF type={"Xong"} />
-        </SafeAreaView>
+        </View>
     )
 }
 export default ChoosePerson;

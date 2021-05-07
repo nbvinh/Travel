@@ -7,7 +7,7 @@ const ProfileStack = () => {
     const Root = createStackNavigator();
     return (
         <Stack.Navigator headerMode={'screen'} screenOptions={() => ({ gestureEnabled: false })}>
-            <Root.Screen name="Profile" component={Profile} options={{ header: () => null }} />
+            <Root.Screen name="Profile" component={Profile} />
             <Root.Screen name="Heart" component={Heart} />
             <Root.Screen name="PersonalPage" component={PersonalPage} />
             <Root.Screen name="EditProfile" component={EditProfile} />

@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { View, TextInput, Text, SafeAreaView, StyleSheet, Dimensions, TouchableOpacity, ScrollView } from "react-native";
-import Header from "../Header";
 import { useDispatch, useSelector } from "react-redux";
 import Form from "./Form";
 import { verticalScale, moderateScale, scale } from "react-native-size-matters";
 import AsyncStorage from '@react-native-async-storage/async-storage';
+import { useHeaderHeight } from "@react-navigation/stack";
+import ImageHeader from "../ImageHeader";
 const { width, height } = Dimensions.get('screen')
 const ScreenUpdateProfile = ({ navigation }) => {
     const onBack = () => {
@@ -37,10 +38,19 @@ const ScreenUpdateProfile = ({ navigation }) => {
             setFinish1(false)
         }
     }
+    const headerHeight = useHeaderHeight();
+    navigation.setOptions({
+        header: (e) => (
+            <ImageHeader
+                navigation={e.navigation}
+                height={headerHeight}
+                left={true}
+            />
+        ),
+    });
     const data = { lastname: text, fisrtname: text1, id: Math.random(), phone: phone, avatar: 'https://cdn0.iconfinder.com/data/icons/set-ui-app-android/32/8-512.png', token: Math.random() }
     return (
-        <SafeAreaView style={styles.container}>
-            <Header style={{ marginTop: scale(5) }} onBack={onBack} />
+        <View style={styles.container}>
             <View style={styles.content}>
                 <Text style={styles.text1}>Cập Nhật Thông Tin</Text>
                 <TextInput
@@ -79,7 +89,7 @@ const ScreenUpdateProfile = ({ navigation }) => {
                             await AsyncStorage.setItem('Token', JSON.stringify(data.token))
                             await AsyncStorage.setItem('DATA', JSON.stringify(data))
                             dispatch({ type: 'PROFILE', data: data })
-                            navigation.navigate("MainTab", { screen: "BottomTab"})
+                            navigation.navigate("MainTab", { screen: "BottomTab" })
                         }}>
                             <Text style={styles.textfinish}>Hoàn Thành</Text>
                         </TouchableOpacity>
@@ -97,7 +107,7 @@ const ScreenUpdateProfile = ({ navigation }) => {
                 </View>
             </View>
             <Form />
-        </SafeAreaView>
+        </View>
     )
 }
 export default ScreenUpdateProfile;

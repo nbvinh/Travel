@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { View, Text, ImageBackground, SafeAreaView, StyleSheet, Button, Image, TextInput, ScrollView, StatusBar, TouchableOpacity } from "react-native";
 import { scale, verticalScale } from "react-native-size-matters";
-import Header from './Header'
 import { useDispatch, useSelector } from "react-redux";
 import AppStyle from "../../src/theme/index";
 const Schedule = (props) => {

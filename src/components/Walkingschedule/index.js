@@ -1,9 +1,10 @@
+import { useHeaderHeight } from "@react-navigation/stack";
 import React, { useEffect, useState } from "react";
 import { View, Text, ImageBackground, SafeAreaView, StyleSheet, Dimensions, Image, TouchableOpacity, ScrollView, StatusBar, FlatList } from "react-native";
 import { scale } from "react-native-size-matters";
 import { useDispatch, useSelector } from "react-redux";
 import AppStyle from "../../theme/index";
-import Header from "../Header";
+import ImageHeader from "../ImageHeader";
 import dulieu from "./Dulieu";
 import styles from "./styles";
 const Walkingschedule = ({ navigation }) => {
@@ -73,20 +74,28 @@ const Walkingschedule = ({ navigation }) => {
             </View>
         )
     }
+    const headerHeight = useHeaderHeight();
+    navigation.setOptions({
+        header: (e) => (
+            <ImageHeader
+                navigation={e.navigation}
+                height={headerHeight}
+                title={"Lịch trình đang đi"}
+                left={true}
+            />
+        ),
+    });
     return (
-        <SafeAreaView style={AppStyle.StyleHome.container}>
+        <View style={[AppStyle.StyleProfile.body, { backgroundColor: '#E5E5E5' }]}>
             <StatusBar backgroundColor='white' translucent animated barStyle={"dark-content"} />
-            <Header text={'Lịch trình đang đi'} onBack={() => navigation.goBack()} />
-            <View style={AppStyle.StyleProfile.body}>
-                <FlatList
-                    data={dulieu}
-                    showsVerticalScrollIndicator={false}
-                    keyExtractor={(item, index) => index}
-                    renderItem={_renderItem}
-                    ListFooterComponent={footer}
-                />
-            </View>
-        </SafeAreaView>
+            <FlatList
+                data={dulieu}
+                showsVerticalScrollIndicator={false}
+                keyExtractor={(item, index) => index}
+                renderItem={_renderItem}
+                ListFooterComponent={footer}
+            />
+        </View>
     )
 }
 export default Walkingschedule;

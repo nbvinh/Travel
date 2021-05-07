@@ -1,13 +1,12 @@
+import { useHeaderHeight } from "@react-navigation/stack";
 import React, { useEffect, useState } from "react";
 import { View, Text, ImageBackground, SafeAreaView, StyleSheet, Dimensions, Image, TextInput, ScrollView, StatusBar } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { useDispatch, useSelector } from "react-redux";
 import AppStyle from "../../theme/index";
-import HeaderBottomTab from "../HeaderBottomTab";
+import ImageHeader from "../ImageHeader";
 import FormReview from "./FormReview";
-import Heart from "./Heart/Heart";
 import Item from "./Item";
-const { height, width } = Dimensions.get('screen')
 const Profile = ({ navigation }) => {
     const user = useSelector(store => store.people.user)
     const dispatch = useDispatch()
@@ -19,7 +18,7 @@ const Profile = ({ navigation }) => {
                 dispatch({ type: 'MODALREVIEW' })
                 :
                 item.id === 2 ?
-                    navigation.navigate("ProfileStack", { screen: 'Heart'})
+                    navigation.navigate("ProfileStack", { screen: 'Heart' })
                     :
                     item.id === 1 ?
                         navigation.navigate("HomeStack", { screen: 'SeeMorePromotions' })
@@ -27,28 +26,31 @@ const Profile = ({ navigation }) => {
                         navigation.navigate("HomeStack", { screen: 'Walkingschedule' })
     }
     const dataItem = useSelector(store => store.people.dataItem)
+    const headerHeight = useHeaderHeight();
+    console.log(headerHeight)
+    navigation.setOptions({
+        header: (e) => (
+            <ImageHeader
+                navigation={e.navigation}
+                height={headerHeight}
+                title={"Thông tin cá nhân"}
+            />
+        ),
+    });
     return (
-        <SafeAreaView style={AppStyle.StyleHome.container}>
-            {/* <StatusBar backgroundColor='white' translucent animated barStyle={"dark-content"} /> */}
-            <ScrollView style={AppStyle.StyleHome.scrollview}>
-                <HeaderBottomTab text={'Thông tin cá nhân'} />
-                <View style={AppStyle.StyleProfile.body}>
-                    <ScrollView style={AppStyle.StyleHome.scrollview}>
-                        <TouchableOpacity style={AppStyle.StyleProfile.avatar} onPress={() => navigation.navigate("ProfileStack", { screen: 'PersonalPage' })}>
-                            <Image
-                                source={{ uri: user.avatar }}
-                                style={AppStyle.StyleProfile.imgAvatar}
-                            />
-                            <Text style={AppStyle.StyleProfile.name}>{user.lastname} {user.fisrtname}</Text>
-                        </TouchableOpacity>
-                        <View style={AppStyle.StyleProfile.content}>
-                            {dataItem && dataItem.map((item) => <Item key={item.id.toString()} item={item} onScreen={() => onScreen(item)} />)}
-                        </View>
-                    </ScrollView>
-                </View>
-            </ScrollView>
+        <ScrollView style={[AppStyle.StyleHome.scrollview, { backgroundColor: '#E5E5E5' }]}>
+            <TouchableOpacity style={AppStyle.StyleProfile.avatar} onPress={() => navigation.navigate("ProfileStack", { screen: 'PersonalPage' })}>
+                <Image
+                    source={{ uri: user.avatar }}
+                    style={AppStyle.StyleProfile.imgAvatar}
+                />
+                <Text style={AppStyle.StyleProfile.name}>{user.lastname} {user.fisrtname}</Text>
+            </TouchableOpacity>
+            <View style={AppStyle.StyleProfile.content}>
+                {dataItem && dataItem.map((item) => <Item key={item.id.toString()} item={item} onScreen={() => onScreen(item)} />)}
+            </View>
             <FormReview />
-        </SafeAreaView>
+        </ScrollView>
     )
 }
 export default Profile;

@@ -12,7 +12,6 @@ const SearchRestaurant = ({ navigation }) => {
     const newsearch = useSelector(store => store.Search.newsearch)
     const data = search === '' ? dataRestaurant : newsearch
     const dispatch = useDispatch()
-    console.log('thu thoi', newsearch)
     return (
         <SafeAreaView style={AppStyle.StyleHome.container}>
             <StatusBar backgroundColor='white' barStyle={"dark-content"} />

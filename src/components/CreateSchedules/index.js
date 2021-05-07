@@ -2,22 +2,33 @@ import React, { useEffect, useState } from "react";
 import { View, Text, ImageBackground, SafeAreaView, StyleSheet, Dimensions, Image, TextInput, ScrollView, StatusBar } from "react-native";
 import { useDispatch, useSelector } from "react-redux";
 import AppStyle from "../../theme/index";
-import Header from "../Header";
 import Body from "./Body";
 import ButtonCF from "../Suggestion/ButtonCF";
+import { useHeaderHeight } from "@react-navigation/stack";
+import ImageHeader from "../ImageHeader";
 const CreateSchedules = ({ navigation }) => {
     const dispatch = useDispatch()
+    const headerHeight = useHeaderHeight();
+    navigation.setOptions({
+        header: (e) => (
+            <ImageHeader
+                navigation={e.navigation}
+                height={headerHeight}
+                title={"Tạo lịch trình"}
+                left={true}
+            />
+        ),
+    });
     return (
-        <SafeAreaView style={AppStyle.StyleHome.container}>
+        <View style={AppStyle.StyleHome.container}>
             <StatusBar backgroundColor='white' barStyle={"dark-content"} />
             <ScrollView style={AppStyle.StyleHome.scrollview}>
-                <Header text={'Tạo lịch trình'} onBack={() => navigation.goBack()} />
                 <View style={styles.container}>
                     <Body navigation={navigation} />
                 </View>
             </ScrollView>
             <ButtonCF type={"Tạo lịch trình"} />
-        </SafeAreaView>
+        </View>
     )
 }
 export default CreateSchedules;

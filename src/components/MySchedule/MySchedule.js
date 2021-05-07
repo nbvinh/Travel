@@ -3,7 +3,6 @@ import { View, Text, ImageBackground, SafeAreaView, StyleSheet, Dimensions, Imag
 import { scale, verticalScale } from "react-native-size-matters";
 import { useSelector } from "react-redux";
 import AppStyle from "../../theme/index";
-import HeaderBottomTab from "../HeaderBottomTab";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 import Finish from "./Finish";
 import Upcoming from "./Upcoming";
@@ -24,9 +23,7 @@ const MySchedule = ({ navigation }) => {
         ),
     });
     return (
-        // <SafeAreaView style={AppStyle.StyleHome.container}>
         <View style={AppStyle.StyleHome.scrollview}>
-            {/* <HeaderBottomTab text={'Lịch trình của tôi'} /> */}
             <View style={AppStyle.StyleProfile.body}>
                 <View style={styles.container}>
                     <Tab.Navigator
@@ -46,7 +43,6 @@ const MySchedule = ({ navigation }) => {
                 </View>
             </View>
         </View>
-        //  </SafeAreaView> 
     )
 }
 export default MySchedule;

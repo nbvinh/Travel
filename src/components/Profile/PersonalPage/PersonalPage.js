@@ -3,7 +3,6 @@ import { View, Text, ImageBackground, StyleSheet, Dimensions, Image, TextInput, 
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { useSelector } from "react-redux";
 import AppStyle from "../../../theme/index";
-import Header from "../../Header";
 import TextHome from "../../TextHome";
 import Review from "./Review";
 import SeeIMG from "./SeeIMG";
