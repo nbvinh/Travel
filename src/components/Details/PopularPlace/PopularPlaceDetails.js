@@ -5,6 +5,7 @@ import AppStyle from "../../../theme/index";
 import { scale, verticalScale } from "react-native-size-matters";
 import { Schedule, TextHome, Hotel } from "../../Home/index";
 import Experience from "./Experience";
+import MapView, { Marker, PROVIDER_GOOGLE } from "react-native-maps";
 const PopularPlaceDetails = ({ navigation, route }) => {
     const item = useSelector(store => store.PopularPlace.item)
     const dispatch = useDispatch()
@@ -54,11 +55,18 @@ const PopularPlaceDetails = ({ navigation, route }) => {
                             </TouchableOpacity>
                         </View>
                     </View>
-                    <TouchableOpacity onPress={() => navigation.navigate("HomeStack", { screen: "Maps" })}>
-                        <Image
-                            source={require('../../../img/mapPlace.png')}
+                    <TouchableOpacity style={AppStyle.StylePopularPlaceDetails.img2} onPress={() => navigation.navigate("HomeStack", { screen: "Maps", params: { item: item } })}>
+                        <MapView
+                            provider={PROVIDER_GOOGLE} // remove if not using Google Maps
                             style={AppStyle.StylePopularPlaceDetails.img2}
-                        />
+                            region={{
+                                latitude: item.mapaddress.latitude,
+                                longitude: item.mapaddress.longitude,
+                                latitudeDelta: 0.09,
+                                longitudeDelta: 0.09,
+                            }}
+                        >
+                        </MapView>
                     </TouchableOpacity>
                     <TextHome text1={'Lịch trình OKGO đề xuất'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate("HomeStack", { screen: 'SeeMoreDecemberDestination' })} />
                     <View style={{ marginLeft: scale(16) }}>
@@ -82,7 +90,7 @@ const PopularPlaceDetails = ({ navigation, route }) => {
                     <View style={{ marginLeft: scale(16) }}>
                         <Hotel data={item.Restaurant} />
                     </View>
-                    <TextHome text1={'Khám Phá'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate("HomeStack", { screen:'SeeMoreDecemberDestination'})} />
+                    <TextHome text1={'Khám Phá'} text2={'Xem Thêm >'} onSeeMore={() => navigation.navigate("HomeStack", { screen: 'SeeMoreDecemberDestination' })} />
                     <Experience />
                 </View>
             </ScrollView>

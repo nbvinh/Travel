@@ -16,6 +16,7 @@ const Maps = ({ navigation, route }) => {
             />
         ),
     });
+    const item = route.params.item
     return (
         <View style={{ flex: 1, backgroundColor: '#E5E5E5' }}>
             <StatusBar backgroundColor='white' translucent animated barStyle={"dark-content"} />
@@ -23,46 +24,29 @@ const Maps = ({ navigation, route }) => {
                 provider={PROVIDER_GOOGLE} // remove if not using Google Maps
                 style={styles.map}
                 region={{
-                    latitude: 15.3833662,
-                    longitude: 109.1085227,
+                    latitude: item.mapaddress.latitude,
+                    longitude: item.mapaddress.longitude,
                     latitudeDelta: 0.009,
                     longitudeDelta: 0.009,
                 }}
             >
-                <Marker
-                    coordinate={{
-                        latitude: 15.382289,
-                        longitude: 109.108422
-                    }}
-                >
-                    <Image
-                        source={require('../../../img/vinh64.png')}
-                        style={{ width: scale(21.66), height: scale(31.36) }}
-                    />
-                    <Text></Text>
-                </Marker>
-                <Marker
-                    coordinate={{
-                        latitude: 15.378255,
-                        longitude: 109.110611
-                    }}
-                >
-                    <Image
-                        source={require('../../../img/vinh66.png')}
-                        style={{ width: scale(21.66), height: scale(31.36) }}
-                    />
-                </Marker>
-                <Marker
-                    coordinate={{
-                        latitude: 15.381389,
-                        longitude: 109.111201
-                    }}
-                >
-                    <Image
-                        source={require('../../../img/vinh65.png')}
-                        style={{ width: scale(21.66), height: scale(31.36) }}
-                    />
-                </Marker>
+                {item.Marker && item.Marker.map((marker, index) => {
+                    return (
+                        <Marker
+                            key={index}
+                            coordinate={{
+                                latitude: marker.latitude,
+                                longitude: marker.longitude
+                            }}
+                        >
+                            <Image
+                                source={require('../../../img/vinh67.png')}
+                                style={{ width: scale(21.66), height: scale(31.36) }}
+                            />
+                            <Text style={{fontSize:scale(10),color:'#000000',position:'absolute', top:scale(5), left:scale(7)}}>{index + 1}</Text>
+                        </Marker>
+                    )
+                })}
             </MapView>
         </View >
     )

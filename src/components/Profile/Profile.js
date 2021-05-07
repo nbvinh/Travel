@@ -27,7 +27,6 @@ const Profile = ({ navigation }) => {
     }
     const dataItem = useSelector(store => store.people.dataItem)
     const headerHeight = useHeaderHeight();
-    console.log(headerHeight)
     navigation.setOptions({
         header: (e) => (
             <ImageHeader
