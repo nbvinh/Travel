@@ -4,6 +4,7 @@ import styles from "./styles";
 import { useDispatch } from "react-redux";
 import HeaderIMG from "./HeaderIMG";
 import LoginFB from "./LoginFB";
+import LoginGG from "./LoginGG";
 const ScreenSecond = ({ navigation }) => {
     const [text, setText] = useState('')
     const [OK, setOK] = useState(false)
@@ -14,7 +15,7 @@ const ScreenSecond = ({ navigation }) => {
         }
     }
     const onOK = () => {
-        navigation.navigate("AuthStack", { screen:'ScreenOTP'})
+        navigation.navigate("AuthStack", { screen: 'ScreenOTP' })
         dispatch({ type: 'PHONE', phone: "0" + text })
     }
     const dispatch = useDispatch()
@@ -59,16 +60,16 @@ const ScreenSecond = ({ navigation }) => {
                                 </TouchableOpacity>
                         }
                         <LoginFB />
-                        <TouchableOpacity style={styles.loginGG}>
+                        {/* <TouchableOpacity style={styles.loginGG}>
                             <Image
                                 source={{ uri: 'https://brasol.vn/public/ckeditor/uploads/tin-tuc/13-logo-google.png' }}
                                 style={styles.img4}
                             />
                             <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
                                 <Text style={styles.text2}>Đăng Nhập Với Google</Text>
-
                             </View>
-                        </TouchableOpacity>
+                        </TouchableOpacity> */}
+                        <LoginGG />
                     </View>
                 </View>
             </ImageBackground>

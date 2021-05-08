@@ -89,7 +89,7 @@ const ScreenUpdateProfile = ({ navigation }) => {
                             await AsyncStorage.setItem('Token', JSON.stringify(data.token))
                             await AsyncStorage.setItem('DATA', JSON.stringify(data))
                             dispatch({ type: 'PROFILE', data: data })
-                            navigation.navigate("MainTab", { screen: "BottomTab" })
+                            navigation.replace("MainTab", { screen: "BottomTab" })
                         }}>
                             <Text style={styles.textfinish}>Hoàn Thành</Text>
                         </TouchableOpacity>
