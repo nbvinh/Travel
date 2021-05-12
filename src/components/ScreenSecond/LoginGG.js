@@ -1,23 +1,39 @@
+import React, { useState, useCallback, useEffect } from 'react';
+import { View, Text, TouchableOpacity, Image } from 'react-native';
+import auth from '@react-native-firebase/auth';
+import { GoogleSignin, GoogleSigninButton, statusCodes } from '@react-native-google-signin/google-signin';
+import styles from './styles';
 
-import { GoogleSignin, GoogleSigninButton, statusCodes } from "@react-native-community/google-signin";
-import React, { useEffect, useState } from "react";
-import { Text, TouchableOpacity, View } from 'react-native';
 
+GoogleSignin.configure({
+    webClientId:
+        '559981280614-1vhfc1a4c0176dlrbh20m9vo52revj43.apps.googleusercontent.com',
+});
 
-
-const LoginGG = () => {
-    useEffect(() => {
-        GoogleSignin.configure({
-            webClientId: '822477820370-o2m2hn6tnpi0kavg1d1pun12amu2hcq8.apps.googleusercontent.com',
-            offlineAccess: false,
-        });
-    }, [])
-    const [userInfo, setUserInfo] = useState({})
+const LoginGG = (props) => {
+    // const handleSignWithGoogle = async () => {
+    //     try {
+    //         if (auth().currentUser) {
+    //             auth().signOut();
+    //             GoogleSignin.signOut();
+    //         }
+    //         const { idToken } = await GoogleSignin.signIn();
+    //         // Create a Google credential with the token
+    //         const googleCredential = auth.GoogleAuthProvider.credential(idToken);
+    //         // Sign-in the user with the credential
+    //         await auth().signInWithCredential(googleCredential);
+    //         const user = auth().currentUser;
+    //         console.log(user)
+    //     } catch (error) {
+    //         console.log(error);
+    //     }
+    // };
     const signIn = async () => {
         try {
             await GoogleSignin.hasPlayServices();
-            const user = await GoogleSignin.signIn();
-            setUserInfo({ user });
+            const userInfo = await GoogleSignin.signIn();
+            console.log('signin')
+            // this.setState({ userInfo });
         } catch (error) {
             if (error.code === statusCodes.SIGN_IN_CANCELLED) {
                 // user cancelled the login flow
@@ -31,17 +47,15 @@ const LoginGG = () => {
         }
     };
     return (
-        <View>
-            <GoogleSigninButton
-                style={{ width: 192, height: 48 }}
-                size={GoogleSigninButton.Size.Wide}
-                color={GoogleSigninButton.Color.Dark}
-                onPress={signIn} />
-            {/* <TouchableOpacity onPress={() => signIn()}>
-                <Text>djsasghjdghds</Text>
-            </TouchableOpacity> */}
-            {console.log('test', userInfo)}
-        </View>
-    )
-}
+        <TouchableOpacity style={styles.loginGG} onPress={() => signIn()}>
+            <Image
+                source={{ uri: 'https://brasol.vn/public/ckeditor/uploads/tin-tuc/13-logo-google.png' }}
+                style={styles.img4}
+            />
+            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                <Text style={styles.text2}>Đăng Nhập Với Google</Text>
+            </View>
+        </TouchableOpacity>
+    );
+};
 export default LoginGG;

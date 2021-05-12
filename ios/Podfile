@@ -12,6 +12,14 @@ target 'Travel' do
     :hermes_enabled => false
   )
 
+  pod 'RNFBApp', :path => '../node_modules/@react-native-firebase/app'
+
+  pod 'RNFBMessaging', :path => '../node_modules/@react-native-firebase/messaging'
+
+  pod 'RNGoogleSignin', :path => '../node_modules/@react-native-community/google-signin'
+
+  pod 'RNFBAuth', :path => '../node_modules/@react-native-firebase/auth'
+
   target 'TravelTests' do
     inherit! :complete
     # Pods for testing

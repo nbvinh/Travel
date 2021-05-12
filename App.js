@@ -8,6 +8,7 @@
 
 import React from 'react';
 import {
+  LogBox,
   SafeAreaView,
   ScrollView,
   StatusBar,
@@ -20,6 +21,7 @@ import { createStore } from "redux";
 import { Provider } from "react-redux";
 import allReducer from "./src/reducers";
 import RootStack from "./src/navigators/Screen/RootStack";
+LogBox.ignoreAllLogs();
 const App = () => {
   const store = createStore(allReducer)
   return (
