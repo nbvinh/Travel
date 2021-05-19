@@ -8,6 +8,7 @@ import AsyncStorage from '@react-native-async-storage/async-storage';
 import Item from "./Item";
 import { useHeaderHeight } from "@react-navigation/stack";
 import ImageHeader from "../../ImageHeader";
+import { GoogleSignin } from "@react-native-google-signin/google-signin";
 const Setting = ({ navigation }) => {
     const dispatch = useDispatch()
     const dataItem = useSelector(store => store.people.dataSetting)
@@ -28,9 +29,19 @@ const Setting = ({ navigation }) => {
         LoginManager.logOut();
         // dispatch({ type: 'USERFACEBOOK', userInfo: {} })
     };
+    const signOut = async () => {
+        try {
+            await GoogleSignin.revokeAccess();
+            await GoogleSignin.signOut();
+            console.log("logout") // Remember to remove the user from your app's state as well
+        } catch (error) {
+            console.error(error);
+        }
+    };
     const Logout = async () => {
         await AsyncStorage.removeItem('Token')
         logoutWithFacebook()
+        signOut()
         dispatch({ type: "LOGOUT" })
         navigation.replace("AuthStack", { screen: 'ScreenFirst' });
     }
