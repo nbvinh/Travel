@@ -14,24 +14,24 @@ const styles = StyleSheet.create({
         fontWeight: '800',
         fontSize: scale(12),
         lineHeight: scale(14.32),
-        color: '#A0A0A0',
+        // color: '#A0A0A0',
         marginBottom: scale(16)
     },
     time: {
         fontSize: scale(12),
         fontWeight: '400',
-        color: '#A0A0A0',
+        // color: '#A0A0A0',
     },
     label: {
         marginLeft: scale(32),
         marginRight: scale(47),
         fontSize: scale(14),
-        color: '#A0A0A0',
+        // color: '#A0A0A0',
     },
     chiphi: {
         marginLeft: scale(48),
         fontSize: scale(11),
-        color: '#A0A0A0',
+        // color: '#A0A0A0',
         marginVertical: scale(16)
     },
     viewStar: {

@@ -1,4 +1,6 @@
 import { useHeaderHeight } from "@react-navigation/stack";
+import moment from "moment";
+import 'moment/min/locales'
 import React, { useEffect, useState } from "react";
 import { View, Text, ImageBackground, SafeAreaView, StyleSheet, Dimensions, Image, TouchableOpacity, ScrollView, StatusBar, FlatList } from "react-native";
 import { scale } from "react-native-size-matters";
@@ -9,17 +11,39 @@ import dulieu from "./Dulieu";
 import styles from "./styles";
 const Walkingschedule = ({ navigation }) => {
     const dispatch = useDispatch()
-    const _renderItem1 = ({ item, index }) => {
+    moment.locale('vi');
+    const mo = moment().format('LT');
+    const day = moment().format("DDMMYYYY");
+    const date = Number(day)
+    let subArr = null;
+    let arrData = dulieu
+    let maxArr = 0
+    for (i = 1; i < arrData.length; i++) {
+        subArr = date - arrData[i].convert
+        if (subArr < 0) break;
+        maxArr = arrData[i].convert
+    }
+    console.log(maxArr)
+    const _renderItem1 = (item, i, index) => {
+        const str = item.gio.replace(":", ".");
+        const cvitemgio = Number(str) + item.ngay
+        const strmo = mo.replace(":", ".");
+        const cvdate = Number(strmo) + Number(day)
         return (
             <View style={{ flex: 1 }}>
-                <Text style={styles.time}>{item.gio}</Text>
-                <Text style={styles.label}>{item.batdau}</Text>
+                <Text style={[styles.time, index === cvitemgio ? { color: '#E83F00' } : cvitemgio <= cvdate ? { color: '#A0A0A0' } : { color: '#FFB498' }]}>{item.gio}</Text>
+                <Text style={[styles.label, index === cvitemgio ? { color: '#E83F00' } : cvitemgio <= cvdate ? { color: '#A0A0A0' } : { color: '#FFB498' }]}>{item.batdau}</Text>
                 {
                     item.chiphi != "" ?
-                        <Text style={styles.chiphi}>{item.chiphi}</Text>
+                        <Text style={[styles.chiphi, index === cvitemgio ? { color: '#E83F00' } : cvitemgio <= cvdate ? { color: '#A0A0A0' } : { color: '#FFB498' }]}>{item.chiphi}</Text>
                         : null
                 }
-                <View style={styles.viewStar}>
+                {
+                    item.dichuyen ?
+                        <Text style={[styles.chiphi, index === cvitemgio ? { color: '#E83F00' } : cvitemgio <= cvdate ? { color: '#A0A0A0' } : { color: '#FFB498' }]}>{item.dichuyen}</Text>
+                        : null
+                }
+                <View style={[styles.viewStar, cvitemgio <= cvdate ? { opacity: 1 } : { opacity: 0.5 }]}>
                     <Text style={styles.star}>{item.sao}</Text>
                     {
                         item.sao ?
@@ -31,20 +55,32 @@ const Walkingschedule = ({ navigation }) => {
                     }
                 </View>
                 <View style={styles.STT}>
-                    <Text style={styles.textstt}>{index + 1}</Text>
+                    <Text style={styles.textstt}>{item.dayid + 1}</Text>
                 </View>
                 <View style={styles.straightLine} />
             </View>
         )
     }
     const _renderItem = ({ item, index }) => {
+        const cvdate1 = Number(day)
+        let sub = null;
+        const strmo = mo.replace(":", ".");
+        let a = cvdate1 + Number(strmo)
+        let arr = item.thongtin
+        let max = 0
+        for (i = 1; i < arr.length; i++) {
+            let cvitemgio = Number(arr[i].gio.replace(":", ".")) + arr[i].ngay
+            sub = a - cvitemgio
+            if (sub < 0) break;
+            max = cvitemgio
+        }
         return (
             <View style={styles.container}>
-                <Text style={styles.day}>Ngày {index + 1}: {item.ngay}</Text>
+                <Text style={[styles.day, item.convert > cvdate1 ? { color: '#FFB498' } : { color: '#A0A0A0' }]}>Ngày {index + 1}: {item.ngay}</Text>
                 <FlatList
                     data={item.thongtin}
                     keyExtractor={(e, index) => index}
-                    renderItem={_renderItem1}
+                    renderItem={({ item, i }) => _renderItem1(item, i, max)}
                 />
             </View>
         )
@@ -53,7 +89,7 @@ const Walkingschedule = ({ navigation }) => {
         return (
             <View>
                 <TouchableOpacity style={styles.footer}>
-                    <Text style={styles.congratulation}>Chúc mừng bạn đã hoàn thanh chuyến đi</Text>
+                    <Text style={styles.congratulation}>Chúc mừng bạn đã hoàn thành chuyến đi</Text>
                 </TouchableOpacity>
                 <View style={styles.end}>
                     <Text style={styles.spent}>Đã chi :
