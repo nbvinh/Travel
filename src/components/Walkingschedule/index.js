@@ -28,7 +28,6 @@ const Walkingschedule = ({ navigation }) => {
         const cvitemgio = Number(str) + item.ngay
         const strmo = mo.replace(":", ".");
         const cvdate = Number(strmo) + Number(day)
-        console.log(maxArr)
         return (
             <View style={{ flex: 1 }}>
                 <Text style={[styles.time, maxArr === convertt ? max === cvitemgio ? { color: '#E83F00' } : cvitemgio <= cvdate ? { color: '#A0A0A0' } : { color: '#FFB498' } : cvdate - cvitemgio < 0 ? { color: '#FFB498' } : { color: '#A0A0A0' }]}>{item.gio}</Text>

@@ -21,9 +21,6 @@ function MyTabBar({ state, descriptors, navigation }) {
     const dispatch = useDispatch()
     return (
         <View style={{ flexDirection: 'row', height: scale(45), backgroundColor: 'white' }}>
-            {/* <View style={{ position: 'absolute', left: (width / 5) * 2, right: (width / 5) * 2, zIndex: 1, bottom: scale(20), alignItems: 'center' }}>
-                <AddButton navigation={navigation} />
-            </View> */}
             {state.routes.map((route, index) => {
                 const { options } = descriptors[route.key];
                 const isFocused = state.index === index;
@@ -37,7 +34,6 @@ function MyTabBar({ state, descriptors, navigation }) {
                         null
                     }
                     else {
-                        // dispatch({ type: 'MODE1' })
                         navigation.navigate(route.name);
                         if (index === 0) {
                             dispatch({ type: 'STATUSBARTRUE' })

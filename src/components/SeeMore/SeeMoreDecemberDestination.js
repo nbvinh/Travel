@@ -7,6 +7,7 @@ const { height, width } = Dimensions.get('screen')
 const SeeMoreDecemberDestination = ({ navigation }) => {
     const dataheader = useSelector(store => store.DecemberDestination.data)
     const headerHeight = useHeaderHeight();
+    const dispatch = useDispatch()
     navigation.setOptions({
         header: (e) => (
             <ImageHeader
@@ -23,7 +24,13 @@ const SeeMoreDecemberDestination = ({ navigation }) => {
             {
                 dataheader && dataheader.map((item) => {
                     return (
-                        <TouchableOpacity key={item.id.toString()} style={{ marginBottom: width / 18.75, marginHorizontal: 10 }}>
+                        <TouchableOpacity
+                            onPress={() => {
+                                dispatch({ type: 'IDPOPULARPLACE', item: item })
+                                navigation.navigate("HomeStack", { screen: 'PopularPlaceDetails' })
+                            }}
+                            key={item.id.toString()}
+                            style={{ marginBottom: width / 18.75, marginHorizontal: 10 }}>
                             <Image
                                 source={{ uri: item.img }}
                                 style={{ width: '100%', height: height / 4.511, borderRadius: 5 }}

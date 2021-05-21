@@ -24,7 +24,11 @@ const SeeMoreExperience = ({ navigation }) => {
             {
                 dataheader && dataheader.map((item) => {
                     return (
-                        <TouchableOpacity key={item.id.toString()} style={AppStyle.StyleSeeMoreExperience.content}>
+                        <TouchableOpacity
+                            onPress={() => navigation.navigate("HomeStack", { screen: 'ExperienceDetails', params: { item: item } })}
+                            key={item.id.toString()}
+                            style={AppStyle.StyleSeeMoreExperience.content}
+                        >
                             <Image
                                 source={{ uri: item.img }}
                                 style={AppStyle.StyleSeeMoreExperience.img}

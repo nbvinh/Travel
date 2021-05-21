@@ -7,7 +7,8 @@ const { width, height } = Dimensions.get('screen')
 const FormReview = (props) => {
     const dispatch = useDispatch()
     const modalReview = useSelector(store => store.people.modalReview)
-    const data = useSelector(store => store.people.Star)
+    const [maxRating, setMaxRating] = useState([1, 2, 3, 4, 5]);
+    const [defaultRating, setDefaultRating] = useState(5);
     return (
         <Modal
             animationType='fade'
@@ -23,28 +24,20 @@ const FormReview = (props) => {
                         <FlatList
                             style={{ marginVertical: scale(10) }}
                             horizontal={true}
-                            data={data}
+                            data={maxRating}
                             renderItem={({ item }) => {
                                 return (
-                                    <TouchableOpacity onPress={() => {
-                                        dispatch({ type: 'CHOOSE', id: item.id })
-                                    }}>
-                                        {
-                                            item.check ?
-                                                <Image
-                                                    source={require('../../img/star.png')}
-                                                    style={{ width: scale(20), height: scale(19.3), marginRight: scale(10) }}
-                                                />
-                                                :
-                                                <Image
-                                                    source={require('../../img/star1.png')}
-                                                    style={{ width: scale(20), height: scale(19.3), marginRight: scale(10) }}
-                                                />
-                                        }
+                                    <TouchableOpacity
+                                        activeOpacity={0.7}
+                                        onPress={() => setDefaultRating(item)}>
+                                        <Image
+                                            source={item <= defaultRating ? require('../../img/star.png') : require('../../img/star1.png')}
+                                            style={{ width: scale(20), height: scale(19.3), marginRight: scale(10) }}
+                                        />
                                     </TouchableOpacity>
                                 )
                             }}
-                            keyExtractor={(item) => item.id.toString()}
+                            keyExtractor={({ item, index }) => index}
                         />
 
                     </View>
@@ -53,10 +46,10 @@ const FormReview = (props) => {
                             <Text style={styles.text2}>Đánh giá ngay</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.tou2} onPress={() => dispatch({ type: 'MODALREVIEW' })}>
-                        <Text style={styles.text2}>Nhắc tôi sau</Text>
+                            <Text style={styles.text2}>Nhắc tôi sau</Text>
                         </TouchableOpacity>
                         <TouchableOpacity style={styles.tou2} onPress={() => dispatch({ type: 'MODALREVIEW' })}>
-                        <Text style={styles.text2}>Không nhắc lại</Text>
+                            <Text style={styles.text2}>Không nhắc lại</Text>
                         </TouchableOpacity>
                     </View>
                 </View>
@@ -94,8 +87,8 @@ const styles = StyleSheet.create({
         borderTopWidth: verticalScale(0.5),
     },
     text2: {
-        fontWeight:'400',
-        fontSize:scale(14)
+        fontWeight: '400',
+        fontSize: scale(14)
     },
     text3: {
         fontSize: scale(14),

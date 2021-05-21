@@ -16,13 +16,6 @@ const initialState = {
     { id: 2, text: 'Hướng dẫn thanh toán' },
     { id: 3, text: 'Đăng xuất' },
   ],
-  Star: [
-    { id: 0, text1: '1' },
-    { id: 1, text1: '2' },
-    { id: 2, text1: '3' },
-    { id: 3, text1: '4' },
-    { id: 4, text1: '5' },
-  ],
   modalReview: false,
   text: '',
   text1: '',
@@ -85,14 +78,6 @@ export default function peopleReducer(state = initialState, action) {
       return { ...state, user: newuser2 }
     case 'TEXT1':
       return { ...state, text1: action.text1 }
-    case 'CHOOSE':
-      let arr = [...state.Star]
-      arr.map((item) => {
-        if (item.id === action.id) {
-          item.check = !item.check
-        }
-      })
-      return { ...state, Star: arr }
     case "PROFILE":
       return { ...state, user: action.data }
     case "PHONE":

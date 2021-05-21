@@ -1,6 +1,7 @@
 import { createStackNavigator } from '@react-navigation/stack';
 import React from 'react';
 import { CareAll, ChoosePerson, ChooseRating, Combo, CreateSchedules, FindAroundHere, HotelDetails, HotelScreen, PopularPlaceDetails, PromotionDetails, Rating, Restaurant, ScheduleDetails, ScheduleOverview, Search, SearchRestaurant, SeeMoreDecemberDestination, SeeMoreExperience, SeeMoreHotel, SeeMorePopularPlace, SeeMorePromotions, SeeMoreSchedule, SeeSuggestion, Setting, Suggestion } from '../../../components';
+import ExperienceDetails from '../../../components/Details/ExpericenceDetails';
 import Maps from '../../../components/Details/PopularPlace/Maps';
 import Home from '../../../components/Home/Home';
 import Walkingschedule from '../../../components/Walkingschedule';
@@ -36,6 +37,7 @@ const HomeStack = () => {
             <Root.Screen name="HotelDetails" component={HotelDetails} options={{ header: () => null }} />
             <Root.Screen name="Walkingschedule" component={Walkingschedule} />
             <Root.Screen name="Maps" component={Maps} />
+            <Root.Screen name="ExperienceDetails" component={ExperienceDetails} options={{ header: () => null }}/>
         </Stack.Navigator>
     );
 }

@@ -800,6 +800,7 @@ const initialState = {
       id: 1,
       text: 'Khánh Hòa',
       text1: 'Nha Trang',
+      img: 'https://nhatrangsensetravel.com/view/at_tong-quan-du-lich-nha-trang_acc7a58da8c62a5da6d0d6d678a79618.jpg',
       name: 'Nha Trang - Thành phố ven biển',
       mapaddress: {
         latitude: 12.259629,
@@ -810,7 +811,6 @@ const initialState = {
         { latitude: 12.261480, longitude: 109.178726 },
         { latitude: 12.260505, longitude: 109.179015 },
       ],
-      img: 'https://nhatrangsensetravel.com/view/at_tong-quan-du-lich-nha-trang_acc7a58da8c62a5da6d0d6d678a79618.jpg',
       label: 'Nha Trang là một thành phố ven biển và là trung tâm chính trị, kinh tế, văn hóa, khoa học kỹ thuật và du lịch của tỉnh Khánh Hòa, Việt Nam.Trước đây, vùng đất Nha Trang vốn thuộc về Chiêm Thành, do đó các di tích của người Chăm vẫn còn tồn tại nhiều nơi ở Nha Trang. Nha Trang được Thủ tướng chính phủ Việt Nam công nhận là đô thị loại I vào ngày 22 tháng 4 năm 2009. Nha Trang được mệnh danh là hòn ngọc của biển Đông, Viên ngọc xanh  vì giá trị thiên nhiên, vẻ đẹp cũng như khí hậu của nó.[4] Đây là nơi được mệnh danh là Miami 2',
       ScheduleOK: [
         {
@@ -1596,6 +1596,7 @@ const initialState = {
       id: 2,
       text: 'Kiên Giang',
       text1: 'Phú Quốc',
+      img: 'https://www.asas.com.vn/wp-content/uploads/2019/01/3430_tf_180426053143_680291.gif',
       name: 'Phú Quốc - Đảo lớn nhất Việt Nam',
       mapaddress: {
         latitude: 10.2218584,
@@ -1606,7 +1607,6 @@ const initialState = {
         { latitude: 10.221202, longitude: 103.961037 },
         { latitude: 10.218615, longitude: 103.959739 },
       ],
-      img: 'https://www.asas.com.vn/wp-content/uploads/2019/01/3430_tf_180426053143_680291.gif',
       label: 'Phú Quốc là hòn đảo lớn nhất Việt Nam, nằm trong vịnh Thái Lan. Đảo Phú Quốc cùng với các đảo nhỏ hơn ở lân cận và quần đảo Thổ Chu nằm cách đó 55 hải lý về phía tây nam hợp thành thành phố Phú Quốc thuộc tỉnh Kiên Giang. Đây cũng là thành phố đảo đầu tiên của Việt Nam.',
       ScheduleOK: [
         {
@@ -2392,6 +2392,7 @@ const initialState = {
       id: 3,
       text: 'Quảng Ninh',
       text1: 'Vịnh Hạ Long',
+      img: 'https://dulichhalongquangninh.com/wp-content/uploads/2016/07/hinh-anh-du-lich-ha-long.jpg',
       name: 'Vịnh Hạ Long -  Di sản Thiên nhiên Thế giới ',
       mapaddress: {
         latitude: 20.987077,
@@ -2402,7 +2403,6 @@ const initialState = {
         { latitude: 15.378255, longitude: 109.110611 },
         { latitude: 15.381389, longitude: 109.111201 },
       ],
-      img: 'https://dulichhalongquangninh.com/wp-content/uploads/2016/07/hinh-anh-du-lich-ha-long.jpg',
       label: 'Thành phố Hạ Long là thành phố tỉnh lỵ, trung tâm văn hóa, kinh tế, chính trị của tỉnh Quảng Ninh, thuộc vùng duyên hải Bắc Bộ. Thành phố Hạ Long nằm ở trung tâm của tỉnh Quảng Ninh, có diện tích 271,95 km², với chiều dài bờ biển dài gần 50 km. Phía đông Hạ Long giáp thành phố Cẩm Phả, tây giáp thị xã Quảng Yên, bắc giáp huyện Hoành Bồ, nam là vịnh Hạ Long. Thành phố nằm dọc theo bờ Vịnh Hạ Long với chiều dài 50 km, cách thủ đô Hà Nội 165 km về phía Tây, thành phố Cảng Hải Phòng 60 km về phía Tây Nam, cửa khẩu Móng Cái 184 km về phía Đông Bắc, phía nam thông ra Biển Đông. Hạ Long có vị trí chiến lược về phát triển kinh tế, an ninh quốc phòng của khu vực và quốc gia.',
       ScheduleOK: [
         {
