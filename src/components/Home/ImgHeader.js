@@ -3,6 +3,7 @@ import { View, Text, ImageBackground, SafeAreaView, StyleSheet, Dimensions, Imag
 import { scale } from "react-native-size-matters";
 import { useSelector, useDispatch } from "react-redux";
 import { useNavigation } from '@react-navigation/native';
+import { scaleW } from "../../config/Ultils";
 const { height } = Dimensions.get('screen')
 const ImgHeader = () => {
     const dataheader = useSelector(store => store.dataheader.data)
@@ -24,13 +25,13 @@ const ImgHeader = () => {
                         <TouchableOpacity
                             onPress={() => onChoose(item)}
                             key={item.id.toString()}
-                            style={{ marginTop: scale(19), marginRight: scale(34) }}
+                            style={{ marginTop: scaleW(19), marginRight: scaleW(34) }}
                         >
                             <Image
                                 source={item.img}
-                                style={{ width: scale(35), height: scale(35), marginBottom:scale(5) }}
+                                style={{ width: scaleW(35), height: scaleW(35), marginBottom:scaleW(5) }}
                             />
-                            <Text style={{ color: 'white', fontSize: height / 68, textAlign: 'center' }}>{item.text}</Text>
+                            <Text style={{ color: 'white', fontSize: scaleW(12), textAlign: 'center' }}>{item.text}</Text>
                         </TouchableOpacity>
                     )
                 })

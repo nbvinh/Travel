@@ -5,7 +5,8 @@ import { useDispatch, useSelector } from "react-redux";
 import { Hotel, ImgHeader, Promotion, TextHome, Schedule, PopularPlace, Experience, DecemberDestination } from "./index";
 import AppStyle from "../../theme/index";
 import Draggable from 'react-native-draggable';
-import { scale } from "react-native-size-matters";
+import { scale, verticalScale } from "react-native-size-matters";
+import { verticalScaleH,scaleW } from "../../config/Ultils";
 const { height, width } = Dimensions.get('screen')
 const Home = ({ navigation, route }) => {
     const [search, setSearch] = useState('')
@@ -18,7 +19,7 @@ const Home = ({ navigation, route }) => {
         <SafeAreaView style={AppStyle.StyleHome.container}>
             <StatusBar backgroundColor={statusBar ? 'transparent' : "white"} translucent animated barStyle={statusBar ? "light-content" : "dark-content"} />
             <ScrollView style={AppStyle.StyleHome.scrollview}>
-                <ImageBackground source={require('../../img/khampha.png')} style={{ height: scale(213) }}>
+                <ImageBackground source={require('../../img/khampha.png')} style={{ height: scaleW(213) }}>
                     <View style={AppStyle.StyleHome.textHeader}>
                         <Text style={AppStyle.StyleHome.text1}>Khám phá</Text>
                         <Text style={AppStyle.StyleHome.text2}>Lên lịch trình, đặt vé máy bay, khách sạn, tìm kiếm các tour lịch và các hoạt động vui chơi giải trí</Text>
@@ -36,7 +37,7 @@ const Home = ({ navigation, route }) => {
                             maxLength={20}
                             onChangeText={(value) => setSearch(value)}
                             style={AppStyle.StyleHome.textinput}
-                            onFocus={() => navigation.navigate("HomeStack", { screen:'Search'})}
+                            onFocus={() => navigation.navigate("HomeStack", { screen: 'Search' })}
                         />
                     </View>
                 </ImageBackground>
@@ -80,7 +81,7 @@ const Home = ({ navigation, route }) => {
                     </View>
                 </View>
             </ScrollView>
-            <Draggable x={width - scale(70)} y={scale(620) - scale(150)} minX={scale(10)} minY={scale(20)} maxX={width - scale(10)} maxY={scale(620) - scale(95)}>
+            <Draggable x={width - 75} y={height - 170} minX={20} minY={50} maxX={width-20} maxY={height - 120}>
                 <TouchableOpacity style={AppStyle.StyleHome.touch} onPress={() => { Linking.openURL('https://t.me/UBGKenhThongBao') }}>
                     <Image style={{ width: '100%', height: '100%' }} source={require('../../img/touchable.png')} />
                 </TouchableOpacity>
